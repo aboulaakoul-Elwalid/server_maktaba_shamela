@@ -74,7 +74,7 @@ app.include_router(retrieval.router, prefix="/retrieval", tags=["retrieval"])
 app.include_router(ingestion.router, prefix="/ingestion", tags=["ingestion"])
 app.include_router(rag_query.router, prefix="/rag", tags=["rag"])
 
-# Startup and shutdown events
+# Startup and shutdown eventsgit push -u origin main
 @app.on_event("startup")
 async def startup_event():
     """

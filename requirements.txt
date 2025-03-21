@@ -12,7 +12,7 @@ idna==3.10
 jsonpath-python==1.0.6
 mistralai==1.5.2
 mypy-extensions==1.0.0
-pinecone==4.12.2
+pinecone==6.0.2
 pinecone-plugin-interface==0.0.7
 pydantic==2.10.6
 pydantic_core==2.27.2
