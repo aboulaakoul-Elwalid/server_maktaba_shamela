@@ -15,7 +15,7 @@ mypy-extensions==1.0.0
 pinecone==6.0.2
 pinecone-plugin-interface==0.0.7
 pydantic==2.10.6
-pydantic-settings==0.1.0
+pydantic-settings==2.8.1
 pydantic_core==2.27.2
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
