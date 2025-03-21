@@ -33,3 +33,9 @@
 2025-03-21 06:30:57,987 - app.core.retrieval - INFO - Found 5 matches in vector store
 2025-03-21 06:30:57,993 - app.core.rag - INFO - Reranking results (placeholder)
 2025-03-21 06:30:57,997 - app.core.rag - INFO - RAG response generated successfully
+2025-03-21 23:20:08,259 - app.main - INFO - Application startup: initializing services and connections
+2025-03-21 23:20:50,515 - app.api.endpoints.embed - INFO - Received embedding request for text: This is a test embedding...
+2025-03-21 23:20:50,890 - app.api.endpoints.embed - INFO - Embedding generated successfully
+2025-03-21 23:22:09,091 - app.api.endpoints.embed - INFO - Received embedding request for text: This is a test embedding...
+2025-03-21 23:22:09,488 - app.api.endpoints.embed - INFO - Embedding generated successfully
+2025-03-21 23:22:26,070 - app.main - INFO - Application shutdown: cleaning up resources
