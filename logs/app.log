@@ -40,3 +40,4 @@
 2025-03-21 23:22:09,488 - app.api.endpoints.embed - INFO - Embedding generated successfully
 2025-03-21 23:22:26,070 - app.main - INFO - Application shutdown: cleaning up resources
 2025-03-21 23:24:17,157 - app.main - INFO - Application startup: initializing services and connections
+2025-03-21 23:46:47,781 - app.main - INFO - Application shutdown: cleaning up resources
