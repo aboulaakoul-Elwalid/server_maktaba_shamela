@@ -1,0 +1,16 @@
+[project]
+name = "arabia"
+version = "0.1.0"
+description = "A FastAPI backend for the Arabia project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "python-dotenv>=0.9.9",
+    "fastapi>=0.115.11",
+    "mistral>=19.0.0",
+    "mistralai>=1.5.1",
+    "pinecone>=6.0.2",
+    "requests>=2.32.3",
+    "uvicorn>=0.34.0",
+    "pydantic-settings",
+]

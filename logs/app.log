@@ -1,0 +1,35 @@
+2025-03-21 03:24:10,438 - app.main - INFO - Application startup: initializing services and connections
+2025-03-21 03:29:32,147 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-21 03:29:59,538 - app.main - INFO - Application startup: initializing services and connections
+2025-03-21 03:35:22,749 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-21 03:35:50,336 - app.main - INFO - Application startup: initializing services and connections
+2025-03-21 03:35:50,399 - app.api.endpoints.embed - INFO - Received embedding request for text: This is a test embedding...
+2025-03-21 03:35:51,279 - app.api.endpoints.embed - INFO - Embedding generated successfully
+2025-03-21 06:27:15,458 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-21 06:27:42,039 - app.main - INFO - Application startup: initializing services and connections
+2025-03-21 06:27:42,044 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-21 06:29:16,560 - app.main - INFO - Application startup: initializing services and connections
+2025-03-21 06:29:37,863 - app.api.endpoints.rag_query - INFO - Received RAG query: test question...
+2025-03-21 06:29:37,869 - app.core.rag - INFO - Processing RAG query: test question...
+2025-03-21 06:29:38,290 - app.core.retrieval - INFO - Generated embedding for query: 'test question...'
+2025-03-21 06:29:38,293 - app.core.clients - INFO - Initializing Pinecone client
+2025-03-21 06:29:38,297 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-03-21 06:29:40,557 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-03-21 06:29:40,560 - app.core.rag - INFO - Reranking results (placeholder)
+2025-03-21 06:29:40,565 - app.core.rag - INFO - RAG response generated successfully
+2025-03-21 06:30:12,461 - app.api.endpoints.rag_query - INFO - Received RAG query: hey...
+2025-03-21 06:30:12,471 - app.core.rag - INFO - Processing RAG query: hey...
+2025-03-21 06:30:12,813 - app.core.retrieval - INFO - Generated embedding for query: 'hey...'
+2025-03-21 06:30:12,815 - app.core.clients - INFO - Initializing Pinecone client
+2025-03-21 06:30:12,819 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-03-21 06:30:14,000 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-03-21 06:30:14,006 - app.core.rag - INFO - Reranking results (placeholder)
+2025-03-21 06:30:14,010 - app.core.rag - INFO - RAG response generated successfully
+2025-03-21 06:30:56,878 - app.api.endpoints.rag_query - INFO - Received RAG query: how are you...
+2025-03-21 06:30:56,886 - app.core.rag - INFO - Processing RAG query: how are you...
+2025-03-21 06:30:57,081 - app.core.retrieval - INFO - Generated embedding for query: 'how are you...'
+2025-03-21 06:30:57,082 - app.core.clients - INFO - Initializing Pinecone client
+2025-03-21 06:30:57,086 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-03-21 06:30:57,987 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-03-21 06:30:57,993 - app.core.rag - INFO - Reranking results (placeholder)
+2025-03-21 06:30:57,997 - app.core.rag - INFO - RAG response generated successfully
