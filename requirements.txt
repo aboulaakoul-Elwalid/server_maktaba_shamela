@@ -28,3 +28,5 @@ typing_extensions==4.12.2
 urllib3==2.3.0
 uvicorn==0.34.0
 mistral>=19.0.0
+bs4==4.13.3   
+beautifulsoup4>=4.12.2
