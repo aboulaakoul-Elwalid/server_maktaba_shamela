@@ -1,0 +1,26 @@
+# .github/workflows/keep-alive.yml
+name: Keep Render Service Alive
+
+on:
+  schedule:
+    - cron: "*/10 * * * *" # Run every 10 minutes
+  workflow_dispatch: # Allow manual trigger for testing
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping API health endpoint
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" https://server-maktaba-shamela.onrender.com/health)
+          echo "Health endpoint response: $response"
+          if [ "$response" != "200" ]; then
+            echo "Health check failed with status $response"
+            exit 1
+          fi
+
+      - name: Ping alternative endpoint if health fails
+        if: failure()
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" https://server-maktaba-shamela.onrender.com/)
+          echo "Root endpoint response: $response"
