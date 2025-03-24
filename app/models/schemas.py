@@ -62,3 +62,25 @@ class IngestionResponse(BaseModel):
     success: bool = Field(..., description="Whether ingestion was successful")
     document_id: Optional[str] = Field(None, description="ID of the ingested document")
     message: str = Field(..., description="Status message")
+
+
+# Add to existing schemas
+class MessageCreate(BaseModel):
+    content: str
+    conversation_id: Optional[str] = None
+
+class Message(BaseModel):
+    user_id: str
+    content: str
+    message_id: str  # This was missing
+    message_type: str  # Changed from Optional
+    timestamp: str  # Changed from Optional[str]
+    conversation_id: Optional[str] = None
+    sources: Optional[List[Dict[str, Any]]] = Field(
+        default=None,
+        description="Source documents used to generate this response, with citation details"
+    )
+class ConversationResponse(BaseModel):
+    conversation_id: str
+    title: str
+    created_at: str

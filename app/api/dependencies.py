@@ -21,8 +21,14 @@ import secrets
 import time
 
 from app.config.settings import settings, Settings
-from app.core.clients import get_pinecone_index
+from app.core.clients import get_pinecone_index, appwrite_account # Import appwrite_account
 from pinecone import Pinecone
+from fastapi import Depends, HTTPException
+from fastapi.security import OAuth2PasswordBearer
+from appwrite.exception import AppwriteException
+import logging
+
+logger = logging.getLogger(__name__)
 
 # Simple in-memory API key store with rate limiting
 # In production, use a database or auth service
@@ -33,6 +39,22 @@ API_KEYS = {
         "calls": {},  # timestamp -> count
     }
 }
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
+
+async def get_current_user(token: str = Depends(oauth2_scheme)):
+    """
+    Dependency to get the current user from the JWT token.
+    """
+    try:
+        user = await appwrite_account.get()
+        return {"user_id": user['$id']}
+    except AppwriteException as e:
+        logger.error(f"Failed to get current user: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid authentication credentials",
+        )
 
 def get_settings():
     """

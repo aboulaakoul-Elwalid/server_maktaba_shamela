@@ -18,6 +18,10 @@ from mistralai import Mistral
 from pinecone import Pinecone
 from app.config.settings import settings
 import logging
+from appwrite.client import Client
+from appwrite.services.users import Users
+from appwrite.services.databases import Databases  # Corrected import
+from appwrite.services.account import Account # Import Account service
 
 logger = logging.getLogger(__name__)
 
@@ -89,3 +93,51 @@ except Exception as e:
     mistral_client = None
 
 # We don't pre-initialize Pinecone as it's more efficient to get the index when needed
+# Initialize Appwrite client
+def get_appwrite_client():
+    """
+    Initialize and return an Appwrite client.
+    
+    Uses the credentials from settings which are loaded from environment variables.
+    
+    Returns:
+        Client: Initialized Appwrite client
+    
+    Raises:
+        ValueError: If required credentials are missing
+    """
+    if not settings.APPWRITE_ENDPOINT:
+        error_msg = "APPWRITE_ENDPOINT not found in environment variables"
+        logger.error(error_msg)
+        raise ValueError(error_msg)
+        
+    if not settings.APPWRITE_PROJECT_ID:
+        error_msg = "APPWRITE_PROJECT_ID not found in environment variables"
+        logger.error(error_msg)
+        raise ValueError(error_msg)
+        
+    if not settings.APPWRITE_API_KEY:
+        error_msg = "APPWRITE_API_KEY not found in environment variables"
+        logger.error(error_msg)
+        raise ValueError(error_msg)
+    
+    logger.info("Initializing Appwrite client")
+    client = Client()
+    client.set_endpoint(settings.APPWRITE_ENDPOINT)
+    client.set_project(settings.APPWRITE_PROJECT_ID)
+    client.set_key(settings.APPWRITE_API_KEY)
+    return client
+
+# Services
+try:
+    appwrite_client = get_appwrite_client()
+    appwrite_users = Users(appwrite_client)
+    appwrite_db = Databases(appwrite_client)  # Corrected class name
+    appwrite_account = Account(appwrite_client) # Initialize Account service
+    logger.info("Appwrite client initialized successfully")
+except Exception as e:
+    logger.warning(f"Failed to initialize Appwrite client: {e}")
+    appwrite_client = None
+    appwrite_users = None
+    appwrite_db = None
+    appwrite_account = None

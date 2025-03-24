@@ -56,10 +56,23 @@ wheels = [
 ]
 
 [[package]]
+name = "appwrite"
+version = "9.0.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "requests" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8f/e4/f0d2b7161646876ab0b4dc9ab04cdb78679dd8f38cc62fe2b7a54c258044/appwrite-9.0.2.tar.gz", hash = "sha256:db0eef137e6a28743c9bed945134df0aa243e2829ac93c3b39b1070f76f525d9", size = 27620 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5d/2a/14cf02958d2790e109c2a10cb20cea58c1a069f5fac95b069f3cfc9c6c84/appwrite-9.0.2-py3-none-any.whl", hash = "sha256:0dbede0679f75bd2f890a227d44eca7e4e9abb420222e2fe55ea44ffbe4a1d74", size = 35307 },
+]
+
+[[package]]
 name = "arabia"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "appwrite" },
     { name = "fastapi" },
     { name = "mistral" },
     { name = "mistralai" },
@@ -72,6 +85,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "appwrite", specifier = ">=9.0.2" },
     { name = "fastapi", specifier = ">=0.115.11" },
     { name = "mistral", specifier = ">=19.0.0" },
     { name = "mistralai", specifier = ">=1.5.1" },

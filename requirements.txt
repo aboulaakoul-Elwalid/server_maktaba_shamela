@@ -31,3 +31,4 @@ mistral>=19.0.0
 gunicorn==21.2.0
 # Removed bs4 dependency
 beautifulsoup4>=4.12.2
+appwrite==9.0.2

@@ -20,7 +20,8 @@ import time
 import traceback
 
 from app.config.settings import settings
-from app.api.endpoints import embed, retrieval, ingestion, rag_query
+from app.api.endpoints import embed, retrieval, ingestion, rag_query, auth, chat
+from app.core.clients import appwrite_db, appwrite_users
 from app.utils.helpers import setup_logging
 
 # Set up logging
@@ -73,8 +74,11 @@ app.include_router(embed.router, prefix="/embed", tags=["embeddings"])
 app.include_router(retrieval.router, prefix="/retrieval", tags=["retrieval"])
 app.include_router(ingestion.router, prefix="/ingestion", tags=["ingestion"])
 app.include_router(rag_query.router, prefix="/rag", tags=["rag"])
+app.include_router(auth.router, prefix="/auth", tags=["auth"])
+app.include_router(chat.router, prefix="/chat", tags=["chat"])
+# Include other routers as needed
 
-# Startup and shutdown eventsgit push -u origin main
+# Startup and shutdown events git push -u origin main
 @app.on_event("startup")
 async def startup_event():
     """

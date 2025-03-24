@@ -36,6 +36,11 @@ class Settings(BaseSettings):
     LOG_LEVEL: str = "INFO"
     LOG_FORMAT: str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
     
+    # Appwrite settings
+    APPWRITE_ENDPOINT: str
+    APPWRITE_PROJECT_ID: str
+    APPWRITE_API_KEY: str
+    
     class Config:
         """Inner configuration class for Pydantic settings."""
         env_file = ".env"
