@@ -19,6 +19,7 @@ from fastapi import Depends, Header, HTTPException, status
 from typing import Optional, List
 import secrets
 import time
+from fastapi import Request
 
 from app.config.settings import settings, Settings
 from app.core.clients import get_pinecone_index, appwrite_account # Import appwrite_account
@@ -46,32 +47,61 @@ from app.api.endpoints.auth import SESSIONS  # Import our session store
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
 
 async def get_current_user(token: str = Depends(oauth2_scheme)):
-    """Get user from our simple session store"""
-    
-    # Debug print
-    print(f"Checking token: {token}")
-    print(f"Available sessions: {SESSIONS}")
-    
-    # Check if token exists
+    """Validate the access token and return the user data"""
     if token not in SESSIONS:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid or expired token"
+            detail="Invalid token"
         )
-    
-    # Check if session is expired
+        
     session = SESSIONS[token]
+    
+    # Check if token has expired
     if session["expires_at"] < time.time():
         # Remove expired session
-        del SESSIONS[token]
+        SESSIONS.pop(token, None)
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Session expired"
+            detail="Token has expired"
         )
     
-    # Valid session - return user info
-    return {"user_id": session["user_id"]}
+    # Return user information
+    return {
+        "user_id": session["user_id"],
+        "is_anonymous": session.get("is_anonymous", False)
+    }
 
+# Optional version that allows anonymous access
+class OAuth2PasswordBearerOptional(OAuth2PasswordBearer):
+    async def __call__(self, request: Request) -> Optional[str]:
+        try:
+            return await super().__call__(request)
+        except HTTPException:
+            return None
+
+oauth2_scheme_optional = OAuth2PasswordBearerOptional(tokenUrl="/auth/login")
+
+async def get_user_or_anonymous(token: str = Depends(oauth2_scheme_optional)):
+    """Get user or create anonymous session if no token provided"""
+    if not token:
+        # Create a new anonymous session
+        anon_id = f"anon_{secrets.token_hex(8)}"
+        return {
+            "user_id": anon_id,
+            "is_anonymous": True
+        }
+    
+    # Try to validate the provided token
+    try:
+        return await get_current_user(token)  # CHANGED: Added 'await' here
+    except HTTPException:
+        # Also create anonymous for invalid tokens
+        anon_id = f"anon_{secrets.token_hex(8)}"
+        return {
+            "user_id": anon_id,
+            "is_anonymous": True
+        }
+    
 def get_settings():
     """
     Dependency for accessing application settings.

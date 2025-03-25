@@ -5,7 +5,7 @@ from app.core.chat_service import (
     store_message, generate_rag_response, generate_streaming_response,
     create_new_conversation, get_user_conversations
 )
-from app.api.dependencies import get_current_user
+from app.api.dependencies import get_user_or_anonymous
 from app.core.clients import appwrite_db
 from typing import List, Dict, Any, Optional
 from datetime import datetime
@@ -15,14 +15,18 @@ logger = logging.getLogger(__name__)
 router = APIRouter(tags=["chat"])
 
 @router.post("/messages", response_model=Dict[str, Any])
-async def send_message(message: MessageCreate, user: dict = Depends(get_current_user)):
+async def send_message(message: MessageCreate, user: dict = Depends(get_user_or_anonymous)):
     """Send a message and get an AI response"""
+    # Check if user is anonymous
+    is_anonymous = user.get("is_anonymous", False)
+    
     # 1. Store user message
     user_message = await store_message(
         user["user_id"], 
         message.content, 
         "user", 
-        message.conversation_id
+        message.conversation_id,
+        is_anonymous=is_anonymous
     )
     
     # 2. Generate AI response using RAG
@@ -34,7 +38,8 @@ async def send_message(message: MessageCreate, user: dict = Depends(get_current_
         rag_response["response"], 
         "ai", 
         message.conversation_id, 
-        sources=rag_response.get("context")
+        sources=rag_response.get("context"),
+        is_anonymous=is_anonymous
     )
     
     return {
@@ -45,7 +50,7 @@ async def send_message(message: MessageCreate, user: dict = Depends(get_current_
 @router.get("/messages", response_model=List[Message])
 async def get_messages(
     conversation_id: Optional[str] = None,
-    user: dict = Depends(get_current_user)
+    user: dict = Depends(get_user_or_anonymous)
 ):
     """Get messages, optionally filtered by conversation"""
     try:
@@ -79,19 +84,19 @@ async def get_messages(
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.post("/conversations", response_model=Dict[str, str])
-async def create_conversation(user: dict = Depends(get_current_user)):
+async def create_conversation(user: dict = Depends(get_user_or_anonymous)):
     """Create a new conversation"""
     return await create_new_conversation(user["user_id"])
 
 @router.get("/conversations", response_model=List[ConversationResponse])
-async def list_conversations(user: dict = Depends(get_current_user)):
+async def list_conversations(user: dict = Depends(get_user_or_anonymous)):
     """List all conversations for a user"""
     return await get_user_conversations(user["user_id"])
 
 @router.get("/conversations/{conversation_id}/messages", response_model=List[Message])
 async def get_conversation_messages(
     conversation_id: str, 
-    user: dict = Depends(get_current_user)
+    user: dict = Depends(get_user_or_anonymous)
 ):
     """Get all messages for a specific conversation"""
     try:
@@ -140,7 +145,7 @@ async def get_conversation_messages(
 @router.post("/messages/stream")
 async def send_message_stream(
     message: MessageCreate, 
-    user: dict = Depends(get_current_user)
+    user: dict = Depends(get_user_or_anonymous)
 ):
     """Stream an AI response"""
     # Store the user message first
@@ -158,7 +163,7 @@ async def send_message_stream(
     )
 
 @router.get("/debug", response_model=Dict[str, Any])
-async def debug_rag(query: str = "Arabia", user: dict = Depends(get_current_user)):
+async def debug_rag(query: str = "Arabia", user: dict = Depends(get_user_or_anonymous)):
     """Debug endpoint to test RAG components separately"""
     try:
         # Test retrieval

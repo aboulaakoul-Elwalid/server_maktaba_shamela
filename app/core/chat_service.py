@@ -11,13 +11,17 @@ import json
 from app.core.retrieval import query_vector_store
 from app.core.clients import mistral_client  # Make sure this is correctly imported
 import requests
+import asyncio
 
 logger = logging.getLogger(__name__)
 
 # Fix store_message function
+import uuid
+
 async def store_message(user_id: str, content: str, message_type: str, 
                        conversation_id: Optional[str] = None, 
-                       sources: Optional[List[Dict]] = None) -> Dict:
+                       sources: Optional[List[Dict]] = None,
+                       is_anonymous: bool = False) -> Dict:
     """Store a message in the Appwrite database"""
     try:
         # Create message data
@@ -28,73 +32,48 @@ async def store_message(user_id: str, content: str, message_type: str,
             "timestamp": datetime.now().isoformat(),
         }
         
+        # For anonymous users, don't store in database
+        if is_anonymous:
+            logger.info(f"Anonymous user message, not storing in database")
+            return {
+                "user_id": user_id,
+                "content": content,
+                "message_id": f"anon_{uuid.uuid4().hex}",
+                "message_type": message_type,
+                "timestamp": message_data["timestamp"],
+                "conversation_id": conversation_id,
+                "sources": sources
+            }
+        
+        # For authenticated users, continue with database storage
         if conversation_id:
             message_data["conversation_id"] = conversation_id
+            
+        if sources:
+            message_data["sources"] = sources
         
-        # Set permissions
-        permissions = [
-            Permission.read(Role.user(user_id))
-        ]
-        
-        # If it's a conversation message, add read permission
-        if conversation_id:
-            try:
-                # Remove await
-                conversation = appwrite_db.get_document(
-                    database_id="arabia_db",
-                    collection_id="conversations",
-                    document_id=conversation_id
-                )
-                conversation_owner = conversation["user_id"]
-                if conversation_owner != user_id:
-                    permissions.append(Permission.read(Role.user(conversation_owner)))
-            except:
-                pass
-        
-        # 1. Save the message without sources - remove await
-        result = appwrite_db.create_document(
+        # Store in Appwrite
+        message_result = appwrite_db.create_document(
             database_id="arabia_db",
             collection_id="messages",
             document_id="unique()",
             data=message_data,
-            permissions=permissions
+            permissions=[
+                Permission.read(Role.user(user_id)),
+                Permission.update(Role.user(user_id)),
+                Permission.delete(Role.user(user_id))
+            ]
         )
         
-        # 2. If there are sources, save them separately
-        if sources and len(sources) > 0:
-            message_id = result["$id"]
-            for i, source in enumerate(sources):
-                source_data = {
-                    "message_id": message_id,
-                    "title": source.get("title", f"Source {i+1}"),
-                    "content": source.get("content", ""),
-                    "metadata": json.dumps(source.get("metadata", {}))
-                }
-                
-                # Remove await
-                appwrite_db.create_document(
-                    database_id="arabia_db",
-                    collection_id="sources",
-                    document_id="unique()",
-                    data=source_data,
-                    permissions=permissions  # Use same permissions as message
-                )
-        
-        # 3. Return the message data
-        message_result = {
-            "user_id": result["user_id"],
-            "content": result["content"],
-            "message_id": result["$id"],
-            "message_type": result["message_type"],
-            "timestamp": result["timestamp"],
-            "conversation_id": result.get("conversation_id"),
+        return {
+            "user_id": message_result["user_id"],
+            "content": message_result["content"],
+            "message_id": message_result["$id"],
+            "message_type": message_result["message_type"],
+            "timestamp": message_result["timestamp"],
+            "conversation_id": message_result.get("conversation_id"),
+            "sources": message_result.get("sources")
         }
-        
-        # We'll add sources property but won't populate it yet
-        # (can be retrieved separately when needed)
-        message_result["sources"] = sources
-        
-        return message_result
     except Exception as e:
         logger.error(f"Failed to store message: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to store message: {str(e)}")
@@ -180,7 +159,7 @@ async def generate_rag_response(query: str) -> Dict[str, Any]:
                     "Authorization": f"Bearer {settings.MISTRAL_API_KEY}"
                 },
                 json={
-                    "model": "mistral-medium",  # Adjust as needed
+                    "model": "mistral-saba-2502",  # Adjust as needed
                     "messages": [
                         {"role": "system", "content": "You are a knowledgeable assistant specializing in Arabic and Islamic texts."},
                         {"role": "user", "content": prompt}
@@ -226,7 +205,7 @@ async def generate_streaming_response(query: str) -> AsyncGenerator[str, None]:
         
         # Get RAG response
         response = await generate_rag_response(query)
-        content = response["response"] 
+        content = response["response"]
         sources = response.get("context", [])
         
         # Stream the response in small chunks to simulate typing
@@ -249,38 +228,53 @@ async def generate_streaming_response(query: str) -> AsyncGenerator[str, None]:
         yield f"data: Error: {str(e)}\n\n"
         yield "data: [DONE]\n\n"
 
-async def create_new_conversation(user_id: str) -> Dict[str, str]:
+async def create_new_conversation(user_id: str, is_anonymous: bool = False) -> Dict[str, str]:
     """Create a new conversation"""
     try:
-        # Try with only fields that must exist in schema
+        # For anonymous users, don't store in database
+        if is_anonymous:
+            conversation_id = f"anon_conv_{uuid.uuid4().hex}"
+            return {
+                "conversation_id": conversation_id,
+                "message": "Anonymous conversation created"
+            }
+            
+        # For authenticated users, store in Appwrite
+        conversation_data = {
+            "user_id": user_id,
+            "title": "New Conversation",
+            "created_at": datetime.now().isoformat()
+        }
+        
+        # Create the conversation
         result = appwrite_db.create_document(
             database_id="arabia_db",
             collection_id="conversations",
             document_id="unique()",
-            data={
-                "user_id": user_id,
-                "created_at": datetime.now().isoformat(),
-                "title": "New Conversation"
-            },
+            data=conversation_data,
             permissions=[
                 Permission.read(Role.user(user_id)),
-                Permission.write(Role.user(user_id))
+                Permission.update(Role.user(user_id)),
+                Permission.delete(Role.user(user_id))
             ]
         )
         
-        return {"conversation_id": result["$id"]}
+        return {
+            "conversation_id": result["$id"],
+            "message": "Conversation created successfully"
+        }
     except Exception as e:
-        logger.error(f"Appwrite error: {str(e)}")
-        
-        # Fallback to simple ID return if all else fails
-        import uuid
-        conversation_id = f"local_{uuid.uuid4()}"
-        return {"conversation_id": conversation_id}
+        logger.error(f"Failed to create conversation: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
 
-async def get_user_conversations(user_id: str) -> List[Dict]:
+async def get_user_conversations(user_id: str, is_anonymous: bool = False) -> List[Dict]:
     """Get all conversations for a user"""
     try:
-        # Remove await
+        # For anonymous users, return empty list (no stored conversations)
+        if is_anonymous:
+            return []
+            
+        # For authenticated users, query Appwrite
         result = appwrite_db.list_documents(
             database_id="arabia_db",
             collection_id="conversations",

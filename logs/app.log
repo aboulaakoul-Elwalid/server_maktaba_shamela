@@ -391,3 +391,277 @@ TypeError: object dict can't be used in 'await' expression
 2025-03-25 05:50:28,230 - app.core.retrieval - INFO - Found 5 matches in vector store
 2025-03-25 05:49:37,561 - app.main - INFO - Application shutdown: cleaning up resources
 2025-03-25 05:49:54,361 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 05:52:08,983 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 17:10:38,181 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 17:29:09,074 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 17:29:27,849 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 17:30:34,658 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 17:30:48,524 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 17:33:06,496 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 17:39:10,078 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 17:41:21,443 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 17:40:37,049 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 17:42:51,213 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 17:45:09,556 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 17:47:54,419 - app.api.endpoints.auth - INFO - Created anonymous session: anon_327a7ded651e328c
+2025-03-25 17:49:45,510 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about Arabia...'
+2025-03-25 17:49:45,512 - app.core.clients - INFO - Initializing Pinecone client
+2025-03-25 17:49:45,515 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-03-25 17:49:49,119 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-03-25 17:49:49,343 - app.core.chat_service - ERROR - API Error: 400 - {"object":"error","message":"Invalid model: mistral-sabaa","type":"invalid_model","param":null,"code":"1500"}
+2025-03-25 17:49:19,861 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about fiqh...'
+2025-03-25 17:49:19,862 - app.core.clients - INFO - Initializing Pinecone client
+2025-03-25 17:49:19,866 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-03-25 17:49:20,369 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-03-25 17:49:20,580 - app.core.chat_service - ERROR - API Error: 400 - {"object":"error","message":"Invalid model: mistral-sabaa","type":"invalid_model","param":null,"code":"1500"}
+2025-03-25 17:51:55,392 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 17:52:09,476 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 17:53:15,279 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 17:53:39,493 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 17:55:17,155 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 17:56:36,577 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 17:57:52,259 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 17:58:08,072 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 17:58:26,692 - app.api.endpoints.auth - INFO - Created anonymous session: anon_fb2d05c34cb684a5
+2025-03-25 17:59:00,336 - app.main - ERROR - Request failed: 'coroutine' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 63, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 21, in send_message
+    is_anonymous = user.get("is_anonymous", False)
+                   ^^^^^^^^
+AttributeError: 'coroutine' object has no attribute 'get'
+
+2025-03-25 17:59:13,175 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 17:59:27,516 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 17:59:27,642 - app.main - ERROR - Request failed: 'coroutine' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 63, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 21, in send_message
+    is_anonymous = user.get("is_anonymous", False)
+                   ^^^^^^^^
+AttributeError: 'coroutine' object has no attribute 'get'
+
+2025-03-25 18:02:03,948 - app.main - ERROR - Request failed: 'coroutine' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 63, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 21, in send_message
+    is_anonymous = user.get("is_anonymous", False)
+                   ^^^^^^^^
+AttributeError: 'coroutine' object has no attribute 'get'
+
+2025-03-25 18:02:34,579 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 18:02:49,967 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 18:02:50,093 - app.main - ERROR - Request failed: 'coroutine' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 63, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 21, in send_message
+    is_anonymous = user.get("is_anonymous", False)
+                   ^^^^^^^^
+AttributeError: 'coroutine' object has no attribute 'get'
+
+2025-03-25 18:05:17,386 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 18:05:31,557 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 18:09:52,588 - app.core.chat_service - INFO - Anonymous user message, not storing in database
+2025-03-25 18:09:53,037 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about fiqh...'
+2025-03-25 18:09:53,037 - app.core.clients - INFO - Initializing Pinecone client
+2025-03-25 18:09:53,040 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-03-25 18:09:54,753 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-03-25 18:08:56,770 - app.core.chat_service - INFO - Anonymous user message, not storing in database
+2025-03-25 22:28:22,049 - app.core.chat_service - INFO - Anonymous user message, not storing in database
+2025-03-25 22:28:22,659 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about fiqh...'
+2025-03-25 22:28:22,661 - app.core.clients - INFO - Initializing Pinecone client
+2025-03-25 22:28:22,698 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-03-25 22:28:23,862 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-03-25 22:28:26,989 - app.core.chat_service - INFO - Anonymous user message, not storing in database
