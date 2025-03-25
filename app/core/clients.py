@@ -26,24 +26,22 @@ from appwrite.services.account import Account # Import Account service
 logger = logging.getLogger(__name__)
 
 def init_mistral_client():
-    """
-    Initialize and return a Mistral client.
-    
-    Uses the API key from settings which is loaded from environment variables.
-    
-    Returns:
-        Mistral: Initialized Mistral client
-    
-    Raises:
-        ValueError: If the API key is missing
-    """
+    """Initialize and return a Mistral client."""
     if not settings.MISTRAL_API_KEY:
         error_msg = "MISTRAL_API_KEY not found in environment variables"
         logger.error(error_msg)
         raise ValueError(error_msg)
     
-    logger.info("Initializing Mistral client")
-    return Mistral(api_key=settings.MISTRAL_API_KEY)
+    try:
+        from mistralai.client import MistralClient
+        logger.info("Initializing Mistral client")
+        return MistralClient(api_key=settings.MISTRAL_API_KEY)
+    except ImportError:
+        logger.error("mistralai package not installed. Install with: pip install mistralai")
+        return None
+    except Exception as e:
+        logger.error(f"Failed to initialize Mistral client: {str(e)}")
+        return None
 
 def init_pinecone_client():
     """

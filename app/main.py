@@ -35,16 +35,20 @@ app = FastAPI(
     version=settings.API_VERSION,
     docs_url="/docs",  # URL for Swagger UI
     redoc_url="/redoc",  # URL for ReDoc
+    debug=True  # Add debug here instead of creating a new app
 )
 
-# Add CORS middleware
+# Add middleware - FIX THIS SECTION
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS,
+    # Choose ONE of these options:
+    allow_origins=["http://localhost:3000", "http://localhost:8000"],  # Option 1: specific origins
+    # allow_origins=["*"],  # Option 2: all origins (use this for development)
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Add middleware for request timing
 @app.middleware("http")
@@ -76,6 +80,7 @@ app.include_router(ingestion.router, prefix="/ingestion", tags=["ingestion"])
 app.include_router(rag_query.router, prefix="/rag", tags=["rag"])
 app.include_router(auth.router, prefix="/auth", tags=["auth"])
 app.include_router(chat.router, prefix="/chat", tags=["chat"])
+
 # Include other routers as needed
 
 # Startup and shutdown events git push -u origin main

@@ -1,0 +1,7 @@
+dotenv>=0.9.9
+fastapi>=0.115.11
+mistral>=19.0.0
+mistralai>=1.5.1
+pinecone>=6.0.2
+requests>=2.32.3
+uvicorn>=0.34.0

@@ -31,6 +31,22 @@ except Exception as e:
     logger.warning(f"Failed to initialize Mistral client: {e}")
     mistral_client = None
 
+# Add this function to handle reconnection attempts
+def ensure_mistral_client():
+    global mistral_client
+    
+    if mistral_client:
+        return mistral_client
+        
+    try:
+        mistral_client = Mistral(api_key=settings.MISTRAL_API_KEY)
+        logger.info("Mistral client initialized successfully")
+        return mistral_client
+    except Exception as e:
+        logger.error(f"Failed to initialize Mistral client: {e}")
+        return None
+
+# Then modify get_text_embedding to use this function
 def get_text_embedding(text: str) -> Optional[List[float]]:
     """
     Generate an embedding for a single text input using the Mistral embedding model.
@@ -45,15 +61,16 @@ def get_text_embedding(text: str) -> Optional[List[float]]:
         This function handles a single text. For batch processing,
         use get_embeddings_in_chunks
     """
-    if not mistral_client:
-        logger.error("Mistral client not initialized")
+    client = ensure_mistral_client()
+    if not client:
+        logger.error("Mistral client not available")
         return None
 
     try:
         # The Mistral client expects inputs as a list, even for single items
         logger.debug(f"Generating embedding for text: {text[:50]}...")
 
-        response = mistral_client.embeddings.create(
+        response = client.embeddings.create(
             model="mistral-embed",
             inputs=[text]
         )

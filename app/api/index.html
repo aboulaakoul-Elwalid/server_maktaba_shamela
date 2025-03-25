@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Streaming Chat Test</title>
+    <script>
+      async function testStream() {
+        const token = document.getElementById("token").value;
+        const conversationId = document.getElementById("conversationId").value;
+        const message = document.getElementById("message").value;
+        const output = document.getElementById("output");
+
+        output.innerHTML = "";
+
+        const response = await fetch(
+          "http://localhost:8000/chat/messages/stream",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+              content: message,
+              conversation_id: conversationId,
+            }),
+          }
+        );
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          const chunk = decoder.decode(value);
+          const lines = chunk.split("\n\n");
+
+          for (const line of lines) {
+            if (line.startsWith("data: ")) {
+              const data = line.substring(6);
+              if (data === "[DONE]") {
+                output.innerHTML += "<br>[End of response]";
+              } else {
+                output.innerHTML += data;
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Test Streaming Chat</h1>
+    <div>
+      <label>JWT Token:</label>
+      <input type="text" id="token" size="40" />
+    </div>
+    <div>
+      <label>Conversation ID:</label>
+      <input type="text" id="conversationId" />
+    </div>
+    <div>
+      <label>Message:</label>
+      <input
+        type="text"
+        id="message"
+        value="Tell me about the history of Arabia"
+      />
+    </div>
+    <button onclick="testStream()">Send Message</button>
+    <div
+      id="output"
+      style="
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        min-height: 200px;
+      "
+    >
+      Response will appear here...
+    </div>
+  </body>
+</html>

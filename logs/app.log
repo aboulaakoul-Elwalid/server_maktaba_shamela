@@ -41,3 +41,353 @@
 2025-03-21 23:22:26,070 - app.main - INFO - Application shutdown: cleaning up resources
 2025-03-21 23:24:17,157 - app.main - INFO - Application startup: initializing services and connections
 2025-03-21 23:46:47,781 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 00:17:48,457 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 00:18:00,175 - app.main - ERROR - Request failed: object dict can't be used in 'await' expression
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 59, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/auth.py", line 28, in register
+    result = await appwrite_users.create(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+TypeError: object dict can't be used in 'await' expression
+
+2025-03-25 00:18:26,957 - app.main - ERROR - Request failed: 'Account' object has no attribute 'create_email_session'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 59, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/auth.py", line 41, in login
+    session = await appwrite_account.create_email_session(user.email, user.password)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Account' object has no attribute 'create_email_session'. Did you mean: 'create_email_token'?
+
+2025-03-25 00:18:33,437 - app.main - ERROR - Request failed: 'Account' object has no attribute 'create_email_session'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 59, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/auth.py", line 41, in login
+    session = await appwrite_account.create_email_session(user.email, user.password)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Account' object has no attribute 'create_email_session'. Did you mean: 'create_email_token'?
+
+2025-03-25 00:19:19,320 - app.main - ERROR - Request failed: object dict can't be used in 'await' expression
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 59, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/auth.py", line 28, in register
+    result = await appwrite_users.create(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+TypeError: object dict can't be used in 'await' expression
+
+2025-03-25 00:21:36,788 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 00:21:58,072 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 00:23:32,249 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 00:23:52,888 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 00:26:44,913 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 00:26:59,188 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 00:34:05,693 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 00:34:49,049 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 00:35:16,490 - app.api.endpoints.auth - ERROR - Unexpected login error: 'Account' object has no attribute 'create_email_session'
+2025-03-25 00:35:31,856 - app.api.endpoints.auth - ERROR - Appwrite registration error: A user with the same id, email, or phone already exists in this project.
+2025-03-25 00:35:39,695 - app.api.endpoints.auth - ERROR - Unexpected login error: 'Account' object has no attribute 'create_email_session'
+2025-03-25 00:37:52,589 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 00:42:30,752 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 00:43:56,911 - app.api.endpoints.auth - ERROR - Unexpected login error: Account.create_session() got an unexpected keyword argument 'email'
+2025-03-25 00:46:08,998 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 00:46:23,573 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 00:48:01,288 - app.api.endpoints.auth - INFO - create_session signature: (user_id: str, secret: str)
+2025-03-25 00:48:01,532 - app.api.endpoints.auth - ERROR - Login error: Invalid `userId` param: Parameter must contain at most 36 chars. Valid chars are a-z, A-Z, 0-9, period, hyphen, and underscore. Can't start with a special char
+2025-03-25 00:49:58,840 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 00:50:15,113 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 00:50:37,886 - app.api.endpoints.auth - ERROR - Appwrite login error: Invalid `queries` param: Invalid query: Invalid query: Syntax error
+2025-03-25 00:51:41,387 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 00:51:55,702 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 00:53:10,255 - app.api.endpoints.auth - ERROR - Appwrite login error: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-03-25 00:53:22,586 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 00:53:51,715 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 00:55:59,962 - app.api.endpoints.auth - ERROR - Login error: 'Settings' object has no attribute 'SECRET_KEY'
+2025-03-25 00:56:16,926 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 00:56:32,142 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 00:56:45,540 - app.api.endpoints.auth - ERROR - Appwrite login error: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-03-25 00:56:47,364 - app.api.endpoints.auth - ERROR - Fallback login error: 'Settings' object has no attribute 'SECRET_KEY'
+2025-03-25 00:56:54,303 - app.api.endpoints.auth - ERROR - Appwrite login error: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-03-25 00:56:54,581 - app.api.endpoints.auth - ERROR - Fallback login error: 'Settings' object has no attribute 'SECRET_KEY'
+2025-03-25 00:57:47,144 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 00:58:04,671 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 01:12:53,634 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 01:13:09,011 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 01:16:51,078 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 01:17:06,158 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 01:18:50,038 - app.api.dependencies - INFO - Attempting to get session with token: 67e20...
+2025-03-25 01:18:50,039 - app.api.dependencies - ERROR - Failed to get session: Account.get_session() got an unexpected keyword argument 'sessionId'. Did you mean 'session_id'?
+2025-03-25 01:18:50,242 - app.api.dependencies - ERROR - Authentication failed: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-03-25 01:18:18,834 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 01:18:36,443 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 01:19:47,820 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 01:20:03,557 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 01:29:30,710 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 01:29:48,042 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 01:30:02,575 - app.api.endpoints.auth - ERROR - Login error: Invalid `queries` param: Invalid query: Invalid query: Syntax error
+2025-03-25 01:30:02,576 - app.api.endpoints.auth - ERROR - Login error: 401: Invalid credentials
+2025-03-25 01:32:53,117 - app.api.endpoints.auth - ERROR - Login error: Invalid `queries` param: Invalid query: Invalid query: Syntax error
+2025-03-25 01:32:53,118 - app.api.endpoints.auth - ERROR - Login error: 401: Invalid credentials
+2025-03-25 01:33:02,507 - app.api.endpoints.auth - ERROR - Login error: Invalid `queries` param: Invalid query: Invalid query: Syntax error
+2025-03-25 01:33:02,508 - app.api.endpoints.auth - ERROR - Login error: 401: Invalid credentials
+2025-03-25 01:33:17,462 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 01:34:15,325 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 01:34:23,718 - app.api.endpoints.auth - ERROR - Login error: Invalid `queries` param: Invalid query: Invalid query: Syntax error
+2025-03-25 01:34:23,719 - app.api.endpoints.auth - ERROR - Login error: 401: Invalid credentials
+2025-03-25 01:35:10,065 - app.api.endpoints.auth - ERROR - Login error: Invalid `queries` param: Invalid query: Invalid query: Syntax error
+2025-03-25 01:35:10,065 - app.api.endpoints.auth - ERROR - Login error: 401: Invalid credentials
+2025-03-25 01:35:37,913 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 01:35:54,298 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 01:41:36,217 - app.core.chat_service - ERROR - Failed to create conversation: object dict can't be used in 'await' expression
+2025-03-25 01:42:47,237 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 01:43:01,406 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 01:44:12,958 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 01:47:36,939 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 01:48:38,218 - app.core.chat_service - ERROR - Failed to create conversation: Invalid document structure: Unknown attribute: "updated_at"
+2025-03-25 01:53:15,104 - app.core.chat_service - ERROR - Failed to create conversation: Invalid document structure: Unknown attribute: "updated_at"
+2025-03-25 01:53:20,334 - app.core.chat_service - ERROR - Failed to create conversation: Invalid document structure: Unknown attribute: "updated_at"
+2025-03-25 01:53:21,931 - app.core.chat_service - ERROR - Failed to create conversation: Invalid document structure: Unknown attribute: "updated_at"
+2025-03-25 01:53:56,936 - app.core.chat_service - ERROR - Failed to create conversation: Invalid document structure: Unknown attribute: "updated_at"
+2025-03-25 01:55:09,051 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 01:54:23,534 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 01:57:03,209 - app.core.rag - INFO - Processing RAG query: Tell me about Arabia...
+2025-03-25 01:57:03,853 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about Arabia...'
+2025-03-25 01:57:03,853 - app.core.clients - INFO - Initializing Pinecone client
+2025-03-25 01:57:03,857 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-03-25 01:57:06,065 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-03-25 01:57:06,066 - app.core.rag - INFO - Reranking results (placeholder)
+2025-03-25 01:57:06,067 - app.core.rag - INFO - RAG response generated successfully
+2025-03-25 02:02:31,973 - app.core.rag - INFO - Processing RAG query: Tell me about Arabia...
+2025-03-25 02:02:32,518 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about Arabia...'
+2025-03-25 02:02:32,519 - app.core.clients - INFO - Initializing Pinecone client
+2025-03-25 02:02:32,522 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-03-25 02:02:33,617 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-03-25 02:02:33,619 - app.core.rag - INFO - Reranking results (placeholder)
+2025-03-25 02:02:33,620 - app.core.rag - INFO - RAG response generated successfully
+2025-03-25 02:08:35,319 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 03:10:33,012 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 03:12:28,977 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about Arabia...'
+2025-03-25 03:12:28,978 - app.core.clients - INFO - Initializing Pinecone client
+2025-03-25 03:12:28,981 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-03-25 03:12:29,965 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-03-25 03:12:29,966 - app.core.chat_service - ERROR - Error in RAG pipeline: 'DocumentMatch' object has no attribute 'text_snippet'
+2025-03-25 03:15:31,596 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 03:15:46,958 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 03:20:57,343 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 03:21:12,273 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 03:29:07,355 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 03:28:33,433 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 03:29:59,730 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 03:30:17,750 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 03:31:19,238 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 03:31:34,430 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 03:36:38,281 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 05:44:09,591 - app.main - INFO - Application startup: initializing services and connections
+2025-03-25 05:46:31,189 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about Arabia...'
+2025-03-25 05:46:31,191 - app.core.clients - INFO - Initializing Pinecone client
+2025-03-25 05:46:31,194 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-03-25 05:46:32,809 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-03-25 05:50:27,313 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about fiqh...'
+2025-03-25 05:50:27,314 - app.core.clients - INFO - Initializing Pinecone client
+2025-03-25 05:50:27,316 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-03-25 05:50:28,230 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-03-25 05:49:37,561 - app.main - INFO - Application shutdown: cleaning up resources
+2025-03-25 05:49:54,361 - app.main - INFO - Application startup: initializing services and connections

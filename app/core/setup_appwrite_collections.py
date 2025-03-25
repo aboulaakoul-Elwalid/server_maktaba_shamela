@@ -150,6 +150,66 @@ async def setup_appwrite_collections():
         else:
             print(f"❌ Collection creation error: {str(e)}")
 
+    # 3.5 Create sources collection
+    try:
+        sources = databases.create_collection(
+            database_id='arabia_db',
+            collection_id='sources',
+            name='Message Sources',
+            permissions=[
+                Permission.read(Role.users()),  # Only authenticated users can read
+                Permission.create(Role.users()),  # Only authenticated users can create
+            ],
+            document_security=True  # Enable document-level security
+        )
+        print("✅ Created collection: sources")
+        
+        # Add attributes to sources collection
+        databases.create_string_attribute(
+            database_id='arabia_db',
+            collection_id='sources',
+            key='message_id',  # Reference to the parent message
+            size=36,
+            required=True
+        )
+        databases.create_string_attribute(
+            database_id='arabia_db',
+            collection_id='sources',
+            key='title',
+            size=200,
+            required=False
+        )
+        databases.create_string_attribute(
+            database_id='arabia_db',
+            collection_id='sources',
+            key='content',  # The excerpt from the source
+            size=6000,
+            required=True
+        )
+        databases.create_string_attribute(
+            database_id='arabia_db',
+            collection_id='sources',
+            key='metadata',  # For storing JSON metadata
+            size=2000,
+            required=False
+        )
+        
+        # Create an index for faster lookups by message_id
+        databases.create_index(
+            database_id='arabia_db',
+            collection_id='sources',
+            key='message_sources_lookup',
+            type='key',
+            attributes=['message_id']
+        )
+        print("✅ Added attributes and index to sources collection")
+        
+    except Exception as e:
+        if 'already exists' in str(e).lower():
+            print("ℹ️ Collection sources already exists")
+        else:
+            print(f"❌ Source collection creation error: {str(e)}")
+
     # 4. Create indexes for faster queries
     try:
         # Index for conversation_id in messages collection

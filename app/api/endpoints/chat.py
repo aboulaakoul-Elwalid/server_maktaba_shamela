@@ -156,3 +156,39 @@ async def send_message_stream(
         generate_streaming_response(message.content),
         media_type="text/event-stream"
     )
+
+@router.get("/debug", response_model=Dict[str, Any])
+async def debug_rag(query: str = "Arabia", user: dict = Depends(get_current_user)):
+    """Debug endpoint to test RAG components separately"""
+    try:
+        # Test retrieval
+        documents = query_vector_store(query_text=query, top_k=3)
+        
+        # Test formatting
+        formatted_docs = []
+        for doc in documents:
+            formatted_docs.append({
+                "text": doc.text_snippet[:100],
+                "book": doc.metadata.book_name,
+                "section": doc.metadata.section_title,
+                "score": doc.score
+            })
+        
+        # Test Mistral client
+        from app.core.clients import mistral_client
+        mistral_status = "initialized" if mistral_client else "not initialized"
+        
+        return {
+            "retrieval_status": "success" if documents else "failed",
+            "document_count": len(documents) if documents else 0,
+            "sample_documents": formatted_docs[:2] if documents else [],
+            "mistral_client": mistral_status,
+            "api_keys_present": {
+                "mistral": bool(settings.MISTRAL_API_KEY),
+                "pinecone": bool(settings.PINECONE_API_KEY),
+                "appwrite": bool(settings.APPWRITE_API_KEY)
+            }
+        }
+    except Exception as e:
+        logger.error(f"Debug endpoint error: {str(e)}")
+        return {"error": str(e)}
