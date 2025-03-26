@@ -1,2 +1,0 @@
-{"detail":[{"type":"missing","loc":["body"],"msg":"Field required","input":null}]}--_curl_--"email":"test@exfample.com"
---_curl_-- "password":"securepassword"

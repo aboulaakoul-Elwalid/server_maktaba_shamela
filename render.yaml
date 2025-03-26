@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: maktaba-shamela
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: MISTRAL_API_KEY
+        sync: false
+      - key: PINECONE_API_KEY
+        sync: false
+      - key: APPWRITE_ENDPOINT
+        value: https://cloud.appwrite.io/v1
+      - key: APPWRITE_PROJECT_ID
+        sync: false
+      - key: APPWRITE_API_KEY
+        sync: false
+      - key: API_KEY_GOOGLE
+        sync: false
+      - key: CORS_ORIGINS
+        value: "https://maktaba-shamela-ai.vercel.app"
