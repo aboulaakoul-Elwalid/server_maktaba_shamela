@@ -7,21 +7,35 @@ from app.core.clients import appwrite_db
 from app.core.rag import generate_rag_response as core_generate_rag_response
 from appwrite.permission import Permission
 from appwrite.role import Role
+from appwrite.query import Query
 import json
 from app.core.retrieval import query_vector_store
-from app.core.clients import mistral_client  # Make sure this is correctly imported
+from app.core.clients import mistral_client
 import requests
 import asyncio
+import uuid
+import random
+import time
 
 logger = logging.getLogger(__name__)
 
-# Fix store_message function
-import uuid
+# Helper function to extract book_id from document_id
+def extract_book_id(document_id: str) -> str:
+    """Extract the book ID from the document ID format (usually book_id_section_id)"""
+    if not document_id:
+        return ""
+    
+    # Parse the document_id which is usually in format like "6315_0_2_0_264"
+    # The first part is typically the book_id
+    parts = document_id.split('_')
+    if parts and parts[0].isdigit():
+        return parts[0]
+    return ""
 
-async def store_message(user_id: str, content: str, message_type: str, 
-                       conversation_id: Optional[str] = None, 
-                       sources: Optional[List[Dict]] = None,
-                       is_anonymous: bool = False) -> Dict:
+def store_message(user_id: str, content: str, message_type: str, 
+                 conversation_id: Optional[str] = None, 
+                 sources: Optional[List[Dict]] = None,
+                 is_anonymous: bool = False) -> Dict:
     """Store a message in the Appwrite database"""
     try:
         # Create message data
@@ -32,9 +46,14 @@ async def store_message(user_id: str, content: str, message_type: str,
             "timestamp": datetime.now().isoformat(),
         }
         
-        # For anonymous users, don't store in database
+        # For anonymous users, handle without database storage
         if is_anonymous:
-            logger.info(f"Anonymous user message, not storing in database")
+            # Add URLs to sources for anonymous users
+            if sources:
+                for source in sources:
+                    book_id = extract_book_id(source.get("document_id", ""))
+                    source["url"] = f"https://shamela.ws/book/{book_id}" if book_id else ""
+            
             return {
                 "user_id": user_id,
                 "content": content,
@@ -45,14 +64,11 @@ async def store_message(user_id: str, content: str, message_type: str,
                 "sources": sources
             }
         
-        # For authenticated users, continue with database storage
+        # For authenticated users, handle with database storage
         if conversation_id:
             message_data["conversation_id"] = conversation_id
-            
-        if sources:
-            message_data["sources"] = sources
         
-        # Store in Appwrite
+        # Store the message - Appwrite SDK is synchronous, don't use await
         message_result = appwrite_db.create_document(
             database_id="arabia_db",
             collection_id="messages",
@@ -65,6 +81,43 @@ async def store_message(user_id: str, content: str, message_type: str,
             ]
         )
         
+        # Process sources
+        if sources and not is_anonymous:
+            try:
+                for source in sources:
+                    # Add URL to source
+                    book_id = extract_book_id(source.get("document_id", ""))
+                    url = f"https://shamela.ws/book/{book_id}" if book_id else ""
+                    source["url"] = url
+                    
+                    # Store in message_sources collection
+                    appwrite_db.create_document(
+                        database_id="arabia_db",
+                        collection_id="message_sources",
+                        document_id="unique()",
+                        data={
+                            "message_id": message_result["$id"],
+                            "title": f"{source.get('book_name', 'Unknown')} - {source.get('section_title', 'Unknown')}",
+                            "content": source.get("text_snippet", ""),
+                            "url": url,
+                            "metadata": json.dumps({
+                                "book_name": source.get("book_name", "Unknown"),
+                                "section_title": source.get("section_title", "Unknown"),
+                                "text_snippet": source.get("text_snippet", ""),
+                                "relevance": source.get("relevance", 0),
+                                "document_id": source.get("document_id", "")
+                            })
+                        },
+                        permissions=[
+                            Permission.read(Role.user(user_id)),
+                            Permission.update(Role.user(user_id)),
+                            Permission.delete(Role.user(user_id))
+                        ]
+                    )
+            except Exception as source_error:
+                logger.warning(f"Could not store sources: {str(source_error)}")
+        
+        # Return the message with sources
         return {
             "user_id": message_result["user_id"],
             "content": message_result["content"],
@@ -72,11 +125,104 @@ async def store_message(user_id: str, content: str, message_type: str,
             "message_type": message_result["message_type"],
             "timestamp": message_result["timestamp"],
             "conversation_id": message_result.get("conversation_id"),
-            "sources": message_result.get("sources")
+            "sources": sources
         }
     except Exception as e:
         logger.error(f"Failed to store message: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Failed to store message: {str(e)}")
+
+def call_mistral_with_retry(prompt, max_retries=3, base_delay=1.0):
+    """Call Mistral API with exponential backoff retry logic for rate limits"""
+    from app.config.settings import settings
+    import requests
+    
+    logger.info(f"Calling Mistral API with retry (max attempts: {max_retries})")
+    
+    for attempt in range(max_retries):
+        try:
+            logger.debug(f"Mistral API attempt {attempt+1}/{max_retries}")
+            
+            response = requests.post(
+                "https://api.mistral.ai/v1/chat/completions",
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {settings.MISTRAL_API_KEY}"
+                },
+                json={
+                    "model": "mistral-saba-2502",
+                    "messages": [
+                        {"role": "system", "content": "You are a knowledgeable assistant specializing in Arabic and Islamic texts."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    "temperature": 0.7,
+                    "max_tokens": 1000
+                },
+                timeout=30
+            )
+            
+            # Success - return the response
+            if response.status_code == 200:
+                logger.info("Mistral API call successful")
+                return response
+                
+            # Handle rate limits with exponential backoff
+            if response.status_code == 429:
+                if attempt < max_retries - 1:
+                    sleep_time = (2 ** attempt) * base_delay + random.random()
+                    logger.warning(f"Rate limit (429) hit. Retrying in {sleep_time:.2f} seconds...")
+                    time.sleep(sleep_time)
+                    continue
+                else:
+                    logger.error("Maximum retry attempts reached for rate limit")
+            
+            # Other error statuses - log and return
+            logger.error(f"Mistral API error: {response.status_code} - {response.text}")
+            return response
+            
+        except Exception as e:
+            if attempt < max_retries - 1:
+                sleep_time = (2 ** attempt) * base_delay + random.random()
+                logger.warning(f"API call failed: {str(e)}. Retrying in {sleep_time:.2f} seconds...")
+                time.sleep(sleep_time)
+            else:
+                logger.error(f"All retry attempts failed: {str(e)}")
+                raise
+    
+    # If we get here, all retries failed with rate limits
+    raise Exception("Failed to call Mistral API after multiple retries")
+
+def call_gemini_api(prompt):
+    """Call Google Gemini as fallback when Mistral fails or gets rate limited"""
+    import google.generativeai as genai
+    from app.config.settings import settings
+    
+    logger.info("Falling back to Google Gemini API")
+    
+    try:
+        # Configure the Gemini API
+        genai.configure(api_key=settings.API_KEY_GOOGLE)
+        
+        # Create model instance
+        model = genai.GenerativeModel("gemini-pro")
+        
+        # Generate response
+        response = model.generate_content(prompt)
+        
+        if response and hasattr(response, 'text'):
+            logger.info("Successfully received response from Gemini API")
+            return {
+                "success": True,
+                "content": response.text
+            }
+        else:
+            logger.error("Gemini API returned invalid response")
+            return {
+                "success": False, 
+                "error": "Invalid response from Gemini"
+            }
+    except Exception as e:
+        logger.error(f"Gemini API error: {str(e)}")
+        return {"success": False, "error": str(e)}
 
 async def generate_rag_response(query: str) -> Dict[str, Any]:
     """Generate an AI response using RAG with direct Mistral API call"""
@@ -89,14 +235,14 @@ async def generate_rag_response(query: str) -> Dict[str, Any]:
         except Exception as e:
             logger.error(f"Error retrieving documents: {str(e)}")
             return {
-                "response": "I encountered an error retrieving relevant information. Please try again later.",
+                "response": "I'm having trouble finding relevant information right now. Please try again in a moment.",
                 "context": []
             }
             
         if not documents or len(documents) == 0:
             logger.warning("No relevant documents found for query")
             return {
-                "response": "I couldn't find any relevant information to answer your question about Arabia. Could you please rephrase or ask a different question?",
+                "response": "I couldn't find specific information about that topic in my knowledge base. Could you try rephrasing your question?",
                 "context": []
             }
         
@@ -107,7 +253,7 @@ async def generate_rag_response(query: str) -> Dict[str, Any]:
             sources = []
             
             for i, doc in enumerate(documents):
-                # Get document properties - adapt these field names based on your schema
+                # Get document properties
                 doc_text = getattr(doc, 'text', None)
                 if doc_text is None:
                     doc_text = getattr(doc, 'content', "No text available")
@@ -127,11 +273,10 @@ async def generate_rag_response(query: str) -> Dict[str, Any]:
                     "relevance": doc.score,
                     "document_id": getattr(doc, 'id', f"doc_{i}")
                 })
-            logger.debug("Context formatting complete")
         except Exception as e:
             logger.error(f"Error formatting context: {str(e)}")
             return {
-                "response": "I encountered an error processing the documents. Please try again later.",
+                "response": "I'm having trouble processing the information for your question. Please try again later.",
                 "context": []
             }
         
@@ -146,55 +291,75 @@ async def generate_rag_response(query: str) -> Dict[str, Any]:
     Answer:
     """
         
-        # 4. Call Mistral API to generate a response
+        # 4. Try Mistral API first, fall back to Gemini if needed
         try:
-            logger.debug("Calling Mistral API directly via HTTP")
+            # Use the retry function for Mistral
+            mistral_response = None
+            gemini_response = None
+            answer = None
+            model_used = "mistral"
+            fallback_used = False
             
-            from app.config.settings import settings
+            try:
+                mistral_response = call_mistral_with_retry(prompt)
+                
+                # If Mistral succeeds, use its response
+                if mistral_response.status_code == 200:
+                    data = mistral_response.json()
+                    answer = data["choices"][0]["message"]["content"]
+                    logger.info("Using Mistral response")
+                else:
+                    # Mistral failed, try Gemini
+                    logger.warning(f"Mistral API failed with status {mistral_response.status_code}, trying Gemini...")
+                    gemini_response = call_gemini_api(prompt)
+                    
+                    if gemini_response["success"]:
+                        answer = gemini_response["content"]
+                        model_used = "gemini"
+                        fallback_used = True
+                        logger.info("Using Gemini response (fallback)")
+                    else:
+                        # Both APIs failed
+                        logger.error("Both Mistral and Gemini failed")
+                        return {
+                            "response": "I apologize, but all available AI services are currently experiencing issues. Please try again later.",
+                            "context": sources
+                        }
+            except Exception as mistral_error:
+                # Mistral exception, try Gemini
+                logger.error(f"Mistral API exception: {str(mistral_error)}, trying Gemini...")
+                gemini_response = call_gemini_api(prompt)
+                
+                if gemini_response["success"]:
+                    answer = gemini_response["content"]
+                    model_used = "gemini"
+                    fallback_used = True
+                    logger.info("Using Gemini response (fallback after exception)")
+                else:
+                    # Both APIs failed
+                    logger.error("Both Mistral and Gemini failed")
+                    return {
+                        "response": "I apologize, but all available AI services are currently experiencing issues. Please try again later.",
+                        "context": sources
+                    }
             
-            response = requests.post(
-                "https://api.mistral.ai/v1/chat/completions",
-                headers={
-                    "Content-Type": "application/json",
-                    "Authorization": f"Bearer {settings.MISTRAL_API_KEY}"
-                },
-                json={
-                    "model": "mistral-saba-2502",  # Adjust as needed
-                    "messages": [
-                        {"role": "system", "content": "You are a knowledgeable assistant specializing in Arabic and Islamic texts."},
-                        {"role": "user", "content": prompt}
-                    ],
-                    "temperature": 0.99,
-                    "max_tokens": 1000
-                },
-                timeout=30  # Add timeout to prevent hanging
-            )
-            
-            if response.status_code != 200:
-                logger.error(f"API Error: {response.status_code} - {response.text}")
-                return {
-                    "response": f"I encountered an error generating a response. Status code: {response.status_code}",
-                    "context": sources
-                }
-            
-            data = response.json()
-            answer = data["choices"][0]["message"]["content"]
-            
-            logger.debug("Successfully received response from Mistral API")
+            # Return the answer with model info
             return {
                 "response": answer,
-                "context": sources
+                "context": sources,
+                "model_used": model_used,
+                "fallback_used": fallback_used
             }
         except Exception as e:
-            logger.error(f"Error generating LLM response: {str(e)}")
+            logger.error(f"Error in LLM response generation: {str(e)}")
             return {
-                "response": f"I apologize, but I encountered an error generating a response: {str(e)}",
+                "response": "I apologize, but I'm having trouble processing your question right now. Please try again later.",
                 "context": sources
             }
     except Exception as e:
         logger.error(f"Error in RAG pipeline: {str(e)}")
         return {
-            "response": "I apologize, but I encountered an error processing your question. Please try again later.",
+            "response": "I'm experiencing technical difficulties at the moment. Please try again later.",
             "context": []
         }
 
@@ -208,18 +373,28 @@ async def generate_streaming_response(query: str) -> AsyncGenerator[str, None]:
         content = response["response"]
         sources = response.get("context", [])
         
-        # Stream the response in small chunks to simulate typing
-        chunk_size = 10  # Characters per chunk
+        # Add URLs to sources before streaming
+        for source in sources:
+            # Extract book_id from document_id
+            book_id = extract_book_id(source.get("document_id", ""))
+            source["url"] = f"https://shamela.ws/book/{book_id}" if book_id else ""
+        
+        # Stream the response in chunks
+        chunk_size = 100
         for i in range(0, len(content), chunk_size):
             chunk = content[i:i+chunk_size]
             yield f"data: {chunk}\n\n"
-            await asyncio.sleep(0.05)  # Small delay to make it more natural
+            await asyncio.sleep(0.1)
             
-        # Send sources information if available
+        # Send sources information with URLs
         if sources:
             yield "\n\ndata: Sources:\n\n"
             for i, source in enumerate(sources):
-                yield f"data: [{i+1}] {source['book_name']} - {source['section_title']}\n\n"
+                source_text = f"[{i+1}] {source['book_name']} - {source['section_title']}"
+                # Add URL if available
+                if source.get("url"):
+                    source_text += f" ({source['url']})"
+                yield f"data: {source_text}\n\n"
                 await asyncio.sleep(0.05)
         
         yield "data: [DONE]\n\n"
@@ -228,7 +403,7 @@ async def generate_streaming_response(query: str) -> AsyncGenerator[str, None]:
         yield f"data: Error: {str(e)}\n\n"
         yield "data: [DONE]\n\n"
 
-async def create_new_conversation(user_id: str, is_anonymous: bool = False) -> Dict[str, str]:
+def create_new_conversation(user_id: str, is_anonymous: bool = False) -> Dict[str, str]:
     """Create a new conversation"""
     try:
         # For anonymous users, don't store in database
@@ -246,7 +421,7 @@ async def create_new_conversation(user_id: str, is_anonymous: bool = False) -> D
             "created_at": datetime.now().isoformat()
         }
         
-        # Create the conversation
+        # Create the conversation - Appwrite SDK is synchronous, don't use await
         result = appwrite_db.create_document(
             database_id="arabia_db",
             collection_id="conversations",
@@ -266,30 +441,34 @@ async def create_new_conversation(user_id: str, is_anonymous: bool = False) -> D
     except Exception as e:
         logger.error(f"Failed to create conversation: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
-
-async def get_user_conversations(user_id: str, is_anonymous: bool = False) -> List[Dict]:
+    
+def get_user_conversations(user_id: str) -> List[Dict]:
     """Get all conversations for a user"""
     try:
-        # For anonymous users, return empty list (no stored conversations)
-        if is_anonymous:
-            return []
-            
-        # For authenticated users, query Appwrite
+        # Log the request for debugging
+        logger.info(f"Getting conversations for user: {user_id}")
+        
+        # Get all documents - Appwrite SDK is synchronous, don't use await
         result = appwrite_db.list_documents(
             database_id="arabia_db",
             collection_id="conversations",
-            queries=[f'user_id="{user_id}"']
+            queries=[Query.equal("user_id", user_id)]
         )
         
+        # Log what we got back
+        logger.info(f"Got {len(result.get('documents', []))} conversations for user: {user_id}")
+        
+        # Format conversations
         conversations = []
-        for doc in result['documents']:
+        for doc in result.get('documents', []):
             conversations.append({
                 "conversation_id": doc["$id"],
-                "title": doc.get("title", "Untitled"),
-                "created_at": doc["created_at"]
+                "title": doc.get("title", "New Conversation"),
+                "created_at": doc.get("created_at", "")
             })
         
         return conversations
     except Exception as e:
         logger.error(f"Failed to list conversations: {str(e)}")
-        raise HTTPException(status_code=500, detail=str(e))
+        # Return empty list instead of error
+        return []

@@ -23,7 +23,7 @@ from app.config.settings import settings
 from app.api.endpoints import embed, retrieval, ingestion, rag_query, auth, chat
 from app.core.clients import appwrite_db, appwrite_users
 from app.utils.helpers import setup_logging
-
+import os
 # Set up logging
 setup_logging()
 logger = logging.getLogger(__name__)
@@ -38,17 +38,20 @@ app = FastAPI(
     debug=True  # Add debug here instead of creating a new app
 )
 
-# Add middleware - FIX THIS SECTION
+# Configure CORS
+if settings.CORS_ORIGINS == "*":
+    allowed_origins = ["*"]
+else:
+    allowed_origins = [origin.strip() for origin in settings.CORS_ORIGINS.split(",")]
+
+logger.info(f"Configuring CORS with allowed origins: {allowed_origins}")
 app.add_middleware(
     CORSMiddleware,
-    # Choose ONE of these options:
-    allow_origins=["http://localhost:3000", "http://localhost:8000"],  # Option 1: specific origins
-    # allow_origins=["*"],  # Option 2: all origins (use this for development)
+    allow_origins=allowed_origins,
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["*"],
 )
-
 
 # Add middleware for request timing
 @app.middleware("http")
