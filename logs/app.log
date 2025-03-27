@@ -2865,3 +2865,15 @@ TypeError: object list can't be used in 'await' expression
 2025-03-26 23:46:58,290 - app.core.clients - INFO - Getting Pinecone index: shamela
 2025-03-26 23:46:59,184 - app.core.retrieval - INFO - Found 5 matches in vector store
 2025-03-26 23:46:59,186 - app.core.chat_service - INFO - Calling Mistral API with retry (max attempts: 3)
+2025-03-26 23:47:05,621 - app.core.chat_service - INFO - Mistral API call successful
+2025-03-26 23:47:05,621 - app.core.chat_service - INFO - Using Mistral response
+2025-03-26 23:47:07,372 - app.api.endpoints.chat - INFO - Found conversation: 67e491e3d1d481871771 for user: user_test13711
+2025-03-26 23:47:08,329 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about Imam al-Shafi'i's contributions to I...'
+2025-03-26 23:47:08,329 - app.core.clients - INFO - Initializing Pinecone client
+2025-03-26 23:47:08,339 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-03-26 23:47:08,989 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-03-26 23:47:08,991 - app.core.chat_service - INFO - Calling Mistral API with retry (max attempts: 3)
+2025-03-26 23:47:14,496 - app.core.chat_service - INFO - Mistral API call successful
+2025-03-26 23:47:14,498 - app.core.chat_service - INFO - Using Mistral response
+2025-03-26 23:48:17,729 - app.api.endpoints.chat - INFO - Found conversation: 67e491e3d1d481871771 for user: user_test13711
+2025-03-26 23:49:09,800 - app.main - INFO - Application shutdown: cleaning up resources
