@@ -19,15 +19,11 @@ from fastapi import Depends, Header, HTTPException, status, Request
 from typing import Optional, List, Dict
 import secrets
 import time
-from fastapi import Request
+import logging
 
 from app.config.settings import settings, Settings
-from app.core.clients import get_pinecone_index, appwrite_account # Import appwrite_account
-from pinecone import Pinecone
-from fastapi import Depends, HTTPException
-from fastapi.security import OAuth2PasswordBearer
-from appwrite.exception import AppwriteException
-import logging
+from app.core.clients import get_pinecone_index
+from app.api.auth_utils import get_current_user, get_user_or_anonymous
 
 logger = logging.getLogger(__name__)
 
@@ -41,67 +37,6 @@ API_KEYS = {
     }
 }
 
-import time
-from app.api.endpoints.auth import SESSIONS  # Import our session store
-
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
-
-async def get_current_user(token: str = Depends(oauth2_scheme)):
-    """Validate the access token and return the user data"""
-    if token not in SESSIONS:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid token"
-        )
-        
-    session = SESSIONS[token]
-    
-    # Check if token has expired
-    if session["expires_at"] < time.time():
-        # Remove expired session
-        SESSIONS.pop(token, None)
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Token has expired"
-        )
-    
-    # Return user information
-    return {
-        "user_id": session["user_id"],
-        "is_anonymous": session.get("is_anonymous", False)
-    }
-
-# Optional version that allows anonymous access
-class OAuth2PasswordBearerOptional(OAuth2PasswordBearer):
-    async def __call__(self, request: Request) -> Optional[str]:
-        try:
-            return await super().__call__(request)
-        except HTTPException:
-            return None
-
-oauth2_scheme_optional = OAuth2PasswordBearerOptional(tokenUrl="/auth/login")
-
-async def get_user_or_anonymous(token: str = Depends(oauth2_scheme_optional)):
-    """Get user or create anonymous session if no token provided"""
-    if not token:
-        # Create a new anonymous session
-        anon_id = f"anon_{secrets.token_hex(8)}"
-        return {
-            "user_id": anon_id,
-            "is_anonymous": True
-        }
-    
-    # Try to validate the provided token
-    try:
-        return await get_current_user(token)  # CHANGED: Added 'await' here
-    except HTTPException:
-        # Also create anonymous for invalid tokens
-        anon_id = f"anon_{secrets.token_hex(8)}"
-        return {
-            "user_id": anon_id,
-            "is_anonymous": True
-        }
-    
 def get_settings():
     """
     Dependency for accessing application settings.
@@ -223,18 +158,19 @@ class RateLimiter:
 # Create a global rate limiter instance
 rate_limiter = RateLimiter(requests_per_minute=30)
 
-# Add this to your existing dependencies file
+# This dependency now correctly uses the imported get_user_or_anonymous
 async def check_rate_limit(user: dict = Depends(get_user_or_anonymous)):
     """
     Dependency to enforce rate limits on API endpoints
     
     Args:
-        user: The authenticated user (or anonymous)
+        user: The authenticated user (or anonymous) from auth_utils
         
     Raises:
         HTTPException: If rate limit is exceeded
     """
-    user_id = user.get("user_id", "anonymous")
+    # Use user_id from the validated user data (Appwrite ID or generated anonymous ID)
+    user_id = user.get("user_id", f"fallback_anon_{secrets.token_hex(4)}") # Added fallback just in case
     
     if not rate_limiter.check_rate_limit(user_id):
         logger.warning(f"Rate limit exceeded for user: {user_id}")
