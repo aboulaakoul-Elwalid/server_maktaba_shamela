@@ -1,16 +1,15 @@
-from fastapi import APIRouter, HTTPException, Depends
+from fastapi import APIRouter, HTTPException, Depends, status
 from pydantic import BaseModel
 from app.core.clients import appwrite_users, appwrite_account
 from appwrite.exception import AppwriteException
-from fastapi.security import OAuth2PasswordBearer
-from fastapi import status
-import logging  # Add this missing import
+import logging
 import secrets
 import time
 from fastapi.responses import RedirectResponse
 from app.config import settings
-
-
+from typing import Optional
+from app.api.auth_utils import get_current_user  # Import from new location
+from fastapi.security import OAuth2PasswordBearer
 logger = logging.getLogger(__name__)  # Add this
 
 router = APIRouter(tags=["auth"])
@@ -27,6 +26,13 @@ class UserLogin(BaseModel):
 class Token(BaseModel):
     access_token: str
     token_type: str
+
+class UserResponse(BaseModel):
+    """Response model for user profile information"""
+    user_id: str
+    email: str
+    name: Optional[str] = None
+    is_anonymous: bool = False
 
 # Fix tokenUrl to match your actual endpoint
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
@@ -159,3 +165,29 @@ async def google_auth_redirect():
     except Exception as e:
         logger.error(f"Google auth error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
+
+@router.get("/me", response_model=UserResponse)
+async def get_current_user_profile(current_user: dict = Depends(get_current_user)):
+    """
+    Return the current authenticated user's profile information.
+    This endpoint is essential for the frontend authentication system.
+    
+    Returns:
+        UserResponse: The user profile information
+    """
+    try:
+        # Return the user profile information
+        return {
+            "user_id": current_user.get("user_id"),
+            "email": current_user.get("email", ""),
+            "name": current_user.get("name", ""),
+            "is_anonymous": current_user.get("is_anonymous", False)
+        }
+    except Exception as e:
+        # Log the error
+        logger.error(f"Error retrieving user profile: {str(e)}")
+        # Return a 500 error
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Error retrieving user profile"
+        )

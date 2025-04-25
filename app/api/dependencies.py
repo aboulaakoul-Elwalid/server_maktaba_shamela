@@ -15,7 +15,7 @@ Benefits of FastAPI's dependency injection:
 - Handles errors consistently
 """
 
-from fastapi import Depends, Header, HTTPException, status
+from fastapi import Depends, Header, HTTPException, status, Request
 from typing import Optional, List, Dict
 import secrets
 import time
