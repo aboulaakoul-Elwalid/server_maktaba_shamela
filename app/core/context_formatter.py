@@ -2,90 +2,102 @@
 import logging
 from typing import List, Dict, Tuple, Optional
 # Assuming DocumentMatch and DocumentMetadata are defined in schemas
-from app.models.schemas import DocumentMatch
-from app.config.settings import settings # Ensure this import exists
+from app.models.schemas import DocumentMatch, Message
+from app.config.settings import settings
 
 logger = logging.getLogger(__name__)
 
+# --- Configuration ---
+CONTEXT_SNIPPET_MAX_LENGTH = 300 # Max characters per document snippet in context
+HISTORY_MAX_MESSAGES = 6 # Max number of recent messages to include
+
+# --- New History Formatter ---
+def format_history(messages: List[Message]) -> str:
+    """Formats recent conversation messages into a string for the LLM prompt."""
+    if not messages:
+        return "No previous conversation history."
+
+    history_lines = []
+    # Take the most recent messages up to the limit
+    recent_messages = messages[-HISTORY_MAX_MESSAGES:]
+    for msg in recent_messages:
+        role = "User" if msg.message_type == "user" else "Assistant"
+        history_lines.append(f"{role}: {msg.content}")
+
+    return "\n".join(history_lines)
+
+# --- Updated Context Formatter ---
 def format_context_and_extract_sources(
     documents: List[DocumentMatch]
 ) -> Tuple[str, List[Dict[str, any]]]:
     """
     Formats retrieved documents into context text for LLM and extracts source info.
-
-    Args:
-        documents: A list of DocumentMatch objects from the vector store query.
-
-    Returns:
-        A tuple containing:
-        - context_text (str): Formatted string with document content and source info.
-        - sources (List[Dict]): A list of dictionaries, each representing a source document.
+    Limits text snippet length and generates source URLs.
     """
-    context_text = ""
+    context_parts = []
     sources = []
 
     if not documents:
         logger.warning("No documents provided for context formatting.")
-        return "", []
+        return "No relevant context found.", []
 
     logger.debug(f"Formatting context from {len(documents)} documents.")
     try:
         for i, doc in enumerate(documents):
-            # --- Metadata Access Fix ---
-            # Access attributes directly from the Pydantic model `doc.metadata`
-            # Use getattr for safe access with defaults if fields might be missing
-            # (though Pydantic validation should ensure they exist if not Optional)
-            metadata = doc.metadata # This is a DocumentMetadata object
+            metadata = doc.metadata
+            doc_id = doc.id # This is the section_id like "6315_0_6_0_116"
 
-            # Safely get attributes, providing defaults
-            book_name = getattr(metadata, 'book_name', "Unknown book")
-            section_title = getattr(metadata, 'section_title', "Unknown section")
-            # Use doc.id as fallback if document_id isn't explicitly in metadata
-            doc_id = getattr(metadata, 'document_id', doc.id)
-            # Get the actual text content
-            doc_text = getattr(metadata, 'text', "No text available")
+            # Extract book_id (assuming format "bookid_...")
+            book_id = doc_id.split('_')[0] if '_' in doc_id else None
+            source_url = f"https://shamela.ws/book/{book_id}" if book_id else None
 
-            # --- Build Context String ---
-            context_text += f"\n--- Document {i+1} (ID: {doc_id}) ---\n"
-            context_text += f"Source: {book_name} - {section_title}\n"
-            context_text += f"Content:\n{doc_text}\n"
-            # context_text += f"Relevance Score: {doc.score:.4f}\n" # Optional: include score
+            # Limit the text snippet length
+            text_snippet = metadata.text[:CONTEXT_SNIPPET_MAX_LENGTH]
+            if len(metadata.text) > CONTEXT_SNIPPET_MAX_LENGTH:
+                text_snippet += "..."
 
-            # --- Extract Source Information ---
+            # Format for the prompt context
+            context_parts.append(
+                f"Source Document [ID: {doc_id}]\n"
+                f"Book: {metadata.book_name}\n"
+                f"Section: {metadata.section_title}\n"
+                f"Content: {text_snippet}\n---\n"
+            )
+
+            # Store structured source info
             sources.append({
-                "book_name": book_name,
-                "section_title": section_title,
-                "text_snippet": doc_text[:150] + "..." if len(doc_text) > 150 else doc_text, # Create snippet
-                "relevance": doc.score,
-                "document_id": doc_id # Use the potentially overridden doc_id
+                "document_id": doc_id,
+                "book_id": book_id,
+                "book_name": metadata.book_name,
+                "section_title": metadata.section_title,
+                "score": doc.score,
+                "url": source_url
+                # Add 'text': text_snippet here if needed in the final API response sources
             })
 
+        context_text = "\n".join(context_parts)
         logger.debug("Successfully formatted context and extracted sources.")
-        return context_text.strip(), sources
+        return context_text, sources
 
     except AttributeError as e:
         logger.exception(f"AttributeError during context formatting: {e}. Check DocumentMetadata schema and retrieval results.")
-        # Depending on desired behavior, could return partial results or raise error
         error_context = "Error: Could not format context due to missing metadata attribute."
         return error_context, [] # Return empty sources on error
     except Exception as e:
         logger.exception(f"Unexpected error formatting context: {str(e)}")
-        # Return error message in context and empty sources
         error_context = f"Error: An unexpected error occurred while formatting context: {e}"
         return error_context, []
 
-def construct_llm_prompt(context_text: str, query: str) -> str:
+# --- Updated Prompt Constructor ---
+def construct_llm_prompt(history_text: str, context_text: str, query: str) -> str:
     """
-    Constructs the final prompt string to be sent to the LLM.
-
-    Args:
-        context_text: The formatted context string from retrieved documents.
-        query: The user's original query.
-
-    Returns:
-        The complete prompt string.
+    Constructs the final prompt string including history, context, and query.
     """
-    # Use the template from settings
-    prompt = settings.PROMPT_TEMPLATE.format(context_text=context_text, query=query)
-    logger.debug(f"Constructed LLM Prompt (start): {prompt[:200]}...")
+    # Use the template from settings, now including history
+    prompt = settings.PROMPT_TEMPLATE.format(
+        history=history_text,
+        context_text=context_text,
+        query=query
+    )
+    logger.debug(f"Constructed LLM Prompt (start): {prompt[:300]}...") # Log more chars
     return prompt

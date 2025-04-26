@@ -4,9 +4,10 @@ import requests
 import json
 import random
 import time
+import asyncio # <<< Add asyncio import
+from typing import Dict, List, Any, Optional, Tuple, Union, AsyncGenerator # <<< Add AsyncGenerator
+
 from app.config.settings import settings
-# filepath: <path_to_your_python_file.py>
-from typing import Dict, List, Any, Optional, Tuple, Union # Add others as needed
 # ... other imports ...
 logger = logging.getLogger(__name__)
 
@@ -215,3 +216,33 @@ def call_gemini_api(prompt: str) -> Dict[str, any]:
         # Catch any other exceptions during API call or processing
         logger.exception(f"Gemini API error occurred: {str(e)}")
         return {"success": False, "error": f"Gemini API call failed: {str(e)}"}
+
+# --- Placeholder Streaming Functions ---
+
+async def call_mistral_streaming(prompt: str) -> AsyncGenerator[str, None]:
+    """
+    Placeholder for Mistral streaming API call.
+    Replace with actual implementation using Mistral's streaming capabilities.
+    """
+    logger.warning("Using placeholder implementation for call_mistral_streaming")
+    # Simulate network delay
+    await asyncio.sleep(0.1)
+    # Simulate receiving chunks
+    yield "Placeholder: Streaming Mistral response chunk 1. "
+    await asyncio.sleep(0.1)
+    yield "Placeholder: Streaming Mistral response chunk 2."
+    # Simulate potential error for testing fallback
+    # raise ConnectionError("Simulated Mistral stream error")
+
+async def call_gemini_streaming(prompt: str) -> AsyncGenerator[str, None]:
+    """
+    Placeholder for Gemini streaming API call.
+    Replace with actual implementation using Gemini's streaming capabilities.
+    """
+    logger.warning("Using placeholder implementation for call_gemini_streaming")
+    # Simulate network delay
+    await asyncio.sleep(0.1)
+    # Simulate receiving chunks
+    yield "Placeholder: Streaming Gemini fallback chunk 1. "
+    await asyncio.sleep(0.1)
+    yield "Placeholder: Streaming Gemini fallback chunk 2."

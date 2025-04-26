@@ -4091,3 +4091,185 @@ message_id
 2025-04-26 21:22:05,084 - app.core.chat_service - INFO - Stored AI message (ID: 680d406bd14a87c6f946) for conversation 6fd9634f16c945258cbb39989b269ec9
 2025-04-26 21:22:05,256 - app.core.storage - INFO - Timestamp updated for conversation 6fd9634f16c945258cbb39989b269ec9
 2025-04-26 21:22:05,859 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 21:33:58,456 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 21:33:58,864 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 21:33:59,751 - app.api.endpoints.auth - INFO - User registered successfully: ntx7xouib7@fixture.pytest.dev, ID: 680d43376d31e48c47c6
+2025-04-26 21:34:00,098 - app.api.endpoints.auth - INFO - Password verified for user: ntx7xouib7@fixture.pytest.dev, User ID: 680d43376d31e48c47c6
+2025-04-26 21:34:05,361 - app.api.endpoints.auth - INFO - JWT created successfully for user: ntx7xouib7@fixture.pytest.dev
+2025-04-26 21:34:05,591 - app.core.storage - INFO - Attempting to create conversation 3049495578ea4544abb8484f45909395 for user 680d43376d31e48c47c6
+2025-04-26 21:34:05,793 - app.core.storage - INFO - Successfully created conversation 3049495578ea4544abb8484f45909395
+2025-04-26 21:34:07,658 - app.core.storage - INFO - Stored message 680d433f94d8f2444a28 for user 680d43376d31e48c47c6
+2025-04-26 21:34:07,658 - app.core.chat_service - INFO - Stored user message (ID: 680d433f94d8f2444a28) for conversation 3049495578ea4544abb8484f45909395
+2025-04-26 21:34:10,412 - app.core.storage - INFO - Timestamp updated for conversation 3049495578ea4544abb8484f45909395
+2025-04-26 21:34:10,728 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about the pillars of Islam....'
+2025-04-26 21:34:10,728 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 21:34:10,735 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 21:34:12,193 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 21:34:12,392 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 21:34:12,394 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 3049495578ea4544abb8484f45909395
+2025-04-26 21:34:12,395 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 3049495578ea4544abb8484f45909395...
+2025-04-26 21:34:12,396 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 21:34:13,136 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 21:34:13,137 - app.core.chat_service - INFO - Successfully used Mistral response for conversation 3049495578ea4544abb8484f45909395.
+2025-04-26 21:34:13,137 - app.core.chat_service - INFO - LLM call finished for 3049495578ea4544abb8484f45909395. Model: mistral, Fallback: False. Answer length: 63
+2025-04-26 21:34:13,319 - app.core.storage - INFO - Stored message 680d434541f8f0b9cd51 for user ai
+2025-04-26 21:34:14,407 - app.core.storage - INFO - Stored 5 sources for message 680d434541f8f0b9cd51
+2025-04-26 21:34:14,408 - app.core.chat_service - INFO - Stored AI message (ID: 680d434541f8f0b9cd51) for conversation 3049495578ea4544abb8484f45909395
+2025-04-26 21:34:14,556 - app.core.storage - INFO - Timestamp updated for conversation 3049495578ea4544abb8484f45909395
+2025-04-26 21:34:16,359 - app.core.storage - INFO - Stored message 680d43482c56c405584d for user 680d43376d31e48c47c6
+2025-04-26 21:34:16,360 - app.core.chat_service - INFO - Stored user message (ID: 680d43482c56c405584d) for conversation 3049495578ea4544abb8484f45909395
+2025-04-26 21:34:16,535 - app.core.storage - INFO - Timestamp updated for conversation 3049495578ea4544abb8484f45909395
+2025-04-26 21:34:16,782 - app.core.retrieval - INFO - Generated embedding for query: 'What is Zakat?...'
+2025-04-26 21:34:16,783 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 21:34:16,787 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 21:34:17,508 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 21:34:17,509 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 3049495578ea4544abb8484f45909395
+2025-04-26 21:34:17,511 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 3049495578ea4544abb8484f45909395...
+2025-04-26 21:34:17,511 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 21:34:18,307 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 21:34:18,308 - app.core.chat_service - INFO - Successfully used Mistral response for conversation 3049495578ea4544abb8484f45909395.
+2025-04-26 21:34:18,308 - app.core.chat_service - INFO - LLM call finished for 3049495578ea4544abb8484f45909395. Model: mistral, Fallback: False. Answer length: 188
+2025-04-26 21:34:18,509 - app.core.storage - INFO - Stored message 680d434a729e0395d769 for user ai
+2025-04-26 21:34:20,414 - app.core.storage - INFO - Stored 5 sources for message 680d434a729e0395d769
+2025-04-26 21:34:20,414 - app.core.chat_service - INFO - Stored AI message (ID: 680d434a729e0395d769) for conversation 3049495578ea4544abb8484f45909395
+2025-04-26 21:34:20,645 - app.core.storage - INFO - Timestamp updated for conversation 3049495578ea4544abb8484f45909395
+2025-04-26 21:34:21,556 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 21:34:26,286 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 21:34:26,318 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 22:57:52,196 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 22:58:07,697 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 22:58:07,731 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 23:01:37,661 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:15:21,402 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:15:21,443 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 23:16:44,216 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:17:01,866 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:17:02,824 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 23:17:03,327 - app.api.endpoints.auth - INFO - User registered successfully: c4uadvsim2@fixture.pytest.dev, ID: 680d5b5ec3ee650c7eac
+2025-04-26 23:17:03,747 - app.api.endpoints.auth - INFO - Password verified for user: c4uadvsim2@fixture.pytest.dev, User ID: 680d5b5ec3ee650c7eac
+2025-04-26 23:17:03,924 - app.api.endpoints.auth - INFO - JWT created successfully for user: c4uadvsim2@fixture.pytest.dev
+2025-04-26 23:17:04,172 - app.core.storage - INFO - Attempting to create conversation 290ca01365664a7281c5e181e0cb8794 for user 680d5b5ec3ee650c7eac
+2025-04-26 23:17:04,503 - app.core.storage - INFO - Successfully created conversation 290ca01365664a7281c5e181e0cb8794
+2025-04-26 23:17:05,228 - app.core.storage - INFO - Stored message 680d5b60a75a14cc8906 for user 680d5b5ec3ee650c7eac
+2025-04-26 23:17:05,229 - app.core.chat_service - INFO - Stored user message (ID: 680d5b60a75a14cc8906) for conversation 290ca01365664a7281c5e181e0cb8794
+2025-04-26 23:17:04,938 - app.core.storage - INFO - Timestamp updated for conversation 290ca01365664a7281c5e181e0cb8794
+2025-04-26 23:17:05,111 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:17:05,152 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 23:17:05,331 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about the pillars of Islam....'
+2025-04-26 23:17:05,332 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 23:17:05,338 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 23:17:06,784 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 23:17:06,787 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 290ca01365664a7281c5e181e0cb8794
+2025-04-26 23:17:06,787 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 290ca01365664a7281c5e181e0cb8794...
+2025-04-26 23:17:06,788 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 23:17:07,321 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 23:17:07,322 - app.core.chat_service - INFO - Mistral response successful for conversation 290ca01365664a7281c5e181e0cb8794
+2025-04-26 23:17:07,523 - app.core.storage - INFO - Stored message 680d5b633a1d71aa0970 for user ai
+2025-04-26 23:17:08,597 - app.core.storage - INFO - Stored 5 sources for message 680d5b633a1d71aa0970
+2025-04-26 23:17:08,602 - app.core.chat_service - INFO - Stored AI message (ID: 680d5b633a1d71aa0970) for conversation 290ca01365664a7281c5e181e0cb8794
+2025-04-26 23:17:08,790 - app.core.storage - INFO - Timestamp updated for conversation 290ca01365664a7281c5e181e0cb8794
+2025-04-26 23:17:10,326 - app.core.storage - INFO - Stored message 680d5b65c181d2d8e883 for user 680d5b5ec3ee650c7eac
+2025-04-26 23:17:10,327 - app.core.chat_service - INFO - Stored user message (ID: 680d5b65c181d2d8e883) for conversation 290ca01365664a7281c5e181e0cb8794
+2025-04-26 23:17:10,015 - app.core.storage - INFO - Timestamp updated for conversation 290ca01365664a7281c5e181e0cb8794
+2025-04-26 23:17:10,258 - app.core.retrieval - INFO - Generated embedding for query: 'What is Zakat?...'
+2025-04-26 23:17:10,260 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 23:17:10,276 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 23:17:11,001 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 23:17:11,004 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 290ca01365664a7281c5e181e0cb8794
+2025-04-26 23:17:11,006 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 290ca01365664a7281c5e181e0cb8794...
+2025-04-26 23:17:11,006 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 23:17:11,558 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 23:17:11,558 - app.core.chat_service - INFO - Mistral response successful for conversation 290ca01365664a7281c5e181e0cb8794
+2025-04-26 23:17:11,775 - app.core.storage - INFO - Stored message 680d5b6787ae988e51ce for user ai
+2025-04-26 23:17:12,768 - app.core.storage - INFO - Stored 5 sources for message 680d5b6787ae988e51ce
+2025-04-26 23:17:12,769 - app.core.chat_service - INFO - Stored AI message (ID: 680d5b6787ae988e51ce) for conversation 290ca01365664a7281c5e181e0cb8794
+2025-04-26 23:17:12,957 - app.core.storage - INFO - Timestamp updated for conversation 290ca01365664a7281c5e181e0cb8794
+2025-04-26 23:17:13,633 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:19:40,120 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:19:40,644 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 23:19:40,667 - app.api.endpoints.auth - INFO - User registered successfully: te588jgnid@fixture.pytest.dev, ID: 680d5bfc69bde57ca3f5
+2025-04-26 23:19:41,085 - app.api.endpoints.auth - INFO - Password verified for user: te588jgnid@fixture.pytest.dev, User ID: 680d5bfc69bde57ca3f5
+2025-04-26 23:19:41,270 - app.api.endpoints.auth - INFO - JWT created successfully for user: te588jgnid@fixture.pytest.dev
+2025-04-26 23:19:41,560 - app.core.storage - INFO - Attempting to create conversation 105ad6a0e86043e0b0abfb3df2749de5 for user 680d5bfc69bde57ca3f5
+2025-04-26 23:19:41,770 - app.core.storage - INFO - Successfully created conversation 105ad6a0e86043e0b0abfb3df2749de5
+2025-04-26 23:19:42,363 - app.core.storage - INFO - Stored message 680d5bfe1e92d17275de for user 680d5bfc69bde57ca3f5
+2025-04-26 23:19:42,364 - app.core.chat_service - INFO - Stored user message (ID: 680d5bfe1e92d17275de) for conversation 105ad6a0e86043e0b0abfb3df2749de5
+2025-04-26 23:19:42,598 - app.core.storage - INFO - Timestamp updated for conversation 105ad6a0e86043e0b0abfb3df2749de5
+2025-04-26 23:19:43,023 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about the pillars of Islam....'
+2025-04-26 23:19:43,024 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 23:19:43,029 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 23:19:45,037 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 23:19:45,039 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 105ad6a0e86043e0b0abfb3df2749de5
+2025-04-26 23:19:45,040 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 105ad6a0e86043e0b0abfb3df2749de5...
+2025-04-26 23:19:45,040 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 23:21:01,804 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 23:21:01,805 - app.core.chat_service - INFO - Mistral response successful for conversation 105ad6a0e86043e0b0abfb3df2749de5
+2025-04-26 23:19:45,433 - app.core.storage - INFO - Stored message 680d5c0159742b1e9d39 for user ai
+2025-04-26 23:19:46,467 - app.core.storage - INFO - Stored 5 sources for message 680d5c0159742b1e9d39
+2025-04-26 23:19:46,467 - app.core.chat_service - INFO - Stored AI message (ID: 680d5c0159742b1e9d39) for conversation 105ad6a0e86043e0b0abfb3df2749de5
+2025-04-26 23:19:46,683 - app.core.storage - INFO - Timestamp updated for conversation 105ad6a0e86043e0b0abfb3df2749de5
+2025-04-26 23:19:48,253 - app.core.storage - INFO - Stored message 680d5c03e2fdf5d4d7ff for user 680d5bfc69bde57ca3f5
+2025-04-26 23:19:48,253 - app.core.chat_service - INFO - Stored user message (ID: 680d5c03e2fdf5d4d7ff) for conversation 105ad6a0e86043e0b0abfb3df2749de5
+2025-04-26 23:19:48,444 - app.core.storage - INFO - Timestamp updated for conversation 105ad6a0e86043e0b0abfb3df2749de5
+2025-04-26 23:19:48,699 - app.core.retrieval - INFO - Generated embedding for query: 'What was my last message?...'
+2025-04-26 23:19:48,700 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 23:19:48,706 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 23:19:49,430 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 23:19:49,432 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 105ad6a0e86043e0b0abfb3df2749de5
+2025-04-26 23:19:49,433 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 105ad6a0e86043e0b0abfb3df2749de5...
+2025-04-26 23:19:49,434 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 23:19:49,643 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-26 23:19:49,643 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.98 seconds (calculated)...
+2025-04-26 23:19:51,608 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 23:19:51,609 - app.core.chat_service - INFO - Mistral response successful for conversation 105ad6a0e86043e0b0abfb3df2749de5
+2025-04-26 23:19:51,798 - app.core.storage - INFO - Stored message 680d5c0795080e48a9f2 for user ai
+2025-04-26 23:19:52,899 - app.core.storage - INFO - Stored 5 sources for message 680d5c0795080e48a9f2
+2025-04-26 23:19:52,900 - app.core.chat_service - INFO - Stored AI message (ID: 680d5c0795080e48a9f2) for conversation 105ad6a0e86043e0b0abfb3df2749de5
+2025-04-26 23:19:53,108 - app.core.storage - INFO - Timestamp updated for conversation 105ad6a0e86043e0b0abfb3df2749de5
+2025-04-26 23:19:56,219 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:20:03,551 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:20:10,721 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:20:10,753 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 23:22:32,328 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:22:32,789 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 23:22:33,209 - app.api.endpoints.auth - INFO - User registered successfully: 533fft9tob@fixture.pytest.dev, ID: 680d5ca8bc65ffbd229e
+2025-04-26 23:22:33,578 - app.api.endpoints.auth - INFO - Password verified for user: 533fft9tob@fixture.pytest.dev, User ID: 680d5ca8bc65ffbd229e
+2025-04-26 23:22:33,777 - app.api.endpoints.auth - INFO - JWT created successfully for user: 533fft9tob@fixture.pytest.dev
+2025-04-26 23:22:33,987 - app.core.storage - INFO - Attempting to create conversation 66e80f4bc30f45eea5197e4e767354ef for user 680d5ca8bc65ffbd229e
+2025-04-26 23:22:34,186 - app.core.storage - INFO - Successfully created conversation 66e80f4bc30f45eea5197e4e767354ef
+2025-04-26 23:22:34,779 - app.core.storage - INFO - Stored message 680d5caa54b54c65b9fb for user 680d5ca8bc65ffbd229e
+2025-04-26 23:22:34,780 - app.core.chat_service - INFO - Stored user message (ID: 680d5caa54b54c65b9fb) for conversation 66e80f4bc30f45eea5197e4e767354ef
+2025-04-26 23:22:35,002 - app.core.storage - INFO - Timestamp updated for conversation 66e80f4bc30f45eea5197e4e767354ef
+2025-04-26 23:22:35,603 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about the pillars of Islam....'
+2025-04-26 23:22:35,604 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 23:22:35,609 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 23:22:36,507 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 23:22:36,510 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 66e80f4bc30f45eea5197e4e767354ef
+2025-04-26 23:22:36,511 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 66e80f4bc30f45eea5197e4e767354ef...
+2025-04-26 23:22:36,511 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 23:22:40,661 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 23:22:40,663 - app.core.chat_service - INFO - Mistral response successful for conversation 66e80f4bc30f45eea5197e4e767354ef
+2025-04-26 23:22:40,891 - app.core.storage - INFO - Stored message 680d5cb0c41d9954da27 for user ai
+2025-04-26 23:22:42,136 - app.core.storage - INFO - Stored 5 sources for message 680d5cb0c41d9954da27
+2025-04-26 23:22:42,137 - app.core.chat_service - INFO - Stored AI message (ID: 680d5cb0c41d9954da27) for conversation 66e80f4bc30f45eea5197e4e767354ef
+2025-04-26 23:22:42,358 - app.core.storage - INFO - Timestamp updated for conversation 66e80f4bc30f45eea5197e4e767354ef
+2025-04-26 23:22:43,984 - app.core.storage - INFO - Stored message 680d5cb39a96356943fb for user 680d5ca8bc65ffbd229e
+2025-04-26 23:22:43,985 - app.core.chat_service - INFO - Stored user message (ID: 680d5cb39a96356943fb) for conversation 66e80f4bc30f45eea5197e4e767354ef
+2025-04-26 23:22:44,203 - app.core.storage - INFO - Timestamp updated for conversation 66e80f4bc30f45eea5197e4e767354ef
+2025-04-26 23:22:44,444 - app.core.retrieval - INFO - Generated embedding for query: 'What was my last message?...'
+2025-04-26 23:22:44,444 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 23:22:44,450 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 23:22:45,200 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 23:22:45,202 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 66e80f4bc30f45eea5197e4e767354ef
+2025-04-26 23:22:45,203 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 66e80f4bc30f45eea5197e4e767354ef...
+2025-04-26 23:22:45,204 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 23:22:45,757 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 23:22:45,757 - app.core.chat_service - INFO - Mistral response successful for conversation 66e80f4bc30f45eea5197e4e767354ef
+2025-04-26 23:22:45,989 - app.core.storage - INFO - Stored message 680d5cb56ccbddc383c8 for user ai
+2025-04-26 23:22:46,541 - app.core.storage - INFO - Stored 5 sources for message 680d5cb56ccbddc383c8
+2025-04-26 23:22:46,542 - app.core.chat_service - INFO - Stored AI message (ID: 680d5cb56ccbddc383c8) for conversation 66e80f4bc30f45eea5197e4e767354ef
+2025-04-26 23:22:46,724 - app.core.storage - INFO - Timestamp updated for conversation 66e80f4bc30f45eea5197e4e767354ef
+2025-04-26 23:22:56,387 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:23:00,780 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:23:15,863 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:23:15,890 - app.main - INFO - Application startup: initializing services and connections

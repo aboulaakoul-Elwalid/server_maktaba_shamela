@@ -37,10 +37,10 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: Optional[str] = None
     API_KEY_GOOGLE: Optional[str] = None
 
-        # Arabic-specific settings
+    # Arabic-specific settings
     NORMALIZE_ARABIC: bool = True
 
-     # LLM Configuration # Added section
+    # LLM Configuration # Added section
     LLM_TIMEOUT: int = 45
     MISTRAL_MODEL: str = "mistral-saba-2502" # Changed from mistral-saba-2502 based on previous code
     MISTRAL_TEMPERATURE: float = 0.7
@@ -55,7 +55,6 @@ class Settings(BaseSettings):
     # Appwrite specific (Defaults can be set here)
     APPWRITE_DATABASE_ID: str = "arabia_db"  # Or load from env if needed
 
-
     # Rate Limiting Settings (Defaults here, BaseSettings loads from env)
     RATE_LIMIT_WINDOW_SECONDS: int = 60
     RATE_LIMIT_REQUESTS: int = 20
@@ -68,13 +67,23 @@ class Settings(BaseSettings):
     LOG_LEVEL: str = "INFO"
     LOG_FORMAT: str = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 
-     # Streaming Configuration # Added section
+    # Streaming Configuration # Added section
     STREAM_CHUNK_SIZE: int = 50
     STREAM_CHUNK_DELAY: float = 0.02
 
     # Prompt Configuration # Added section
     # Using a simple placeholder, replace with your actual multi-line prompt
-    PROMPT_TEMPLATE: str = """You are a helpful assistant specializing in Arabic and Islamic texts. Use the following context derived from reliable sources to answer the user's question accurately and concisely. If the context does not contain the answer, state that the information is not available in the provided sources. Do not make up information. Cite the relevant Document ID (e.g., [ID: 1234_5_6]) when using information from the context."""
+    PROMPT_TEMPLATE: str = """You are an expert assistant specializing in Arabic and Islamic texts. Use ONLY the conversation history and the retrieved context below to answer the user's question.
+
+[CONVERSATION HISTORY]
+{history}
+
+[RETRIEVED CONTEXT]
+{context_text}
+
+QUESTION: {query}
+
+Answer concisely based *only* on the provided history and context. Cite relevant sources using their Document ID (e.g., [ID: 1234_5_6]) when using information from the context. If the answer is not found in the context or history, state that clearly. Do not make up information."""
 
     # Arabic-specific settings
     NORMALIZE_ARABIC: bool = True

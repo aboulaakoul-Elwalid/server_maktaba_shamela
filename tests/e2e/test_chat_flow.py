@@ -69,7 +69,7 @@ class TestChatFlow:
         time.sleep(1) # Small delay sometimes helps avoid race conditions or rate limits
 
         message_payload_with_id = {
-            "content": "What is Zakat?",
+            "content": "What was my last message?",
             "conversation_id": TestChatFlow.conversation_id
         }
         response = client.post(
