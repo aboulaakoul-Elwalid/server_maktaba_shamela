@@ -62,14 +62,14 @@ async def generate_rag_response(
         conversation_messages: List[Message] = []
         if not is_anonymous and conversation_id:
             try:
-                logger.debug(f"Fetching history for conversation {conversation_id} (limit: {HISTORY_FETCH_LIMIT})")
+                logger.debug(f"Fetching ALL history for conversation {conversation_id}")  # Log change
                 history_result = db.list_documents(
                     database_id=settings.APPWRITE_DATABASE_ID,
                     collection_id=settings.APPWRITE_MESSAGES_COLLECTION_ID,
                     queries=[
                         Query.equal("conversation_id", conversation_id),
                         Query.order_desc("timestamp"),  # Fetch newest first
-                        Query.limit(HISTORY_FETCH_LIMIT)
+                        # Query.limit(HISTORY_FETCH_LIMIT)  # REMOVED LIMIT
                     ]
                 )
                 # Map Appwrite docs to Pydantic models (reverse order for correct chronology)

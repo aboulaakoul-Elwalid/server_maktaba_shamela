@@ -72,8 +72,7 @@ class Settings(BaseSettings):
     STREAM_CHUNK_DELAY: float = 0.02
 
     # Prompt Configuration # Added section
-    # Using a simple placeholder, replace with your actual multi-line prompt
-    PROMPT_TEMPLATE: str = """You are an expert assistant specializing in Arabic and Islamic texts. Use ONLY the conversation history and the retrieved context below to answer the user's question.
+    PROMPT_TEMPLATE: str = """You are an expert assistant specializing in Arabic and Islamic texts. The conversation history is provided below. Use ONLY the conversation history and the retrieved context to answer the user's question.
 
 [CONVERSATION HISTORY]
 {history}

@@ -56,14 +56,14 @@ async def generate_streaming_response(
         conversation_messages: List[Message] = []
         if not is_anonymous and conversation_id:
             try:
-                logger.debug(f"Streaming: Fetching history for conversation {conversation_id} (limit: {HISTORY_FETCH_LIMIT})")
+                logger.debug(f"Streaming: Fetching ALL history for conversation {conversation_id}")  # <<< Log change
                 history_result = db.list_documents(
                     database_id=settings.APPWRITE_DATABASE_ID,
                     collection_id=settings.APPWRITE_MESSAGES_COLLECTION_ID,
                     queries=[
                         Query.equal("conversation_id", conversation_id),
                         Query.order_desc("timestamp"),
-                        Query.limit(HISTORY_FETCH_LIMIT)
+                        # Query.limit(HISTORY_FETCH_LIMIT)  # <<< REMOVED LIMIT
                     ]
                 )
                 raw_docs = history_result.get('documents', [])[::-1]
