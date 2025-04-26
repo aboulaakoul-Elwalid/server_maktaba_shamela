@@ -2877,3 +2877,1217 @@ TypeError: object list can't be used in 'await' expression
 2025-03-26 23:47:14,498 - app.core.chat_service - INFO - Using Mistral response
 2025-03-26 23:48:17,729 - app.api.endpoints.chat - INFO - Found conversation: 67e491e3d1d481871771 for user: user_test13711
 2025-03-26 23:49:09,800 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-25 20:11:44,273 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-25 20:11:44,320 - app.main - INFO - Application startup: initializing services and connections
+2025-04-25 20:13:46,216 - app.api.endpoints.auth - ERROR - Appwrite login error for test26768@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-04-25 20:13:47,688 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:13:47,865 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:13:59,838 - app.api.endpoints.auth - ERROR - Appwrite login error for test13741@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-04-25 20:15:17,878 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:14:00,846 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:14:01,635 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:14:01,848 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:14:02,113 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:14:02,252 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:14:02,519 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:14:02,677 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:14:02,932 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:14:03,071 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:14:03,344 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:14:03,501 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:17:31,352 - app.api.endpoints.auth - ERROR - Appwrite login error for test16779@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-04-25 20:17:32,299 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:17:32,461 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:17:33,157 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:17:33,315 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:17:33,569 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:17:33,725 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:17:33,979 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:17:34,127 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:17:34,387 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:17:34,571 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:17:34,827 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:17:34,976 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:22:32,080 - app.api.endpoints.auth - ERROR - Appwrite login error for test26626@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-04-25 20:22:33,042 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:22:33,189 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 20:23:05,221 - app.api.endpoints.auth - ERROR - Appwrite login error for test27484@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-04-25 20:23:06,617 - app.core.clients - INFO - Initializing Appwrite client
+2025-04-25 20:23:06,763 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-25 21:08:47,638 - app.api.endpoints.auth - ERROR - Appwrite login error for test15937@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-04-25 21:11:45,413 - app.api.endpoints.auth - ERROR - Appwrite login error for test32365@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-04-25 21:13:49,124 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-25 21:15:20,929 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-25 21:15:20,993 - app.main - INFO - Application startup: initializing services and connections
+2025-04-25 21:16:54,710 - app.api.endpoints.auth - ERROR - Appwrite login error for test5793@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-04-25 21:16:44,373 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-25 21:16:58,568 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-25 21:16:58,612 - app.main - INFO - Application startup: initializing services and connections
+2025-04-25 21:24:33,909 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-25 21:30:45,777 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-25 21:30:45,817 - app.main - INFO - Application startup: initializing services and connections
+2025-04-25 21:31:44,131 - app.api.endpoints.auth - ERROR - Appwrite login error for test14359@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-04-25 21:32:01,558 - app.api.endpoints.auth - ERROR - Appwrite login error for test29938@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-04-25 21:40:15,699 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-25 21:44:03,196 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-25 21:44:03,236 - app.main - INFO - Application startup: initializing services and connections
+2025-04-25 21:44:09,180 - app.api.endpoints.auth - ERROR - Appwrite login error for test31835@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account)
+2025-04-25 23:27:52,901 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 00:27:46,179 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 00:27:46,223 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 00:30:04,117 - app.api.endpoints.auth - INFO - Successfully registered user: test1825@example.com (ID: 680c1afbe031baa78ccc)
+2025-04-26 00:30:04,896 - app.api.endpoints.auth - ERROR - Appwrite login error for test1825@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account) (Code: 401, Type: general_unauthorized_scope)
+2025-04-26 00:37:45,629 - app.api.endpoints.auth - INFO - Successfully registered user: test13049@example.com (ID: 680c1cc94a105d7fe0fc)
+2025-04-26 00:37:46,502 - app.api.endpoints.auth - ERROR - Appwrite login error for test13049@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account) (Code: 401, Type: general_unauthorized_scope)
+2025-04-26 01:32:46,179 - app.api.endpoints.auth - INFO - Successfully registered user: test11793@example.com (ID: 680c29adb91a88ff4bb9)
+2025-04-26 01:32:47,038 - app.api.endpoints.auth - ERROR - Appwrite login error for test11793@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account) (Code: 401, Type: general_unauthorized_scope)
+2025-04-26 02:21:17,271 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 02:21:34,331 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 02:21:34,376 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 02:26:47,042 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 02:27:01,300 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 02:27:01,341 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 02:28:26,276 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 02:28:41,929 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 02:28:41,971 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 02:38:53,681 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 02:39:10,269 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 02:39:10,315 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 02:54:43,150 - app.api.endpoints.auth - INFO - Successfully registered user: test_end_to_end_1@example.com (ID: 680c3ce28c15a24e3ad1)
+2025-04-26 02:55:08,623 - app.api.endpoints.auth - ERROR - Appwrite login error for test_end_to_end_1@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account) (Code: 401, Type: general_unauthorized_scope)
+2025-04-26 02:55:46,666 - app.api.endpoints.auth - ERROR - Appwrite registration error for test_end_to_end_1@example.com: A user with the same id, email, or phone already exists in this project. (Code: 409, Type: user_already_exists)
+2025-04-26 02:56:03,897 - app.api.endpoints.auth - ERROR - Appwrite login error for test_end_to_end_1@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account) (Code: 401, Type: general_unauthorized_scope)
+2025-04-26 03:08:47,415 - app.api.endpoints.auth - ERROR - Appwrite login error for test_end_to_end_1@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account) (Code: 401, Type: general_unauthorized_scope)
+2025-04-26 03:08:50,593 - app.api.endpoints.auth - ERROR - Appwrite registration error for test_end_to_end_1@example.com: A user with the same id, email, or phone already exists in this project. (Code: 409, Type: user_already_exists)
+2025-04-26 03:08:53,199 - app.api.endpoints.auth - ERROR - Appwrite registration error for test_end_to_end_1@example.com: A user with the same id, email, or phone already exists in this project. (Code: 409, Type: user_already_exists)
+2025-04-26 03:08:55,485 - app.api.endpoints.auth - ERROR - Appwrite login error for test_end_to_end_1@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account) (Code: 401, Type: general_unauthorized_scope)
+2025-04-26 03:18:57,984 - app.api.endpoints.auth - ERROR - Appwrite login error for test_end_to_end_1@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account) (Code: 401, Type: general_unauthorized_scope)
+2025-04-26 03:19:00,536 - app.api.endpoints.auth - ERROR - Appwrite registration error for test_end_to_end_1@example.com: A user with the same id, email, or phone already exists in this project. (Code: 409, Type: user_already_exists)
+2025-04-26 03:19:03,552 - app.api.endpoints.auth - ERROR - Appwrite login error for test_end_to_end_1@example.com: app.67df69ef0039756850bd@service.cloud.appwrite.io (role: applications) missing scope (account) (Code: 401, Type: general_unauthorized_scope)
+2025-04-26 03:19:11,241 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 15:26:18,530 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 15:26:18,607 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 15:38:30,657 - app.api.endpoints.auth - INFO - User registered successfully: test4208@example.com, ID: 680cef99631dd3b57638
+2025-04-26 15:37:14,956 - app.api.endpoints.auth - INFO - Password verified for user: test4208@example.com, User ID: 680cef99631dd3b57638
+2025-04-26 15:37:15,898 - app.api.endpoints.auth - INFO - JWT created successfully for user: test4208@example.com
+2025-04-26 15:37:18,387 - app.main - ERROR - Request failed: 'UserResponse' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 65, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/dependencies/utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/dependencies.py", line 173, in check_rate_limit
+    user_id = user.get("user_id", f"fallback_anon_{secrets.token_hex(4)}") # Added fallback just in case
+              ^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 891, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'UserResponse' object has no attribute 'get'
+
+2025-04-26 15:37:19,361 - app.main - ERROR - Request failed: 'UserResponse' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 65, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/dependencies/utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/dependencies.py", line 173, in check_rate_limit
+    user_id = user.get("user_id", f"fallback_anon_{secrets.token_hex(4)}") # Added fallback just in case
+              ^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 891, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'UserResponse' object has no attribute 'get'
+
+2025-04-26 15:37:20,293 - app.main - ERROR - Request failed: 'UserResponse' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 65, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/dependencies/utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/dependencies.py", line 173, in check_rate_limit
+    user_id = user.get("user_id", f"fallback_anon_{secrets.token_hex(4)}") # Added fallback just in case
+              ^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 891, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'UserResponse' object has no attribute 'get'
+
+2025-04-26 16:08:09,958 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 16:08:10,608 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 16:09:28,496 - app.api.endpoints.auth - INFO - User registered successfully: ufv4jz2rpq@test.pytest.dev, ID: 680cf6db4f3f7c4f0eea
+2025-04-26 16:08:12,369 - app.api.endpoints.auth - INFO - Password verified for user: ufv4jz2rpq@test.pytest.dev, User ID: 680cf6db4f3f7c4f0eea
+2025-04-26 16:08:12,563 - app.api.endpoints.auth - INFO - JWT created successfully for user: ufv4jz2rpq@test.pytest.dev
+2025-04-26 16:08:12,820 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 16:08:39,053 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 16:08:53,953 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 16:08:53,981 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 16:34:44,751 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 16:35:06,949 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 16:35:06,991 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 16:34:12,050 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 16:34:12,660 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 16:34:13,269 - app.api.endpoints.auth - INFO - User registered successfully: ui7lvmv7ot@fixture.pytest.dev, ID: 680cfcf50ee5623b3eb1
+2025-04-26 16:34:13,574 - app.api.endpoints.auth - INFO - Password verified for user: ui7lvmv7ot@fixture.pytest.dev, User ID: 680cfcf50ee5623b3eb1
+2025-04-26 16:34:13,742 - app.api.endpoints.auth - INFO - JWT created successfully for user: ui7lvmv7ot@fixture.pytest.dev
+2025-04-26 16:34:14,279 - app.main - ERROR - Request failed: 'UserResponse' object is not subscriptable
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 65, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 79, in create_conversation
+    return create_new_conversation(db=db, user_id=user["user_id"], is_anonymous=user.get("is_anonymous", False))
+                                                  ~~~~^^^^^^^^^^^
+TypeError: 'UserResponse' object is not subscriptable
+
+2025-04-26 16:34:25,105 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 16:40:27,027 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 16:40:27,447 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 16:40:27,968 - app.api.endpoints.auth - INFO - User registered successfully: dm0gwa81ke@fixture.pytest.dev, ID: 680cfe6bb57558362442
+2025-04-26 16:40:28,342 - app.api.endpoints.auth - INFO - Password verified for user: dm0gwa81ke@fixture.pytest.dev, User ID: 680cfe6bb57558362442
+2025-04-26 16:40:28,482 - app.api.endpoints.auth - INFO - JWT created successfully for user: dm0gwa81ke@fixture.pytest.dev
+2025-04-26 16:40:28,685 - app.core.chat_service - ERROR - Unexpected error creating conversation for user 680cfe6bb57558362442: module 'app.config.settings' has no attribute 'APPWRITE_DATABASE_ID'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/chat_service.py", line 104, in create_new_conversation
+    database_id=settings.APPWRITE_DATABASE_ID,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'app.config.settings' has no attribute 'APPWRITE_DATABASE_ID'
+2025-04-26 16:40:38,495 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 16:42:17,747 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 16:41:16,186 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 16:41:16,226 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 16:59:36,834 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 17:00:01,120 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 17:00:01,159 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 17:00:12,185 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 17:01:31,256 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 17:01:31,310 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 17:01:58,114 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 17:01:58,572 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 17:01:59,019 - app.api.endpoints.auth - INFO - User registered successfully: 4z7066mjf7@fixture.pytest.dev, ID: 680d0376d0a5991e113d
+2025-04-26 17:01:59,522 - app.api.endpoints.auth - INFO - Password verified for user: 4z7066mjf7@fixture.pytest.dev, User ID: 680d0376d0a5991e113d
+2025-04-26 17:01:59,681 - app.api.endpoints.auth - INFO - JWT created successfully for user: 4z7066mjf7@fixture.pytest.dev
+2025-04-26 17:02:00,051 - app.core.chat_service - ERROR - Failed to create conversation for user 680d0376d0a5991e113d: Invalid document structure: Unknown attribute: "last_updated"
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/appwrite/client.py", line 115, in call
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://cloud.appwrite.io/v1/databases/arabia_db/collections/conversations/documents
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/chat_service.py", line 142, in create_new_conversation
+    result = db.create_document(
+        database_id=settings.APPWRITE_DATABASE_ID,
+    ...<7 lines>...
+        ]
+    )
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/appwrite/services/databases.py", line 913, in create_document
+    return self.client.call('post', api_path, {
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+        'content-type': 'application/json',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    }, api_params)
+    ^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/appwrite/client.py", line 135, in call
+    raise AppwriteException(response.json()['message'], response.status_code, response.json().get('type'), response.text)
+appwrite.exception.AppwriteException: Invalid document structure: Unknown attribute: "last_updated"
+2025-04-26 17:02:11,299 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 17:08:41,119 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 17:08:13,527 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 17:08:13,576 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 17:10:35,111 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 17:10:35,578 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 17:10:36,110 - app.api.endpoints.auth - INFO - User registered successfully: 4v0wnyrzx9@fixture.pytest.dev, ID: 680d052f0fd28f2bbd6a
+2025-04-26 17:10:37,156 - app.api.endpoints.auth - INFO - Password verified for user: 4v0wnyrzx9@fixture.pytest.dev, User ID: 680d052f0fd28f2bbd6a
+2025-04-26 17:09:21,084 - app.api.endpoints.auth - INFO - JWT created successfully for user: 4v0wnyrzx9@fixture.pytest.dev
+2025-04-26 17:09:22,474 - app.core.chat_service - INFO - Created conversation 680d0532694050975987 for user 680d052f0fd28f2bbd6a
+2025-04-26 17:09:22,844 - app.main - ERROR - Request failed: 'UserResponse' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 65, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/dependencies/utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/dependencies.py", line 173, in check_rate_limit
+    user_id = user.get("user_id", f"fallback_anon_{secrets.token_hex(4)}") # Added fallback just in case
+              ^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 891, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'UserResponse' object has no attribute 'get'
+
+2025-04-26 17:09:36,103 - app.main - ERROR - Request failed: 'UserResponse' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 65, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/dependencies/utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/dependencies.py", line 173, in check_rate_limit
+    user_id = user.get("user_id", f"fallback_anon_{secrets.token_hex(4)}") # Added fallback just in case
+              ^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 891, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'UserResponse' object has no attribute 'get'
+
+2025-04-26 17:09:37,307 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 17:23:19,557 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 17:26:52,742 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 17:26:52,768 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 17:51:32,719 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 17:53:04,062 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 17:53:04,099 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 17:55:59,659 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 17:56:00,079 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 17:56:00,563 - app.api.endpoints.auth - INFO - User registered successfully: 4rr4nblmh9@fixture.pytest.dev, ID: 680d10201111536366bd
+2025-04-26 17:56:01,054 - app.api.endpoints.auth - INFO - Password verified for user: 4rr4nblmh9@fixture.pytest.dev, User ID: 680d10201111536366bd
+2025-04-26 17:56:01,244 - app.api.endpoints.auth - INFO - JWT created successfully for user: 4rr4nblmh9@fixture.pytest.dev
+2025-04-26 17:56:01,325 - app.core.chat_service - INFO - Created conversation 680d102145a06a41351a for user 680d10201111536366bd
+2025-04-26 17:56:01,694 - app.main - ERROR - Request failed: 'Settings' object has no attribute 'RATE_LIMIT_WINDOW_SECONDS'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 65, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/dependencies/utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/dependencies.py", line 134, in check_rate_limit
+    window = settings.RATE_LIMIT_WINDOW_SECONDS
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 891, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Settings' object has no attribute 'RATE_LIMIT_WINDOW_SECONDS'
+
+2025-04-26 17:56:13,896 - app.main - ERROR - Request failed: 'Settings' object has no attribute 'RATE_LIMIT_WINDOW_SECONDS'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 65, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/dependencies/utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/dependencies.py", line 134, in check_rate_limit
+    window = settings.RATE_LIMIT_WINDOW_SECONDS
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 891, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Settings' object has no attribute 'RATE_LIMIT_WINDOW_SECONDS'
+
+2025-04-26 17:56:15,495 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 17:56:38,578 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 17:56:54,024 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 17:56:54,058 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 17:57:03,272 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 17:57:03,689 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 17:57:04,119 - app.api.endpoints.auth - INFO - User registered successfully: 7bs7htzg30@fixture.pytest.dev, ID: 680d105fe6063960ec3a
+2025-04-26 17:57:04,436 - app.api.endpoints.auth - INFO - Password verified for user: 7bs7htzg30@fixture.pytest.dev, User ID: 680d105fe6063960ec3a
+2025-04-26 17:57:04,619 - app.api.endpoints.auth - INFO - JWT created successfully for user: 7bs7htzg30@fixture.pytest.dev
+2025-04-26 17:57:05,002 - app.core.chat_service - INFO - Created conversation 680d1060f13e79b5179e for user 680d105fe6063960ec3a
+2025-04-26 17:57:05,331 - app.main - ERROR - Request failed: 'Settings' object has no attribute 'RATE_LIMIT_WINDOW_SECONDS'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 65, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/dependencies/utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/dependencies.py", line 134, in check_rate_limit
+    window = settings.RATE_LIMIT_WINDOW_SECONDS
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 891, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Settings' object has no attribute 'RATE_LIMIT_WINDOW_SECONDS'
+
+2025-04-26 17:57:17,032 - app.main - ERROR - Request failed: 'Settings' object has no attribute 'RATE_LIMIT_WINDOW_SECONDS'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 65, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<6 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/dependencies/utils.py", line 638, in solve_dependencies
+    solved = await call(**solved_result.values)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/dependencies.py", line 134, in check_rate_limit
+    window = settings.RATE_LIMIT_WINDOW_SECONDS
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 891, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Settings' object has no attribute 'RATE_LIMIT_WINDOW_SECONDS'
+
+2025-04-26 17:57:18,177 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 18:12:29,320 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 18:12:50,035 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 18:12:50,067 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 18:16:03,100 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 18:16:17,946 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 18:16:17,997 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 18:18:57,761 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 18:18:58,366 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 18:18:59,045 - app.api.endpoints.auth - INFO - User registered successfully: 9r08ecdj9j@fixture.pytest.dev, ID: 680d1582cea642c571e4
+2025-04-26 18:18:59,580 - app.api.endpoints.auth - INFO - Password verified for user: 9r08ecdj9j@fixture.pytest.dev, User ID: 680d1582cea642c571e4
+2025-04-26 18:18:59,835 - app.api.endpoints.auth - INFO - JWT created successfully for user: 9r08ecdj9j@fixture.pytest.dev
+2025-04-26 18:19:00,378 - app.core.chat_service - INFO - Created conversation 680d15843c1851c92419 for user 680d1582cea642c571e4
+2025-04-26 18:19:01,415 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about the pillars of Islam....'
+2025-04-26 18:19:01,416 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 18:19:01,429 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 18:19:05,209 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 18:19:05,211 - app.core.chat_service - ERROR - Error formatting context: 'DocumentMetadata' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/chat_service.py", line 383, in generate_rag_response
+    book_name = metadata.get('book_name', "Unknown book")
+                ^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 891, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'DocumentMetadata' object has no attribute 'get'
+2025-04-26 18:19:07,159 - app.core.retrieval - INFO - Generated embedding for query: 'What is Zakat?...'
+2025-04-26 18:19:07,160 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 18:19:07,168 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 18:19:08,051 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 18:19:08,053 - app.core.chat_service - ERROR - Error formatting context: 'DocumentMetadata' object has no attribute 'get'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/chat_service.py", line 383, in generate_rag_response
+    book_name = metadata.get('book_name', "Unknown book")
+                ^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 891, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'DocumentMetadata' object has no attribute 'get'
+2025-04-26 18:19:08,690 - app.api.endpoints.chat - ERROR - Unexpected error retrieving messages for conversation 680d15843c1851c92419: 1 validation error for Message
+message_id
+  Field required [type=missing, input_value={'id': '680d1584e96f52172...1c92419', 'sources': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 117, in get_conversation_messages
+    conversation_messages.append(Message(
+                                 ~~~~~~~^
+        id=doc.get('$id'),
+        ^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        sources=sources_list
+        ^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Message
+message_id
+  Field required [type=missing, input_value={'id': '680d1584e96f52172...1c92419', 'sources': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-04-26 18:19:19,476 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 18:45:41,625 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 18:46:04,474 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 18:46:04,505 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 18:47:36,716 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 18:47:59,092 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 18:47:59,143 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 18:51:48,936 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 19:03:59,029 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 19:03:59,082 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 19:04:38,553 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 19:04:39,031 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 19:04:39,664 - app.api.endpoints.auth - INFO - User registered successfully: ydurfu0h4w@fixture.pytest.dev, ID: 680d2037205853d11c46
+2025-04-26 19:04:40,076 - app.api.endpoints.auth - INFO - Password verified for user: ydurfu0h4w@fixture.pytest.dev, User ID: 680d2037205853d11c46
+2025-04-26 19:04:40,275 - app.api.endpoints.auth - INFO - JWT created successfully for user: ydurfu0h4w@fixture.pytest.dev
+2025-04-26 19:04:40,708 - app.core.storage - ERROR - Failed to create conversation for user 680d2037205853d11c46: Invalid document structure: Unknown attribute: "last_updated"
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/appwrite/client.py", line 115, in call
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://cloud.appwrite.io/v1/databases/arabia_db/collections/conversations/documents
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/storage.py", line 160, in create_new_conversation
+    result = db.create_document(
+        database_id=settings.APPWRITE_DATABASE_ID,
+    ...<7 lines>...
+        ]
+    )
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/appwrite/services/databases.py", line 913, in create_document
+    return self.client.call('post', api_path, {
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+        'content-type': 'application/json',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    }, api_params)
+    ^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/appwrite/client.py", line 135, in call
+    raise AppwriteException(response.json()['message'], response.status_code, response.json().get('type'), response.text)
+appwrite.exception.AppwriteException: Invalid document structure: Unknown attribute: "last_updated"
+2025-04-26 19:04:51,342 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 19:05:30,846 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 19:05:46,680 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 19:05:46,718 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 19:07:16,545 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 19:07:36,694 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 19:07:36,730 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 19:10:27,427 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 19:24:04,149 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 19:24:04,197 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 19:24:35,669 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 19:24:36,238 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 19:24:37,745 - app.api.endpoints.auth - INFO - User registered successfully: w7tdzq781h@fixture.pytest.dev, ID: 680d24e4f1a2f466ce64
+2025-04-26 19:25:55,725 - app.api.endpoints.auth - INFO - Password verified for user: w7tdzq781h@fixture.pytest.dev, User ID: 680d24e4f1a2f466ce64
+2025-04-26 19:24:39,972 - app.api.endpoints.auth - INFO - JWT created successfully for user: w7tdzq781h@fixture.pytest.dev
+2025-04-26 19:24:41,497 - app.core.storage - ERROR - Failed to create conversation for user 680d24e4f1a2f466ce64: Invalid document structure: Unknown attribute: "last_updated"
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/appwrite/client.py", line 115, in call
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://cloud.appwrite.io/v1/databases/arabia_db/collections/conversations/documents
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/storage.py", line 160, in create_new_conversation
+    result = db.create_document(
+        database_id=settings.APPWRITE_DATABASE_ID,
+    ...<7 lines>...
+        ]
+    )
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/appwrite/services/databases.py", line 913, in create_document
+    return self.client.call('post', api_path, {
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+        'content-type': 'application/json',
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    }, api_params)
+    ^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/appwrite/client.py", line 135, in call
+    raise AppwriteException(response.json()['message'], response.status_code, response.json().get('type'), response.text)
+appwrite.exception.AppwriteException: Invalid document structure: Unknown attribute: "last_updated"
+2025-04-26 19:24:51,227 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 19:36:18,606 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 19:36:33,969 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 19:36:34,025 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 19:38:38,492 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 19:38:38,929 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 19:37:22,519 - app.api.endpoints.auth - INFO - User registered successfully: aanimvjtyn@fixture.pytest.dev, ID: 680d27e2a09dfbb96385
+2025-04-26 19:37:24,753 - app.api.endpoints.auth - INFO - Password verified for user: aanimvjtyn@fixture.pytest.dev, User ID: 680d27e2a09dfbb96385
+2025-04-26 19:37:26,699 - app.api.endpoints.auth - INFO - JWT created successfully for user: aanimvjtyn@fixture.pytest.dev
+2025-04-26 19:37:29,687 - app.core.storage - INFO - Attempting to create conversation conv_fe1b7595f8d049db84619d07880dbdf9 for user 680d27e2a09dfbb96385
+2025-04-26 19:37:30,693 - app.main - ERROR - Request failed: name 'AppwriteException' is not defined
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 147, in call_next
+    message = await recv_stream.receive()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/anyio/streams/memory.py", line 126, in receive
+    raise EndOfStream from None
+anyio.EndOfStream
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/main.py", line 65, in add_process_time_header
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 153, in call_next
+    raise app_exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/base.py", line 140, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 76, in create_conversation_endpoint
+    return create_new_conversation(db=db, user_id=user.user_id, is_anonymous=user.is_anonymous)
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/storage.py", line 165, in create_new_conversation
+    except AppwriteException as e:
+           ^^^^^^^^^^^^^^^^^
+NameError: name 'AppwriteException' is not defined
+
+2025-04-26 19:37:43,479 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 19:44:12,607 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 19:44:29,751 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 19:44:29,845 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 19:44:35,897 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 19:44:36,484 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 19:44:37,039 - app.api.endpoints.auth - INFO - User registered successfully: 0w249v8dx0@fixture.pytest.dev, ID: 680d29945072a1ea8b0f
+2025-04-26 19:44:37,023 - app.api.endpoints.auth - INFO - Password verified for user: 0w249v8dx0@fixture.pytest.dev, User ID: 680d29945072a1ea8b0f
+2025-04-26 19:44:37,226 - app.api.endpoints.auth - INFO - JWT created successfully for user: 0w249v8dx0@fixture.pytest.dev
+2025-04-26 19:44:37,524 - app.core.storage - INFO - Attempting to create conversation conv_78d670d27391407998c29f9e978184d5 for user 680d29945072a1ea8b0f
+2025-04-26 19:44:37,730 - app.core.storage - ERROR - Failed to create conversation for user 680d29945072a1ea8b0f: Invalid `documentId` param: Parameter must contain at most 36 chars. Valid chars are a-z, A-Z, 0-9, period, hyphen, and underscore. Can't start with a special char
+2025-04-26 19:44:49,455 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 19:47:12,665 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 19:47:13,101 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 19:47:14,319 - app.api.endpoints.auth - INFO - User registered successfully: nh1ol2pd18@fixture.pytest.dev, ID: 680d29e456c94c822449
+2025-04-26 19:47:15,298 - app.api.endpoints.auth - INFO - Password verified for user: nh1ol2pd18@fixture.pytest.dev, User ID: 680d29e456c94c822449
+2025-04-26 19:47:15,481 - app.api.endpoints.auth - INFO - JWT created successfully for user: nh1ol2pd18@fixture.pytest.dev
+2025-04-26 19:47:15,709 - app.core.storage - INFO - Attempting to create conversation conv_cb26abfe2d194dfda79eff6435bf770f for user 680d29e456c94c822449
+2025-04-26 19:47:15,919 - app.core.storage - ERROR - Failed to create conversation for user 680d29e456c94c822449: Invalid `documentId` param: Parameter must contain at most 36 chars. Valid chars are a-z, A-Z, 0-9, period, hyphen, and underscore. Can't start with a special char
+2025-04-26 19:46:08,740 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 20:00:51,000 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 19:59:49,849 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 19:59:49,891 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 20:01:37,120 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 20:01:37,865 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 20:01:39,821 - app.api.endpoints.auth - INFO - User registered successfully: xshjv4kgvr@fixture.pytest.dev, ID: 680d2d935fea2dab5f68
+2025-04-26 20:01:43,167 - app.api.endpoints.auth - INFO - Password verified for user: xshjv4kgvr@fixture.pytest.dev, User ID: 680d2d935fea2dab5f68
+2025-04-26 20:01:46,008 - app.api.endpoints.auth - INFO - JWT created successfully for user: xshjv4kgvr@fixture.pytest.dev
+2025-04-26 20:01:47,151 - app.core.storage - INFO - Attempting to create conversation a3ba30d57b98420c96c68db57fdc0e37 for user 680d2d935fea2dab5f68
+2025-04-26 20:01:48,176 - app.core.storage - ERROR - Failed to create conversation for user 680d2d935fea2dab5f68: Invalid document structure: Unknown attribute: "is_anonymous"
+2025-04-26 20:02:00,090 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 20:17:48,223 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 20:17:48,761 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 20:17:50,142 - app.api.endpoints.auth - INFO - User registered successfully: 3rk1ycegni@fixture.pytest.dev, ID: 680d315dd290b49daae5
+2025-04-26 20:17:55,422 - app.api.endpoints.auth - INFO - Password verified for user: 3rk1ycegni@fixture.pytest.dev, User ID: 680d315dd290b49daae5
+2025-04-26 20:17:57,055 - app.api.endpoints.auth - INFO - JWT created successfully for user: 3rk1ycegni@fixture.pytest.dev
+2025-04-26 20:17:57,299 - app.core.storage - INFO - Attempting to create conversation 930635ce8a5543eb8e403fd49219e685 for user 680d315dd290b49daae5
+2025-04-26 20:17:57,529 - app.core.storage - ERROR - Failed to create conversation for user 680d315dd290b49daae5: Invalid document structure: Unknown attribute: "is_anonymous"
+2025-04-26 20:18:10,013 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 20:21:50,477 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 20:21:50,947 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 20:21:51,358 - app.api.endpoints.auth - INFO - User registered successfully: bnpur5e6x6@fixture.pytest.dev, ID: 680d324f299cbf6756d2
+2025-04-26 20:21:51,738 - app.api.endpoints.auth - INFO - Password verified for user: bnpur5e6x6@fixture.pytest.dev, User ID: 680d324f299cbf6756d2
+2025-04-26 20:21:51,873 - app.api.endpoints.auth - INFO - JWT created successfully for user: bnpur5e6x6@fixture.pytest.dev
+2025-04-26 20:21:52,093 - app.core.storage - INFO - Attempting to create conversation f331c5f53aa94f0eb9410b7f73582a13 for user 680d324f299cbf6756d2
+2025-04-26 20:21:52,303 - app.core.storage - ERROR - Failed to create conversation for user 680d324f299cbf6756d2: Invalid document structure: Attribute "created_at" has invalid type. Value must be a valid string and no longer than 30 chars
+2025-04-26 20:22:02,874 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 20:57:38,051 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 20:56:40,066 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 20:56:40,100 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 20:59:49,502 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 20:59:50,038 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 20:59:50,736 - app.api.endpoints.auth - INFO - User registered successfully: nqqhv43ajq@fixture.pytest.dev, ID: 680d3b367c9753a594c5
+2025-04-26 20:59:51,554 - app.api.endpoints.auth - INFO - Password verified for user: nqqhv43ajq@fixture.pytest.dev, User ID: 680d3b367c9753a594c5
+2025-04-26 20:59:51,776 - app.api.endpoints.auth - INFO - JWT created successfully for user: nqqhv43ajq@fixture.pytest.dev
+2025-04-26 20:59:52,065 - app.core.storage - INFO - Attempting to create conversation 656f85c5408a40d3a6da72d108f09df0 for user 680d3b367c9753a594c5
+2025-04-26 20:59:52,255 - app.core.storage - ERROR - Failed to create conversation for user 680d3b367c9753a594c5: Invalid document structure: Attribute "created_at" has invalid type. Value must be a valid string and no longer than 30 chars
+2025-04-26 21:00:03,823 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 21:07:38,955 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 21:07:59,143 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 21:07:59,182 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 21:10:19,517 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 21:10:19,936 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 21:10:21,577 - app.api.endpoints.auth - INFO - User registered successfully: f9omkfopim@fixture.pytest.dev, ID: 680d3dac84eac00b599f
+2025-04-26 21:10:22,473 - app.api.endpoints.auth - INFO - Password verified for user: f9omkfopim@fixture.pytest.dev, User ID: 680d3dac84eac00b599f
+2025-04-26 21:10:23,039 - app.api.endpoints.auth - INFO - JWT created successfully for user: f9omkfopim@fixture.pytest.dev
+2025-04-26 21:10:23,948 - app.core.storage - INFO - Attempting to create conversation dd499d821d7a485788d25a60b90a713f for user 680d3dac84eac00b599f
+2025-04-26 21:10:24,129 - app.core.storage - INFO - Successfully created conversation dd499d821d7a485788d25a60b90a713f
+2025-04-26 21:10:27,609 - app.core.storage - INFO - Stored message 680d3db37efdaab14147 for user 680d3dac84eac00b599f
+2025-04-26 21:10:27,609 - app.core.chat_service - INFO - Stored user message (ID: 680d3db37efdaab14147) for conversation dd499d821d7a485788d25a60b90a713f
+2025-04-26 21:10:28,464 - app.core.storage - ERROR - Failed to update timestamp for conversation dd499d821d7a485788d25a60b90a713f: Invalid document structure: Unknown attribute: "last_updated"
+2025-04-26 21:10:28,815 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about the pillars of Islam....'
+2025-04-26 21:10:28,816 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 21:10:28,822 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 21:10:31,680 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 21:10:31,682 - app.core.chat_service - INFO - Retrieved 5 documents for conversation dd499d821d7a485788d25a60b90a713f
+2025-04-26 21:10:31,682 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation dd499d821d7a485788d25a60b90a713f...
+2025-04-26 21:10:31,683 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 21:10:32,150 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 21:10:32,150 - app.core.chat_service - INFO - Successfully used Mistral response for conversation dd499d821d7a485788d25a60b90a713f.
+2025-04-26 21:10:32,151 - app.core.chat_service - INFO - LLM call finished for dd499d821d7a485788d25a60b90a713f. Model: mistral, Fallback: False. Answer length: 93
+2025-04-26 21:10:32,319 - app.core.storage - INFO - Stored message 680d3db8419aa02ece54 for user ai
+2025-04-26 21:10:36,847 - app.core.storage - INFO - Stored 5 sources for message 680d3db8419aa02ece54
+2025-04-26 21:10:36,848 - app.core.chat_service - INFO - Stored AI message (ID: 680d3db8419aa02ece54) for conversation dd499d821d7a485788d25a60b90a713f
+2025-04-26 21:10:37,547 - app.core.storage - ERROR - Failed to update timestamp for conversation dd499d821d7a485788d25a60b90a713f: Invalid document structure: Unknown attribute: "last_updated"
+2025-04-26 21:10:39,306 - app.core.storage - INFO - Stored message 680d3dbf42709beefa2e for user 680d3dac84eac00b599f
+2025-04-26 21:10:39,307 - app.core.chat_service - INFO - Stored user message (ID: 680d3dbf42709beefa2e) for conversation dd499d821d7a485788d25a60b90a713f
+2025-04-26 21:10:39,502 - app.core.storage - ERROR - Failed to update timestamp for conversation dd499d821d7a485788d25a60b90a713f: Invalid document structure: Unknown attribute: "last_updated"
+2025-04-26 21:10:41,978 - app.core.retrieval - INFO - Generated embedding for query: 'What is Zakat?...'
+2025-04-26 21:10:41,978 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 21:10:41,983 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 21:10:42,656 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 21:10:42,658 - app.core.chat_service - INFO - Retrieved 5 documents for conversation dd499d821d7a485788d25a60b90a713f
+2025-04-26 21:10:42,659 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation dd499d821d7a485788d25a60b90a713f...
+2025-04-26 21:10:42,659 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 21:10:43,326 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 21:10:43,327 - app.core.chat_service - INFO - Successfully used Mistral response for conversation dd499d821d7a485788d25a60b90a713f.
+2025-04-26 21:10:43,327 - app.core.chat_service - INFO - LLM call finished for dd499d821d7a485788d25a60b90a713f. Model: mistral, Fallback: False. Answer length: 126
+2025-04-26 21:10:45,010 - app.core.storage - INFO - Stored message 680d3dc4c5b685119d8b for user ai
+2025-04-26 21:10:47,152 - app.core.storage - INFO - Stored 5 sources for message 680d3dc4c5b685119d8b
+2025-04-26 21:10:47,153 - app.core.chat_service - INFO - Stored AI message (ID: 680d3dc4c5b685119d8b) for conversation dd499d821d7a485788d25a60b90a713f
+2025-04-26 21:10:47,827 - app.core.storage - ERROR - Failed to update timestamp for conversation dd499d821d7a485788d25a60b90a713f: Invalid document structure: Unknown attribute: "last_updated"
+2025-04-26 21:10:48,769 - app.api.endpoints.chat - ERROR - Unexpected error retrieving messages for conversation dd499d821d7a485788d25a60b90a713f: 1 validation error for Message
+message_id
+  Field required [type=missing, input_value={'id': '680d3db37efdaab14....330216', 'sources': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 139, in get_conversation_messages
+    message_model = Message(
+        id=doc.get('$id'),
+    ...<5 lines>...
+        sources=[]  # Placeholder - see TODO above
+    )
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Message
+message_id
+  Field required [type=missing, input_value={'id': '680d3db37efdaab14....330216', 'sources': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-04-26 21:10:58,514 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 21:13:58,656 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 21:13:59,124 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 21:13:59,749 - app.api.endpoints.auth - INFO - User registered successfully: bcgkmpw04m@fixture.pytest.dev, ID: 680d3e876d495dd1262f
+2025-04-26 21:14:00,177 - app.api.endpoints.auth - INFO - Password verified for user: bcgkmpw04m@fixture.pytest.dev, User ID: 680d3e876d495dd1262f
+2025-04-26 21:14:00,775 - app.api.endpoints.auth - INFO - JWT created successfully for user: bcgkmpw04m@fixture.pytest.dev
+2025-04-26 21:14:00,973 - app.core.storage - INFO - Attempting to create conversation 5b6b84b13aa54031a9ac770d0c202add for user 680d3e876d495dd1262f
+2025-04-26 21:14:01,173 - app.core.storage - INFO - Successfully created conversation 5b6b84b13aa54031a9ac770d0c202add
+2025-04-26 21:14:03,134 - app.core.storage - INFO - Stored message 680d3e89c6cfb06e13e7 for user 680d3e876d495dd1262f
+2025-04-26 21:14:03,134 - app.core.chat_service - INFO - Stored user message (ID: 680d3e89c6cfb06e13e7) for conversation 5b6b84b13aa54031a9ac770d0c202add
+2025-04-26 21:14:03,895 - app.core.storage - INFO - Timestamp updated for conversation 5b6b84b13aa54031a9ac770d0c202add
+2025-04-26 21:14:04,112 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about the pillars of Islam....'
+2025-04-26 21:14:04,113 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 21:14:04,119 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 21:14:05,478 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 21:14:05,480 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 5b6b84b13aa54031a9ac770d0c202add
+2025-04-26 21:14:05,481 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 5b6b84b13aa54031a9ac770d0c202add...
+2025-04-26 21:14:05,481 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 21:14:06,407 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 21:14:06,408 - app.core.chat_service - INFO - Successfully used Mistral response for conversation 5b6b84b13aa54031a9ac770d0c202add.
+2025-04-26 21:14:06,409 - app.core.chat_service - INFO - LLM call finished for 5b6b84b13aa54031a9ac770d0c202add. Model: mistral, Fallback: False. Answer length: 156
+2025-04-26 21:14:07,959 - app.core.storage - INFO - Stored message 680d3e8f13fc89c4780f for user ai
+2025-04-26 21:14:09,850 - app.core.storage - INFO - Stored 5 sources for message 680d3e8f13fc89c4780f
+2025-04-26 21:14:09,851 - app.core.chat_service - INFO - Stored AI message (ID: 680d3e8f13fc89c4780f) for conversation 5b6b84b13aa54031a9ac770d0c202add
+2025-04-26 21:14:10,743 - app.core.storage - INFO - Timestamp updated for conversation 5b6b84b13aa54031a9ac770d0c202add
+2025-04-26 21:14:14,047 - app.core.storage - INFO - Stored message 680d3e9518cb5e935f83 for user 680d3e876d495dd1262f
+2025-04-26 21:14:14,047 - app.core.chat_service - INFO - Stored user message (ID: 680d3e9518cb5e935f83) for conversation 5b6b84b13aa54031a9ac770d0c202add
+2025-04-26 21:14:14,301 - app.core.storage - INFO - Timestamp updated for conversation 5b6b84b13aa54031a9ac770d0c202add
+2025-04-26 21:14:14,601 - app.core.retrieval - INFO - Generated embedding for query: 'What is Zakat?...'
+2025-04-26 21:14:14,601 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 21:14:14,606 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 21:14:15,266 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 21:14:15,268 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 5b6b84b13aa54031a9ac770d0c202add
+2025-04-26 21:14:15,269 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 5b6b84b13aa54031a9ac770d0c202add...
+2025-04-26 21:14:15,269 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 21:14:15,431 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-26 21:14:15,431 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.35 seconds (calculated)...
+2025-04-26 21:14:17,297 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 21:14:17,298 - app.core.chat_service - INFO - Successfully used Mistral response for conversation 5b6b84b13aa54031a9ac770d0c202add.
+2025-04-26 21:14:17,298 - app.core.chat_service - INFO - LLM call finished for 5b6b84b13aa54031a9ac770d0c202add. Model: mistral, Fallback: False. Answer length: 101
+2025-04-26 21:14:17,926 - app.core.storage - INFO - Stored message 680d3e99b3e90915bee9 for user ai
+2025-04-26 21:14:22,637 - app.core.storage - INFO - Stored 5 sources for message 680d3e99b3e90915bee9
+2025-04-26 21:14:22,637 - app.core.chat_service - INFO - Stored AI message (ID: 680d3e99b3e90915bee9) for conversation 5b6b84b13aa54031a9ac770d0c202add
+2025-04-26 21:14:23,989 - app.core.storage - INFO - Timestamp updated for conversation 5b6b84b13aa54031a9ac770d0c202add
+2025-04-26 21:14:26,209 - app.api.endpoints.chat - ERROR - Unexpected error retrieving messages for conversation 5b6b84b13aa54031a9ac770d0c202add: 1 validation error for Message
+message_id
+  Field required [type=missing, input_value={'id': '680d3e89c6cfb06e1....377246', 'sources': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 139, in get_conversation_messages
+    message_model = Message(
+        id=doc.get('$id'),
+    ...<5 lines>...
+        sources=[]  # Placeholder - see TODO above
+    )
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/.venv/lib/python3.13/site-packages/pydantic/main.py", line 214, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for Message
+message_id
+  Field required [type=missing, input_value={'id': '680d3e89c6cfb06e1....377246', 'sources': []}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+2025-04-26 21:14:35,828 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 21:21:39,852 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 21:21:44,927 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 21:21:45,361 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 21:21:47,449 - app.api.endpoints.auth - INFO - User registered successfully: d1mgyc6mms@fixture.pytest.dev, ID: 680d405adc2302c6ba97
+2025-04-26 21:21:47,853 - app.api.endpoints.auth - INFO - Password verified for user: d1mgyc6mms@fixture.pytest.dev, User ID: 680d405adc2302c6ba97
+2025-04-26 21:21:51,300 - app.api.endpoints.auth - INFO - JWT created successfully for user: d1mgyc6mms@fixture.pytest.dev
+2025-04-26 21:21:51,497 - app.core.storage - INFO - Attempting to create conversation 6fd9634f16c945258cbb39989b269ec9 for user 680d405adc2302c6ba97
+2025-04-26 21:21:51,676 - app.core.storage - INFO - Successfully created conversation 6fd9634f16c945258cbb39989b269ec9
+2025-04-26 21:21:52,165 - app.core.storage - INFO - Stored message 680d405fe5029982d16f for user 680d405adc2302c6ba97
+2025-04-26 21:21:52,166 - app.core.chat_service - INFO - Stored user message (ID: 680d405fe5029982d16f) for conversation 6fd9634f16c945258cbb39989b269ec9
+2025-04-26 21:21:52,444 - app.core.storage - INFO - Timestamp updated for conversation 6fd9634f16c945258cbb39989b269ec9
+2025-04-26 21:21:52,808 - app.core.retrieval - INFO - Generated embedding for query: 'Tell me about the pillars of Islam....'
+2025-04-26 21:21:52,808 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 21:21:52,815 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 21:21:55,654 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 21:21:55,657 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 6fd9634f16c945258cbb39989b269ec9
+2025-04-26 21:21:55,657 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 6fd9634f16c945258cbb39989b269ec9...
+2025-04-26 21:21:55,658 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 21:21:56,111 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 21:21:56,112 - app.core.chat_service - INFO - Successfully used Mistral response for conversation 6fd9634f16c945258cbb39989b269ec9.
+2025-04-26 21:21:56,113 - app.core.chat_service - INFO - LLM call finished for 6fd9634f16c945258cbb39989b269ec9. Model: mistral, Fallback: False. Answer length: 85
+2025-04-26 21:21:56,326 - app.core.storage - INFO - Stored message 680d4064280dfb548e64 for user ai
+2025-04-26 21:21:57,467 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 21:21:57,505 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 21:21:58,877 - app.core.storage - INFO - Stored 5 sources for message 680d4064280dfb548e64
+2025-04-26 21:21:58,879 - app.core.chat_service - INFO - Stored AI message (ID: 680d4064280dfb548e64) for conversation 6fd9634f16c945258cbb39989b269ec9
+2025-04-26 21:22:00,885 - app.core.storage - INFO - Timestamp updated for conversation 6fd9634f16c945258cbb39989b269ec9
+2025-04-26 21:22:02,240 - app.core.storage - INFO - Stored message 680d406a01c60aa3a6b5 for user 680d405adc2302c6ba97
+2025-04-26 21:22:02,242 - app.core.chat_service - INFO - Stored user message (ID: 680d406a01c60aa3a6b5) for conversation 6fd9634f16c945258cbb39989b269ec9
+2025-04-26 21:22:02,444 - app.core.storage - INFO - Timestamp updated for conversation 6fd9634f16c945258cbb39989b269ec9
+2025-04-26 21:22:02,690 - app.core.retrieval - INFO - Generated embedding for query: 'What is Zakat?...'
+2025-04-26 21:22:02,691 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 21:22:02,696 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 21:22:03,468 - app.core.retrieval - INFO - Found 5 matches in vector store
+2025-04-26 21:22:03,471 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 6fd9634f16c945258cbb39989b269ec9
+2025-04-26 21:22:03,472 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 6fd9634f16c945258cbb39989b269ec9...
+2025-04-26 21:22:03,473 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 21:22:04,058 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 21:22:04,059 - app.core.chat_service - INFO - Successfully used Mistral response for conversation 6fd9634f16c945258cbb39989b269ec9.
+2025-04-26 21:22:04,059 - app.core.chat_service - INFO - LLM call finished for 6fd9634f16c945258cbb39989b269ec9. Model: mistral, Fallback: False. Answer length: 122
+2025-04-26 21:22:04,238 - app.core.storage - INFO - Stored message 680d406bd14a87c6f946 for user ai
+2025-04-26 21:22:05,083 - app.core.storage - INFO - Stored 5 sources for message 680d406bd14a87c6f946
+2025-04-26 21:22:05,084 - app.core.chat_service - INFO - Stored AI message (ID: 680d406bd14a87c6f946) for conversation 6fd9634f16c945258cbb39989b269ec9
+2025-04-26 21:22:05,256 - app.core.storage - INFO - Timestamp updated for conversation 6fd9634f16c945258cbb39989b269ec9
+2025-04-26 21:22:05,859 - app.main - INFO - Application shutdown: cleaning up resources

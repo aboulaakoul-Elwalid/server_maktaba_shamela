@@ -81,6 +81,29 @@ class Message(BaseModel):
         description="Source documents used to generate this response, with citation details"
     )
 class ConversationResponse(BaseModel):
-    conversation_id: str
-    title: str
-    created_at: str
+    id: str
+    title: Optional[str] = "Untitled Conversation"
+    # Expect strings from Appwrite initially
+    created_at: Optional[str] = None
+    last_updated: Optional[str] = None
+
+    # Optional: If you want datetime objects in your API response,
+    # you can add validators to parse the strings.
+    # parsed_created_at: Optional[datetime] = None
+    # parsed_last_updated: Optional[datetime] = None
+
+    # @field_validator('created_at', 'last_updated', mode='before')
+    # def parse_datetime_str(cls, v):
+    #     if isinstance(v, str):
+    #         try:
+    #             # Appwrite uses ISO 8601 format like '2023-10-27T10:00:00.000+00:00'
+    #             # Adjust parsing if needed based on actual Appwrite output
+    #             return datetime.fromisoformat(v.replace("Z", "+00:00"))
+    #         except (ValueError, TypeError) as e:
+    #             logger.warning(f"Could not parse timestamp string '{v}': {e}")
+    #             return None # Return None if parsing fails
+    #     return v # Return as is if not a string or already parsed
+
+    class Config:
+        from_attributes = True # For Pydantic v2
+        # orm_mode = True # For Pydantic v1

@@ -3,7 +3,7 @@ echo Testing RAG Chat API - Single Conversation Test...
 echo.
 
 REM Set your base URL
-set API_BASE=https://server-maktaba-shamela.onrender.com
+set API_BASE=http://localhost:8000
 
 REM 1. Register a new user
 echo 1. REGISTERING NEW USER...
@@ -19,16 +19,17 @@ REM 2. Login with registered user
 echo 2. LOGGING IN...
 curl -s -X POST %API_BASE%/auth/login -H "Content-Type: application/json" -d "{\"email\": \"%EMAIL%\", \"password\": \"%PASSWORD%\"}" > login_response.json
 type login_response.json
+
+REM Check if login was successful by looking for access_token in the response
+findstr /C:"\"access_token\"" login_response.json > nul
+if %errorlevel% neq 0 (
+    echo ERROR: Login failed or did not return an access token. Check login_response.json.
+    goto :eof
+)
+
+REM Extract token only if login was successful
 for /f "tokens=*" %%a in ('powershell -Command "(Get-Content login_response.json | ConvertFrom-Json).access_token"') do set AUTH_TOKEN=%%a
 echo Token: %AUTH_TOKEN%
-echo.
-
-REM 3. Create a conversation
-echo 3. CREATING CONVERSATION...
-curl -s -X POST %API_BASE%/chat/conversations -H "Content-Type: application/json" -H "Authorization: Bearer %AUTH_TOKEN%" > conversation.json
-type conversation.json
-for /f "tokens=*" %%a in ('powershell -Command "(Get-Content conversation.json | ConvertFrom-Json).conversation_id"') do set CONV_ID=%%a
-echo Conversation ID: %CONV_ID%
 echo.
 
 REM 4. First Message: Ask about Islamic jurisprudence

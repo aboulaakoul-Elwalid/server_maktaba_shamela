@@ -21,7 +21,6 @@ import traceback
 
 from app.config.settings import settings
 from app.api.endpoints import embed, retrieval, ingestion, rag_query, auth, chat
-from app.core.clients import appwrite_db, appwrite_users
 from app.utils.helpers import setup_logging
 import os
 # Set up logging

@@ -7,6 +7,10 @@ import hashlib
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 from typing import Dict, List, Tuple, Optional
+import logging
+# ... other imports ...
+
+logger = logging.getLogger(__name__)
 
 def fetch_document(url: str) -> Optional[str]:
     """

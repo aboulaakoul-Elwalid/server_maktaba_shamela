@@ -26,7 +26,7 @@ dependencies = [
     "jsonpath-python==1.0.6",
     "mypy-extensions==1.0.0",
     "pinecone-plugin-interface==0.0.7",
-    "pydantic==2.10.6",
+    "pydantic[email]==2.10.6",
     "pydantic-core==2.27.2",
     "python-dateutil==2.9.0.post0",
     "six==1.17.0",
