@@ -2,18 +2,18 @@
 import logging
 import json
 import asyncio
-from typing import AsyncGenerator, Dict, Any, List
+from typing import AsyncGenerator, Dict, Any, List, Optional
 from appwrite.services.databases import Databases
 from appwrite.query import Query
 from appwrite.exception import AppwriteException
 
 # Import necessary functions from refactored modules
 from app.core.storage import store_message, update_conversation_timestamp
-from app.core.retrieval import query_vector_store
+from app.core.retrieval import get_retriever, Retriever
 from app.core.context_formatter import format_context_and_extract_sources, construct_llm_prompt, format_history
 from app.core.llm_service import call_mistral_streaming, call_gemini_streaming
 from app.config.settings import settings
-from app.models.schemas import Message
+from app.models.schemas import Message, DocumentMatch
 
 logger = logging.getLogger(__name__)
 
@@ -28,10 +28,8 @@ async def generate_streaming_response(
     is_anonymous: bool
 ) -> AsyncGenerator[str, None]:
     """
-    Generates a Server-Sent Events (SSE) stream including conversation history.
-
-    Handles retrieval, context formatting, LLM call, and message storage,
-    yielding events for different stages and content chunks.
+    Generates a Server-Sent Events (SSE) stream for the RAG response,
+    including conversation history and using the refactored retriever.
 
     Args:
         db: Appwrite Databases service instance.
@@ -41,14 +39,14 @@ async def generate_streaming_response(
         is_anonymous: Flag indicating if the user is anonymous.
 
     Yields:
-        str: SSE formatted strings (e.g., "event: <type>\ndata: <json>\n\n").
+        Server-Sent Events formatted strings.
     """
     full_response_content = ""
     final_sources = []
     model_used = "none"
     fallback_used = False
     error_detail = None
-    message_id = None  # To store the ID of the AI's response message
+    ai_message_id = None  # To store the ID of the AI's response message
     history_text = "No history fetched."  # Default
 
     try:
@@ -56,14 +54,14 @@ async def generate_streaming_response(
         conversation_messages: List[Message] = []
         if not is_anonymous and conversation_id:
             try:
-                logger.debug(f"Streaming: Fetching ALL history for conversation {conversation_id}")  # <<< Log change
+                logger.debug(f"Streaming: Fetching ALL history for conversation {conversation_id}")
                 history_result = db.list_documents(
                     database_id=settings.APPWRITE_DATABASE_ID,
                     collection_id=settings.APPWRITE_MESSAGES_COLLECTION_ID,
                     queries=[
                         Query.equal("conversation_id", conversation_id),
                         Query.order_desc("timestamp"),
-                        # Query.limit(HISTORY_FETCH_LIMIT)  # <<< REMOVED LIMIT
+                        # Query.limit(HISTORY_FETCH_LIMIT)  # REMOVED LIMIT
                     ]
                 )
                 raw_docs = history_result.get('documents', [])[::-1]
@@ -101,18 +99,19 @@ async def generate_streaming_response(
             logger.error(f"Streaming: Failed to store user message for conversation {conversation_id}: {store_err}")
             yield f"event: error\ndata: {json.dumps({'detail': 'Failed to save your message.'})}\n\n"
 
-        # 2. Retrieval Stage
+        # 2. Retrieval Stage using the new retriever
         yield "event: retrieving\ndata: {}\n\n"
-        documents = None
+        documents: Optional[List[DocumentMatch]] = None
         try:
-            documents = query_vector_store(query_text=query, top_k=settings.RETRIEVAL_TOP_K)
+            retriever: Retriever = get_retriever()  # Get the configured retriever instance
+            documents = await retriever.retrieve(query=query, top_k=settings.RETRIEVAL_TOP_K)
             if not documents:
                 logger.warning(f"Streaming: No documents retrieved for query in conversation {conversation_id}")
                 documents = []
             else:
                 logger.info(f"Streaming: Retrieved {len(documents)} documents for conversation {conversation_id}")
         except Exception as retrieval_err:
-            logger.error(f"Streaming: Error during vector store query for conversation {conversation_id}: {retrieval_err}")
+            logger.error(f"Streaming: Error during vector store retrieval for conversation {conversation_id}: {retrieval_err}")
             error_detail = f"Retrieval error: {retrieval_err}"
             yield f"event: error\ndata: {json.dumps({'detail': 'Failed to retrieve information.'})}\n\n"
             error_response = "I'm having trouble finding relevant information right now."
@@ -151,7 +150,7 @@ async def generate_streaming_response(
         prompt = construct_llm_prompt(history_text, context_text, query)
 
         # --- Streaming LLM Call Logic ---
-        llm_stream = None
+        llm_stream: Optional[AsyncGenerator[str, None]] = None
         try:
             logger.info(f"Streaming: Attempting Mistral stream for conversation {conversation_id}")
             llm_stream = call_mistral_streaming(prompt)
@@ -214,8 +213,8 @@ async def generate_streaming_response(
                     conversation_id=conversation_id, is_anonymous=is_anonymous,
                     sources=final_sources
                 )
-                message_id = ai_message.get('message_id')
-                logger.info(f"Streaming: Stored AI message (ID: {message_id}) for conversation {conversation_id}")
+                ai_message_id = ai_message.get('message_id')
+                logger.info(f"Streaming: Stored AI message (ID: {ai_message_id}) for conversation {conversation_id}")
                 if not is_anonymous and conversation_id:
                     update_conversation_timestamp(db, conversation_id)
             except Exception as store_err:
@@ -232,10 +231,10 @@ async def generate_streaming_response(
         yield f"event: sources\ndata: {json.dumps(final_sources)}\n\n"
         logger.debug(f"Streaming: Yielded {len(final_sources)} sources for conversation {conversation_id}")
 
-        # 8. Yield Final Metadata (Optional)
+        # 8. Yield Final Metadata
         final_data = {
             "conversation_id": conversation_id,
-            "message_id": message_id,
+            "ai_message_id": ai_message_id,
             "model_used": model_used,
             "fallback_used": fallback_used,
             "error": error_detail

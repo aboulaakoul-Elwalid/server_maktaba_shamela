@@ -19,7 +19,7 @@ Enhanced Retrieval-Augmented Generation (RAG) pipeline module.
 import logging
 import asyncio
 from typing import List, Dict, Any, Optional, Tuple
-from app.core.retrieval import query_vector_store
+from app.core.retrieval_old import query_vector_store
 from app.config.settings import settings
 from app.core.embeddings import mistral_client  # Import the already initialized client
 

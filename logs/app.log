@@ -4319,3 +4319,376 @@ message_id
 2025-04-26 23:32:53,572 - app.core.chat_service - INFO - Stored AI message (ID: 680d5f1481624fbb5741) for conversation 9a214d636d2d494f801bbfe660d41359
 2025-04-26 23:32:53,784 - app.core.storage - INFO - Timestamp updated for conversation 9a214d636d2d494f801bbfe660d41359
 2025-04-26 23:33:02,834 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:42:55,049 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:43:14,751 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:43:14,793 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 23:43:43,472 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:43:44,030 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 23:43:44,564 - app.api.endpoints.auth - INFO - User registered successfully: 9lfw2e8b0u@fixture.pytest.dev, ID: 680d61a0045ff93a77ff
+2025-04-26 23:43:45,020 - app.api.endpoints.auth - INFO - Password verified for user: 9lfw2e8b0u@fixture.pytest.dev, User ID: 680d61a0045ff93a77ff
+2025-04-26 23:43:45,235 - app.api.endpoints.auth - INFO - JWT created successfully for user: 9lfw2e8b0u@fixture.pytest.dev
+2025-04-26 23:43:45,526 - app.core.storage - INFO - Attempting to create conversation e616c1bcd3b0451d8c05e2d765900542 for user 680d61a0045ff93a77ff
+2025-04-26 23:43:45,704 - app.core.storage - INFO - Successfully created conversation e616c1bcd3b0451d8c05e2d765900542
+2025-04-26 23:43:46,318 - app.core.storage - INFO - Stored message 680d61a1c02c5e55e4da for user 680d61a0045ff93a77ff
+2025-04-26 23:43:46,319 - app.core.chat_service - INFO - Stored user message (ID: 680d61a1c02c5e55e4da) for conversation e616c1bcd3b0451d8c05e2d765900542
+2025-04-26 23:43:46,064 - app.core.storage - INFO - Timestamp updated for conversation e616c1bcd3b0451d8c05e2d765900542
+2025-04-26 23:43:46,065 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 23:43:46,070 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 23:43:47,845 - app.core.chat_service - INFO - Retrieved 5 documents for conversation e616c1bcd3b0451d8c05e2d765900542
+2025-04-26 23:43:47,848 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation e616c1bcd3b0451d8c05e2d765900542...
+2025-04-26 23:43:47,850 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 23:43:48,545 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 23:43:48,572 - app.core.chat_service - INFO - Mistral response successful for conversation e616c1bcd3b0451d8c05e2d765900542
+2025-04-26 23:43:48,871 - app.core.storage - INFO - Stored message 680d61a487eea0654229 for user ai
+2025-04-26 23:43:49,830 - app.core.storage - INFO - Stored 5 sources for message 680d61a487eea0654229
+2025-04-26 23:43:49,832 - app.core.chat_service - INFO - Stored AI message (ID: 680d61a487eea0654229) for conversation e616c1bcd3b0451d8c05e2d765900542
+2025-04-26 23:43:50,054 - app.core.storage - INFO - Timestamp updated for conversation e616c1bcd3b0451d8c05e2d765900542
+2025-04-26 23:43:51,161 - app.core.storage - INFO - Stored message 680d61a7183920f21427 for user 680d61a0045ff93a77ff
+2025-04-26 23:43:51,162 - app.core.chat_service - INFO - Stored user message (ID: 680d61a7183920f21427) for conversation e616c1bcd3b0451d8c05e2d765900542
+2025-04-26 23:43:51,349 - app.core.storage - INFO - Timestamp updated for conversation e616c1bcd3b0451d8c05e2d765900542
+2025-04-26 23:43:51,350 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 23:43:51,358 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 23:43:52,309 - app.core.chat_service - INFO - Retrieved 5 documents for conversation e616c1bcd3b0451d8c05e2d765900542
+2025-04-26 23:43:52,310 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation e616c1bcd3b0451d8c05e2d765900542...
+2025-04-26 23:43:52,311 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 23:43:52,753 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 23:43:52,753 - app.core.chat_service - INFO - Mistral response successful for conversation e616c1bcd3b0451d8c05e2d765900542
+2025-04-26 23:43:52,930 - app.core.storage - INFO - Stored message 680d61a8aad02cf3d93f for user ai
+2025-04-26 23:43:53,909 - app.core.storage - INFO - Stored 5 sources for message 680d61a8aad02cf3d93f
+2025-04-26 23:43:53,910 - app.core.chat_service - INFO - Stored AI message (ID: 680d61a8aad02cf3d93f) for conversation e616c1bcd3b0451d8c05e2d765900542
+2025-04-26 23:43:54,120 - app.core.storage - INFO - Timestamp updated for conversation e616c1bcd3b0451d8c05e2d765900542
+2025-04-26 23:44:06,028 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:44:57,093 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:45:15,128 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:45:15,179 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 23:46:16,663 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:46:16,905 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 23:46:17,417 - app.api.endpoints.auth - INFO - User registered successfully: am93jhky10@fixture.pytest.dev, ID: 680d6239173486e0b1bd
+2025-04-26 23:46:17,840 - app.api.endpoints.auth - INFO - Password verified for user: am93jhky10@fixture.pytest.dev, User ID: 680d6239173486e0b1bd
+2025-04-26 23:46:18,031 - app.api.endpoints.auth - INFO - JWT created successfully for user: am93jhky10@fixture.pytest.dev
+2025-04-26 23:46:18,236 - app.core.storage - INFO - Attempting to create conversation fe7a6e98f74d4487b7a52f32c504d138 for user 680d6239173486e0b1bd
+2025-04-26 23:46:18,452 - app.core.storage - INFO - Successfully created conversation fe7a6e98f74d4487b7a52f32c504d138
+2025-04-26 23:46:19,051 - app.core.storage - INFO - Stored message 680d623ab800aa8549bf for user 680d6239173486e0b1bd
+2025-04-26 23:46:19,051 - app.core.chat_service - INFO - Stored user message (ID: 680d623ab800aa8549bf) for conversation fe7a6e98f74d4487b7a52f32c504d138
+2025-04-26 23:46:19,284 - app.core.storage - INFO - Timestamp updated for conversation fe7a6e98f74d4487b7a52f32c504d138
+2025-04-26 23:46:19,286 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 23:46:19,292 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 23:46:20,701 - app.core.chat_service - INFO - Retrieved 5 documents for conversation fe7a6e98f74d4487b7a52f32c504d138
+2025-04-26 23:46:20,702 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation fe7a6e98f74d4487b7a52f32c504d138...
+2025-04-26 23:46:20,702 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 23:46:21,316 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 23:46:21,317 - app.core.chat_service - INFO - Mistral response successful for conversation fe7a6e98f74d4487b7a52f32c504d138
+2025-04-26 23:46:21,525 - app.core.storage - INFO - Stored message 680d623cf246b8b7e8ae for user ai
+2025-04-26 23:46:22,107 - app.core.storage - INFO - Stored 5 sources for message 680d623cf246b8b7e8ae
+2025-04-26 23:46:22,108 - app.core.chat_service - INFO - Stored AI message (ID: 680d623cf246b8b7e8ae) for conversation fe7a6e98f74d4487b7a52f32c504d138
+2025-04-26 23:46:22,366 - app.core.storage - INFO - Timestamp updated for conversation fe7a6e98f74d4487b7a52f32c504d138
+2025-04-26 23:46:23,915 - app.core.storage - INFO - Stored message 680d623f962fd537aa66 for user 680d6239173486e0b1bd
+2025-04-26 23:46:23,915 - app.core.chat_service - INFO - Stored user message (ID: 680d623f962fd537aa66) for conversation fe7a6e98f74d4487b7a52f32c504d138
+2025-04-26 23:46:24,150 - app.core.storage - INFO - Timestamp updated for conversation fe7a6e98f74d4487b7a52f32c504d138
+2025-04-26 23:46:24,151 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 23:46:24,159 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 23:46:25,118 - app.core.chat_service - INFO - Retrieved 5 documents for conversation fe7a6e98f74d4487b7a52f32c504d138
+2025-04-26 23:46:25,120 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation fe7a6e98f74d4487b7a52f32c504d138...
+2025-04-26 23:46:25,122 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 23:46:25,717 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 23:46:25,718 - app.core.chat_service - INFO - Mistral response successful for conversation fe7a6e98f74d4487b7a52f32c504d138
+2025-04-26 23:46:25,945 - app.core.storage - INFO - Stored message 680d62416fa455b6e6b5 for user ai
+2025-04-26 23:46:26,450 - app.core.storage - INFO - Stored 5 sources for message 680d62416fa455b6e6b5
+2025-04-26 23:46:26,451 - app.core.chat_service - INFO - Stored AI message (ID: 680d62416fa455b6e6b5) for conversation fe7a6e98f74d4487b7a52f32c504d138
+2025-04-26 23:46:26,657 - app.core.storage - INFO - Timestamp updated for conversation fe7a6e98f74d4487b7a52f32c504d138
+2025-04-26 23:46:39,761 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:48:37,686 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:48:58,731 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:48:58,827 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 23:49:11,281 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:49:12,078 - app.main - INFO - Application startup: initializing services and connections
+2025-04-26 23:49:12,156 - app.api.endpoints.auth - INFO - User registered successfully: ljazpio5y3@fixture.pytest.dev, ID: 680d62e7e7ac9f127eff
+2025-04-26 23:49:12,565 - app.api.endpoints.auth - INFO - Password verified for user: ljazpio5y3@fixture.pytest.dev, User ID: 680d62e7e7ac9f127eff
+2025-04-26 23:49:12,784 - app.api.endpoints.auth - INFO - JWT created successfully for user: ljazpio5y3@fixture.pytest.dev
+2025-04-26 23:49:12,988 - app.core.storage - INFO - Attempting to create conversation 83bca362ef6341b685bf96f3ff2c383a for user 680d62e7e7ac9f127eff
+2025-04-26 23:49:13,194 - app.core.storage - INFO - Successfully created conversation 83bca362ef6341b685bf96f3ff2c383a
+2025-04-26 23:49:13,790 - app.core.storage - INFO - Stored message 680d62e99261da88d257 for user 680d62e7e7ac9f127eff
+2025-04-26 23:49:13,790 - app.core.chat_service - INFO - Stored user message (ID: 680d62e99261da88d257) for conversation 83bca362ef6341b685bf96f3ff2c383a
+2025-04-26 23:49:14,007 - app.core.storage - INFO - Timestamp updated for conversation 83bca362ef6341b685bf96f3ff2c383a
+2025-04-26 23:49:14,008 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 23:49:14,014 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 23:49:15,848 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 83bca362ef6341b685bf96f3ff2c383a
+2025-04-26 23:49:15,849 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 83bca362ef6341b685bf96f3ff2c383a...
+2025-04-26 23:49:15,850 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 23:49:16,446 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 23:49:16,447 - app.core.chat_service - INFO - Mistral response successful for conversation 83bca362ef6341b685bf96f3ff2c383a
+2025-04-26 23:49:16,657 - app.core.storage - INFO - Stored message 680d62ec32306cce38ab for user ai
+2025-04-26 23:49:17,215 - app.core.storage - INFO - Stored 5 sources for message 680d62ec32306cce38ab
+2025-04-26 23:49:17,216 - app.core.chat_service - INFO - Stored AI message (ID: 680d62ec32306cce38ab) for conversation 83bca362ef6341b685bf96f3ff2c383a
+2025-04-26 23:49:17,384 - app.core.storage - INFO - Timestamp updated for conversation 83bca362ef6341b685bf96f3ff2c383a
+2025-04-26 23:49:19,039 - app.core.storage - INFO - Stored message 680d62eec84d8c68abe4 for user 680d62e7e7ac9f127eff
+2025-04-26 23:49:19,040 - app.core.chat_service - INFO - Stored user message (ID: 680d62eec84d8c68abe4) for conversation 83bca362ef6341b685bf96f3ff2c383a
+2025-04-26 23:49:19,218 - app.core.storage - INFO - Timestamp updated for conversation 83bca362ef6341b685bf96f3ff2c383a
+2025-04-26 23:49:19,219 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-26 23:49:19,225 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-26 23:49:20,103 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 83bca362ef6341b685bf96f3ff2c383a
+2025-04-26 23:49:20,105 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 83bca362ef6341b685bf96f3ff2c383a...
+2025-04-26 23:49:20,105 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-26 23:49:20,862 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-26 23:49:20,871 - app.core.chat_service - INFO - Mistral response successful for conversation 83bca362ef6341b685bf96f3ff2c383a
+2025-04-26 23:49:21,089 - app.core.storage - INFO - Stored message 680d62f0a89e097b0eb3 for user ai
+2025-04-26 23:49:22,163 - app.core.storage - INFO - Stored 5 sources for message 680d62f0a89e097b0eb3
+2025-04-26 23:49:22,164 - app.core.chat_service - INFO - Stored AI message (ID: 680d62f0a89e097b0eb3) for conversation 83bca362ef6341b685bf96f3ff2c383a
+2025-04-26 23:49:22,366 - app.core.storage - INFO - Timestamp updated for conversation 83bca362ef6341b685bf96f3ff2c383a
+2025-04-26 23:49:34,968 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:58:55,090 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-26 23:59:10,489 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-26 23:59:10,533 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 00:14:54,456 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 00:50:02,317 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 00:50:02,369 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 00:50:26,258 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 00:50:26,747 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 00:50:27,336 - app.api.endpoints.auth - INFO - User registered successfully: z3yrbqx2n6@fixture.pytest.dev, ID: 680d7142db15ef10521b
+2025-04-27 00:50:27,760 - app.api.endpoints.auth - INFO - Password verified for user: z3yrbqx2n6@fixture.pytest.dev, User ID: 680d7142db15ef10521b
+2025-04-27 00:50:28,012 - app.api.endpoints.auth - INFO - JWT created successfully for user: z3yrbqx2n6@fixture.pytest.dev
+2025-04-27 00:50:28,270 - app.core.storage - INFO - Attempting to create conversation 0187dfe2597040a5b85c7b449c489720 for user 680d7142db15ef10521b
+2025-04-27 00:50:28,567 - app.core.storage - INFO - Successfully created conversation 0187dfe2597040a5b85c7b449c489720
+2025-04-27 00:50:29,189 - app.core.storage - INFO - Stored message 680d7144bf3de7170dbc for user 680d7142db15ef10521b
+2025-04-27 00:50:29,189 - app.core.chat_service - INFO - Stored user message (ID: 680d7144bf3de7170dbc) for conversation 0187dfe2597040a5b85c7b449c489720
+2025-04-27 00:50:29,363 - app.core.storage - INFO - Timestamp updated for conversation 0187dfe2597040a5b85c7b449c489720
+2025-04-27 00:50:29,363 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 00:50:29,364 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 00:50:29,371 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 00:50:30,027 - app.core.retrieval.pinecone - ERROR - Error querying Pinecone vector store: 'Index' object has no attribute 'name'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/retrieval/pinecone.py", line 30, in retrieve
+    logger.debug(f"Querying Pinecone index '{index.name}' with top_k={top_k}")
+                                             ^^^^^^^^^^
+AttributeError: 'Index' object has no attribute 'name'
+2025-04-27 00:50:30,038 - app.core.chat_service - WARNING - No documents retrieved for query in conversation 0187dfe2597040a5b85c7b449c489720
+2025-04-27 00:50:30,039 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 00:50:30,039 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 0187dfe2597040a5b85c7b449c489720...
+2025-04-27 00:50:30,040 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 00:50:30,896 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 00:50:30,897 - app.core.chat_service - INFO - Mistral response successful for conversation 0187dfe2597040a5b85c7b449c489720
+2025-04-27 00:50:31,061 - app.core.storage - INFO - Stored message 680d7146db39b31dad5b for user ai
+2025-04-27 00:50:31,062 - app.core.chat_service - INFO - Stored AI message (ID: 680d7146db39b31dad5b) for conversation 0187dfe2597040a5b85c7b449c489720
+2025-04-27 00:50:31,294 - app.core.storage - INFO - Timestamp updated for conversation 0187dfe2597040a5b85c7b449c489720
+2025-04-27 00:50:32,914 - app.core.storage - INFO - Stored message 680d71489472f9ce4735 for user 680d7142db15ef10521b
+2025-04-27 00:50:32,914 - app.core.chat_service - INFO - Stored user message (ID: 680d71489472f9ce4735) for conversation 0187dfe2597040a5b85c7b449c489720
+2025-04-27 00:50:33,115 - app.core.storage - INFO - Timestamp updated for conversation 0187dfe2597040a5b85c7b449c489720
+2025-04-27 00:50:33,116 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 00:50:33,122 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 00:50:33,497 - app.core.retrieval.pinecone - ERROR - Error querying Pinecone vector store: 'Index' object has no attribute 'name'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/retrieval/pinecone.py", line 30, in retrieve
+    logger.debug(f"Querying Pinecone index '{index.name}' with top_k={top_k}")
+                                             ^^^^^^^^^^
+AttributeError: 'Index' object has no attribute 'name'
+2025-04-27 00:50:33,503 - app.core.chat_service - WARNING - No documents retrieved for query in conversation 0187dfe2597040a5b85c7b449c489720
+2025-04-27 00:50:33,503 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 00:50:33,504 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 0187dfe2597040a5b85c7b449c489720...
+2025-04-27 00:50:33,504 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 00:50:34,024 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 00:50:34,025 - app.core.chat_service - INFO - Mistral response successful for conversation 0187dfe2597040a5b85c7b449c489720
+2025-04-27 00:50:34,225 - app.core.storage - INFO - Stored message 680d7149c691c269a1cd for user ai
+2025-04-27 00:50:34,226 - app.core.chat_service - INFO - Stored AI message (ID: 680d7149c691c269a1cd) for conversation 0187dfe2597040a5b85c7b449c489720
+2025-04-27 00:50:34,472 - app.core.storage - INFO - Timestamp updated for conversation 0187dfe2597040a5b85c7b449c489720
+2025-04-27 00:50:46,584 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:01:02,534 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:01:33,336 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:01:33,387 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:03:06,918 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:03:22,191 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:04:38,286 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:04:09,501 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:04:09,977 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:04:10,630 - app.api.endpoints.auth - INFO - User registered successfully: 69wg52el1u@fixture.pytest.dev, ID: 680d747a0c0e539c21c9
+2025-04-27 01:04:11,039 - app.api.endpoints.auth - INFO - Password verified for user: 69wg52el1u@fixture.pytest.dev, User ID: 680d747a0c0e539c21c9
+2025-04-27 01:04:11,236 - app.api.endpoints.auth - INFO - JWT created successfully for user: 69wg52el1u@fixture.pytest.dev
+2025-04-27 01:04:11,524 - app.core.storage - INFO - Attempting to create conversation 042e40eac0b24169adee5199427a6bc5 for user 680d747a0c0e539c21c9
+2025-04-27 01:04:11,750 - app.core.storage - INFO - Successfully created conversation 042e40eac0b24169adee5199427a6bc5
+2025-04-27 01:04:11,962 - app.core.storage - ERROR - Appwrite error storing message for conversation 042e40eac0b24169adee5199427a6bc5: Invalid `permissions` param: Permission "user:680d747a0c0e539c21c9" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:04:11,963 - app.core.chat_service - ERROR - Failed to store user message for conversation 042e40eac0b24169adee5199427a6bc5: 500: Failed to store message: Invalid `permissions` param: Permission "user:680d747a0c0e539c21c9" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:04:11,964 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 01:04:11,964 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:04:11,972 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:04:14,264 - app.core.retrieval.pinecone - ERROR - Error querying Pinecone vector store: 'Index' object has no attribute 'name'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/retrieval/pinecone.py", line 30, in retrieve
+    logger.debug(f"Querying Pinecone index '{index.name}' with top_k={top_k}")
+                                             ^^^^^^^^^^
+AttributeError: 'Index' object has no attribute 'name'
+2025-04-27 01:04:14,276 - app.core.chat_service - WARNING - No documents retrieved for query in conversation 042e40eac0b24169adee5199427a6bc5
+2025-04-27 01:04:14,277 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 01:04:14,277 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 042e40eac0b24169adee5199427a6bc5...
+2025-04-27 01:04:14,278 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:04:14,990 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:04:14,991 - app.core.chat_service - INFO - Mistral response successful for conversation 042e40eac0b24169adee5199427a6bc5
+2025-04-27 01:04:15,238 - app.core.storage - ERROR - Appwrite error storing message for conversation 042e40eac0b24169adee5199427a6bc5: Invalid `permissions` param: Permission "user:ai" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:04:15,239 - app.core.chat_service - ERROR - Failed to store AI message for conversation 042e40eac0b24169adee5199427a6bc5: 500: Failed to store message: Invalid `permissions` param: Permission "user:ai" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:04:16,837 - app.core.storage - ERROR - Appwrite error storing message for conversation 042e40eac0b24169adee5199427a6bc5: Invalid `permissions` param: Permission "user:680d747a0c0e539c21c9" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:04:16,838 - app.core.chat_service - ERROR - Failed to store user message for conversation 042e40eac0b24169adee5199427a6bc5: 500: Failed to store message: Invalid `permissions` param: Permission "user:680d747a0c0e539c21c9" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:04:16,839 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:04:16,844 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:04:17,172 - app.core.retrieval.pinecone - ERROR - Error querying Pinecone vector store: 'Index' object has no attribute 'name'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/retrieval/pinecone.py", line 30, in retrieve
+    logger.debug(f"Querying Pinecone index '{index.name}' with top_k={top_k}")
+                                             ^^^^^^^^^^
+AttributeError: 'Index' object has no attribute 'name'
+2025-04-27 01:04:17,178 - app.core.chat_service - WARNING - No documents retrieved for query in conversation 042e40eac0b24169adee5199427a6bc5
+2025-04-27 01:04:17,178 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 01:04:17,179 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 042e40eac0b24169adee5199427a6bc5...
+2025-04-27 01:04:17,179 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:04:17,048 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:04:17,048 - app.core.chat_service - INFO - Mistral response successful for conversation 042e40eac0b24169adee5199427a6bc5
+2025-04-27 01:04:17,276 - app.core.storage - ERROR - Appwrite error storing message for conversation 042e40eac0b24169adee5199427a6bc5: Invalid `permissions` param: Permission "user:ai" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:04:17,277 - app.core.chat_service - ERROR - Failed to store AI message for conversation 042e40eac0b24169adee5199427a6bc5: 500: Failed to store message: Invalid `permissions` param: Permission "user:ai" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:04:27,311 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:06:24,846 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:06:47,048 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:06:47,093 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:08:56,046 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:08:56,568 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:08:57,100 - app.api.endpoints.auth - INFO - User registered successfully: zgvn8b77uy@fixture.pytest.dev, ID: 680d759867cf51694d32
+2025-04-27 01:08:57,581 - app.api.endpoints.auth - INFO - Password verified for user: zgvn8b77uy@fixture.pytest.dev, User ID: 680d759867cf51694d32
+2025-04-27 01:08:57,819 - app.api.endpoints.auth - INFO - JWT created successfully for user: zgvn8b77uy@fixture.pytest.dev
+2025-04-27 01:08:57,599 - app.core.storage - INFO - Attempting to create conversation a3783bca440540ce90fe20d3c6ac3471 for user 680d759867cf51694d32
+2025-04-27 01:08:57,819 - app.core.storage - INFO - Successfully created conversation a3783bca440540ce90fe20d3c6ac3471
+2025-04-27 01:08:58,357 - app.core.storage - ERROR - Appwrite error storing message for conversation a3783bca440540ce90fe20d3c6ac3471: Invalid `permissions` param: Permission "user:680d759867cf51694d32" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:08:58,358 - app.core.chat_service - ERROR - Failed to store user message for conversation a3783bca440540ce90fe20d3c6ac3471: 500: Failed to store message: Invalid `permissions` param: Permission "user:680d759867cf51694d32" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:08:58,359 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 01:08:58,360 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:08:58,364 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:08:59,410 - app.core.retrieval.pinecone - ERROR - Error querying Pinecone vector store: 'Index' object has no attribute 'name'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/retrieval/pinecone.py", line 30, in retrieve
+    logger.debug(f"Querying Pinecone index '{index.name}' with top_k={top_k}")
+                                             ^^^^^^^^^^
+AttributeError: 'Index' object has no attribute 'name'
+2025-04-27 01:08:59,422 - app.core.chat_service - WARNING - No documents retrieved for query in conversation a3783bca440540ce90fe20d3c6ac3471
+2025-04-27 01:08:59,423 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 01:08:59,423 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation a3783bca440540ce90fe20d3c6ac3471...
+2025-04-27 01:08:59,424 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:09:00,410 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:09:00,410 - app.core.chat_service - INFO - Mistral response successful for conversation a3783bca440540ce90fe20d3c6ac3471
+2025-04-27 01:09:00,744 - app.core.storage - ERROR - Appwrite error storing message for conversation a3783bca440540ce90fe20d3c6ac3471: Invalid `permissions` param: Permission "user:ai" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:00,745 - app.core.chat_service - ERROR - Failed to store AI message for conversation a3783bca440540ce90fe20d3c6ac3471: 500: Failed to store message: Invalid `permissions` param: Permission "user:ai" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:02,391 - app.core.storage - ERROR - Appwrite error storing message for conversation a3783bca440540ce90fe20d3c6ac3471: Invalid `permissions` param: Permission "user:680d759867cf51694d32" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:02,392 - app.core.chat_service - ERROR - Failed to store user message for conversation a3783bca440540ce90fe20d3c6ac3471: 500: Failed to store message: Invalid `permissions` param: Permission "user:680d759867cf51694d32" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:02,394 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:09:02,424 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:09:02,693 - app.core.retrieval.pinecone - ERROR - Error querying Pinecone vector store: 'Index' object has no attribute 'name'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/retrieval/pinecone.py", line 30, in retrieve
+    logger.debug(f"Querying Pinecone index '{index.name}' with top_k={top_k}")
+                                             ^^^^^^^^^^
+AttributeError: 'Index' object has no attribute 'name'
+2025-04-27 01:09:02,699 - app.core.chat_service - WARNING - No documents retrieved for query in conversation a3783bca440540ce90fe20d3c6ac3471
+2025-04-27 01:09:02,700 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 01:09:02,701 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation a3783bca440540ce90fe20d3c6ac3471...
+2025-04-27 01:09:02,701 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:09:02,901 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-27 01:09:02,902 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.04 seconds (calculated)...
+2025-04-27 01:09:03,876 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:09:03,877 - app.core.chat_service - INFO - Mistral response successful for conversation a3783bca440540ce90fe20d3c6ac3471
+2025-04-27 01:09:04,128 - app.core.storage - ERROR - Appwrite error storing message for conversation a3783bca440540ce90fe20d3c6ac3471: Invalid `permissions` param: Permission "user:ai" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:04,129 - app.core.chat_service - ERROR - Failed to store AI message for conversation a3783bca440540ce90fe20d3c6ac3471: 500: Failed to store message: Invalid `permissions` param: Permission "user:ai" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:16,635 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:09:47,132 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:09:47,606 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:09:47,733 - app.api.endpoints.auth - INFO - User registered successfully: ledmmc5y55@fixture.pytest.dev, ID: 680d75cb7ae43b54a74f
+2025-04-27 01:09:48,235 - app.api.endpoints.auth - INFO - Password verified for user: ledmmc5y55@fixture.pytest.dev, User ID: 680d75cb7ae43b54a74f
+2025-04-27 01:09:48,778 - app.api.endpoints.auth - INFO - JWT created successfully for user: ledmmc5y55@fixture.pytest.dev
+2025-04-27 01:09:49,526 - app.core.storage - INFO - Attempting to create conversation f564ad3f7d974246aafd8ee0b87bb2ed for user 680d75cb7ae43b54a74f
+2025-04-27 01:09:49,939 - app.core.storage - INFO - Successfully created conversation f564ad3f7d974246aafd8ee0b87bb2ed
+2025-04-27 01:09:50,729 - app.core.storage - ERROR - Appwrite error storing message for conversation f564ad3f7d974246aafd8ee0b87bb2ed: Invalid `permissions` param: Permission "user:680d75cb7ae43b54a74f" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:50,730 - app.core.chat_service - ERROR - Failed to store user message for conversation f564ad3f7d974246aafd8ee0b87bb2ed: 500: Failed to store message: Invalid `permissions` param: Permission "user:680d75cb7ae43b54a74f" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:50,731 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 01:09:50,732 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:09:50,738 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:09:52,641 - app.core.retrieval.pinecone - ERROR - Error querying Pinecone vector store: 'Index' object has no attribute 'name'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/retrieval/pinecone.py", line 30, in retrieve
+    logger.debug(f"Querying Pinecone index '{index.name}' with top_k={top_k}")
+                                             ^^^^^^^^^^
+AttributeError: 'Index' object has no attribute 'name'
+2025-04-27 01:09:52,652 - app.core.chat_service - WARNING - No documents retrieved for query in conversation f564ad3f7d974246aafd8ee0b87bb2ed
+2025-04-27 01:09:52,652 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 01:09:52,653 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation f564ad3f7d974246aafd8ee0b87bb2ed...
+2025-04-27 01:09:52,654 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:09:52,781 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:09:52,781 - app.core.chat_service - INFO - Mistral response successful for conversation f564ad3f7d974246aafd8ee0b87bb2ed
+2025-04-27 01:09:53,044 - app.core.storage - ERROR - Appwrite error storing message for conversation f564ad3f7d974246aafd8ee0b87bb2ed: Invalid `permissions` param: Permission "user:ai" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:53,045 - app.core.chat_service - ERROR - Failed to store AI message for conversation f564ad3f7d974246aafd8ee0b87bb2ed: 500: Failed to store message: Invalid `permissions` param: Permission "user:ai" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:54,637 - app.core.storage - ERROR - Appwrite error storing message for conversation f564ad3f7d974246aafd8ee0b87bb2ed: Invalid `permissions` param: Permission "user:680d75cb7ae43b54a74f" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:54,638 - app.core.chat_service - ERROR - Failed to store user message for conversation f564ad3f7d974246aafd8ee0b87bb2ed: 500: Failed to store message: Invalid `permissions` param: Permission "user:680d75cb7ae43b54a74f" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:54,639 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:09:54,646 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:09:54,816 - app.core.retrieval.pinecone - ERROR - Error querying Pinecone vector store: 'Index' object has no attribute 'name'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/retrieval/pinecone.py", line 30, in retrieve
+    logger.debug(f"Querying Pinecone index '{index.name}' with top_k={top_k}")
+                                             ^^^^^^^^^^
+AttributeError: 'Index' object has no attribute 'name'
+2025-04-27 01:09:54,821 - app.core.chat_service - WARNING - No documents retrieved for query in conversation f564ad3f7d974246aafd8ee0b87bb2ed
+2025-04-27 01:09:54,822 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 01:09:54,823 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation f564ad3f7d974246aafd8ee0b87bb2ed...
+2025-04-27 01:09:54,823 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:09:55,215 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:09:55,218 - app.core.chat_service - INFO - Mistral response successful for conversation f564ad3f7d974246aafd8ee0b87bb2ed
+2025-04-27 01:09:55,417 - app.core.storage - ERROR - Appwrite error storing message for conversation f564ad3f7d974246aafd8ee0b87bb2ed: Invalid `permissions` param: Permission "user:ai" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:55,418 - app.core.chat_service - ERROR - Failed to store AI message for conversation f564ad3f7d974246aafd8ee0b87bb2ed: 500: Failed to store message: Invalid `permissions` param: Permission "user:ai" is not allowed. Must be one of: read, update, delete, write.
+2025-04-27 01:09:59,415 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:10:09,040 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:10:19,921 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:10:19,959 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:10:51,985 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:10:52,531 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:10:53,011 - app.api.endpoints.auth - INFO - User registered successfully: zk4r30ehyu@fixture.pytest.dev, ID: 680d760c620bedffadce
+2025-04-27 01:10:53,049 - app.api.endpoints.auth - INFO - Password verified for user: zk4r30ehyu@fixture.pytest.dev, User ID: 680d760c620bedffadce
+2025-04-27 01:10:53,268 - app.api.endpoints.auth - INFO - JWT created successfully for user: zk4r30ehyu@fixture.pytest.dev
+2025-04-27 01:10:53,494 - app.core.storage - INFO - Attempting to create conversation abd6f3facd1f4d38b61b03ed0ea9dc7e for user 680d760c620bedffadce
+2025-04-27 01:10:53,706 - app.core.storage - INFO - Successfully created conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
+2025-04-27 01:10:54,382 - app.core.storage - INFO - Stored message 680d760e36bcee0cd4e0 for user 680d760c620bedffadce
+2025-04-27 01:10:54,383 - app.core.chat_service - INFO - Stored user message (ID: 680d760e36bcee0cd4e0) for conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
+2025-04-27 01:10:54,601 - app.core.storage - INFO - Timestamp updated for conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
+2025-04-27 01:10:54,603 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 01:10:54,604 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:10:54,609 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:10:56,258 - app.core.retrieval.pinecone - ERROR - Error querying Pinecone vector store: 'Index' object has no attribute 'name'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/retrieval/pinecone.py", line 30, in retrieve
+    logger.debug(f"Querying Pinecone index '{index.name}' with top_k={top_k}")
+                                             ^^^^^^^^^^
+AttributeError: 'Index' object has no attribute 'name'
+2025-04-27 01:10:56,269 - app.core.chat_service - WARNING - No documents retrieved for query in conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
+2025-04-27 01:10:56,269 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 01:10:56,270 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation abd6f3facd1f4d38b61b03ed0ea9dc7e...
+2025-04-27 01:10:56,271 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:10:57,014 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:10:57,014 - app.core.chat_service - INFO - Mistral response successful for conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
+2025-04-27 01:10:57,227 - app.core.storage - INFO - Stored message 680d7610cf8e11998b28 for user ai
+2025-04-27 01:10:57,228 - app.core.chat_service - INFO - Stored AI message (ID: 680d7610cf8e11998b28) for conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
+2025-04-27 01:10:57,424 - app.core.storage - INFO - Timestamp updated for conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
+2025-04-27 01:10:59,401 - app.core.storage - INFO - Stored message 680d761327a13a0474b5 for user 680d760c620bedffadce
+2025-04-27 01:10:59,401 - app.core.chat_service - INFO - Stored user message (ID: 680d761327a13a0474b5) for conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
+2025-04-27 01:10:59,672 - app.core.storage - INFO - Timestamp updated for conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
+2025-04-27 01:10:59,672 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:10:59,678 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:10:59,871 - app.core.retrieval.pinecone - ERROR - Error querying Pinecone vector store: 'Index' object has no attribute 'name'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/core/retrieval/pinecone.py", line 30, in retrieve
+    logger.debug(f"Querying Pinecone index '{index.name}' with top_k={top_k}")
+                                             ^^^^^^^^^^
+AttributeError: 'Index' object has no attribute 'name'
+2025-04-27 01:10:59,875 - app.core.chat_service - WARNING - No documents retrieved for query in conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
+2025-04-27 01:10:59,876 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 01:10:59,877 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation abd6f3facd1f4d38b61b03ed0ea9dc7e...
+2025-04-27 01:10:59,877 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:11:00,082 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-27 01:11:00,083 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.02 seconds (calculated)...
+2025-04-27 01:11:01,530 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:11:01,531 - app.core.chat_service - INFO - Mistral response successful for conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
+2025-04-27 01:11:01,717 - app.core.storage - INFO - Stored message 680d761557407d15d060 for user ai
+2025-04-27 01:11:01,718 - app.core.chat_service - INFO - Stored AI message (ID: 680d761557407d15d060) for conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
+2025-04-27 01:11:01,929 - app.core.storage - INFO - Timestamp updated for conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
+2025-04-27 01:11:12,523 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:11:49,120 - app.main - INFO - Application shutdown: cleaning up resources

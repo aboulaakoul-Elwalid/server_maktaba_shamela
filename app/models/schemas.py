@@ -1,6 +1,7 @@
 # app/models/schemas.py
-from pydantic import BaseModel, Field, HttpUrl
+from pydantic import BaseModel, Field, HttpUrl, model_validator  # Import model_validator
 from typing import List, Dict, Any, Optional
+import datetime  # Added for timestamp
 
 class EmbedRequest(BaseModel):
     """
@@ -22,88 +23,78 @@ class EmbedResponse(BaseModel):
     embedding: List[float] = Field(..., 
                                  description="Vector representation of the input text")
 
-class RetrievalRequest(BaseModel):
-    """Request model for the /retrieval endpoint."""
-    query: str = Field(..., 
-                      description="Query text to search for", 
-                      min_length=1)
-    top_k: int = Field(default=5, 
-                     description="Number of results to return",
-                     ge=1, le=100)
+
+# --- Retrieval Schemas ---
 
 class DocumentMetadata(BaseModel):
-    """Metadata model for retrieved documents."""
-    book_name: str
-    section_title: str
-    text: str
+    """Metadata associated with a retrieved document chunk."""
+    author_name: Optional[str] = Field(None, description="Author of the source book")
+    book_name: Optional[str] = Field(None, description="Name of the source book")
+    category_name: Optional[str] = Field(None, description="Category of the source book")
+    section_title: Optional[str] = Field(None, description="Title of the section within the book")
+    text: str = Field(..., description="The actual text content of the document chunk")
+    book_id: Optional[str] = Field(None, description="Unique identifier for the book (e.g., for URL generation)")
 
 class DocumentMatch(BaseModel):
-    """Model for a single document match."""
-    score: float = Field(..., description="Similarity score")
-    id: str = Field(..., description="Document ID")
-    metadata: DocumentMetadata = Field(..., description="Document metadata")
+    """Represents a single document match from the retriever."""
+    id: str = Field(..., description="Unique identifier for the document chunk (e.g., section_id)")
+    score: float = Field(..., description="Relevance score from the retrieval system")
+    metadata: DocumentMetadata = Field(..., description="Structured metadata for the document")
+
+class RetrievalRequest(BaseModel):
+    """Request model for the /retrieval endpoint."""
+    query: str = Field(...,
+                      description="Query text to search for",
+                      min_length=1)
+    top_k: int = Field(5, description="Number of documents to retrieve", ge=1, le=50)
 
 class RetrievalResponse(BaseModel):
     """Response model for the /retrieval endpoint."""
-    matches: List[DocumentMatch] = Field(..., 
-                                       description="List of matched documents")
+    matches: List[DocumentMatch] = Field(..., description="List of retrieved document matches")
+    query: str = Field(..., description="The original query text")
+
+
+# --- Ingestion Schemas ---
 
 class IngestionRequest(BaseModel):
-    """Request model for the /ingestion endpoint."""
-    document_url: HttpUrl = Field(..., 
-                                description="URL of the document to ingest")
-    # Alternative for direct text ingestion
-    # text: Optional[str] = Field(None, description="Text content to ingest")
-    metadata: Optional[Dict[str, Any]] = Field(default={}, 
-                                             description="Additional metadata")
+    """Request model for the /ingest endpoint."""
+    source_url: Optional[HttpUrl] = Field(None, description="URL of the source document (optional)")
+    text_content: Optional[str] = Field(None, description="Raw text content to ingest (optional)")
+    metadata: Dict[str, Any] = Field({}, description="Additional metadata to associate with the document")
+
+    @model_validator(mode='before')  # This decorator will now be recognized
+    def check_source_or_content(cls, values):
+        if not values.get('source_url') and not values.get('text_content'):
+            raise ValueError('Either source_url or text_content must be provided')
+        return values
 
 class IngestionResponse(BaseModel):
-    """Response model for the /ingestion endpoint."""
-    success: bool = Field(..., description="Whether ingestion was successful")
-    document_id: Optional[str] = Field(None, description="ID of the ingested document")
-    message: str = Field(..., description="Status message")
+    """Response model for the /ingest endpoint."""
+    status: str = Field(..., description="Ingestion status (e.g., 'success', 'failed')")
+    message: str = Field(..., description="Details about the ingestion process")
+    processed_chunks: Optional[int] = Field(None, description="Number of chunks processed")
 
 
-# Add to existing schemas
+# --- Chat Schemas ---
+
 class MessageCreate(BaseModel):
-    content: str
-    conversation_id: Optional[str] = None
+    """Request model for sending a message."""
+    content: str = Field(..., min_length=1, description="The content of the user's message")
+    conversation_id: Optional[str] = Field(None, description="Existing conversation ID (optional)")
 
 class Message(BaseModel):
-    user_id: str
-    content: str
-    message_id: str  # This was missing
-    message_type: str  # Changed from Optional
-    timestamp: str  # Changed from Optional[str]
-    conversation_id: Optional[str] = None
-    sources: Optional[List[Dict[str, Any]]] = Field(
-        default=None,
-        description="Source documents used to generate this response, with citation details"
-    )
+    """Represents a single message in a conversation."""
+    message_id: str = Field(..., description="Unique ID of the message")
+    conversation_id: str = Field(..., description="ID of the conversation this message belongs to")
+    user_id: str = Field(..., description="ID of the user who sent the message (or 'ai')")
+    content: str = Field(..., description="The text content of the message")
+    message_type: str = Field(..., description="Type of message ('user' or 'ai')")
+    timestamp: datetime.datetime = Field(..., description="Timestamp when the message was created")
+    sources: List[Dict[str, Any]] = Field([], description="List of source documents cited by an AI message")
+
 class ConversationResponse(BaseModel):
-    id: str
-    title: Optional[str] = "Untitled Conversation"
-    # Expect strings from Appwrite initially
-    created_at: Optional[str] = None
-    last_updated: Optional[str] = None
-
-    # Optional: If you want datetime objects in your API response,
-    # you can add validators to parse the strings.
-    # parsed_created_at: Optional[datetime] = None
-    # parsed_last_updated: Optional[datetime] = None
-
-    # @field_validator('created_at', 'last_updated', mode='before')
-    # def parse_datetime_str(cls, v):
-    #     if isinstance(v, str):
-    #         try:
-    #             # Appwrite uses ISO 8601 format like '2023-10-27T10:00:00.000+00:00'
-    #             # Adjust parsing if needed based on actual Appwrite output
-    #             return datetime.fromisoformat(v.replace("Z", "+00:00"))
-    #         except (ValueError, TypeError) as e:
-    #             logger.warning(f"Could not parse timestamp string '{v}': {e}")
-    #             return None # Return None if parsing fails
-    #     return v # Return as is if not a string or already parsed
-
-    class Config:
-        from_attributes = True # For Pydantic v2
-        # orm_mode = True # For Pydantic v1
+    """Response model for listing conversations."""
+    id: str = Field(..., description="Unique ID of the conversation")
+    title: Optional[str] = Field(None, description="Title of the conversation (optional)")
+    created_at: datetime.datetime = Field(..., description="Timestamp when the conversation was created")
+    last_updated: datetime.datetime = Field(..., description="Timestamp when the conversation was last updated")

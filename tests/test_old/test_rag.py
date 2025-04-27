@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 # Import after environment variables are loaded
-from app.core.retrieval import query_vector_store
+from app.core.retrieval_old import query_vector_store
 from app.core.clients import init_mistral_client
 
 def test_retrieval():

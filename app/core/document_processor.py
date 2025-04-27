@@ -188,12 +188,12 @@ def process_document(url: str) -> Tuple[Optional[List[Dict]], Optional[Dict]]:
             **metadata,
             "chunk_index": i,
             "total_chunks": len(chunks),
-            "text": chunk,
+            "text": chunk,  # <<< CONFIRMED: 'text' is included here
             "source_url": url
         }
         result.append({
             "id": chunk_id,
-            "text": chunk,
+            "text": chunk,  # This 'text' is often redundant if using Pinecone's text field directly
             "metadata": chunk_metadata
         })
     

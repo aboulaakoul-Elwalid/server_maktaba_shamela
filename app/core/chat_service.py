@@ -2,7 +2,7 @@
 import logging
 import json
 import asyncio
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 from fastapi import HTTPException
 from appwrite.services.databases import Databases
 from appwrite.query import Query
@@ -10,11 +10,11 @@ from appwrite.exception import AppwriteException
 
 # Import necessary functions from refactored modules
 from app.core.storage import store_message, update_conversation_timestamp
-from app.core.retrieval import query_vector_store
+from app.core.retrieval import get_retriever, Retriever  # Use the new retrieval package
 from app.core.context_formatter import format_context_and_extract_sources, construct_llm_prompt, format_history
 from app.core.llm_service import call_mistral_with_retry, call_gemini_api
 from app.config.settings import settings
-from app.models.schemas import Message
+from app.models.schemas import Message, DocumentMatch
 
 logger = logging.getLogger(__name__)
 
@@ -115,18 +115,19 @@ async def generate_rag_response(
             logger.error(f"Failed to store user message for conversation {conversation_id}: {store_err}")
             # Decide if we should stop or continue; continuing might be better UX
 
-        # 2. Retrieve Documents
+        # 2. Retrieve Documents using the new retriever
         logger.debug(f"Retrieving documents for query: {query[:50]}...")
-        documents = None
+        documents: Optional[List[DocumentMatch]] = None
         try:
-            documents = query_vector_store(query_text=query, top_k=settings.RETRIEVAL_TOP_K)
+            retriever: Retriever = get_retriever()  # Get the configured retriever instance
+            documents = await retriever.retrieve(query=query, top_k=settings.RETRIEVAL_TOP_K)
             if not documents:
                 logger.warning(f"No documents retrieved for query in conversation {conversation_id}")
                 documents = []  # Ensure it's an empty list for formatting
             else:
                 logger.info(f"Retrieved {len(documents)} documents for conversation {conversation_id}")
         except Exception as e:
-            logger.exception(f"Error during vector store query for conversation {conversation_id}: {str(e)}")
+            logger.exception(f"Error during vector store retrieval for conversation {conversation_id}: {str(e)}")
             error_detail = f"Retrieval error: {e}"
             ai_response_content = "I'm having trouble finding relevant information right now."
             try:

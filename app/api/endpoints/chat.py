@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from fastapi.responses import StreamingResponse
-from app.models.schemas import MessageCreate, Message, ConversationResponse
+from app.models.schemas import MessageCreate, Message, ConversationResponse, DocumentMatch
 from app.core.storage import create_new_conversation, get_user_conversations
 from app.core.chat_service import generate_rag_response
 from app.core.streaming import generate_streaming_response
@@ -8,7 +8,7 @@ from app.api.dependencies import get_user_or_anonymous, check_rate_limit
 from app.core.clients import get_admin_db_service
 from appwrite.services.databases import Databases
 from typing import List, Dict, Any, Optional
-from app.core.retrieval import query_vector_store
+from app.core.retrieval import get_retriever, Retriever  # Use the new retrieval package
 from app.core.context_formatter import format_context_and_extract_sources, construct_llm_prompt
 from app.config.settings import settings
 from appwrite.query import Query
@@ -202,19 +202,19 @@ async def stream_message(
 
 @router.get("/debug", response_model=Dict[str, Any])
 async def debug_rag(query: str = "Test query", user: UserResponse = Depends(get_user_or_anonymous)):
+    """Debug endpoint to test the RAG pipeline components."""
     try:
-        documents = query_vector_store(query_text=query, top_k=settings.RETRIEVAL_TOP_K)
+        retriever: Retriever = get_retriever()
+        documents: Optional[List[DocumentMatch]] = await retriever.retrieve(query=query, top_k=settings.RETRIEVAL_TOP_K)
 
         formatted_docs = []
         if documents:
             _, sources = format_context_and_extract_sources(documents)
             formatted_docs = sources
 
-        mistral_status = "configured" if settings.MISTRAL_API_KEY else "missing"
-        gemini_status = "configured" if settings.API_KEY_GOOGLE else "missing"
-
         return {
             "query": query,
+            "retriever_provider": settings.RETRIEVER_PROVIDER,
             "retrieval_status": "success" if documents is not None else "failed",
             "document_count": len(documents) if documents else 0,
             "sample_formatted_sources": formatted_docs[:2],

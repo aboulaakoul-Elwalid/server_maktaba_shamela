@@ -71,6 +71,10 @@ class Settings(BaseSettings):
     STREAM_CHUNK_SIZE: int = 50
     STREAM_CHUNK_DELAY: float = 0.02
 
+    # Retrieval Configuration
+    RETRIEVER_PROVIDER: str = "pinecone" # Options: "pinecone", "faiss" (future), etc.
+    RETRIEVAL_TOP_K: int = 5
+
     # Prompt Configuration # Added section
     PROMPT_TEMPLATE: str = """You are an expert assistant specializing in Arabic and Islamic texts. The conversation history is provided below. Use ONLY the conversation history and the retrieved context to answer the user's question.
 
