@@ -1,6 +1,6 @@
 import pytest
 from fastapi.testclient import TestClient
-import time
+import time  # <-- ADD THIS IMPORT
 
 # --- Test Class for Chat Flow ---
 class TestChatFlow:
@@ -12,8 +12,9 @@ class TestChatFlow:
     @pytest.fixture(autouse=True)
     def setup_auth_header(self, authenticated_user_token: str):
         """Fixture to automatically set the auth header for all tests in this class."""
+        print("\n--- Setup: Setting Auth Header (Validation patched in conftest) ---")
         TestChatFlow.auth_headers = {"Authorization": f"Bearer {authenticated_user_token}"}
-        print(f"\n--- Setup Auth Header for TestChatFlow ---")
+        print(f"--- Setup: Auth Header set with token: {authenticated_user_token[:5]}... ---")
 
     def test_create_conversation(self, client: TestClient):
         """Tests creating a new conversation."""
@@ -35,17 +36,12 @@ class TestChatFlow:
         print("\n--- Testing Send First Message ---")
         assert TestChatFlow.conversation_id is not None, "Create conversation must run first"
 
-        message_payload = {"content": "Tell me about the pillars of Islam."}
-        # Note: Your actual endpoint might be /chat/messages and takes conversation_id in payload
-        # Adjusting based on the prompt's desired structure: POST /chat/conversations/{id}/message
-        # If your actual endpoint is different (like POST /chat/messages), change the URL below.
-        # Based on your chat.py, the endpoint is POST /messages, taking conversation_id in payload
         message_payload_with_id = {
             "content": "Tell me about the pillars of Islam.",
             "conversation_id": TestChatFlow.conversation_id
         }
         response = client.post(
-            "/chat/messages", # Corrected based on chat.py
+            "/chat/messages",
             headers=TestChatFlow.auth_headers,
             json=message_payload_with_id
         )
@@ -57,7 +53,6 @@ class TestChatFlow:
 
         assert response.status_code == 200
         response_data = response.json()
-        # Assert based on the actual response structure of your /chat/messages endpoint
         assert "ai_response" in response_data
         assert "sources" in response_data
         assert response_data.get("conversation_id") == TestChatFlow.conversation_id
@@ -73,7 +68,7 @@ class TestChatFlow:
             "conversation_id": TestChatFlow.conversation_id
         }
         response = client.post(
-            "/chat/messages", # Corrected based on chat.py
+            "/chat/messages",
             headers=TestChatFlow.auth_headers,
             json=message_payload_with_id
         )
@@ -86,14 +81,12 @@ class TestChatFlow:
         assert response.status_code == 200
         response_data = response.json()
         assert "ai_response" in response_data
-        # Add more specific assertions if needed
 
     def test_get_conversation_history(self, client: TestClient):
         """Tests retrieving the full message history for the conversation."""
         print("\n--- Testing Get Conversation History ---")
         assert TestChatFlow.conversation_id is not None, "Create conversation must run first"
 
-        # Based on your chat.py, the endpoint is GET /chat/conversations/{id}/messages
         response = client.get(
             f"/chat/conversations/{TestChatFlow.conversation_id}/messages",
             headers=TestChatFlow.auth_headers
@@ -107,15 +100,12 @@ class TestChatFlow:
         assert response.status_code == 200
         response_data = response.json()
         assert isinstance(response_data, list)
-        # Expecting user message, AI response, user message, AI response = 4 messages
-        assert len(response_data) >= 4 # Check if at least 4 messages exist
-        # Check order and content (optional but good)
+        assert len(response_data) >= 4
         assert response_data[0].get("message_type") == "user"
         assert response_data[0].get("content") == "Tell me about the pillars of Islam."
         assert response_data[1].get("message_type") == "ai"
         assert response_data[2].get("message_type") == "user"
         assert response_data[2].get("content") == "What is Zakat?"
         assert response_data[3].get("message_type") == "ai"
-        # Check if conversation_id matches in messages
         for msg in response_data:
             assert msg.get("conversation_id") == TestChatFlow.conversation_id

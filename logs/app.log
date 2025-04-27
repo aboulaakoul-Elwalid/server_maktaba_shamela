@@ -4871,3 +4871,298 @@ book_id
 2025-04-27 01:56:45,971 - app.core.chat_service - INFO - Stored AI message (ID: 680d80cc8911579a4322) for conversation 55da5c52cdba43d4bc0605d612bb0666
 2025-04-27 01:56:46,153 - app.core.storage - INFO - Timestamp updated for conversation 55da5c52cdba43d4bc0605d612bb0666
 2025-04-27 01:56:56,546 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 02:40:04,585 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 02:40:20,906 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 02:40:20,938 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 02:43:52,528 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 02:44:13,290 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 02:44:13,327 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 02:45:55,939 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 02:46:14,884 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 02:46:14,934 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 02:48:33,817 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 02:48:53,823 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 02:48:53,867 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 02:50:08,234 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 02:50:31,231 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 02:50:46,626 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 02:50:46,673 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 02:51:15,713 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 02:51:23,637 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 02:51:24,103 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 02:51:34,415 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:05:10,156 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:05:33,307 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:05:33,345 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:12:49,261 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:12:57,749 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:12:58,171 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 03:13:08,172 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:13:32,915 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:13:48,073 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:13:48,117 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:21:24,397 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:21:34,703 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:21:44,336 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:21:44,451 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 03:21:44,484 - app.core.context_formatter - WARNING - Skipping document invalid_doc_empty due to missing metadata or text.
+2025-04-27 03:21:44,715 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:21:46,402 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:21:46,441 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:28:17,724 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:28:25,691 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:28:26,414 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 03:28:26,457 - app.core.context_formatter - WARNING - Skipping document invalid_doc_empty due to missing metadata or text.
+2025-04-27 03:28:26,718 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:33:36,939 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:33:38,332 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:33:38,429 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:34:50,103 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:35:26,846 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:35:26,887 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:35:55,716 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:35:56,395 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:35:56,444 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:39:49,398 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:39:50,120 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:40:02,588 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:43:10,070 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:43:10,718 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:43:21,096 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:43:26,949 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:43:41,355 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:43:41,390 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:49:45,242 - app.api.endpoints.auth - INFO - User registered successfully: test509@example.com, ID: 680d9b48d2cbba35e5d2
+2025-04-27 03:49:46,016 - app.api.endpoints.auth - INFO - Password verified for user: test509@example.com, User ID: 680d9b48d2cbba35e5d2
+2025-04-27 03:49:46,232 - app.api.endpoints.auth - INFO - JWT created successfully for user: test509@example.com
+2025-04-27 03:49:47,953 - app.core.storage - INFO - Attempting to create conversation afdace8a8c5246d485d68005a4ec071c for user 680d9b48d2cbba35e5d2
+2025-04-27 03:49:48,251 - app.core.storage - INFO - Successfully created conversation afdace8a8c5246d485d68005a4ec071c
+2025-04-27 03:49:48,264 - app.api.endpoints.chat - INFO - Created new conversation afdace8a8c5246d485d68005a4ec071c for message.
+2025-04-27 03:49:48,823 - app.core.storage - INFO - Stored message 680d9b4c4734d9ea6a5b for user 680d9b48d2cbba35e5d2
+2025-04-27 03:49:48,824 - app.core.chat_service - INFO - Stored user message (ID: 680d9b4c4734d9ea6a5b) for conversation afdace8a8c5246d485d68005a4ec071c
+2025-04-27 03:49:48,578 - app.core.storage - INFO - Timestamp updated for conversation afdace8a8c5246d485d68005a4ec071c
+2025-04-27 03:49:48,580 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 03:49:48,581 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 03:49:48,589 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 03:49:51,475 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 03:49:51,477 - app.core.chat_service - INFO - Retrieved 5 documents for conversation afdace8a8c5246d485d68005a4ec071c
+2025-04-27 03:49:51,478 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 03:49:51,479 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 03:49:51,479 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation afdace8a8c5246d485d68005a4ec071c...
+2025-04-27 03:49:51,480 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 03:49:53,750 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 03:49:53,751 - app.core.chat_service - INFO - Mistral response successful for conversation afdace8a8c5246d485d68005a4ec071c
+2025-04-27 03:49:53,555 - app.core.storage - INFO - Stored message 680d9b5172bfcb29affe for user ai
+2025-04-27 03:49:54,566 - app.core.storage - INFO - Stored 5 sources for message 680d9b5172bfcb29affe
+2025-04-27 03:49:54,567 - app.core.chat_service - INFO - Stored AI message (ID: 680d9b5172bfcb29affe) for conversation afdace8a8c5246d485d68005a4ec071c
+2025-04-27 03:49:54,760 - app.core.storage - INFO - Timestamp updated for conversation afdace8a8c5246d485d68005a4ec071c
+2025-04-27 03:49:55,568 - app.core.storage - INFO - Attempting to create conversation 319d707a6aad4294ae22cb76c70637da for user 680d9b48d2cbba35e5d2
+2025-04-27 03:49:55,804 - app.core.storage - INFO - Successfully created conversation 319d707a6aad4294ae22cb76c70637da
+2025-04-27 03:49:55,805 - app.api.endpoints.chat - INFO - Created new conversation 319d707a6aad4294ae22cb76c70637da for message.
+2025-04-27 03:49:56,276 - app.core.storage - INFO - Stored message 680d9b53e7167c2491cd for user 680d9b48d2cbba35e5d2
+2025-04-27 03:49:56,276 - app.core.chat_service - INFO - Stored user message (ID: 680d9b53e7167c2491cd) for conversation 319d707a6aad4294ae22cb76c70637da
+2025-04-27 03:49:56,536 - app.core.storage - INFO - Timestamp updated for conversation 319d707a6aad4294ae22cb76c70637da
+2025-04-27 03:49:56,538 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 03:49:56,543 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 03:49:57,881 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 03:49:57,883 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 319d707a6aad4294ae22cb76c70637da
+2025-04-27 03:49:57,885 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 03:49:57,887 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 03:49:57,889 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 319d707a6aad4294ae22cb76c70637da...
+2025-04-27 03:49:57,889 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 03:49:58,695 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 03:49:58,695 - app.core.chat_service - INFO - Mistral response successful for conversation 319d707a6aad4294ae22cb76c70637da
+2025-04-27 03:51:15,259 - app.core.storage - INFO - Stored message 680d9b5656ef8560f749 for user ai
+2025-04-27 03:51:17,442 - app.core.storage - INFO - Stored 5 sources for message 680d9b5656ef8560f749
+2025-04-27 03:51:17,443 - app.core.chat_service - INFO - Stored AI message (ID: 680d9b5656ef8560f749) for conversation 319d707a6aad4294ae22cb76c70637da
+2025-04-27 03:51:17,691 - app.core.storage - INFO - Timestamp updated for conversation 319d707a6aad4294ae22cb76c70637da
+2025-04-27 03:51:19,747 - app.core.storage - INFO - Attempting to create conversation 6ea929a26a1b4734a6241f46d7a2e4a7 for user 680d9b48d2cbba35e5d2
+2025-04-27 03:51:21,626 - app.core.storage - INFO - Successfully created conversation 6ea929a26a1b4734a6241f46d7a2e4a7
+2025-04-27 03:51:21,626 - app.api.endpoints.chat - INFO - Created new conversation 6ea929a26a1b4734a6241f46d7a2e4a7 for message.
+2025-04-27 03:51:23,333 - app.core.storage - INFO - Stored message 680d9b5db4464afa8cfa for user 680d9b48d2cbba35e5d2
+2025-04-27 03:51:23,334 - app.core.chat_service - INFO - Stored user message (ID: 680d9b5db4464afa8cfa) for conversation 6ea929a26a1b4734a6241f46d7a2e4a7
+2025-04-27 03:51:23,953 - app.core.storage - INFO - Timestamp updated for conversation 6ea929a26a1b4734a6241f46d7a2e4a7
+2025-04-27 03:51:23,955 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 03:51:23,964 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 03:51:26,840 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 03:51:26,842 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 6ea929a26a1b4734a6241f46d7a2e4a7
+2025-04-27 03:51:26,843 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 03:51:26,843 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 03:51:26,844 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 6ea929a26a1b4734a6241f46d7a2e4a7...
+2025-04-27 03:51:26,845 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 03:51:27,657 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 03:51:27,658 - app.core.chat_service - INFO - Mistral response successful for conversation 6ea929a26a1b4734a6241f46d7a2e4a7
+2025-04-27 03:51:30,240 - app.core.storage - INFO - Stored message 680d9b653e327dfa3333 for user ai
+2025-04-27 03:50:17,171 - app.core.storage - INFO - Stored 5 sources for message 680d9b653e327dfa3333
+2025-04-27 03:50:17,171 - app.core.chat_service - INFO - Stored AI message (ID: 680d9b653e327dfa3333) for conversation 6ea929a26a1b4734a6241f46d7a2e4a7
+2025-04-27 03:50:17,721 - app.core.storage - INFO - Timestamp updated for conversation 6ea929a26a1b4734a6241f46d7a2e4a7
+2025-04-27 03:52:47,962 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:52:48,410 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:52:48,485 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:52:38,835 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:52:39,280 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:52:41,061 - app.api.endpoints.auth - INFO - User registered successfully: 3peq43src6@test.pytest.dev, ID: 680d9bf78ed5a4075eb3
+2025-04-27 03:52:43,646 - app.api.endpoints.auth - INFO - Password verified for user: 3peq43src6@test.pytest.dev, User ID: 680d9bf78ed5a4075eb3
+2025-04-27 03:52:47,902 - app.api.endpoints.auth - INFO - JWT created successfully for user: 3peq43src6@test.pytest.dev
+2025-04-27 03:52:50,621 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 03:58:22,360 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 03:58:23,542 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 03:58:23,596 - app.api.endpoints.auth - INFO - Password verified for user: e2e_test@example.com, User ID: e2e_test_user_id
+2025-04-27 03:58:23,596 - app.api.endpoints.auth - INFO - JWT created successfully for user: e2e_test@example.com
+2025-04-27 03:58:24,032 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-27 03:58:24,034 - app.core.storage - INFO - Attempting to create conversation 45f52f445a4f4691b6e767fca0cc1f59 for user anon_141e5998e14d2ee8
+2025-04-27 03:58:24,255 - app.core.storage - INFO - Successfully created conversation 45f52f445a4f4691b6e767fca0cc1f59
+2025-04-27 03:58:24,427 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-27 03:58:24,430 - app.core.chat_service - INFO - Stored user message (ID: anon_bec2d08e2474406d9fd3dff123a894d8) for conversation 45f52f445a4f4691b6e767fca0cc1f59
+2025-04-27 03:58:24,431 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 03:58:24,431 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 03:58:24,439 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 03:58:26,339 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 03:58:26,341 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 45f52f445a4f4691b6e767fca0cc1f59
+2025-04-27 03:58:26,341 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 03:58:26,342 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 03:58:26,342 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 45f52f445a4f4691b6e767fca0cc1f59...
+2025-04-27 03:58:26,343 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 03:58:27,080 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 03:58:27,081 - app.core.chat_service - INFO - Mistral response successful for conversation 45f52f445a4f4691b6e767fca0cc1f59
+2025-04-27 03:58:27,081 - app.core.chat_service - INFO - Stored AI message (ID: anon_fc362b6fb4164870bbfbc7257d6576e0) for conversation 45f52f445a4f4691b6e767fca0cc1f59
+2025-04-27 03:58:28,308 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-27 03:58:28,309 - app.core.chat_service - INFO - Stored user message (ID: anon_286f158091f44fc18640a66d507e8cb3) for conversation 45f52f445a4f4691b6e767fca0cc1f59
+2025-04-27 03:58:28,310 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 03:58:28,316 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 03:58:29,158 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 03:58:29,160 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 45f52f445a4f4691b6e767fca0cc1f59
+2025-04-27 03:58:29,161 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 03:58:29,161 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 03:58:29,162 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 45f52f445a4f4691b6e767fca0cc1f59...
+2025-04-27 03:58:29,162 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 03:59:46,050 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 03:59:46,051 - app.core.chat_service - INFO - Mistral response successful for conversation 45f52f445a4f4691b6e767fca0cc1f59
+2025-04-27 03:59:46,051 - app.core.chat_service - INFO - Stored AI message (ID: anon_3fedf021053341ceb6a14fb4745d09f0) for conversation 45f52f445a4f4691b6e767fca0cc1f59
+2025-04-27 03:58:29,992 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-27 03:59:56,359 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:00:10,400 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:00:27,194 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:00:27,235 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:01:12,622 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:01:27,266 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:01:28,131 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:01:28,169 - app.api.endpoints.auth - INFO - Password verified for user: e2e_test@example.com, User ID: e2e_test_user_id
+2025-04-27 04:01:28,170 - app.api.endpoints.auth - INFO - JWT created successfully for user: e2e_test@example.com
+2025-04-27 04:01:36,994 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:01:37,029 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:01:41,553 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:03:02,884 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:03:26,761 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:03:26,838 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:04:34,077 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:04:34,848 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:04:34,946 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:05:01,248 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:05:01,719 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:05:01,795 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:05:10,288 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:05:26,458 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:05:26,507 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:08:01,565 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:08:02,204 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:08:02,294 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:06:59,399 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:07:31,201 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:07:31,246 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:08:18,865 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:08:19,323 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:08:19,406 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:09:04,362 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:09:21,290 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:09:21,339 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:09:43,728 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:09:44,203 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:09:44,274 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:10:26,236 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:10:26,727 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:10:26,798 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:10:59,964 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:11:17,437 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:11:17,476 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:11:22,415 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:11:22,886 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:11:22,945 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:12:25,391 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:12:25,836 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:12:25,876 - app.api.endpoints.auth - INFO - Password verified for user: e2e_test@example.com, User ID: e2e_test_user_id
+2025-04-27 04:12:25,877 - app.api.endpoints.auth - INFO - JWT created successfully for user: e2e_test@example.com
+2025-04-27 04:12:26,716 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-27 04:12:26,718 - app.core.storage - INFO - Attempting to create conversation 7b45d811ecd044ecb69f50314ab669cc for user anon_02d927cef254b780
+2025-04-27 04:12:27,619 - app.core.storage - INFO - Successfully created conversation 7b45d811ecd044ecb69f50314ab669cc
+2025-04-27 04:12:27,905 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-27 04:12:27,908 - app.core.chat_service - INFO - Stored user message (ID: anon_0770143399a64c6aa4424f8f2d3a80e0) for conversation 7b45d811ecd044ecb69f50314ab669cc
+2025-04-27 04:12:27,908 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 04:12:27,909 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 04:12:27,914 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 04:12:36,866 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 04:12:36,868 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 7b45d811ecd044ecb69f50314ab669cc
+2025-04-27 04:12:36,869 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 04:12:36,870 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 04:12:36,870 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 7b45d811ecd044ecb69f50314ab669cc...
+2025-04-27 04:12:36,870 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 04:12:37,356 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 04:12:37,357 - app.core.chat_service - INFO - Mistral response successful for conversation 7b45d811ecd044ecb69f50314ab669cc
+2025-04-27 04:12:37,357 - app.core.chat_service - INFO - Stored AI message (ID: anon_ca306b4cb6a041b197c3638dd3e11ef1) for conversation 7b45d811ecd044ecb69f50314ab669cc
+2025-04-27 04:12:38,526 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-27 04:12:38,527 - app.core.chat_service - INFO - Stored user message (ID: anon_791d9ee712a04641a38b4ec057d0544b) for conversation 7b45d811ecd044ecb69f50314ab669cc
+2025-04-27 04:12:38,527 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 04:12:38,532 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 04:12:40,273 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 04:12:40,283 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 7b45d811ecd044ecb69f50314ab669cc
+2025-04-27 04:12:40,291 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 04:12:40,299 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 04:12:40,299 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 7b45d811ecd044ecb69f50314ab669cc...
+2025-04-27 04:12:40,300 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 04:12:42,378 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 04:12:42,378 - app.core.chat_service - INFO - Mistral response successful for conversation 7b45d811ecd044ecb69f50314ab669cc
+2025-04-27 04:12:42,379 - app.core.chat_service - INFO - Stored AI message (ID: anon_63815759cafb40ac83d6a26a390e95be) for conversation 7b45d811ecd044ecb69f50314ab669cc
+2025-04-27 04:12:42,644 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-27 04:12:48,254 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:12:52,746 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:13:03,364 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:13:03,403 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:15:44,857 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:15:45,602 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:15:45,642 - app.api.endpoints.auth - INFO - Password verified for user: conftest_test@example.com, User ID: mock_conftest_user_id
+2025-04-27 04:15:45,642 - app.api.endpoints.auth - INFO - JWT created successfully for user: conftest_test@example.com
+2025-04-27 04:15:59,451 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:16:06,425 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:17:41,221 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:17:41,255 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:17:50,830 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:17:51,307 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:17:51,351 - app.api.endpoints.auth - INFO - Password verified for user: e2e_test@example.com, User ID: e2e_test_user_id
+2025-04-27 04:17:51,351 - app.api.endpoints.auth - INFO - JWT created successfully for user: e2e_test@example.com
+2025-04-27 04:17:52,009 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-27 04:17:52,010 - app.core.storage - INFO - Attempting to create conversation c56f0fe7712c41c1b213c703a9d7da4f for user anon_7d90b9351119643a
+2025-04-27 04:17:52,500 - app.core.storage - INFO - Successfully created conversation c56f0fe7712c41c1b213c703a9d7da4f
+2025-04-27 04:17:52,682 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-27 04:17:52,685 - app.core.chat_service - INFO - Stored user message (ID: anon_c2ef1bfb14b64fd8a09a6bbde154e305) for conversation c56f0fe7712c41c1b213c703a9d7da4f
+2025-04-27 04:17:52,685 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 04:17:52,686 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 04:17:52,691 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 04:16:40,417 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 04:16:40,418 - app.core.chat_service - INFO - Retrieved 5 documents for conversation c56f0fe7712c41c1b213c703a9d7da4f
+2025-04-27 04:16:40,419 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 04:16:40,420 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 04:16:40,420 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation c56f0fe7712c41c1b213c703a9d7da4f...
+2025-04-27 04:16:40,421 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 04:16:41,727 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 04:16:41,728 - app.core.chat_service - INFO - Mistral response successful for conversation c56f0fe7712c41c1b213c703a9d7da4f
+2025-04-27 04:16:41,728 - app.core.chat_service - INFO - Stored AI message (ID: anon_5ddbbf22b01e44a6bc9db6997ce381f8) for conversation c56f0fe7712c41c1b213c703a9d7da4f
+2025-04-27 04:16:51,593 - app.api.auth_utils - ERROR - Appwrite token validation error: Failed to verify JWT. Invalid token: Incomplete segments (Code: 401, Type: user_jwt_invalid)
+2025-04-27 04:16:51,806 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:20:48,325 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:20:49,096 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:20:49,168 - app.api.endpoints.auth - INFO - Password verified for user: conftest_test@example.com, User ID: mock_conftest_user_id
+2025-04-27 04:20:49,169 - app.api.endpoints.auth - INFO - JWT created successfully for user: conftest_test@example.com
+2025-04-27 04:21:01,413 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:21:18,641 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:21:35,772 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:21:35,802 - app.main - INFO - Application startup: initializing services and connections
