@@ -1,7 +1,6 @@
 # app/core/context_formatter.py
 import logging
-from typing import List, Dict, Tuple, Optional
-# Assuming DocumentMatch and DocumentMetadata are defined in schemas
+from typing import List, Dict, Tuple, Any
 from app.models.schemas import DocumentMatch, Message
 from app.config.settings import settings
 
@@ -29,10 +28,10 @@ def format_history(messages: List[Message]) -> str:
 # --- Updated Context Formatter ---
 def format_context_and_extract_sources(
     documents: List[DocumentMatch]
-) -> Tuple[str, List[Dict[str, any]]]:
+) -> Tuple[str, List[Dict[str, Any]]]:
     """
-    Formats retrieved documents into context text for LLM and extracts source info.
-    Limits text snippet length and generates source URLs.
+    Formats retrieved documents into context text for LLM and extracts source info,
+    including the text snippet for storage and API response.
     """
     context_parts = []
     sources = []
@@ -45,59 +44,66 @@ def format_context_and_extract_sources(
     try:
         for i, doc in enumerate(documents):
             metadata = doc.metadata
-            doc_id = doc.id # This is the section_id like "6315_0_6_0_116"
+            doc_id = doc.id
 
-            # Extract book_id (assuming format "bookid_...")
-            book_id = doc_id.split('_')[0] if '_' in doc_id else None
+            # Ensure metadata and text exist
+            if not metadata or not hasattr(metadata, 'text') or not metadata.text:
+                logger.warning(f"Skipping document {doc_id} due to missing metadata or text.")
+                continue # Skip this document
+
+            logger.debug(f"Processing doc ID: {doc_id}, Metadata Text (first 100 chars): '{metadata.text[:100]}'")
+
+            # Extract book_id and generate URL
+            book_id = metadata.book_id or (doc_id.split('_')[0] if '_' in doc_id else None)
             source_url = f"https://shamela.ws/book/{book_id}" if book_id else None
 
             # Limit the text snippet length
-            text_snippet = metadata.text[:CONTEXT_SNIPPET_MAX_LENGTH]
-            if len(metadata.text) > CONTEXT_SNIPPET_MAX_LENGTH:
+            raw_text = metadata.text
+            text_snippet = raw_text[:CONTEXT_SNIPPET_MAX_LENGTH]
+            if len(raw_text) > CONTEXT_SNIPPET_MAX_LENGTH:
                 text_snippet += "..."
 
-            # Format for the prompt context
+            # Format for the prompt context (context_parts)
             context_parts.append(
                 f"Source Document [ID: {doc_id}]\n"
-                f"Book: {metadata.book_name}\n"
-                f"Section: {metadata.section_title}\n"
+                f"Book: {metadata.book_name or 'Unknown'}\n"
+                f"Section: {metadata.section_title or 'Unknown'}\n"
                 f"Content: {text_snippet}\n---\n"
             )
 
-            # Store structured source info
+            # Store structured source info for storage/API (sources list)
             sources.append({
                 "document_id": doc_id,
                 "book_id": book_id,
                 "book_name": metadata.book_name,
-                "section_title": metadata.section_title,
+                "title": metadata.section_title,
                 "score": doc.score,
-                "url": source_url
-                # Add 'text': text_snippet here if needed in the final API response sources
+                "url": source_url,
+                "content": text_snippet
             })
 
         context_text = "\n".join(context_parts)
         logger.debug("Successfully formatted context and extracted sources.")
+        if sources:
+            logger.debug(f"Sample source item structure: {sources[0]}")
         return context_text, sources
 
     except AttributeError as e:
-        logger.exception(f"AttributeError during context formatting: {e}. Check DocumentMetadata schema and retrieval results.")
-        error_context = "Error: Could not format context due to missing metadata attribute."
-        return error_context, [] # Return empty sources on error
+        logger.exception(f"AttributeError during context formatting: {e}. Check DocumentMatch structure.")
+        return "Error formatting context due to missing attribute.", []
     except Exception as e:
-        logger.exception(f"Unexpected error formatting context: {str(e)}")
-        error_context = f"Error: An unexpected error occurred while formatting context: {e}"
-        return error_context, []
+        logger.exception(f"Unexpected error during context formatting: {e}")
+        return "Error formatting context.", []
 
 # --- Updated Prompt Constructor ---
 def construct_llm_prompt(history_text: str, context_text: str, query: str) -> str:
     """
     Constructs the final prompt string including history, context, and query.
     """
-    # Use the template from settings, now including history
     prompt = settings.PROMPT_TEMPLATE.format(
         history=history_text,
         context_text=context_text,
         query=query
     )
-    logger.debug(f"Constructed LLM Prompt (start): {prompt[:300]}...") # Log more chars
+    logger.debug(f"Constructed LLM Prompt (start): {prompt[:300]}...")
     return prompt

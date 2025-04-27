@@ -19,13 +19,14 @@ Enhanced Retrieval-Augmented Generation (RAG) pipeline module.
 import logging
 import asyncio
 from typing import List, Dict, Any, Optional, Tuple
-from app.core.retrieval_old import query_vector_store
+from app.core.retrieval import get_retriever, Retriever  # Use the new retrieval package
+from app.models.schemas import DocumentMatch
 from app.config.settings import settings
 from app.core.embeddings import mistral_client  # Import the already initialized client
 
 logger = logging.getLogger(__name__)
 
-def format_context_for_prompt(matches: List[Dict[str, Any]], query: str) -> str:
+def format_context_for_prompt(matches: List[DocumentMatch], query: str) -> str:
     """
     Format retrieved documents into a context string for the LLM prompt.
     
@@ -156,9 +157,16 @@ async def generate_rag_response(
     """
     logger.info(f"Processing RAG query: {query[:50]}...")
     
-    # Step 1: Retrieve relevant documents
-    matches = query_vector_store(query, top_k=top_k)
-    
+    # Step 1: Retrieve relevant documents using the new retriever
+    matches: List[DocumentMatch] = []  # Initialize as empty list
+    try:
+        retriever_instance: Retriever = get_retriever()
+        matches = await retriever_instance.retrieve(query, top_k=top_k)
+    except Exception as e:
+        logger.exception(f"Error retrieving documents in RAG pipeline: {e}")
+        # matches will remain []
+
+    # Check if matches list is empty
     if not matches:
         logger.warning("No relevant documents found for query")
         return {

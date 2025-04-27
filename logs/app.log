@@ -4692,3 +4692,182 @@ AttributeError: 'Index' object has no attribute 'name'
 2025-04-27 01:11:01,929 - app.core.storage - INFO - Timestamp updated for conversation abd6f3facd1f4d38b61b03ed0ea9dc7e
 2025-04-27 01:11:12,523 - app.main - INFO - Application shutdown: cleaning up resources
 2025-04-27 01:11:49,120 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:13:20,435 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:13:20,473 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:27:52,084 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:28:12,933 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:28:13,020 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:29:13,452 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:29:14,012 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:29:14,571 - app.api.endpoints.auth - INFO - User registered successfully: l1nxogxvsg@fixture.pytest.dev, ID: 680d7a5a11bdb8539fbb
+2025-04-27 01:29:15,018 - app.api.endpoints.auth - INFO - Password verified for user: l1nxogxvsg@fixture.pytest.dev, User ID: 680d7a5a11bdb8539fbb
+2025-04-27 01:29:15,195 - app.api.endpoints.auth - INFO - JWT created successfully for user: l1nxogxvsg@fixture.pytest.dev
+2025-04-27 01:29:15,437 - app.core.storage - INFO - Attempting to create conversation dcd121591ef44a43abfcec6d4f8dd161 for user 680d7a5a11bdb8539fbb
+2025-04-27 01:29:15,781 - app.core.storage - INFO - Successfully created conversation dcd121591ef44a43abfcec6d4f8dd161
+2025-04-27 01:29:16,026 - app.core.storage - INFO - Stored message 680d7a5bed8e6dbb1564 for user 680d7a5a11bdb8539fbb
+2025-04-27 01:29:16,027 - app.core.chat_service - INFO - Stored user message (ID: 680d7a5bed8e6dbb1564) for conversation dcd121591ef44a43abfcec6d4f8dd161
+2025-04-27 01:29:16,259 - app.core.storage - INFO - Timestamp updated for conversation dcd121591ef44a43abfcec6d4f8dd161
+2025-04-27 01:29:16,259 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 01:29:16,260 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:29:16,266 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:29:18,512 - app.core.retrieval.pinecone - ERROR - Pydantic validation failed for metadata of match ID 6315_0_1_0_55: 1 validation error for DocumentMetadata
+book_id
+  Input should be a valid string [type=string_type, input_value=6315.0, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+2025-04-27 01:29:18,513 - app.core.retrieval.pinecone - ERROR - Pydantic validation failed for metadata of match ID 6315_0_2_0_341: 1 validation error for DocumentMetadata
+book_id
+  Input should be a valid string [type=string_type, input_value=6315.0, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+2025-04-27 01:29:18,514 - app.core.retrieval.pinecone - ERROR - Pydantic validation failed for metadata of match ID 6315_0_2_0_350: 1 validation error for DocumentMetadata
+book_id
+  Input should be a valid string [type=string_type, input_value=6315.0, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+2025-04-27 01:29:18,515 - app.core.retrieval.pinecone - ERROR - Pydantic validation failed for metadata of match ID 6315_0_9_0_207: 1 validation error for DocumentMetadata
+book_id
+  Input should be a valid string [type=string_type, input_value=6315.0, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+2025-04-27 01:29:18,515 - app.core.retrieval.pinecone - ERROR - Pydantic validation failed for metadata of match ID 6315_0_3_0_74: 1 validation error for DocumentMetadata
+book_id
+  Input should be a valid string [type=string_type, input_value=6315.0, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+2025-04-27 01:29:18,518 - app.core.chat_service - WARNING - No documents retrieved for query in conversation dcd121591ef44a43abfcec6d4f8dd161
+2025-04-27 01:29:18,520 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 01:29:18,521 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation dcd121591ef44a43abfcec6d4f8dd161...
+2025-04-27 01:29:18,522 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:29:18,697 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-27 01:29:18,698 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.47 seconds (calculated)...
+2025-04-27 01:29:20,798 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:29:20,820 - app.core.chat_service - INFO - Mistral response successful for conversation dcd121591ef44a43abfcec6d4f8dd161
+2025-04-27 01:29:20,990 - app.core.storage - INFO - Stored message 680d7a6088bfa4d5beb9 for user ai
+2025-04-27 01:29:20,991 - app.core.chat_service - INFO - Stored AI message (ID: 680d7a6088bfa4d5beb9) for conversation dcd121591ef44a43abfcec6d4f8dd161
+2025-04-27 01:29:21,190 - app.core.storage - INFO - Timestamp updated for conversation dcd121591ef44a43abfcec6d4f8dd161
+2025-04-27 01:29:23,077 - app.core.storage - INFO - Stored message 680d7a62d3cf5cc221f1 for user 680d7a5a11bdb8539fbb
+2025-04-27 01:29:23,078 - app.core.chat_service - INFO - Stored user message (ID: 680d7a62d3cf5cc221f1) for conversation dcd121591ef44a43abfcec6d4f8dd161
+2025-04-27 01:29:23,297 - app.core.storage - INFO - Timestamp updated for conversation dcd121591ef44a43abfcec6d4f8dd161
+2025-04-27 01:29:23,298 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:29:23,304 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:29:24,332 - app.core.retrieval.pinecone - ERROR - Pydantic validation failed for metadata of match ID 6315_0_9_0_196: 1 validation error for DocumentMetadata
+book_id
+  Input should be a valid string [type=string_type, input_value=6315.0, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+2025-04-27 01:29:24,333 - app.core.retrieval.pinecone - ERROR - Pydantic validation failed for metadata of match ID 6315_0_9_0_265: 1 validation error for DocumentMetadata
+book_id
+  Input should be a valid string [type=string_type, input_value=6315.0, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+2025-04-27 01:29:24,333 - app.core.retrieval.pinecone - ERROR - Pydantic validation failed for metadata of match ID 6315_0_2_0_864: 1 validation error for DocumentMetadata
+book_id
+  Input should be a valid string [type=string_type, input_value=6315.0, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+2025-04-27 01:29:24,335 - app.core.retrieval.pinecone - ERROR - Pydantic validation failed for metadata of match ID 6315_0_2_0_144: 1 validation error for DocumentMetadata
+book_id
+  Input should be a valid string [type=string_type, input_value=6315.0, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+2025-04-27 01:29:24,336 - app.core.retrieval.pinecone - ERROR - Pydantic validation failed for metadata of match ID 6315_0_9_0_234: 1 validation error for DocumentMetadata
+book_id
+  Input should be a valid string [type=string_type, input_value=6315.0, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.10/v/string_type
+2025-04-27 01:29:24,338 - app.core.chat_service - WARNING - No documents retrieved for query in conversation dcd121591ef44a43abfcec6d4f8dd161
+2025-04-27 01:29:24,339 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-27 01:29:24,340 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation dcd121591ef44a43abfcec6d4f8dd161...
+2025-04-27 01:29:24,341 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:29:24,873 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-27 01:29:24,874 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.57 seconds (calculated)...
+2025-04-27 01:29:27,572 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:29:27,574 - app.core.chat_service - INFO - Mistral response successful for conversation dcd121591ef44a43abfcec6d4f8dd161
+2025-04-27 01:29:27,979 - app.core.storage - INFO - Stored message 680d7a67a5951d26920a for user ai
+2025-04-27 01:29:27,979 - app.core.chat_service - INFO - Stored AI message (ID: 680d7a67a5951d26920a) for conversation dcd121591ef44a43abfcec6d4f8dd161
+2025-04-27 01:29:28,232 - app.core.storage - INFO - Timestamp updated for conversation dcd121591ef44a43abfcec6d4f8dd161
+2025-04-27 01:30:57,867 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:29:46,190 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:30:03,653 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:30:03,687 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:37:32,126 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:37:50,072 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:37:50,138 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:37:53,861 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:37:54,338 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:37:54,834 - app.api.endpoints.auth - INFO - User registered successfully: s9liob78ik@fixture.pytest.dev, ID: 680d7c626cab52473a2c
+2025-04-27 01:37:55,290 - app.api.endpoints.auth - INFO - Password verified for user: s9liob78ik@fixture.pytest.dev, User ID: 680d7c626cab52473a2c
+2025-04-27 01:37:55,502 - app.api.endpoints.auth - INFO - JWT created successfully for user: s9liob78ik@fixture.pytest.dev
+2025-04-27 01:37:55,761 - app.core.storage - INFO - Attempting to create conversation ab43ee1dd6454deea7941319a21c1df3 for user 680d7c626cab52473a2c
+2025-04-27 01:37:55,958 - app.core.storage - INFO - Successfully created conversation ab43ee1dd6454deea7941319a21c1df3
+2025-04-27 01:37:56,668 - app.core.storage - INFO - Stored message 680d7c644343c6442a0b for user 680d7c626cab52473a2c
+2025-04-27 01:37:56,669 - app.core.chat_service - INFO - Stored user message (ID: 680d7c644343c6442a0b) for conversation ab43ee1dd6454deea7941319a21c1df3
+2025-04-27 01:37:56,873 - app.core.storage - INFO - Timestamp updated for conversation ab43ee1dd6454deea7941319a21c1df3
+2025-04-27 01:37:56,873 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 01:37:56,874 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:37:56,880 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:37:58,248 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 01:37:58,251 - app.core.chat_service - INFO - Retrieved 5 documents for conversation ab43ee1dd6454deea7941319a21c1df3
+2025-04-27 01:37:58,255 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation ab43ee1dd6454deea7941319a21c1df3...
+2025-04-27 01:37:58,256 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:37:58,879 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:37:58,879 - app.core.chat_service - INFO - Mistral response successful for conversation ab43ee1dd6454deea7941319a21c1df3
+2025-04-27 01:37:59,089 - app.core.storage - INFO - Stored message 680d7c66e2706cf97ea3 for user ai
+2025-04-27 01:38:00,103 - app.core.storage - INFO - Stored 5 sources for message 680d7c66e2706cf97ea3
+2025-04-27 01:38:00,104 - app.core.chat_service - INFO - Stored AI message (ID: 680d7c66e2706cf97ea3) for conversation ab43ee1dd6454deea7941319a21c1df3
+2025-04-27 01:38:00,314 - app.core.storage - INFO - Timestamp updated for conversation ab43ee1dd6454deea7941319a21c1df3
+2025-04-27 01:38:01,941 - app.core.storage - INFO - Stored message 680d7c69811406b78516 for user 680d7c626cab52473a2c
+2025-04-27 01:38:01,942 - app.core.chat_service - INFO - Stored user message (ID: 680d7c69811406b78516) for conversation ab43ee1dd6454deea7941319a21c1df3
+2025-04-27 01:38:02,157 - app.core.storage - INFO - Timestamp updated for conversation ab43ee1dd6454deea7941319a21c1df3
+2025-04-27 01:38:02,158 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:38:02,164 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:38:03,223 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 01:38:03,225 - app.core.chat_service - INFO - Retrieved 5 documents for conversation ab43ee1dd6454deea7941319a21c1df3
+2025-04-27 01:38:03,226 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation ab43ee1dd6454deea7941319a21c1df3...
+2025-04-27 01:38:03,227 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:38:02,919 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-27 01:38:02,920 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.53 seconds (calculated)...
+2025-04-27 01:38:04,897 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:38:04,898 - app.core.chat_service - INFO - Mistral response successful for conversation ab43ee1dd6454deea7941319a21c1df3
+2025-04-27 01:38:05,329 - app.core.storage - INFO - Stored message 680d7c6d16fc17129ae5 for user ai
+2025-04-27 01:38:06,317 - app.core.storage - INFO - Stored 5 sources for message 680d7c6d16fc17129ae5
+2025-04-27 01:38:06,318 - app.core.chat_service - INFO - Stored AI message (ID: 680d7c6d16fc17129ae5) for conversation ab43ee1dd6454deea7941319a21c1df3
+2025-04-27 01:38:06,522 - app.core.storage - INFO - Timestamp updated for conversation ab43ee1dd6454deea7941319a21c1df3
+2025-04-27 01:38:17,170 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:53:31,133 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 01:53:47,267 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:53:47,316 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:56:33,482 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 01:56:33,971 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 01:56:34,515 - app.api.endpoints.auth - INFO - User registered successfully: tx8rlnm8fn@fixture.pytest.dev, ID: 680d80c1ed20a5a354c0
+2025-04-27 01:56:35,004 - app.api.endpoints.auth - INFO - Password verified for user: tx8rlnm8fn@fixture.pytest.dev, User ID: 680d80c1ed20a5a354c0
+2025-04-27 01:56:35,224 - app.api.endpoints.auth - INFO - JWT created successfully for user: tx8rlnm8fn@fixture.pytest.dev
+2025-04-27 01:56:35,464 - app.core.storage - INFO - Attempting to create conversation 55da5c52cdba43d4bc0605d612bb0666 for user 680d80c1ed20a5a354c0
+2025-04-27 01:56:35,637 - app.core.storage - INFO - Successfully created conversation 55da5c52cdba43d4bc0605d612bb0666
+2025-04-27 01:56:35,795 - app.core.storage - INFO - Stored message 680d80c3b47da43244f6 for user 680d80c1ed20a5a354c0
+2025-04-27 01:56:35,795 - app.core.chat_service - INFO - Stored user message (ID: 680d80c3b47da43244f6) for conversation 55da5c52cdba43d4bc0605d612bb0666
+2025-04-27 01:56:36,003 - app.core.storage - INFO - Timestamp updated for conversation 55da5c52cdba43d4bc0605d612bb0666
+2025-04-27 01:56:36,008 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 01:56:36,013 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:56:36,033 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:56:39,650 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 01:56:39,652 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 55da5c52cdba43d4bc0605d612bb0666
+2025-04-27 01:56:39,653 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 01:56:39,654 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 01:56:39,654 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 55da5c52cdba43d4bc0605d612bb0666...
+2025-04-27 01:56:39,655 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:56:40,225 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:56:40,226 - app.core.chat_service - INFO - Mistral response successful for conversation 55da5c52cdba43d4bc0605d612bb0666
+2025-04-27 01:56:40,438 - app.core.storage - INFO - Stored message 680d80c7eaa754b51da5 for user ai
+2025-04-27 01:56:41,201 - app.core.storage - INFO - Stored 5 sources for message 680d80c7eaa754b51da5
+2025-04-27 01:56:41,202 - app.core.chat_service - INFO - Stored AI message (ID: 680d80c7eaa754b51da5) for conversation 55da5c52cdba43d4bc0605d612bb0666
+2025-04-27 01:56:41,429 - app.core.storage - INFO - Timestamp updated for conversation 55da5c52cdba43d4bc0605d612bb0666
+2025-04-27 01:56:43,019 - app.core.storage - INFO - Stored message 680d80cab9e333c3a2c5 for user 680d80c1ed20a5a354c0
+2025-04-27 01:56:43,020 - app.core.chat_service - INFO - Stored user message (ID: 680d80cab9e333c3a2c5) for conversation 55da5c52cdba43d4bc0605d612bb0666
+2025-04-27 01:56:43,247 - app.core.storage - INFO - Timestamp updated for conversation 55da5c52cdba43d4bc0605d612bb0666
+2025-04-27 01:56:43,248 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 01:56:43,255 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 01:56:44,169 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 01:56:44,171 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 55da5c52cdba43d4bc0605d612bb0666
+2025-04-27 01:56:44,172 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 01:56:44,172 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 01:56:44,173 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 55da5c52cdba43d4bc0605d612bb0666...
+2025-04-27 01:56:44,173 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 01:56:44,728 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 01:56:44,728 - app.core.chat_service - INFO - Mistral response successful for conversation 55da5c52cdba43d4bc0605d612bb0666
+2025-04-27 01:56:44,998 - app.core.storage - INFO - Stored message 680d80cc8911579a4322 for user ai
+2025-04-27 01:56:45,970 - app.core.storage - INFO - Stored 5 sources for message 680d80cc8911579a4322
+2025-04-27 01:56:45,971 - app.core.chat_service - INFO - Stored AI message (ID: 680d80cc8911579a4322) for conversation 55da5c52cdba43d4bc0605d612bb0666
+2025-04-27 01:56:46,153 - app.core.storage - INFO - Timestamp updated for conversation 55da5c52cdba43d4bc0605d612bb0666
+2025-04-27 01:56:56,546 - app.main - INFO - Application shutdown: cleaning up resources

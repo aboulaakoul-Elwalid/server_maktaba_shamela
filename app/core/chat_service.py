@@ -139,6 +139,20 @@ async def generate_rag_response(
         # 3. Format Context & Extract Sources
         logger.debug(f"Formatting context for conversation {conversation_id}")
         context_text, final_sources = format_context_and_extract_sources(documents)
+
+        # <<< ADD LOGGING HERE to verify final_sources structure >>>
+        logger.info(f"Context formatted. Number of sources extracted: {len(final_sources)}")
+        if final_sources:
+            logger.debug(f"Structure of first source item in final_sources: {final_sources[0]}")
+            # Check if 'content' key exists in the first source item
+            if 'content' in final_sources[0]:
+                logger.info("Verification: 'content' key FOUND in final_sources.")
+            else:
+                logger.error("Verification: 'content' key MISSING in final_sources!")
+        else:
+            logger.warning("Verification: final_sources list is empty.")
+        # <<< END OF ADDED LOGGING >>>
+
         logger.debug(f"Formatted Context Text (first 300 chars):\n{context_text[:300]}")
 
         # 4. Construct Prompt (Now includes history) and Call LLM
