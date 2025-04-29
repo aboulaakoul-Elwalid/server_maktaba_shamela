@@ -98,3 +98,16 @@ class ConversationResponse(BaseModel):
     title: Optional[str] = Field(None, description="Title of the conversation (optional)")
     created_at: datetime.datetime = Field(..., description="Timestamp when the conversation was created")
     last_updated: datetime.datetime = Field(..., description="Timestamp when the conversation was last updated")
+
+class Source(BaseModel):
+    """Represents a source document cited by an AI message."""
+    id: str = Field(..., description="Unique ID of the source document record (from Appwrite)")
+    message_id: str = Field(..., description="ID of the AI message this source belongs to")
+    title: str = Field(..., description="Title of the source (e.g., Book - Section)")
+    content: Optional[str] = Field(None, description="The relevant text snippet from the source")
+    url: Optional[HttpUrl] = Field(None, description="URL link to the source, if available")
+    # Include fields derived from metadata for easier access
+    book_name: Optional[str] = Field(None, description="Name of the source book")
+    section_title: Optional[str] = Field(None, description="Title of the section within the book")
+    document_id: Optional[str] = Field(None, description="Original document ID from the vector store")
+    score: Optional[float] = Field(None, description="Relevance score (if available)")

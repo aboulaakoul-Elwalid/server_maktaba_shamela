@@ -5166,3 +5166,1478 @@ book_id
 2025-04-27 04:21:18,641 - app.main - INFO - Application shutdown: cleaning up resources
 2025-04-27 04:21:35,772 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
 2025-04-27 04:21:35,802 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:28:11,427 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:28:11,931 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:28:11,991 - app.api.endpoints.auth - INFO - Password verified for user: conftest_test@example.com, User ID: mock_conftest_user_id
+2025-04-27 04:28:11,992 - app.api.endpoints.auth - INFO - JWT created successfully for user: conftest_test@example.com
+2025-04-27 04:28:22,619 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 04:29:58,527 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 04:29:58,982 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 04:29:59,601 - app.api.endpoints.auth - INFO - User registered successfully: wptb44t5xv@test.pytest.dev, ID: 680da4b71a561bbbe948
+2025-04-27 04:30:00,488 - app.api.endpoints.auth - INFO - Password verified for user: wptb44t5xv@test.pytest.dev, User ID: 680da4b71a561bbbe948
+2025-04-27 04:30:00,672 - app.api.endpoints.auth - INFO - JWT created successfully for user: wptb44t5xv@test.pytest.dev
+2025-04-27 04:30:00,952 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 22:43:03,922 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 22:43:04,037 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 22:43:46,828 - app.api.endpoints.rag_query - INFO - Received RAG query: hi...
+2025-04-27 22:43:46,829 - app.core.rag - INFO - Processing RAG query: hi...
+2025-04-27 22:43:46,829 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 22:43:46,830 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:43:46,842 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:43:48,287 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:43:48,290 - app.core.rag - INFO - Reranking results (placeholder)
+2025-04-27 22:43:48,291 - app.core.rag - ERROR - Error generating LLM response: 'Chat' object is not callable
+2025-04-27 22:43:48,292 - app.core.rag - INFO - RAG response generated successfully
+2025-04-27 22:44:16,399 - app.api.endpoints.rag_query - INFO - Received RAG query: wht is this...
+2025-04-27 22:44:16,407 - app.core.rag - INFO - Processing RAG query: wht is this...
+2025-04-27 22:44:16,409 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:44:16,522 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:44:17,162 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:44:17,164 - app.core.rag - INFO - Reranking results (placeholder)
+2025-04-27 22:44:17,164 - app.core.rag - ERROR - Error generating LLM response: 'Chat' object is not callable
+2025-04-27 22:44:17,165 - app.core.rag - INFO - RAG response generated successfully
+2025-04-27 22:44:49,975 - app.api.endpoints.rag_query - INFO - Received RAG query: hi...
+2025-04-27 22:44:49,994 - app.core.rag - INFO - Processing RAG query: hi...
+2025-04-27 22:44:49,998 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:44:50,014 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:44:51,249 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:44:51,251 - app.core.rag - INFO - Reranking results (placeholder)
+2025-04-27 22:44:51,256 - app.core.rag - ERROR - Error generating LLM response: 'Chat' object is not callable
+2025-04-27 22:44:51,257 - app.core.rag - INFO - RAG response generated successfully
+2025-04-27 22:44:56,781 - app.api.endpoints.rag_query - INFO - Received RAG query: hi...
+2025-04-27 22:44:56,801 - app.core.rag - INFO - Processing RAG query: hi...
+2025-04-27 22:44:56,820 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:44:56,880 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:44:57,567 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:44:57,569 - app.core.rag - INFO - Reranking results (placeholder)
+2025-04-27 22:44:57,571 - app.core.rag - ERROR - Error generating LLM response: 'Chat' object is not callable
+2025-04-27 22:44:57,572 - app.core.rag - INFO - RAG response generated successfully
+2025-04-27 22:45:04,284 - app.api.endpoints.rag_query - INFO - Received RAG query: hi...
+2025-04-27 22:45:04,294 - app.core.rag - INFO - Processing RAG query: hi...
+2025-04-27 22:45:04,295 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:45:04,298 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:45:05,477 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:45:05,479 - app.core.rag - INFO - Reranking results (placeholder)
+2025-04-27 22:45:05,480 - app.core.rag - ERROR - Error generating LLM response: 'Chat' object is not callable
+2025-04-27 22:45:05,480 - app.core.rag - INFO - RAG response generated successfully
+2025-04-27 22:45:40,431 - app.api.endpoints.rag_query - INFO - Received RAG query: hi...
+2025-04-27 22:45:40,432 - app.core.rag - INFO - Processing RAG query: hi...
+2025-04-27 22:45:40,433 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:45:40,461 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:45:41,686 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:45:41,688 - app.core.rag - INFO - Reranking results (placeholder)
+2025-04-27 22:45:41,689 - app.core.rag - ERROR - Error generating LLM response: 'Chat' object is not callable
+2025-04-27 22:45:41,689 - app.core.rag - INFO - RAG response generated successfully
+2025-04-27 22:45:58,896 - app.api.endpoints.rag_query - INFO - Received RAG query: hi...
+2025-04-27 22:45:58,907 - app.core.rag - INFO - Processing RAG query: hi...
+2025-04-27 22:45:58,909 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:45:58,919 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:46:00,525 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:46:00,528 - app.core.rag - INFO - Reranking results (placeholder)
+2025-04-27 22:46:00,529 - app.core.rag - ERROR - Error generating LLM response: 'Chat' object is not callable
+2025-04-27 22:46:00,530 - app.core.rag - INFO - RAG response generated successfully
+2025-04-27 22:47:01,154 - app.api.endpoints.auth - INFO - User registered successfully: test7731@example.com, ID: 680ea5d48d3af1f44f6b
+2025-04-27 22:47:01,813 - app.api.endpoints.auth - INFO - Password verified for user: test7731@example.com, User ID: 680ea5d48d3af1f44f6b
+2025-04-27 22:47:01,978 - app.api.endpoints.auth - INFO - JWT created successfully for user: test7731@example.com
+2025-04-27 22:47:03,269 - app.core.storage - INFO - Attempting to create conversation 411f92001cc04538b0797b15322bc303 for user 680ea5d48d3af1f44f6b
+2025-04-27 22:47:03,473 - app.core.storage - INFO - Successfully created conversation 411f92001cc04538b0797b15322bc303
+2025-04-27 22:47:03,474 - app.api.endpoints.chat - INFO - Created new conversation 411f92001cc04538b0797b15322bc303 for message.
+2025-04-27 22:47:03,816 - app.core.storage - INFO - Stored message 680ea5d79d5da7357193 for user 680ea5d48d3af1f44f6b
+2025-04-27 22:47:03,817 - app.core.chat_service - INFO - Stored user message (ID: 680ea5d79d5da7357193) for conversation 411f92001cc04538b0797b15322bc303
+2025-04-27 22:47:04,016 - app.core.storage - INFO - Timestamp updated for conversation 411f92001cc04538b0797b15322bc303
+2025-04-27 22:47:04,017 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:47:04,022 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:47:05,031 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:47:05,033 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 411f92001cc04538b0797b15322bc303
+2025-04-27 22:47:05,034 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 22:47:05,034 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 22:47:05,035 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 411f92001cc04538b0797b15322bc303...
+2025-04-27 22:47:05,036 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 22:47:06,003 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 22:47:06,004 - app.core.chat_service - INFO - Mistral response successful for conversation 411f92001cc04538b0797b15322bc303
+2025-04-27 22:47:06,189 - app.core.storage - INFO - Stored message 680ea5d9c2ea0500fa8d for user ai
+2025-04-27 22:47:07,108 - app.core.storage - INFO - Stored 5 sources for message 680ea5d9c2ea0500fa8d
+2025-04-27 22:47:07,110 - app.core.chat_service - INFO - Stored AI message (ID: 680ea5d9c2ea0500fa8d) for conversation 411f92001cc04538b0797b15322bc303
+2025-04-27 22:47:07,362 - app.core.storage - INFO - Timestamp updated for conversation 411f92001cc04538b0797b15322bc303
+2025-04-27 22:47:07,700 - app.core.storage - INFO - Attempting to create conversation cb93562a37ab4edfbbf8a196d6eb5997 for user 680ea5d48d3af1f44f6b
+2025-04-27 22:47:07,910 - app.core.storage - INFO - Successfully created conversation cb93562a37ab4edfbbf8a196d6eb5997
+2025-04-27 22:47:07,910 - app.api.endpoints.chat - INFO - Created new conversation cb93562a37ab4edfbbf8a196d6eb5997 for message.
+2025-04-27 22:47:08,254 - app.core.storage - INFO - Stored message 680ea5dc1e1a6cbbf55f for user 680ea5d48d3af1f44f6b
+2025-04-27 22:47:08,254 - app.core.chat_service - INFO - Stored user message (ID: 680ea5dc1e1a6cbbf55f) for conversation cb93562a37ab4edfbbf8a196d6eb5997
+2025-04-27 22:47:08,458 - app.core.storage - INFO - Timestamp updated for conversation cb93562a37ab4edfbbf8a196d6eb5997
+2025-04-27 22:47:08,459 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:47:08,464 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:47:09,357 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:47:09,359 - app.core.chat_service - INFO - Retrieved 5 documents for conversation cb93562a37ab4edfbbf8a196d6eb5997
+2025-04-27 22:47:09,360 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 22:47:09,361 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 22:47:09,361 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation cb93562a37ab4edfbbf8a196d6eb5997...
+2025-04-27 22:47:09,362 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 22:47:10,446 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 22:47:10,447 - app.core.chat_service - INFO - Mistral response successful for conversation cb93562a37ab4edfbbf8a196d6eb5997
+2025-04-27 22:47:10,648 - app.core.storage - INFO - Stored message 680ea5de47eb658b14c4 for user ai
+2025-04-27 22:47:11,570 - app.core.storage - INFO - Stored 5 sources for message 680ea5de47eb658b14c4
+2025-04-27 22:47:11,573 - app.core.chat_service - INFO - Stored AI message (ID: 680ea5de47eb658b14c4) for conversation cb93562a37ab4edfbbf8a196d6eb5997
+2025-04-27 22:47:11,772 - app.core.storage - INFO - Timestamp updated for conversation cb93562a37ab4edfbbf8a196d6eb5997
+2025-04-27 22:47:12,570 - app.core.storage - INFO - Attempting to create conversation f101a5e746844acf816acc3dd595d2f3 for user 680ea5d48d3af1f44f6b
+2025-04-27 22:47:12,757 - app.core.storage - INFO - Successfully created conversation f101a5e746844acf816acc3dd595d2f3
+2025-04-27 22:47:12,758 - app.api.endpoints.chat - INFO - Created new conversation f101a5e746844acf816acc3dd595d2f3 for message.
+2025-04-27 22:47:12,625 - app.core.storage - INFO - Stored message 680ea5e085c5b4684378 for user 680ea5d48d3af1f44f6b
+2025-04-27 22:47:12,626 - app.core.chat_service - INFO - Stored user message (ID: 680ea5e085c5b4684378) for conversation f101a5e746844acf816acc3dd595d2f3
+2025-04-27 22:47:12,833 - app.core.storage - INFO - Timestamp updated for conversation f101a5e746844acf816acc3dd595d2f3
+2025-04-27 22:47:12,836 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:47:12,843 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:47:13,742 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:47:13,744 - app.core.chat_service - INFO - Retrieved 5 documents for conversation f101a5e746844acf816acc3dd595d2f3
+2025-04-27 22:47:13,745 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 22:47:13,746 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 22:47:13,746 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation f101a5e746844acf816acc3dd595d2f3...
+2025-04-27 22:47:13,747 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 22:47:14,575 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 22:47:14,576 - app.core.chat_service - INFO - Mistral response successful for conversation f101a5e746844acf816acc3dd595d2f3
+2025-04-27 22:47:14,752 - app.core.storage - INFO - Stored message 680ea5e2796899283a5c for user ai
+2025-04-27 22:47:15,698 - app.core.storage - INFO - Stored 5 sources for message 680ea5e2796899283a5c
+2025-04-27 22:47:15,699 - app.core.chat_service - INFO - Stored AI message (ID: 680ea5e2796899283a5c) for conversation f101a5e746844acf816acc3dd595d2f3
+2025-04-27 22:47:15,890 - app.core.storage - INFO - Timestamp updated for conversation f101a5e746844acf816acc3dd595d2f3
+2025-04-27 22:50:29,875 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 22:50:47,076 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 22:50:47,111 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 22:50:47,534 - app.api.endpoints.auth - INFO - User registered successfully: test17911@example.com, ID: 680ea6b6e072d9ede734
+2025-04-27 22:50:48,204 - app.api.endpoints.auth - INFO - Password verified for user: test17911@example.com, User ID: 680ea6b6e072d9ede734
+2025-04-27 22:52:04,770 - app.api.endpoints.auth - INFO - JWT created successfully for user: test17911@example.com
+2025-04-27 22:50:49,000 - app.core.storage - INFO - Attempting to create conversation 344c5974d4ab4a20aef29b24525931a8 for user 680ea6b6e072d9ede734
+2025-04-27 22:50:49,181 - app.core.storage - INFO - Successfully created conversation 344c5974d4ab4a20aef29b24525931a8
+2025-04-27 22:50:49,181 - app.api.endpoints.chat - INFO - Created new conversation 344c5974d4ab4a20aef29b24525931a8 for message.
+2025-04-27 22:50:49,541 - app.core.storage - INFO - Stored message 680ea6b95564db63d3f6 for user 680ea6b6e072d9ede734
+2025-04-27 22:50:49,541 - app.core.chat_service - INFO - Stored user message (ID: 680ea6b95564db63d3f6) for conversation 344c5974d4ab4a20aef29b24525931a8
+2025-04-27 22:50:49,720 - app.core.storage - INFO - Timestamp updated for conversation 344c5974d4ab4a20aef29b24525931a8
+2025-04-27 22:50:49,721 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 22:50:49,722 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:50:49,725 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:50:52,027 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:50:52,029 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 344c5974d4ab4a20aef29b24525931a8
+2025-04-27 22:50:52,031 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 22:50:52,031 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 22:50:52,032 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 344c5974d4ab4a20aef29b24525931a8...
+2025-04-27 22:50:52,033 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 22:50:52,198 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-27 22:50:52,199 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.26 seconds (calculated)...
+2025-04-27 22:50:53,606 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 22:50:53,607 - app.core.chat_service - INFO - Mistral response successful for conversation 344c5974d4ab4a20aef29b24525931a8
+2025-04-27 22:50:53,818 - app.core.storage - INFO - Stored message 680ea6bda7ae24205e21 for user ai
+2025-04-27 22:50:54,740 - app.core.storage - INFO - Stored 5 sources for message 680ea6bda7ae24205e21
+2025-04-27 22:50:54,740 - app.core.chat_service - INFO - Stored AI message (ID: 680ea6bda7ae24205e21) for conversation 344c5974d4ab4a20aef29b24525931a8
+2025-04-27 22:50:54,929 - app.core.storage - INFO - Timestamp updated for conversation 344c5974d4ab4a20aef29b24525931a8
+2025-04-27 22:50:55,764 - app.core.storage - INFO - Attempting to create conversation 3eea95ca0bc74482b2295ae493caa1d2 for user 680ea6b6e072d9ede734
+2025-04-27 22:50:55,945 - app.core.storage - INFO - Successfully created conversation 3eea95ca0bc74482b2295ae493caa1d2
+2025-04-27 22:50:55,945 - app.api.endpoints.chat - INFO - Created new conversation 3eea95ca0bc74482b2295ae493caa1d2 for message.
+2025-04-27 22:50:56,286 - app.core.storage - INFO - Stored message 680ea6bfe4995837094b for user 680ea6b6e072d9ede734
+2025-04-27 22:50:56,287 - app.core.chat_service - INFO - Stored user message (ID: 680ea6bfe4995837094b) for conversation 3eea95ca0bc74482b2295ae493caa1d2
+2025-04-27 22:50:56,461 - app.core.storage - INFO - Timestamp updated for conversation 3eea95ca0bc74482b2295ae493caa1d2
+2025-04-27 22:50:56,462 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:50:56,465 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:50:57,649 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:50:57,651 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 3eea95ca0bc74482b2295ae493caa1d2
+2025-04-27 22:50:57,652 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 22:50:57,653 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 22:50:57,653 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 3eea95ca0bc74482b2295ae493caa1d2...
+2025-04-27 22:50:57,653 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 22:50:57,817 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-27 22:50:57,818 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.16 seconds (calculated)...
+2025-04-27 22:50:59,213 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 22:50:59,213 - app.core.chat_service - INFO - Mistral response successful for conversation 3eea95ca0bc74482b2295ae493caa1d2
+2025-04-27 22:50:59,388 - app.core.storage - INFO - Stored message 680ea6c33586977646aa for user ai
+2025-04-27 22:51:00,308 - app.core.storage - INFO - Stored 5 sources for message 680ea6c33586977646aa
+2025-04-27 22:51:00,309 - app.core.chat_service - INFO - Stored AI message (ID: 680ea6c33586977646aa) for conversation 3eea95ca0bc74482b2295ae493caa1d2
+2025-04-27 22:51:00,490 - app.core.storage - INFO - Timestamp updated for conversation 3eea95ca0bc74482b2295ae493caa1d2
+2025-04-27 22:51:01,261 - app.core.storage - INFO - Attempting to create conversation 2a1723929daf44da9fcb8103cd22de9e for user 680ea6b6e072d9ede734
+2025-04-27 22:51:01,453 - app.core.storage - INFO - Successfully created conversation 2a1723929daf44da9fcb8103cd22de9e
+2025-04-27 22:51:01,455 - app.api.endpoints.chat - INFO - Created new conversation 2a1723929daf44da9fcb8103cd22de9e for message.
+2025-04-27 22:51:01,816 - app.core.storage - INFO - Stored message 680ea6c566599a387f82 for user 680ea6b6e072d9ede734
+2025-04-27 22:51:01,816 - app.core.chat_service - INFO - Stored user message (ID: 680ea6c566599a387f82) for conversation 2a1723929daf44da9fcb8103cd22de9e
+2025-04-27 22:51:01,989 - app.core.storage - INFO - Timestamp updated for conversation 2a1723929daf44da9fcb8103cd22de9e
+2025-04-27 22:51:01,990 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:51:01,993 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:51:03,089 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:51:03,091 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 2a1723929daf44da9fcb8103cd22de9e
+2025-04-27 22:51:03,094 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 22:51:03,095 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 22:51:03,096 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 2a1723929daf44da9fcb8103cd22de9e...
+2025-04-27 22:51:03,096 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 22:51:03,262 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-27 22:51:03,262 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.20 seconds (calculated)...
+2025-04-27 22:51:04,591 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 22:51:04,591 - app.core.chat_service - INFO - Mistral response successful for conversation 2a1723929daf44da9fcb8103cd22de9e
+2025-04-27 22:51:04,765 - app.core.storage - INFO - Stored message 680ea6c884eb080677c1 for user ai
+2025-04-27 22:51:05,693 - app.core.storage - INFO - Stored 5 sources for message 680ea6c884eb080677c1
+2025-04-27 22:51:05,693 - app.core.chat_service - INFO - Stored AI message (ID: 680ea6c884eb080677c1) for conversation 2a1723929daf44da9fcb8103cd22de9e
+2025-04-27 22:51:05,871 - app.core.storage - INFO - Timestamp updated for conversation 2a1723929daf44da9fcb8103cd22de9e
+2025-04-27 22:52:59,781 - app.api.endpoints.auth - INFO - User registered successfully: test4096@example.com, ID: 680ea73b726b4a77d7df
+2025-04-27 22:53:00,440 - app.api.endpoints.auth - INFO - Password verified for user: test4096@example.com, User ID: 680ea73b726b4a77d7df
+2025-04-27 22:53:00,613 - app.api.endpoints.auth - INFO - JWT created successfully for user: test4096@example.com
+2025-04-27 22:53:02,510 - app.core.storage - INFO - Stored message 680ea73e0dd645717cd7 for user 680ea73b726b4a77d7df
+2025-04-27 22:53:02,525 - app.core.chat_service - INFO - Stored user message (ID: 680ea73e0dd645717cd7) for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:02,742 - app.core.storage - INFO - Timestamp updated for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:02,745 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:53:02,772 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:53:03,462 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:53:03,464 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:03,465 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 22:53:03,465 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 22:53:03,466 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 8e0685fc2e7a4eb49631f99395beeb2c...
+2025-04-27 22:53:03,467 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 22:53:05,404 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 22:53:05,405 - app.core.chat_service - INFO - Mistral response successful for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:05,592 - app.core.storage - INFO - Stored message 680ea74150c62f57f149 for user ai
+2025-04-27 22:53:06,560 - app.core.storage - INFO - Stored 5 sources for message 680ea74150c62f57f149
+2025-04-27 22:53:06,560 - app.core.chat_service - INFO - Stored AI message (ID: 680ea74150c62f57f149) for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:06,740 - app.core.storage - INFO - Timestamp updated for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:07,421 - app.api.endpoints.chat - WARNING - User 680ea73b726b4a77d7df attempted to access conversation 8e0685fc2e7a4eb49631f99395beeb2c owned by 680ea720e1658ca5c171
+2025-04-27 22:53:08,289 - app.core.storage - INFO - Stored message 680ea743c261b1ecac79 for user 680ea73b726b4a77d7df
+2025-04-27 22:53:08,289 - app.core.chat_service - INFO - Stored user message (ID: 680ea743c261b1ecac79) for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:08,463 - app.core.storage - INFO - Timestamp updated for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:08,464 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:53:08,467 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:53:09,006 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:53:09,008 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:09,009 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 22:53:09,010 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 22:53:09,010 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 8e0685fc2e7a4eb49631f99395beeb2c...
+2025-04-27 22:53:09,011 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 22:53:09,950 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 22:53:09,951 - app.core.chat_service - INFO - Mistral response successful for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:10,173 - app.core.storage - INFO - Stored message 680ea745eb25b8177928 for user ai
+2025-04-27 22:53:11,133 - app.core.storage - INFO - Stored 5 sources for message 680ea745eb25b8177928
+2025-04-27 22:53:11,133 - app.core.chat_service - INFO - Stored AI message (ID: 680ea745eb25b8177928) for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:11,347 - app.core.storage - INFO - Timestamp updated for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:11,982 - app.api.endpoints.chat - WARNING - User 680ea73b726b4a77d7df attempted to access conversation 8e0685fc2e7a4eb49631f99395beeb2c owned by 680ea720e1658ca5c171
+2025-04-27 22:53:12,832 - app.core.storage - INFO - Stored message 680ea7485f98a5add334 for user 680ea73b726b4a77d7df
+2025-04-27 22:53:12,833 - app.core.chat_service - INFO - Stored user message (ID: 680ea7485f98a5add334) for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:13,028 - app.core.storage - INFO - Timestamp updated for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:13,029 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:53:13,031 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:53:13,465 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:53:13,467 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:13,469 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 22:53:13,470 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 22:53:13,470 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 8e0685fc2e7a4eb49631f99395beeb2c...
+2025-04-27 22:53:13,471 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 22:53:13,746 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-27 22:53:13,749 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.39 seconds (calculated)...
+2025-04-27 22:53:16,272 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 22:53:16,273 - app.core.chat_service - INFO - Mistral response successful for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:16,480 - app.core.storage - INFO - Stored message 680ea74c25b60a6e8add for user ai
+2025-04-27 22:53:17,374 - app.core.storage - INFO - Stored 5 sources for message 680ea74c25b60a6e8add
+2025-04-27 22:53:17,375 - app.core.chat_service - INFO - Stored AI message (ID: 680ea74c25b60a6e8add) for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:17,553 - app.core.storage - INFO - Timestamp updated for conversation 8e0685fc2e7a4eb49631f99395beeb2c
+2025-04-27 22:53:18,197 - app.api.endpoints.chat - WARNING - User 680ea73b726b4a77d7df attempted to access conversation 8e0685fc2e7a4eb49631f99395beeb2c owned by 680ea720e1658ca5c171
+2025-04-27 22:53:52,957 - app.api.endpoints.auth - INFO - User registered successfully: test25489@example.com, ID: 680ea77053afd7d2a10a
+2025-04-27 22:53:53,590 - app.api.endpoints.auth - INFO - Password verified for user: test25489@example.com, User ID: 680ea77053afd7d2a10a
+2025-04-27 22:53:53,744 - app.api.endpoints.auth - INFO - JWT created successfully for user: test25489@example.com
+2025-04-27 22:53:54,447 - app.core.storage - INFO - Attempting to create conversation 3fcfa0dbac0d4d3492ab39deb8a5da64 for user 680ea77053afd7d2a10a
+2025-04-27 22:53:54,626 - app.core.storage - INFO - Successfully created conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:53:56,277 - app.core.storage - INFO - Stored message 680ea773ec545a3e120d for user 680ea77053afd7d2a10a
+2025-04-27 22:53:56,277 - app.core.chat_service - INFO - Stored user message (ID: 680ea773ec545a3e120d) for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:53:56,468 - app.core.storage - INFO - Timestamp updated for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:53:56,470 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:53:56,473 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:53:57,532 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:53:57,534 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:53:57,535 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 22:53:57,537 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 22:53:57,537 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64...
+2025-04-27 22:53:57,538 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 22:53:57,723 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-27 22:53:57,723 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.89 seconds (calculated)...
+2025-04-27 22:54:01,001 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 22:54:01,002 - app.core.chat_service - INFO - Mistral response successful for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:01,214 - app.core.storage - INFO - Stored message 680ea778e12d46182ad9 for user ai
+2025-04-27 22:54:02,379 - app.core.storage - INFO - Stored 5 sources for message 680ea778e12d46182ad9
+2025-04-27 22:54:02,380 - app.core.chat_service - INFO - Stored AI message (ID: 680ea778e12d46182ad9) for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:02,567 - app.core.storage - INFO - Timestamp updated for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:03,862 - app.core.storage - INFO - Stored message 680ea77bbdb7fcd3aee5 for user 680ea77053afd7d2a10a
+2025-04-27 22:54:03,863 - app.core.chat_service - INFO - Stored user message (ID: 680ea77bbdb7fcd3aee5) for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:04,060 - app.core.storage - INFO - Timestamp updated for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:04,061 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:54:04,063 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:54:05,220 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:54:05,222 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:05,223 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 22:54:05,224 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 22:54:05,224 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64...
+2025-04-27 22:54:05,225 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 22:54:06,322 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 22:54:06,322 - app.core.chat_service - INFO - Mistral response successful for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:06,505 - app.core.storage - INFO - Stored message 680ea77e2bc487b566e2 for user ai
+2025-04-27 22:54:07,573 - app.core.storage - INFO - Stored 5 sources for message 680ea77e2bc487b566e2
+2025-04-27 22:54:07,573 - app.core.chat_service - INFO - Stored AI message (ID: 680ea77e2bc487b566e2) for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:07,767 - app.core.storage - INFO - Timestamp updated for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:08,979 - app.core.storage - INFO - Stored message 680ea780d8cd7f2d8b60 for user 680ea77053afd7d2a10a
+2025-04-27 22:54:08,980 - app.core.chat_service - INFO - Stored user message (ID: 680ea780d8cd7f2d8b60) for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:09,178 - app.core.storage - INFO - Timestamp updated for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:09,179 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:54:09,182 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:54:10,160 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:54:10,162 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:10,164 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 22:54:10,165 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 22:54:10,165 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64...
+2025-04-27 22:54:10,167 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 22:54:10,362 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-27 22:54:10,363 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.21 seconds (calculated)...
+2025-04-27 22:54:12,461 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 22:54:12,462 - app.core.chat_service - INFO - Mistral response successful for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:13,708 - app.core.storage - INFO - Stored message 680ea7852c6215bc759e for user ai
+2025-04-27 22:54:14,246 - app.core.storage - INFO - Stored 5 sources for message 680ea7852c6215bc759e
+2025-04-27 22:54:14,246 - app.core.chat_service - INFO - Stored AI message (ID: 680ea7852c6215bc759e) for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:54:14,432 - app.core.storage - INFO - Timestamp updated for conversation 3fcfa0dbac0d4d3492ab39deb8a5da64
+2025-04-27 22:55:07,176 - app.api.endpoints.rag_query - INFO - Received RAG query: hi...
+2025-04-27 22:55:07,187 - app.core.rag - INFO - Processing RAG query: hi...
+2025-04-27 22:55:07,188 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 22:55:07,226 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 22:55:08,444 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 22:55:08,446 - app.core.rag - INFO - Reranking results (placeholder)
+2025-04-27 22:55:08,447 - app.core.rag - ERROR - Error generating LLM response: 'Chat' object is not callable
+2025-04-27 22:55:08,448 - app.core.rag - INFO - RAG response generated successfully
+2025-04-27 22:59:49,320 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 23:00:07,532 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 23:00:07,578 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 23:02:52,238 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-27 23:25:24,628 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-27 23:25:24,704 - app.main - INFO - Application startup: initializing services and connections
+2025-04-27 23:26:25,852 - app.api.endpoints.auth - INFO - User registered successfully: test11653@example.com, ID: 680eaf114889265470f1
+2025-04-27 23:26:26,537 - app.api.endpoints.auth - INFO - Password verified for user: test11653@example.com, User ID: 680eaf114889265470f1
+2025-04-27 23:26:26,690 - app.api.endpoints.auth - INFO - JWT created successfully for user: test11653@example.com
+2025-04-27 23:26:27,394 - app.core.storage - INFO - Attempting to create conversation 4cb0841788104271902da7133149e206 for user 680eaf114889265470f1
+2025-04-27 23:26:27,577 - app.core.storage - INFO - Successfully created conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:29,054 - app.core.storage - INFO - Stored message 680eaf14ca741760c0d0 for user 680eaf114889265470f1
+2025-04-27 23:26:29,058 - app.core.chat_service - INFO - Stored user message (ID: 680eaf14ca741760c0d0) for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:29,248 - app.core.storage - INFO - Timestamp updated for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:29,248 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-27 23:26:29,249 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 23:26:29,253 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 23:26:31,571 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 23:26:31,573 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:31,574 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 23:26:31,575 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 23:26:31,575 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 4cb0841788104271902da7133149e206...
+2025-04-27 23:26:31,576 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 23:26:33,213 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 23:26:33,214 - app.core.chat_service - INFO - Mistral response successful for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:33,382 - app.core.storage - INFO - Stored message 680eaf193571d7793cbb for user ai
+2025-04-27 23:26:34,279 - app.core.storage - INFO - Stored 5 sources for message 680eaf193571d7793cbb
+2025-04-27 23:26:34,280 - app.core.chat_service - INFO - Stored AI message (ID: 680eaf193571d7793cbb) for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:34,483 - app.core.storage - INFO - Timestamp updated for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:35,531 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680eaf193571d7793cbb: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf195e716b...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf1984d1de...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf19aa6af7...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf19d4491a...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf1a0897a5...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-27 23:26:36,381 - app.core.storage - INFO - Stored message 680eaf1be4974b623192 for user 680eaf114889265470f1
+2025-04-27 23:26:36,382 - app.core.chat_service - INFO - Stored user message (ID: 680eaf1be4974b623192) for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:36,570 - app.core.storage - INFO - Timestamp updated for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:36,571 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 23:26:36,574 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 23:26:37,245 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 23:26:37,248 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:37,249 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 23:26:37,250 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 23:26:37,250 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 4cb0841788104271902da7133149e206...
+2025-04-27 23:26:37,251 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 23:26:37,510 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-27 23:26:37,511 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.43 seconds (calculated)...
+2025-04-27 23:26:39,585 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 23:26:39,586 - app.core.chat_service - INFO - Mistral response successful for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:39,770 - app.core.storage - INFO - Stored message 680eaf1f742bc087856a for user ai
+2025-04-27 23:26:40,659 - app.core.storage - INFO - Stored 5 sources for message 680eaf1f742bc087856a
+2025-04-27 23:26:40,660 - app.core.chat_service - INFO - Stored AI message (ID: 680eaf1f742bc087856a) for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:40,852 - app.core.storage - INFO - Timestamp updated for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:41,850 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680eaf193571d7793cbb: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf195e716b...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf1984d1de...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf19aa6af7...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf19d4491a...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf1a0897a5...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-27 23:26:41,851 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680eaf1f742bc087856a: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf1fa062a3...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf1fc56691...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf1fe9c1fa...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf201a9308...5_0_2_0_281', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf204425d4..._0_2_0_1029', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-27 23:26:42,178 - app.core.storage - INFO - Stored message 680eaf221d0d05076650 for user 680eaf114889265470f1
+2025-04-27 23:26:42,179 - app.core.chat_service - INFO - Stored user message (ID: 680eaf221d0d05076650) for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:42,351 - app.core.storage - INFO - Timestamp updated for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:42,352 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 23:26:42,355 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 23:26:43,372 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 23:26:43,374 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:43,375 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 23:26:43,376 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 23:26:43,376 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 4cb0841788104271902da7133149e206...
+2025-04-27 23:26:43,377 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 23:26:44,129 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 23:26:44,130 - app.core.chat_service - INFO - Mistral response successful for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:44,301 - app.core.storage - INFO - Stored message 680eaf240be328fcf9ed for user ai
+2025-04-27 23:26:45,273 - app.core.storage - INFO - Stored 5 sources for message 680eaf240be328fcf9ed
+2025-04-27 23:26:45,273 - app.core.chat_service - INFO - Stored AI message (ID: 680eaf240be328fcf9ed) for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:45,455 - app.core.storage - INFO - Timestamp updated for conversation 4cb0841788104271902da7133149e206
+2025-04-27 23:26:46,599 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680eaf193571d7793cbb: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf195e716b...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf1984d1de...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf19aa6af7...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf19d4491a...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf1a0897a5...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-27 23:26:46,600 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680eaf1f742bc087856a: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf1fa062a3...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf1fc56691...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf1fe9c1fa...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf201a9308...5_0_2_0_281', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf204425d4..._0_2_0_1029', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-27 23:26:46,601 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680eaf240be328fcf9ed: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf24340ab3...5_0_2_0_510', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf24602106...5_0_2_0_205', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf248a60fe...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf24b94118...315_0_3_1_5', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eaf24e2dd26...5_0_5_0_124', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-27 23:44:04,169 - app.api.endpoints.auth - INFO - User registered successfully: test29425@example.com, ID: 680eb333b6736fd0cc27
+2025-04-27 23:44:05,156 - app.api.endpoints.auth - INFO - Password verified for user: test29425@example.com, User ID: 680eb333b6736fd0cc27
+2025-04-27 23:44:05,370 - app.api.endpoints.auth - INFO - JWT created successfully for user: test29425@example.com
+2025-04-27 23:44:07,527 - app.core.storage - INFO - Attempting to create conversation 7e1128882fc34940b39d8c180d69e750 for user 680eb333b6736fd0cc27
+2025-04-27 23:44:07,745 - app.core.storage - INFO - Successfully created conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:09,260 - app.core.storage - INFO - Stored message 680eb339066632bc9fa7 for user 680eb333b6736fd0cc27
+2025-04-27 23:44:09,262 - app.core.chat_service - INFO - Stored user message (ID: 680eb339066632bc9fa7) for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:09,496 - app.core.storage - INFO - Timestamp updated for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:09,497 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 23:44:09,554 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 23:44:11,420 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 23:44:11,422 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:11,434 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 23:44:11,436 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 23:44:11,442 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 7e1128882fc34940b39d8c180d69e750...
+2025-04-27 23:44:11,443 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 23:44:12,273 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 23:44:12,278 - app.core.chat_service - INFO - Mistral response successful for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:12,465 - app.core.storage - INFO - Stored message 680eb33be5a66f701916 for user ai
+2025-04-27 23:44:12,955 - app.core.storage - INFO - Stored 5 sources for message 680eb33be5a66f701916
+2025-04-27 23:44:12,957 - app.core.chat_service - INFO - Stored AI message (ID: 680eb33be5a66f701916) for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:13,159 - app.core.storage - INFO - Timestamp updated for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:14,448 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680eb33be5a66f701916: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33c246a26...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33c50759f...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33c7c5e26...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33ca6083b...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33ccd0f45...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-27 23:44:15,396 - app.core.storage - INFO - Stored message 680eb33f0ba694f8e56b for user 680eb333b6736fd0cc27
+2025-04-27 23:44:15,397 - app.core.chat_service - INFO - Stored user message (ID: 680eb33f0ba694f8e56b) for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:15,600 - app.core.storage - INFO - Timestamp updated for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:15,730 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 23:44:15,848 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 23:44:17,137 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 23:44:17,139 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:17,140 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 23:44:17,140 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 23:44:17,140 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 7e1128882fc34940b39d8c180d69e750...
+2025-04-27 23:44:17,141 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 23:44:17,438 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 23:44:17,439 - app.core.chat_service - INFO - Mistral response successful for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:17,629 - app.core.storage - INFO - Stored message 680eb341843adb34f84b for user ai
+2025-04-27 23:44:18,568 - app.core.storage - INFO - Stored 5 sources for message 680eb341843adb34f84b
+2025-04-27 23:44:18,569 - app.core.chat_service - INFO - Stored AI message (ID: 680eb341843adb34f84b) for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:18,775 - app.core.storage - INFO - Timestamp updated for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:20,995 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680eb33be5a66f701916: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33c246a26...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33c50759f...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33c7c5e26...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33ca6083b...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33ccd0f45...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-27 23:44:20,999 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680eb341843adb34f84b: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb341aa337a...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb341d2e9e6...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb3420e5b7d...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb34237d2b1...5_0_2_0_281', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb3426055d4..._0_2_0_1029', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-27 23:44:21,862 - app.core.storage - INFO - Stored message 680eb3455c541049fc38 for user 680eb333b6736fd0cc27
+2025-04-27 23:44:21,863 - app.core.chat_service - INFO - Stored user message (ID: 680eb3455c541049fc38) for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:22,066 - app.core.storage - INFO - Timestamp updated for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:22,066 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-27 23:44:22,070 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-27 23:44:22,561 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-27 23:44:22,564 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:22,570 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-27 23:44:22,572 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-27 23:44:22,574 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 7e1128882fc34940b39d8c180d69e750...
+2025-04-27 23:44:22,576 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-27 23:44:23,416 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-27 23:44:23,417 - app.core.chat_service - INFO - Mistral response successful for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:23,598 - app.core.storage - INFO - Stored message 680eb347650d93fb68af for user ai
+2025-04-27 23:44:24,550 - app.core.storage - INFO - Stored 5 sources for message 680eb347650d93fb68af
+2025-04-27 23:44:24,551 - app.core.chat_service - INFO - Stored AI message (ID: 680eb347650d93fb68af) for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:24,772 - app.core.storage - INFO - Timestamp updated for conversation 7e1128882fc34940b39d8c180d69e750
+2025-04-27 23:44:25,834 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680eb33be5a66f701916: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33c246a26...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33c50759f...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33c7c5e26...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33ca6083b...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb33ccd0f45...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-27 23:44:25,835 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680eb341843adb34f84b: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb341aa337a...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb341d2e9e6...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb3420e5b7d...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb34237d2b1...5_0_2_0_281', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb3426055d4..._0_2_0_1029', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-27 23:44:25,836 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680eb347650d93fb68af: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb34790b588...5_0_2_0_510', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb347b8c228...5_0_2_0_205', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb347e83c2d...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb3481bc470...315_0_3_1_5', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680eb3484752ae...5_0_5_0_124', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 00:18:53,777 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 00:19:11,327 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 00:19:11,370 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 00:20:12,654 - app.api.endpoints.auth - INFO - User registered successfully: test30049@example.com, ID: 680ebbac236062f70cab
+2025-04-28 00:20:13,424 - app.api.endpoints.auth - INFO - Password verified for user: test30049@example.com, User ID: 680ebbac236062f70cab
+2025-04-28 00:20:13,580 - app.api.endpoints.auth - INFO - JWT created successfully for user: test30049@example.com
+2025-04-28 00:20:14,745 - app.core.storage - INFO - Attempting to create conversation 0a25719846504b4b9844994ed81180d5 for user 680ebbac236062f70cab
+2025-04-28 00:20:14,925 - app.core.storage - INFO - Successfully created conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:16,342 - app.core.storage - INFO - Stored message 680ebbb016c5592955f5 for user 680ebbac236062f70cab
+2025-04-28 00:20:16,342 - app.core.chat_service - INFO - Stored user message (ID: 680ebbb016c5592955f5) for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:16,539 - app.core.storage - INFO - Timestamp updated for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:16,539 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-28 00:20:16,540 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 00:20:16,545 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 00:20:18,437 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 00:20:18,439 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:18,440 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 00:20:18,441 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-28 00:20:18,443 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 0a25719846504b4b9844994ed81180d5...
+2025-04-28 00:20:18,447 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 00:20:19,723 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 00:20:19,729 - app.core.chat_service - INFO - Mistral response successful for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:19,997 - app.core.storage - INFO - Stored message 680ebbb3d8d3a27b2e7c for user ai
+2025-04-28 00:20:20,964 - app.core.storage - INFO - Stored 5 sources for message 680ebbb3d8d3a27b2e7c
+2025-04-28 00:20:20,965 - app.core.chat_service - INFO - Stored AI message (ID: 680ebbb3d8d3a27b2e7c) for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:21,143 - app.core.storage - INFO - Timestamp updated for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:22,201 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680ebbb3d8d3a27b2e7c: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb40e477b...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb43807e6...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb46def00...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb49470c4...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb4b985d9...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 00:20:23,181 - app.core.storage - INFO - Stored message 680ebbb6bf5ecba42465 for user 680ebbac236062f70cab
+2025-04-28 00:20:23,182 - app.core.chat_service - INFO - Stored user message (ID: 680ebbb6bf5ecba42465) for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:23,390 - app.core.storage - INFO - Timestamp updated for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:23,391 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 00:20:23,394 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 00:20:24,342 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 00:20:24,343 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:24,344 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 00:20:24,345 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-28 00:20:24,345 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 0a25719846504b4b9844994ed81180d5...
+2025-04-28 00:20:24,346 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 00:20:24,656 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 00:20:24,656 - app.core.chat_service - INFO - Mistral response successful for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:24,920 - app.core.storage - INFO - Stored message 680ebbb8c7b6edd619b2 for user ai
+2025-04-28 00:20:25,881 - app.core.storage - INFO - Stored 5 sources for message 680ebbb8c7b6edd619b2
+2025-04-28 00:20:25,882 - app.core.chat_service - INFO - Stored AI message (ID: 680ebbb8c7b6edd619b2) for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:26,063 - app.core.storage - INFO - Timestamp updated for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:27,080 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680ebbb3d8d3a27b2e7c: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb40e477b...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb43807e6...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb46def00...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb49470c4...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb4b985d9...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 00:20:27,081 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680ebbb8c7b6edd619b2: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb8f209f9...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb934b6b0...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb95d165d...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb9804861...5_0_2_0_281', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb9a78a6b..._0_2_0_1029', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 00:20:27,914 - app.core.storage - INFO - Stored message 680ebbbb858b9f7c3a76 for user 680ebbac236062f70cab
+2025-04-28 00:20:27,915 - app.core.chat_service - INFO - Stored user message (ID: 680ebbbb858b9f7c3a76) for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:28,093 - app.core.storage - INFO - Timestamp updated for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:28,094 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 00:20:28,098 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 00:20:29,185 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 00:20:29,186 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:29,187 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 00:20:29,188 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-28 00:20:29,188 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 0a25719846504b4b9844994ed81180d5...
+2025-04-28 00:20:29,189 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 00:20:29,582 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 00:20:29,582 - app.core.chat_service - INFO - Mistral response successful for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:29,751 - app.core.storage - INFO - Stored message 680ebbbda4bf67444aa8 for user ai
+2025-04-28 00:20:30,633 - app.core.storage - INFO - Stored 5 sources for message 680ebbbda4bf67444aa8
+2025-04-28 00:20:30,633 - app.core.chat_service - INFO - Stored AI message (ID: 680ebbbda4bf67444aa8) for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:30,823 - app.core.storage - INFO - Timestamp updated for conversation 0a25719846504b4b9844994ed81180d5
+2025-04-28 00:20:31,827 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680ebbb3d8d3a27b2e7c: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb40e477b...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb43807e6...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb46def00...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb49470c4...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb4b985d9...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 00:20:31,828 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680ebbb8c7b6edd619b2: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb8f209f9...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb934b6b0...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb95d165d...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb9804861...5_0_2_0_281', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbb9a78a6b..._0_2_0_1029', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 00:20:31,829 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680ebbbda4bf67444aa8: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbbdca7c91...5_0_2_0_510', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbbdefd323...5_0_2_0_205', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbbe23fb94...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbbe49f695...315_0_3_1_5', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebbbe728e4e...5_0_5_0_124', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 00:20:38,416 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 00:20:53,217 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 00:20:53,262 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 00:21:44,557 - app.api.endpoints.auth - INFO - User registered successfully: test6507@example.com, ID: 680ebc07dca58027f77c
+2025-04-28 00:21:44,710 - app.api.endpoints.auth - INFO - Password verified for user: test6507@example.com, User ID: 680ebc07dca58027f77c
+2025-04-28 00:21:44,871 - app.api.endpoints.auth - INFO - JWT created successfully for user: test6507@example.com
+2025-04-28 00:21:45,948 - app.core.storage - INFO - Attempting to create conversation ad134d9a44a6488f84d5da068e5c2250 for user 680ebc07dca58027f77c
+2025-04-28 00:21:46,115 - app.core.storage - INFO - Successfully created conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:21:47,570 - app.core.storage - INFO - Stored message 680ebc0b31b18abfc6b9 for user 680ebc07dca58027f77c
+2025-04-28 00:21:47,571 - app.core.chat_service - INFO - Stored user message (ID: 680ebc0b31b18abfc6b9) for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:21:47,742 - app.core.storage - INFO - Timestamp updated for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:21:47,743 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-28 00:21:47,744 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 00:21:47,746 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 00:21:49,160 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 00:21:49,162 - app.core.chat_service - INFO - Retrieved 5 documents for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:21:49,163 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 00:21:49,163 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-28 00:21:49,164 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation ad134d9a44a6488f84d5da068e5c2250...
+2025-04-28 00:21:49,165 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 00:21:49,913 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 00:21:49,914 - app.core.chat_service - INFO - Mistral response successful for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:21:50,086 - app.core.storage - INFO - Stored message 680ebc0def9c474a23b6 for user ai
+2025-04-28 00:21:51,031 - app.core.storage - INFO - Stored 5 sources for message 680ebc0def9c474a23b6
+2025-04-28 00:21:51,033 - app.core.chat_service - INFO - Stored AI message (ID: 680ebc0def9c474a23b6) for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:21:51,208 - app.core.storage - INFO - Timestamp updated for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:21:52,246 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680ebc0def9c474a23b6: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0e210d73...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0e537d31...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0e7c85b0...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0ea64861...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0ecf3786...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 00:21:53,108 - app.core.storage - INFO - Stored message 680ebc10af7358abd517 for user 680ebc07dca58027f77c
+2025-04-28 00:21:53,110 - app.core.chat_service - INFO - Stored user message (ID: 680ebc10af7358abd517) for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:21:53,309 - app.core.storage - INFO - Timestamp updated for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:21:53,309 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 00:21:53,312 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 00:21:54,306 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 00:21:54,308 - app.core.chat_service - INFO - Retrieved 5 documents for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:21:54,309 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 00:21:54,310 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-28 00:21:54,310 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation ad134d9a44a6488f84d5da068e5c2250...
+2025-04-28 00:21:54,311 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 00:21:54,470 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-28 00:21:54,471 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.99 seconds (calculated)...
+2025-04-28 00:21:56,708 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 00:21:56,708 - app.core.chat_service - INFO - Mistral response successful for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:21:56,895 - app.core.storage - INFO - Stored message 680ebc1498444fd185c3 for user ai
+2025-04-28 00:21:57,771 - app.core.storage - INFO - Stored 5 sources for message 680ebc1498444fd185c3
+2025-04-28 00:21:57,772 - app.core.chat_service - INFO - Stored AI message (ID: 680ebc1498444fd185c3) for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:21:57,947 - app.core.storage - INFO - Timestamp updated for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:21:59,549 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680ebc0def9c474a23b6: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0e210d73...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0e537d31...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0e7c85b0...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0ea64861...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0ecf3786...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 00:21:59,550 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680ebc1498444fd185c3: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc14c061f6...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc14e58a06...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc1519515a...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc15414d32...5_0_2_0_281', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc15692342..._0_2_0_1029', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 00:22:00,430 - app.core.storage - INFO - Stored message 680ebc184879d34447ff for user 680ebc07dca58027f77c
+2025-04-28 00:22:00,431 - app.core.chat_service - INFO - Stored user message (ID: 680ebc184879d34447ff) for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:22:00,629 - app.core.storage - INFO - Timestamp updated for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:22:00,630 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 00:22:00,633 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 00:22:01,586 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 00:22:01,588 - app.core.chat_service - INFO - Retrieved 5 documents for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:22:01,589 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 00:22:01,590 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-28 00:22:01,590 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation ad134d9a44a6488f84d5da068e5c2250...
+2025-04-28 00:22:01,591 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 00:22:02,566 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 00:22:02,567 - app.core.chat_service - INFO - Mistral response successful for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:22:02,756 - app.core.storage - INFO - Stored message 680ebc1a65505aaa14f2 for user ai
+2025-04-28 00:22:03,667 - app.core.storage - INFO - Stored 5 sources for message 680ebc1a65505aaa14f2
+2025-04-28 00:22:03,668 - app.core.chat_service - INFO - Stored AI message (ID: 680ebc1a65505aaa14f2) for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:22:03,847 - app.core.storage - INFO - Timestamp updated for conversation ad134d9a44a6488f84d5da068e5c2250
+2025-04-28 00:22:04,854 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680ebc0def9c474a23b6: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0e210d73...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0e537d31...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0e7c85b0...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0ea64861...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc0ecf3786...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 00:22:04,855 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680ebc1498444fd185c3: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc14c061f6...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc14e58a06...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc1519515a...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc15414d32...5_0_2_0_281', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc15692342..._0_2_0_1029', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 00:22:04,856 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680ebc1a65505aaa14f2: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc1a8f2c2a...5_0_2_0_510', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc1ab725c3...5_0_2_0_205', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc1ade900b...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc1b1135e2...315_0_3_1_5', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680ebc1b38f543...5_0_5_0_124', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 00:34:09,840 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 00:34:10,413 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 00:34:10,455 - app.api.endpoints.auth - INFO - Password verified for user: conftest_test@example.com, User ID: mock_conftest_user_id
+2025-04-28 00:34:10,456 - app.api.endpoints.auth - INFO - JWT created successfully for user: conftest_test@example.com
+2025-04-28 00:34:21,620 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 14:51:08,147 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 14:51:08,221 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 14:51:43,807 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 14:51:44,439 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 14:51:44,498 - app.api.endpoints.auth - INFO - Password verified for user: conftest_test@example.com, User ID: mock_conftest_user_id
+2025-04-28 14:51:44,499 - app.api.endpoints.auth - INFO - JWT created successfully for user: conftest_test@example.com
+2025-04-28 14:51:56,464 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 15:50:39,341 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 15:50:39,907 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 15:50:39,961 - app.api.endpoints.auth - INFO - Password verified for user: conftest_test@example.com, User ID: mock_conftest_user_id
+2025-04-28 15:50:39,962 - app.api.endpoints.auth - INFO - JWT created successfully for user: conftest_test@example.com
+2025-04-28 15:50:39,969 - app.core.storage - INFO - Attempting to create conversation a8b68ff947b64f549c4327cce37eed2a for user mock_conftest_user_id
+2025-04-28 15:50:40,275 - app.core.storage - INFO - Successfully created conversation a8b68ff947b64f549c4327cce37eed2a
+2025-04-28 15:50:51,449 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 15:51:08,491 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 15:51:26,031 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 15:51:26,073 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 15:51:34,900 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 15:51:35,575 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 15:51:35,626 - app.api.endpoints.auth - INFO - Password verified for user: conftest_test@example.com, User ID: mock_conftest_user_id
+2025-04-28 15:51:35,629 - app.api.endpoints.auth - INFO - JWT created successfully for user: conftest_test@example.com
+2025-04-28 15:51:35,636 - app.core.storage - INFO - Attempting to create conversation 9ae02729b523462698afc93d8c44cd08 for user mock_conftest_user_id
+2025-04-28 15:51:35,853 - app.core.storage - INFO - Successfully created conversation 9ae02729b523462698afc93d8c44cd08
+2025-04-28 15:51:45,916 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 16:01:08,720 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 16:01:25,217 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 16:01:25,256 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 16:03:00,049 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 16:03:14,413 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 16:03:14,462 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 16:06:01,548 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 16:06:02,093 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 16:06:02,136 - app.api.endpoints.auth - INFO - Password verified for user: conftest_test@example.com, User ID: mock_conftest_user_id
+2025-04-28 16:06:02,137 - app.api.endpoints.auth - INFO - JWT created successfully for user: conftest_test@example.com
+2025-04-28 16:06:02,143 - app.core.storage - INFO - Attempting to create conversation 859e9f620e0a4fab8ad36ac225aebb81 for user mock_conftest_user_id
+2025-04-28 16:06:02,450 - app.core.storage - INFO - Successfully created conversation 859e9f620e0a4fab8ad36ac225aebb81
+2025-04-28 16:06:12,214 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 16:06:14,146 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 16:06:29,062 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 16:06:29,097 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 16:09:12,013 - app.api.endpoints.auth - INFO - User registered successfully: test15352@example.com, ID: 680f9a1767836c76596d
+2025-04-28 16:09:12,740 - app.api.endpoints.auth - INFO - Password verified for user: test15352@example.com, User ID: 680f9a1767836c76596d
+2025-04-28 16:09:12,914 - app.api.endpoints.auth - INFO - JWT created successfully for user: test15352@example.com
+2025-04-28 16:09:15,153 - app.core.storage - INFO - Attempting to create conversation c18369e9509040f88726d9a26e487d4f for user 680f9a1767836c76596d
+2025-04-28 16:09:15,358 - app.core.storage - INFO - Successfully created conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:17,409 - app.core.storage - INFO - Stored message 680f9a1d0e877d2d5ea9 for user 680f9a1767836c76596d
+2025-04-28 16:09:17,411 - app.core.chat_service - INFO - Stored user message (ID: 680f9a1d0e877d2d5ea9) for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:17,652 - app.core.storage - INFO - Timestamp updated for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:17,658 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-28 16:09:17,659 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 16:09:17,665 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 16:09:19,523 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 16:09:19,525 - app.core.chat_service - INFO - Retrieved 5 documents for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:19,526 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 16:09:19,527 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-28 16:09:19,527 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation c18369e9509040f88726d9a26e487d4f...
+2025-04-28 16:09:19,528 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 16:09:21,105 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 16:09:21,106 - app.core.chat_service - INFO - Mistral response successful for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:21,287 - app.core.storage - INFO - Stored message 680f9a210a9cd9c9ae34 for user ai
+2025-04-28 16:09:22,231 - app.core.storage - INFO - Stored 5 sources for message 680f9a210a9cd9c9ae34
+2025-04-28 16:09:22,232 - app.core.chat_service - INFO - Stored AI message (ID: 680f9a210a9cd9c9ae34) for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:22,488 - app.core.storage - INFO - Timestamp updated for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:23,571 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680f9a210a9cd9c9ae34: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a21368546...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a2163f60e...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a218b4486...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a21b46c19...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a21dd2162...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 16:10:42,044 - app.core.storage - INFO - Stored message 680f9a2411a80567d7a9 for user 680f9a1767836c76596d
+2025-04-28 16:10:42,045 - app.core.chat_service - INFO - Stored user message (ID: 680f9a2411a80567d7a9) for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:24,336 - app.core.storage - INFO - Timestamp updated for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:24,337 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 16:09:24,340 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 16:09:25,376 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 16:09:25,378 - app.core.chat_service - INFO - Retrieved 5 documents for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:25,380 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 16:09:25,382 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-28 16:09:25,382 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation c18369e9509040f88726d9a26e487d4f...
+2025-04-28 16:09:25,383 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 16:09:27,699 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 16:09:27,700 - app.core.chat_service - INFO - Mistral response successful for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:27,882 - app.core.storage - INFO - Stored message 680f9a2778cbdb462769 for user ai
+2025-04-28 16:09:28,852 - app.core.storage - INFO - Stored 5 sources for message 680f9a2778cbdb462769
+2025-04-28 16:09:28,853 - app.core.chat_service - INFO - Stored AI message (ID: 680f9a2778cbdb462769) for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:29,049 - app.core.storage - INFO - Timestamp updated for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:29,649 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680f9a210a9cd9c9ae34: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a21368546...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a2163f60e...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a218b4486...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a21b46c19...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a21dd2162...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 16:09:29,654 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680f9a2778cbdb462769: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a27a4e9cd...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a27cca413...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a2805a243...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a2837b927...5_0_2_0_281', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a285def82..._0_2_0_1029', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 16:09:30,556 - app.core.storage - INFO - Stored message 680f9a2a5d74c572e2cc for user 680f9a1767836c76596d
+2025-04-28 16:09:30,557 - app.core.chat_service - INFO - Stored user message (ID: 680f9a2a5d74c572e2cc) for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:30,741 - app.core.storage - INFO - Timestamp updated for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:30,742 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 16:09:30,746 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 16:09:31,949 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 16:09:31,951 - app.core.chat_service - INFO - Retrieved 5 documents for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:31,952 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 16:09:31,952 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-28 16:09:31,953 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation c18369e9509040f88726d9a26e487d4f...
+2025-04-28 16:09:31,953 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 16:09:32,134 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-28 16:09:32,135 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.45 seconds (calculated)...
+2025-04-28 16:09:36,342 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 16:09:36,343 - app.core.chat_service - INFO - Mistral response successful for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:36,524 - app.core.storage - INFO - Stored message 680f9a303f60f8ac4b5b for user ai
+2025-04-28 16:09:37,532 - app.core.storage - INFO - Stored 5 sources for message 680f9a303f60f8ac4b5b
+2025-04-28 16:09:37,533 - app.core.chat_service - INFO - Stored AI message (ID: 680f9a303f60f8ac4b5b) for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:37,730 - app.core.storage - INFO - Timestamp updated for conversation c18369e9509040f88726d9a26e487d4f
+2025-04-28 16:09:38,772 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680f9a210a9cd9c9ae34: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a21368546...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a2163f60e...5_0_2_0_264', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a218b4486...5_0_2_0_263', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a21b46c19...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a21dd2162...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 16:09:38,775 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680f9a2778cbdb462769: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a27a4e9cd...5_0_2_0_758', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a27cca413...5_0_3_0_151', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a2805a243...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a2837b927...5_0_2_0_281', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a285def82..._0_2_0_1029', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 16:09:38,776 - app.api.endpoints.chat - ERROR - Pydantic validation failed for Appwrite message doc ID 680f9a303f60f8ac4b5b: 5 validation errors for Message
+sources.0
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a306fd24a...5_0_2_0_510', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.1
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a30a26077...5_0_2_0_205', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.2
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a30cd6a7f...5_0_2_0_676', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.3
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a31046b1c...315_0_3_1_5', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+sources.4
+  Input should be a valid dictionary [type=dict_type, input_value=Source(id='680f9a312b32e7...5_0_5_0_124', score=0.0), input_type=Source]
+    For further information visit https://errors.pydantic.dev/2.10/v/dict_type
+2025-04-28 16:10:59,237 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 16:11:14,583 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 16:11:14,647 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 16:12:03,256 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 16:12:04,231 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 16:12:04,297 - app.api.endpoints.auth - INFO - Password verified for user: conftest_test@example.com, User ID: mock_conftest_user_id
+2025-04-28 16:12:04,301 - app.api.endpoints.auth - INFO - JWT created successfully for user: conftest_test@example.com
+2025-04-28 16:12:04,309 - app.core.storage - INFO - Attempting to create conversation 6ec530574f8047d2b6b5e04f0453a914 for user mock_conftest_user_id
+2025-04-28 16:12:04,596 - app.core.storage - INFO - Successfully created conversation 6ec530574f8047d2b6b5e04f0453a914
+2025-04-28 16:12:32,421 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 16:48:04,762 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 19:50:27,767 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 19:50:27,824 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 19:50:28,513 - app.api.endpoints.auth - INFO - User registered successfully: test20494@example.com, ID: 680fcdf41d45556fea83
+2025-04-28 19:50:49,691 - app.api.endpoints.auth - INFO - User registered successfully: test18695@example.com, ID: 680fce0932961d9a4437
+2025-04-28 19:50:50,500 - app.api.endpoints.auth - INFO - Password verified for user: test18695@example.com, User ID: 680fce0932961d9a4437
+2025-04-28 19:50:50,762 - app.api.endpoints.auth - INFO - JWT created successfully for user: test18695@example.com
+2025-04-28 19:50:52,642 - app.core.storage - INFO - Attempting to create conversation 485627a6012846efaf404969f7602062 for user 680fce0932961d9a4437
+2025-04-28 19:50:52,835 - app.core.storage - INFO - Successfully created conversation 485627a6012846efaf404969f7602062
+2025-04-28 19:50:53,777 - app.api.endpoints.chat - ERROR - Error in send_message endpoint for user 680fce0932961d9a4437: generate_rag_response() got an unexpected keyword argument 'user'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 48, in send_message
+    result = await generate_rag_response(
+                   ~~~~~~~~~~~~~~~~~~~~~^
+        db=db,
+        ^^^^^^
+    ...<2 lines>...
+        conversation_id=payload.conversation_id
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: generate_rag_response() got an unexpected keyword argument 'user'
+2025-04-28 19:50:56,332 - app.api.endpoints.chat - ERROR - Error in send_message endpoint for user 680fce0932961d9a4437: generate_rag_response() got an unexpected keyword argument 'user'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 48, in send_message
+    result = await generate_rag_response(
+                   ~~~~~~~~~~~~~~~~~~~~~^
+        db=db,
+        ^^^^^^
+    ...<2 lines>...
+        conversation_id=payload.conversation_id
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: generate_rag_response() got an unexpected keyword argument 'user'
+2025-04-28 19:50:57,522 - app.api.endpoints.chat - ERROR - Error in send_message endpoint for user 680fce0932961d9a4437: generate_rag_response() got an unexpected keyword argument 'user'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 48, in send_message
+    result = await generate_rag_response(
+                   ~~~~~~~~~~~~~~~~~~~~~^
+        db=db,
+        ^^^^^^
+    ...<2 lines>...
+        conversation_id=payload.conversation_id
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: generate_rag_response() got an unexpected keyword argument 'user'
+2025-04-28 19:52:04,257 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 19:52:20,697 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 19:52:20,737 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 19:52:21,657 - app.api.endpoints.auth - INFO - User registered successfully: test20569@example.com, ID: 680fce64d8a98d68c572
+2025-04-28 19:52:22,919 - app.api.endpoints.auth - INFO - Password verified for user: test20569@example.com, User ID: 680fce64d8a98d68c572
+2025-04-28 19:52:23,085 - app.api.endpoints.auth - INFO - JWT created successfully for user: test20569@example.com
+2025-04-28 19:52:24,185 - app.core.storage - INFO - Attempting to create conversation 56fad03dbebe420baf758b046425f5e9 for user 680fce64d8a98d68c572
+2025-04-28 19:52:24,364 - app.core.storage - INFO - Successfully created conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:25,718 - app.core.storage - INFO - Stored message 680fce695ca1dceb2c57 for user 680fce64d8a98d68c572
+2025-04-28 19:52:25,719 - app.core.chat_service - INFO - Stored user message (ID: 680fce695ca1dceb2c57) for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:25,927 - app.core.storage - INFO - Timestamp updated for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:25,928 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-28 19:52:25,929 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 19:52:25,934 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 19:52:27,769 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 19:52:27,775 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:27,781 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 19:52:27,843 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-28 19:52:27,860 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 56fad03dbebe420baf758b046425f5e9...
+2025-04-28 19:52:27,874 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 19:52:30,052 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 19:52:30,053 - app.core.chat_service - INFO - Mistral response successful for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:30,259 - app.core.storage - INFO - Stored message 680fce6de7bbe59cb03d for user ai
+2025-04-28 19:52:34,156 - app.core.storage - INFO - Stored 5 sources for message 680fce6de7bbe59cb03d
+2025-04-28 19:52:34,158 - app.core.chat_service - INFO - Stored AI message (ID: 680fce6de7bbe59cb03d) for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:34,428 - app.core.storage - INFO - Timestamp updated for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:36,903 - app.core.storage - INFO - Stored message 680fce7470d9ecc75a6e for user 680fce64d8a98d68c572
+2025-04-28 19:52:36,903 - app.core.chat_service - INFO - Stored user message (ID: 680fce7470d9ecc75a6e) for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:37,108 - app.core.storage - INFO - Timestamp updated for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:37,109 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 19:52:37,112 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 19:52:38,035 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 19:52:38,036 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:38,038 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 19:52:38,038 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-28 19:52:38,039 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 56fad03dbebe420baf758b046425f5e9...
+2025-04-28 19:52:38,039 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 19:52:39,382 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 19:52:39,382 - app.core.chat_service - INFO - Mistral response successful for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:39,574 - app.core.storage - INFO - Stored message 680fce774fd49693cab0 for user ai
+2025-04-28 19:52:41,104 - app.core.storage - INFO - Stored 5 sources for message 680fce774fd49693cab0
+2025-04-28 19:52:41,105 - app.core.chat_service - INFO - Stored AI message (ID: 680fce774fd49693cab0) for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:41,332 - app.core.storage - INFO - Timestamp updated for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:43,175 - app.core.storage - INFO - Stored message 680fce7b06ca4898de18 for user 680fce64d8a98d68c572
+2025-04-28 19:52:43,176 - app.core.chat_service - INFO - Stored user message (ID: 680fce7b06ca4898de18) for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:43,389 - app.core.storage - INFO - Timestamp updated for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:43,389 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 19:52:43,393 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 19:52:44,436 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 19:52:44,439 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:44,442 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 19:52:44,444 - app.core.chat_service - INFO - Verification: 'content' key FOUND in final_sources.
+2025-04-28 19:52:44,445 - app.core.chat_service - INFO - Attempting LLM call (Mistral first) for conversation 56fad03dbebe420baf758b046425f5e9...
+2025-04-28 19:52:44,446 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 19:52:44,647 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-28 19:52:44,649 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.37 seconds (calculated)...
+2025-04-28 19:52:46,848 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 19:52:46,853 - app.core.chat_service - INFO - Mistral response successful for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:47,055 - app.core.storage - INFO - Stored message 680fce7e95e2f149d9cc for user ai
+2025-04-28 19:52:50,863 - app.core.storage - INFO - Stored 5 sources for message 680fce7e95e2f149d9cc
+2025-04-28 19:52:50,863 - app.core.chat_service - INFO - Stored AI message (ID: 680fce7e95e2f149d9cc) for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 19:52:51,436 - app.core.storage - INFO - Timestamp updated for conversation 56fad03dbebe420baf758b046425f5e9
+2025-04-28 20:02:22,483 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-28 20:01:23,237 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-28 20:01:23,293 - app.main - INFO - Application startup: initializing services and connections
+2025-04-28 20:13:04,806 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_8e4e056a717b4631993f9cf160c80b29
+2025-04-28 20:13:04,811 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-28 20:13:04,811 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 20:13:04,822 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 20:13:07,312 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 20:13:07,314 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_8e4e056a717b4631993f9cf160c80b29
+2025-04-28 20:13:07,316 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 20:13:07,318 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-28 20:13:07,320 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 20:13:08,257 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 20:13:08,258 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_8e4e056a717b4631993f9cf160c80b29
+2025-04-28 20:13:29,906 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_d0b822b836924dca9f1c6f6d3dee9cb0
+2025-04-28 20:13:29,907 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 20:13:29,919 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 20:13:31,121 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 20:13:31,126 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_d0b822b836924dca9f1c6f6d3dee9cb0
+2025-04-28 20:13:31,130 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 20:13:31,132 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-28 20:13:31,133 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 20:13:31,638 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 20:13:31,639 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_d0b822b836924dca9f1c6f6d3dee9cb0
+2025-04-28 20:14:39,445 - app.api.endpoints.auth - INFO - User registered successfully: test28125@example.com, ID: 680fd39ef2c60def69b4
+2025-04-28 20:14:40,239 - app.api.endpoints.auth - INFO - Password verified for user: test28125@example.com, User ID: 680fd39ef2c60def69b4
+2025-04-28 20:14:40,411 - app.api.endpoints.auth - INFO - JWT created successfully for user: test28125@example.com
+2025-04-28 20:14:42,209 - app.core.storage - INFO - Attempting to create conversation 3f530e55ddbd41a39254b3a81af734ca for user 680fd39ef2c60def69b4
+2025-04-28 20:14:42,154 - app.core.storage - INFO - Successfully created conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:44,001 - app.core.storage - INFO - Stored message 680fd3a3ac6aababd296 for user 680fd39ef2c60def69b4
+2025-04-28 20:14:44,002 - app.core.chat_service - INFO - Stored user message (ID: 680fd3a3ac6aababd296) for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:44,213 - app.core.storage - INFO - Timestamp updated for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:44,214 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 20:14:44,219 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 20:14:45,506 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 20:14:45,509 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:45,511 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 20:14:45,513 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-28 20:14:45,516 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 20:14:45,701 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-28 20:14:45,703 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.19 seconds (calculated)...
+2025-04-28 20:14:48,300 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 20:14:48,300 - app.core.chat_service - INFO - Mistral response successful for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:48,487 - app.core.storage - INFO - Stored message 680fd3a846c605067c73 for user ai
+2025-04-28 20:14:49,735 - app.core.storage - INFO - Stored 5 sources for message 680fd3a846c605067c73
+2025-04-28 20:14:49,752 - app.core.chat_service - INFO - Stored AI message (ID: 680fd3a846c605067c73) for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:50,047 - app.core.storage - INFO - Timestamp updated for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:52,025 - app.core.storage - INFO - Stored message 680fd3ab7d38b72f3f79 for user 680fd39ef2c60def69b4
+2025-04-28 20:14:52,026 - app.core.chat_service - INFO - Stored user message (ID: 680fd3ab7d38b72f3f79) for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:52,017 - app.core.storage - INFO - Timestamp updated for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:52,026 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 20:14:52,081 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 20:14:53,312 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 20:14:53,316 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:53,318 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 20:14:53,320 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-28 20:14:53,321 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 20:14:54,184 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 20:14:54,185 - app.core.chat_service - INFO - Mistral response successful for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:54,480 - app.core.storage - INFO - Stored message 680fd3ae2d662e1f52ba for user ai
+2025-04-28 20:14:56,245 - app.core.storage - INFO - Stored 5 sources for message 680fd3ae2d662e1f52ba
+2025-04-28 20:14:56,247 - app.core.chat_service - INFO - Stored AI message (ID: 680fd3ae2d662e1f52ba) for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:56,470 - app.core.storage - INFO - Timestamp updated for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:58,247 - app.core.storage - INFO - Stored message 680fd3b211d3a47ed0ea for user 680fd39ef2c60def69b4
+2025-04-28 20:14:58,248 - app.core.chat_service - INFO - Stored user message (ID: 680fd3b211d3a47ed0ea) for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:58,459 - app.core.storage - INFO - Timestamp updated for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:58,465 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 20:14:58,477 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 20:14:59,644 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 20:14:59,649 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:14:59,650 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 20:14:59,651 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-28 20:14:59,652 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 20:15:00,473 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 20:15:00,473 - app.core.chat_service - INFO - Mistral response successful for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:15:00,680 - app.core.storage - INFO - Stored message 680fd3b444bd9faa2578 for user ai
+2025-04-28 20:15:01,749 - app.core.storage - INFO - Stored 5 sources for message 680fd3b444bd9faa2578
+2025-04-28 20:15:01,749 - app.core.chat_service - INFO - Stored AI message (ID: 680fd3b444bd9faa2578) for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 20:15:01,941 - app.core.storage - INFO - Timestamp updated for conversation 3f530e55ddbd41a39254b3a81af734ca
+2025-04-28 21:50:31,499 - app.api.endpoints.auth - INFO - User registered successfully: test7253@example.com, ID: 680fe9c962437b5b160c
+2025-04-28 21:50:32,723 - app.api.endpoints.auth - INFO - Password verified for user: test7253@example.com, User ID: 680fe9c962437b5b160c
+2025-04-28 21:50:32,882 - app.api.endpoints.auth - INFO - JWT created successfully for user: test7253@example.com
+2025-04-28 21:50:34,622 - app.core.storage - INFO - Attempting to create conversation 50336c7beeda4c85bc18e1198899f2ef for user 680fe9c962437b5b160c
+2025-04-28 21:50:34,837 - app.core.storage - INFO - Successfully created conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:50:36,167 - app.core.storage - INFO - Stored message 680fe9ce58850127f55c for user 680fe9c962437b5b160c
+2025-04-28 21:50:36,167 - app.core.chat_service - INFO - Stored user message (ID: 680fe9ce58850127f55c) for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:50:36,339 - app.core.storage - INFO - Timestamp updated for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:50:36,341 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 21:50:36,376 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 21:50:39,005 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 21:50:39,006 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:50:39,008 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 21:50:39,009 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-28 21:50:39,009 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 21:50:40,852 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 21:50:40,853 - app.core.chat_service - INFO - Mistral response successful for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:50:41,053 - app.core.storage - INFO - Stored message 680fe9d33af6ab91fbf5 for user ai
+2025-04-28 21:50:41,925 - app.core.storage - INFO - Stored 5 sources for message 680fe9d33af6ab91fbf5
+2025-04-28 21:50:41,926 - app.core.chat_service - INFO - Stored AI message (ID: 680fe9d33af6ab91fbf5) for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:50:42,108 - app.core.storage - INFO - Timestamp updated for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:49:26,006 - app.core.storage - INFO - Stored message 680fe9d5e9aeb437442c for user 680fe9c962437b5b160c
+2025-04-28 21:49:26,006 - app.core.chat_service - INFO - Stored user message (ID: 680fe9d5e9aeb437442c) for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:49:26,203 - app.core.storage - INFO - Timestamp updated for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:49:26,203 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 21:49:26,206 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 21:49:27,224 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 21:49:27,226 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:49:27,227 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 21:49:27,228 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-28 21:49:27,228 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 21:49:27,943 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 21:49:27,945 - app.core.chat_service - INFO - Mistral response successful for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:49:28,118 - app.core.storage - INFO - Stored message 680fe9d81448aa2c7bd1 for user ai
+2025-04-28 21:49:28,949 - app.core.storage - INFO - Stored 5 sources for message 680fe9d81448aa2c7bd1
+2025-04-28 21:49:28,949 - app.core.chat_service - INFO - Stored AI message (ID: 680fe9d81448aa2c7bd1) for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:49:29,121 - app.core.storage - INFO - Timestamp updated for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:49:30,866 - app.core.storage - INFO - Stored message 680fe9dac951a4c49e19 for user 680fe9c962437b5b160c
+2025-04-28 21:49:30,866 - app.core.chat_service - INFO - Stored user message (ID: 680fe9dac951a4c49e19) for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:49:31,040 - app.core.storage - INFO - Timestamp updated for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:49:31,040 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-28 21:49:31,044 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-28 21:49:32,083 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-28 21:49:32,085 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:49:32,086 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-28 21:49:32,087 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-28 21:49:32,087 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-28 21:49:32,851 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-28 21:49:32,852 - app.core.chat_service - INFO - Mistral response successful for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:49:33,034 - app.core.storage - INFO - Stored message 680fe9dcf2d8edf98cd9 for user ai
+2025-04-28 21:49:33,952 - app.core.storage - INFO - Stored 5 sources for message 680fe9dcf2d8edf98cd9
+2025-04-28 21:49:33,952 - app.core.chat_service - INFO - Stored AI message (ID: 680fe9dcf2d8edf98cd9) for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-28 21:49:34,142 - app.core.storage - INFO - Timestamp updated for conversation 50336c7beeda4c85bc18e1198899f2ef
+2025-04-29 01:40:31,144 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-29 01:40:31,251 - app.main - INFO - Application startup: initializing services and connections
+2025-04-29 01:40:49,650 - app.api.endpoints.auth - INFO - User registered successfully: test8070@example.com, ID: 681020116b6b40114f68
+2025-04-29 01:40:50,463 - app.api.endpoints.auth - INFO - Password verified for user: test8070@example.com, User ID: 681020116b6b40114f68
+2025-04-29 01:40:50,657 - app.api.endpoints.auth - INFO - JWT created successfully for user: test8070@example.com
+2025-04-29 01:40:52,616 - app.core.storage - INFO - Attempting to create conversation f5ca0f23ad1d4496a80c74728286d74c for user 681020116b6b40114f68
+2025-04-29 01:40:52,899 - app.core.storage - INFO - Successfully created conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:40:54,577 - app.core.storage - INFO - Stored message 681020167e2670567c8f for user 681020116b6b40114f68
+2025-04-29 01:40:54,578 - app.core.chat_service - INFO - Stored user message (ID: 681020167e2670567c8f) for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:40:54,833 - app.core.storage - INFO - Timestamp updated for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:40:54,835 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-29 01:40:54,836 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 01:40:54,851 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 01:40:57,248 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 01:40:57,249 - app.core.chat_service - INFO - Retrieved 5 documents for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:40:57,250 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 01:40:57,251 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 01:40:57,251 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 01:40:59,191 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 01:40:59,192 - app.core.chat_service - INFO - Mistral response successful for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:40:59,508 - app.core.storage - INFO - Stored message 6810201b668b2c0098d0 for user ai
+2025-04-29 01:41:01,389 - app.core.storage - INFO - Stored 5 sources for message 6810201b668b2c0098d0
+2025-04-29 01:41:01,389 - app.core.chat_service - INFO - Stored AI message (ID: 6810201b668b2c0098d0) for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:41:01,685 - app.core.storage - INFO - Timestamp updated for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:41:03,890 - app.core.storage - INFO - Stored message 6810201fccf4b03681c5 for user 681020116b6b40114f68
+2025-04-29 01:41:03,896 - app.core.chat_service - INFO - Stored user message (ID: 6810201fccf4b03681c5) for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:41:04,117 - app.core.storage - INFO - Timestamp updated for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:41:04,122 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 01:41:04,130 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 01:41:05,201 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 01:41:05,203 - app.core.chat_service - INFO - Retrieved 5 documents for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:41:05,205 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 01:41:05,206 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 01:41:05,207 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 01:41:07,378 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 01:41:07,379 - app.core.chat_service - INFO - Mistral response successful for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:41:07,595 - app.core.storage - INFO - Stored message 68102023842c0905b91f for user ai
+2025-04-29 01:41:08,721 - app.core.storage - INFO - Stored 5 sources for message 68102023842c0905b91f
+2025-04-29 01:41:08,721 - app.core.chat_service - INFO - Stored AI message (ID: 68102023842c0905b91f) for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:41:08,979 - app.core.storage - INFO - Timestamp updated for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:41:11,113 - app.core.storage - INFO - Stored message 681020270e43792f8ba5 for user 681020116b6b40114f68
+2025-04-29 01:41:11,114 - app.core.chat_service - INFO - Stored user message (ID: 681020270e43792f8ba5) for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:41:11,376 - app.core.storage - INFO - Timestamp updated for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:41:11,384 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 01:41:11,400 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 01:41:12,651 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 01:41:12,653 - app.core.chat_service - INFO - Retrieved 5 documents for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:41:12,654 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 01:41:12,654 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 01:41:12,655 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 01:41:13,380 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 01:41:13,381 - app.core.chat_service - INFO - Mistral response successful for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:41:13,614 - app.core.storage - INFO - Stored message 6810202989c764bda4af for user ai
+2025-04-29 01:41:14,838 - app.core.storage - INFO - Stored 5 sources for message 6810202989c764bda4af
+2025-04-29 01:41:14,840 - app.core.chat_service - INFO - Stored AI message (ID: 6810202989c764bda4af) for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:41:15,085 - app.core.storage - INFO - Timestamp updated for conversation f5ca0f23ad1d4496a80c74728286d74c
+2025-04-29 01:42:52,050 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-29 01:42:52,507 - app.main - INFO - Application startup: initializing services and connections
+2025-04-29 01:42:52,545 - app.api.endpoints.auth - INFO - Password verified for user: conftest_test@example.com, User ID: mock_conftest_user_id
+2025-04-29 01:42:52,546 - app.api.endpoints.auth - INFO - JWT created successfully for user: conftest_test@example.com
+2025-04-29 01:42:52,557 - app.core.storage - INFO - Attempting to create conversation 7f692400277d49fc92b099eb59156c81 for user mock_conftest_user_id
+2025-04-29 01:42:52,777 - app.core.storage - INFO - Successfully created conversation 7f692400277d49fc92b099eb59156c81
+2025-04-29 01:43:02,765 - app.main - INFO - Application shutdown: cleaning up resources

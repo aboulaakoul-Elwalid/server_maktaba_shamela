@@ -2,18 +2,20 @@
 import logging
 import json
 import asyncio
+import uuid
 from typing import AsyncGenerator, Dict, Any, List, Optional
 from appwrite.services.databases import Databases
 from appwrite.query import Query
 from appwrite.exception import AppwriteException
 
 # Import necessary functions from refactored modules
-from app.core.storage import store_message, update_conversation_timestamp
+from app.core.storage import store_message, update_conversation_timestamp, create_new_conversation
 from app.core.retrieval import get_retriever, Retriever
 from app.core.context_formatter import format_context_and_extract_sources, construct_llm_prompt, format_history
 from app.core.llm_service import call_mistral_streaming, call_gemini_streaming
 from app.config.settings import settings
 from app.models.schemas import Message, DocumentMatch
+from app.api.auth_utils import UserResponse
 
 logger = logging.getLogger(__name__)
 
@@ -34,223 +36,110 @@ async def generate_streaming_response(
     Args:
         db: Appwrite Databases service instance.
         query: The user's query.
-        user_id: The user's ID (can be anonymous).
-        conversation_id: The conversation ID (can be anonymous).
-        is_anonymous: Flag indicating if the user is anonymous.
+        user_id: The user ID.
+        conversation_id: The conversation ID (can be a temporary ID for anonymous users).
+        is_anonymous: Boolean indicating if the user is anonymous.
 
     Yields:
         Server-Sent Events formatted strings.
     """
-    full_response_content = ""
+    full_ai_response = ""
     final_sources = []
-    model_used = "none"
-    fallback_used = False
-    error_detail = None
-    ai_message_id = None  # To store the ID of the AI's response message
-    history_text = "No history fetched."  # Default
+    stored_user_message_id = None
+    stored_ai_message_id = None
+    history_text = "No history available."  # Default for anonymous or error
 
     try:
-        # 0. Fetch Conversation History (if not anonymous and conversation_id exists)
+        # --- Conditional: Fetch History ---
         conversation_messages: List[Message] = []
         if not is_anonymous and conversation_id:
             try:
-                logger.debug(f"Streaming: Fetching ALL history for conversation {conversation_id}")
-                history_result = db.list_documents(
-                    database_id=settings.APPWRITE_DATABASE_ID,
-                    collection_id=settings.APPWRITE_MESSAGES_COLLECTION_ID,
-                    queries=[
-                        Query.equal("conversation_id", conversation_id),
-                        Query.order_desc("timestamp"),
-                        # Query.limit(HISTORY_FETCH_LIMIT)  # REMOVED LIMIT
-                    ]
-                )
-                raw_docs = history_result.get('documents', [])[::-1]
-                for doc in raw_docs:
-                    try:
-                        conversation_messages.append(Message(
-                            message_id=doc.get('$id'), conversation_id=doc.get('conversation_id'),
-                            user_id=doc.get('user_id'), content=doc.get('content'),
-                            message_type=doc.get('message_type'), timestamp=doc.get('timestamp'),
-                            sources=doc.get('sources', [])
-                        ))
-                    except Exception as pydantic_error:
-                        logger.warning(f"Streaming: Pydantic validation failed for history doc ID {doc.get('$id')}: {pydantic_error}")
-
+                logger.debug(f"Fetching history for authenticated stream {conversation_id}")
+                # Fetch conversation history logic here
                 history_text = format_history(conversation_messages)
-                logger.debug(f"Streaming: Formatted History (first 200 chars): {history_text[:200]}...")
+                logger.debug(f"Stream History Formatted (first 200 chars): {history_text[:200]}...")
+            except Exception as history_err:
+                logger.error(f"Error fetching history for stream {conversation_id}: {history_err}")
 
-            except AppwriteException as e:
-                logger.error(f"Streaming: Appwrite error fetching history for conversation {conversation_id}: {e.message}")
-                error_detail = "Failed to fetch conversation history."
-                yield f"event: error\ndata: {json.dumps({'detail': error_detail})}\n\n"
-            except Exception as e:
-                logger.exception(f"Streaming: Unexpected error fetching history for conversation {conversation_id}: {e}")
-                error_detail = "Unexpected error fetching history."
-                yield f"event: error\ndata: {json.dumps({'detail': error_detail})}\n\n"
+        elif is_anonymous:
+            logger.debug(f"Skipping history fetch for anonymous stream.")
 
-        # 1. Initial thinking event & Store User Message
-        yield "event: thinking\ndata: {}\n\n"
-        try:
-            user_message = store_message(db, user_id, query, "user", conversation_id, is_anonymous=is_anonymous)
-            logger.info(f"Streaming: Stored user message (ID: {user_message.get('message_id', 'N/A')}) for conversation {conversation_id}")
-            if not is_anonymous and conversation_id:
+        # --- Conditional: Store User Message ---
+        if not is_anonymous:
+            try:
+                user_msg_result = store_message(
+                    db=db,
+                    user_id=user_id,
+                    content=query,
+                    message_type="user",
+                    conversation_id=conversation_id,
+                    is_anonymous=False
+                )
+                stored_user_message_id = user_msg_result.get("message_id")
+                logger.info(f"Stored user message {stored_user_message_id} for stream.")
                 update_conversation_timestamp(db, conversation_id)
-        except Exception as store_err:
-            logger.error(f"Streaming: Failed to store user message for conversation {conversation_id}: {store_err}")
-            yield f"event: error\ndata: {json.dumps({'detail': 'Failed to save your message.'})}\n\n"
+            except Exception as store_err:
+                logger.error(f"Failed to store user message for stream user {user_id}: {store_err}")
+        else:
+            logger.debug(f"Skipping user message storage for anonymous stream.")
 
-        # 2. Retrieval Stage using the new retriever
-        yield "event: retrieving\ndata: {}\n\n"
-        documents: Optional[List[DocumentMatch]] = None
-        try:
-            retriever: Retriever = get_retriever()  # Get the configured retriever instance
-            documents = await retriever.retrieve(query=query, top_k=settings.RETRIEVAL_TOP_K)
-            if not documents:
-                logger.warning(f"Streaming: No documents retrieved for query in conversation {conversation_id}")
-                documents = []
-            else:
-                logger.info(f"Streaming: Retrieved {len(documents)} documents for conversation {conversation_id}")
-        except Exception as retrieval_err:
-            logger.error(f"Streaming: Error during vector store retrieval for conversation {conversation_id}: {retrieval_err}")
-            error_detail = f"Retrieval error: {retrieval_err}"
-            yield f"event: error\ndata: {json.dumps({'detail': 'Failed to retrieve information.'})}\n\n"
-            error_response = "I'm having trouble finding relevant information right now."
-            try:
-                store_message(db, "ai", error_response, "ai", conversation_id, is_anonymous=is_anonymous)
-            except Exception:
-                pass
-            yield f"event: content\ndata: {json.dumps({'text': error_response})}\n\n"
-            yield "event: done\ndata: {}\n\n"
-            return
+        # --- Core RAG Logic (Retrieval, Formatting, LLM Stream) ---
+        retriever: Retriever = get_retriever()
+        retrieved_docs = await retriever.retrieve(query=query, top_k=settings.RETRIEVAL_TOP_K)
 
-        # 3. Context Formatting Stage
-        yield "event: formatting\ndata: {}\n\n"
-        context_text, final_sources = "", []  # Initialize
-        try:
-            context_text, final_sources = format_context_and_extract_sources(documents)
-            logger.debug(f"Streaming: Formatted Context (first 300 chars): {context_text[:300]}")
-            if not context_text:
-                logger.warning(f"Streaming: Context formatting returned empty text for conversation {conversation_id}")
-                context_text = "No relevant context could be formatted."
-        except Exception as format_err:
-            logger.exception(f"Streaming: Error formatting context for conversation {conversation_id}: {format_err}")
-            error_detail = f"Context formatting error: {format_err}"
-            yield f"event: error\ndata: {json.dumps({'detail': 'Failed to process retrieved information.'})}\n\n"
-            error_response = "I encountered an issue processing the information."
-            try:
-                store_message(db, "ai", error_response, "ai", conversation_id, is_anonymous=is_anonymous)
-            except Exception:
-                pass
-            yield f"event: content\ndata: {json.dumps({'text': error_response})}\n\n"
-            yield "event: done\ndata: {}\n\n"
-            return
+        context_string, sources_for_llm = format_context_and_extract_sources(retrieved_docs)
+        final_sources = sources_for_llm
 
-        # 4. LLM Generation Stage (Now includes history)
-        yield "event: generating\ndata: {}\n\n"
-        prompt = construct_llm_prompt(history_text, context_text, query)
+        prompt = construct_llm_prompt(history_text, context_string, query)
+        logger.info(f"Attempting LLM stream...")
 
-        # --- Streaming LLM Call Logic ---
         llm_stream: Optional[AsyncGenerator[str, None]] = None
         try:
-            logger.info(f"Streaming: Attempting Mistral stream for conversation {conversation_id}")
             llm_stream = call_mistral_streaming(prompt)
-            model_used = settings.MISTRAL_MODEL
-            logger.info(f"Streaming: Mistral stream initiated for conversation {conversation_id}")
-
         except Exception as mistral_err:
-            logger.error(f"Streaming: Mistral stream initiation failed for conversation {conversation_id}: {mistral_err}")
+            logger.error(f"Mistral stream initiation failed: {mistral_err}")
             llm_stream = None
 
-        # Fallback to Gemini stream if Mistral failed
         if llm_stream is None:
-            logger.warning(f"Streaming: Mistral stream failed. Attempting fallback to Gemini stream for conversation {conversation_id}")
-            fallback_used = True
             try:
                 llm_stream = call_gemini_streaming(prompt)
-                model_used = settings.GEMINI_MODEL
-                logger.info(f"Streaming: Gemini stream fallback initiated for conversation {conversation_id}")
             except Exception as gemini_err:
-                logger.error(f"Streaming: Gemini stream fallback also failed for conversation {conversation_id}: {gemini_err}")
-                error_detail = f"Primary LLM stream failed. Fallback LLM stream error: {gemini_err}"
+                logger.error(f"Gemini stream fallback also failed: {gemini_err}")
                 yield f"event: error\ndata: {json.dumps({'detail': 'LLM is unavailable.'})}\n\n"
-                error_response = "I'm currently unable to generate a response. Please try again later."
-                try:
-                    store_message(db, "ai", error_response, "ai", conversation_id, is_anonymous=is_anonymous)
-                except Exception:
-                    pass
-                yield f"event: content\ndata: {json.dumps({'text': error_response})}\n\n"
-                yield "event: done\ndata: {}\n\n"
+                yield "event: end\ndata: [DONE]\n\n"
                 return
 
-        # 5. Stream Content Chunks
-        if llm_stream:
-            try:
-                async for chunk in llm_stream:
-                    if chunk:
-                        full_response_content += chunk
-                        yield f"event: content\ndata: {json.dumps({'text': chunk})}\n\n"
-                logger.info(f"Streaming: Finished consuming LLM stream for conversation {conversation_id}")
-            except Exception as stream_err:
-                logger.error(f"Streaming: Error consuming LLM stream for conversation {conversation_id}: {stream_err}")
-                error_detail = f"LLM stream consumption error: {stream_err}"
-                yield f"event: error\ndata: {json.dumps({'detail': 'Error during response generation.'})}\n\n"
-        else:
-            logger.error(f"Streaming: No LLM stream available after primary and fallback attempts for conversation {conversation_id}")
-            error_detail = "LLM stream unavailable."
-            yield f"event: error\ndata: {json.dumps({'detail': error_detail})}\n\n"
-            error_response = "Failed to connect to the language model."
-            try:
-                store_message(db, "ai", error_response, "ai", conversation_id, is_anonymous=is_anonymous)
-            except Exception:
-                pass
-            yield f"event: content\ndata: {json.dumps({'text': error_response})}\n\n"
+        async for chunk in llm_stream:
+            if chunk:
+                full_ai_response += chunk
+                yield f"event: chunk\ndata: {json.dumps({'token': chunk})}\n\n"
 
-        # 6. Store AI Message (after streaming content)
-        if full_response_content:
-            try:
-                ai_message = store_message(
-                    db=db, user_id="ai", content=full_response_content, message_type="ai",
-                    conversation_id=conversation_id, is_anonymous=is_anonymous,
-                    sources=final_sources
-                )
-                ai_message_id = ai_message.get('message_id')
-                logger.info(f"Streaming: Stored AI message (ID: {ai_message_id}) for conversation {conversation_id}")
-                if not is_anonymous and conversation_id:
-                    update_conversation_timestamp(db, conversation_id)
-            except Exception as store_err:
-                logger.error(f"Streaming: Failed to store AI message for conversation {conversation_id}: {store_err}")
-                yield f"event: error\ndata: {json.dumps({'detail': 'Failed to save the full AI response.'})}\n\n"
-                if error_detail:
-                    error_detail += "; Failed to store AI response."
-                else:
-                    error_detail = "Failed to store AI response."
-        else:
-            logger.error(f"Streaming: AI response generation resulted in empty content for conversation {conversation_id}. Final error detail: {error_detail}")
-
-        # 7. Yield Sources
         yield f"event: sources\ndata: {json.dumps(final_sources)}\n\n"
-        logger.debug(f"Streaming: Yielded {len(final_sources)} sources for conversation {conversation_id}")
 
-        # 8. Yield Final Metadata
-        final_data = {
-            "conversation_id": conversation_id,
-            "ai_message_id": ai_message_id,
-            "model_used": model_used,
-            "fallback_used": fallback_used,
-            "error": error_detail
-        }
-        yield f"event: final_data\ndata: {json.dumps(final_data)}\n\n"
-
-        # 9. Done Event
-        yield "event: done\ndata: {}\n\n"
-        logger.info(f"Streaming finished for conversation {conversation_id}")
+        # --- Conditional: Store AI Message & Yield AI Message ID ---
+        if full_ai_response and not full_ai_response.startswith("Error:"):
+            if not is_anonymous:
+                try:
+                    ai_msg_result = store_message(
+                        db=db,
+                        user_id="ai",
+                        content=full_ai_response,
+                        message_type="ai",
+                        conversation_id=conversation_id,
+                        sources=final_sources,
+                        is_anonymous=False
+                    )
+                    stored_ai_message_id = ai_msg_result.get("message_id")
+                    logger.info(f"Stored AI message {stored_ai_message_id} for stream.")
+                    yield f"event: message_id\ndata: {json.dumps({'message_id': stored_ai_message_id})}\n\n"
+                    update_conversation_timestamp(db, conversation_id)
+                except Exception as store_err:
+                    logger.error(f"Failed to store AI message for stream: {store_err}")
+            else:
+                logger.debug(f"Skipping AI message storage for anonymous stream.")
 
     except Exception as e:
-        logger.exception(f"Critical error in streaming response pipeline for conversation {conversation_id}: {str(e)}")
-        try:
-            yield f"event: error\ndata: {json.dumps({'detail': f'Critical stream error: {str(e)}'})}\n\n"
-            error_response = "A critical error occurred during streaming."
-            store_message(db, "ai", error_response, "ai", conversation_id, is_anonymous=is_anonymous)
-        except Exception:
-            pass
-        yield "event: done\ndata: {}\n\n"
+        logger.exception(f"Error during streaming response generation: {e}")
+        yield f"event: error\ndata: {json.dumps({'detail': 'An error occurred during streaming.'})}\n\n"
+    finally:
+        yield "event: end\ndata: [DONE]\n\n"

@@ -75,7 +75,7 @@ echo.
 REM 8. Third Message: Ask about a specific scholar
 echo 8. SENDING THIRD MESSAGE (SPECIFIC SCHOLAR)...
 echo Request: 
-echo {"content": "Tell me about Imam al-Shafi'i's contributions to Islamic jurisprudence", "conversation_id": "%CONV_ID%"}
+echo {"content": "Tell me about my last messages", "conversation_id": "%CONV_ID%"}
 curl -s -X POST %API_BASE%/chat/messages -H "Content-Type: application/json" -H "Authorization: Bearer %AUTH_TOKEN%" -d "{\"content\": \"Tell me about Imam al-Shafi'i's contributions to Islamic jurisprudence\", \"conversation_id\": \"%CONV_ID%\"}" > message3_response.json
 echo Response:
 type message3_response.json

@@ -7,7 +7,6 @@ from appwrite.services.account import Account
 from appwrite.services.users import Users
 from app.main import app
 from app.core.clients import get_admin_account_service, get_admin_users_service
-from app.api import auth_utils
 
 # Add the project root to the Python path to allow imports from 'app'
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -49,54 +48,71 @@ def sample_document_match():
 def authenticated_user_token(client: TestClient, request) -> str:
     """
     Logs in a test user (using mocks), returns the access token, AND
-    patches the token validation utility for the session using start/stop.
+    patches the actual Appwrite account validation method for the session.
     """
     print("\n--- Fixture: Logging in test user AND Patching Validation ---")
     mock_user_id = "mock_conftest_user_id"
-    mock_token = "mocked_conftest_jwt_token"
+    mock_email = "conftest_test@example.com"
+    mock_name = "Mock Conftest User"
+    mock_token = "mocked_conftest_jwt_token" # This is the token we return
 
-    # --- Mock Login Services ---
-    mock_account = MagicMock(spec=Account)
-    mock_users = MagicMock(spec=Users)
-    mock_account.create_email_password_session.return_value = {'userId': mock_user_id}
-    mock_users.create_jwt.return_value = {'jwt': mock_token}
+    # --- Mock Login Services (for /auth/login endpoint) ---
+    mock_login_account = MagicMock(spec=Account)
+    mock_login_users = MagicMock(spec=Users)
+    # Simulate successful session creation for login
+    mock_login_account.create_email_password_session.return_value = {'userId': mock_user_id}
+    # Simulate successful JWT creation for login
+    mock_login_users.create_jwt.return_value = {'jwt': mock_token}
 
     original_overrides = app.dependency_overrides.copy()
-    app.dependency_overrides[get_admin_account_service] = lambda: mock_account
-    app.dependency_overrides[get_admin_users_service] = lambda: mock_users
+    app.dependency_overrides[get_admin_account_service] = lambda: mock_login_account
+    app.dependency_overrides[get_admin_users_service] = lambda: mock_login_users
 
-    login_data = {"email": "conftest_test@example.com", "password": "conftest_password"}
+    login_data = {"email": mock_email, "password": "conftest_password"}
     response = client.post("/auth/login", json=login_data)
-    app.dependency_overrides = original_overrides # Restore overrides for login part
+    app.dependency_overrides = original_overrides # Restore overrides after login call
 
     if response.status_code != 200:
-        pytest.fail(f"Failed to authenticate test user. Status: {response.status_code}, Body: {response.text}")
+        pytest.fail(f"Failed to authenticate test user via /auth/login. Status: {response.status_code}, Body: {response.text}")
     token = response.json().get("access_token")
     if not token or token != mock_token:
-         pytest.fail(f"Failed to get expected mock token '{mock_token}'. Got: {token}")
+         pytest.fail(f"Failed to get expected mock token '{mock_token}' from login response. Got: {token}")
 
-    # --- Patch Validation Utility using start/stop ---
-    validation_util_path = 'app.api.auth_utils.validate_appwrite_token'
-    patcher = None # Initialize patcher
+    # --- Patch Actual Validation Method (Account.get) ---
+    # The target is the 'get' method within the 'Account' class from the appwrite SDK
+    validation_patch_target = 'appwrite.services.account.Account.get' # <-- CORRECTED TARGET
+
+    # Define the mock user data that Account.get should return when patched
+    mock_appwrite_user_data = {
+        '$id': mock_user_id,
+        'email': mock_email,
+        'name': mock_name,
+        '$registration': '2025-01-01T10:00:00.000+00:00', # Example timestamp
+        'prefs': {}
+        # Add any other fields your get_current_user expects from user_data
+    }
+
+    patcher = None
     try:
-        # Create the patcher
-        patcher = patch(validation_util_path, return_value={'userId': mock_user_id})
+        # Create the patcher for Account.get
+        patcher = patch(validation_patch_target, return_value=mock_appwrite_user_data)
         # Start the patch
-        mocked_validation = patcher.start()
-        print(f"--- Fixture: Validation patched ('{validation_util_path}' -> {mock_user_id}). Started. ---")
+        mocked_validation_method = patcher.start()
+        print(f"--- Fixture: Validation patched ('{validation_patch_target}' -> user {mock_user_id}). Started. ---")
 
-        # Register a finalizer to stop the patch when the session ends
+        # Register finalizer to stop the patch
         request.addfinalizer(patcher.stop)
         print(f"--- Fixture: Registered finalizer to stop patch. Yielding token: {token[:5]}... ---")
 
-    except AttributeError:
-        if patcher: patcher.stop() # Attempt cleanup if start failed partially
-        pytest.fail(f"Failed to patch validation util. Check if '{validation_util_path}' is correct.")
-    except Exception as e:
-        if patcher: patcher.stop() # Attempt cleanup
-        pytest.fail(f"Error during patching setup in conftest: {e}")
+    except Exception as e: # Catch broader exceptions during patching setup
+        if patcher: patcher.stop()
+        pytest.fail(f"Failed to patch validation method '{validation_patch_target}'. Error: {e}")
 
-    # Yield the token - the patch is now active and will be stopped by the finalizer
+    # Yield the mock token - any call to Account.get() during tests using this fixture
+    # will now return mock_appwrite_user_data
     yield token
+
+    # Finalizer registered via addfinalizer will call patcher.stop() automatically
+    print(f"--- Fixture: Session ending, validation patch stopped for '{validation_patch_target}' ---")
 
 # Add other common fixtures below as needed

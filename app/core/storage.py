@@ -92,14 +92,14 @@ def store_message(
                     source_data = {
                         "message_id": message_result["$id"],
                         "title": f"{source.get('book_name', 'Unknown')} - {source.get('section_title', 'Unknown')}",
-                        "content": source.get("text_snippet", ""), # Use text_snippet for brevity
+                        "content": source.get("content", ""), # Use "content" key from the formatted source
                         "url": url,
                         "metadata": json.dumps({ # Store detailed metadata as JSON string
                             "book_name": source.get("book_name", "Unknown"),
                             "section_title": source.get("section_title", "Unknown"),
-                            "relevance": source.get("relevance", 0),
+                            "relevance": source.get("relevance", 0), # Assuming relevance is score
                             "document_id": source.get("document_id", "")
-                        })
+                        }, ensure_ascii=False) # <-- ADD ensure_ascii=False HERE
                     }
 
                     source_doc = db.create_document(

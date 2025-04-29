@@ -32,6 +32,14 @@ for /f "tokens=*" %%a in ('powershell -Command "(Get-Content login_response.json
 echo Token: %AUTH_TOKEN%
 echo.
 
+REM 3. Create a conversation
+echo 3. CREATING CONVERSATION...
+curl -s -X POST %API_BASE%/chat/conversations -H "Content-Type: application/json" -H "Authorization: Bearer %AUTH_TOKEN%" > conversation.json
+type conversation.json
+for /f "tokens=*" %%a in ('powershell -Command "(Get-Content conversation.json | ConvertFrom-Json).conversation_id"') do set CONV_ID=%%a
+echo Conversation ID: %CONV_ID%
+echo.
+
 REM 4. First Message: Ask about Islamic jurisprudence
 echo 4. SENDING FIRST MESSAGE...
 echo Request:
@@ -67,7 +75,7 @@ echo.
 REM 8. Third Message: Ask about a specific scholar
 echo 8. SENDING THIRD MESSAGE (SPECIFIC SCHOLAR)...
 echo Request: 
-echo {"content": "Tell me about Imam al-Shafi'i's contributions to Islamic jurisprudence", "conversation_id": "%CONV_ID%"}
+echo {"content": "Tell me about my last messages", "conversation_id": "%CONV_ID%"}
 curl -s -X POST %API_BASE%/chat/messages -H "Content-Type: application/json" -H "Authorization: Bearer %AUTH_TOKEN%" -d "{\"content\": \"Tell me about Imam al-Shafi'i's contributions to Islamic jurisprudence\", \"conversation_id\": \"%CONV_ID%\"}" > message3_response.json
 echo Response:
 type message3_response.json
