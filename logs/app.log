@@ -7221,3 +7221,4 @@ TypeError: generate_rag_response() got an unexpected keyword argument 'query'
 2025-04-29 04:23:16,548 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.98 seconds (calculated)...
 2025-04-29 04:23:22,235 - app.core.llm_service - INFO - Mistral API call successful
 2025-04-29 04:23:22,235 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_f935499af01b456b9bb418523ae24ed9
+2025-04-29 04:24:34,064 - app.main - INFO - Application shutdown: cleaning up resources
