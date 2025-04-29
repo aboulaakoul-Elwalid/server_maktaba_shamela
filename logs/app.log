@@ -6641,3 +6641,583 @@ TypeError: generate_rag_response() got an unexpected keyword argument 'user'
 2025-04-29 01:42:52,557 - app.core.storage - INFO - Attempting to create conversation 7f692400277d49fc92b099eb59156c81 for user mock_conftest_user_id
 2025-04-29 01:42:52,777 - app.core.storage - INFO - Successfully created conversation 7f692400277d49fc92b099eb59156c81
 2025-04-29 01:43:02,765 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-29 01:44:03,938 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_5a9b4270aced479e9ca7e9646a8fbaf4
+2025-04-29 01:44:03,939 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 01:44:03,943 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 01:44:06,501 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 01:44:06,506 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_5a9b4270aced479e9ca7e9646a8fbaf4
+2025-04-29 01:44:06,507 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 01:44:06,508 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 01:44:06,508 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 01:44:06,766 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-29 01:44:06,767 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.79 seconds (calculated)...
+2025-04-29 01:44:09,104 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 01:44:09,105 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_5a9b4270aced479e9ca7e9646a8fbaf4
+2025-04-29 02:50:02,608 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-29 02:50:02,669 - app.main - INFO - Application startup: initializing services and connections
+2025-04-29 03:16:28,002 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-29 03:17:46,479 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-29 03:17:46,539 - app.main - INFO - Application startup: initializing services and connections
+2025-04-29 03:20:21,614 - app.api.endpoints.auth - INFO - User registered successfully: test15279@example.com, ID: 681037655a99cd59aaff
+2025-04-29 03:20:22,513 - app.api.endpoints.auth - INFO - Password verified for user: test15279@example.com, User ID: 681037655a99cd59aaff
+2025-04-29 03:20:22,767 - app.api.endpoints.auth - INFO - JWT created successfully for user: test15279@example.com
+2025-04-29 03:20:24,421 - app.core.storage - INFO - Attempting to create conversation adf6461ddec44c7cae3d7c82262ec779 for user 681037655a99cd59aaff
+2025-04-29 03:20:24,628 - app.core.storage - INFO - Successfully created conversation adf6461ddec44c7cae3d7c82262ec779
+2025-04-29 03:20:26,227 - app.api.endpoints.chat - ERROR - Error processing message in conversation adf6461ddec44c7cae3d7c82262ec779: generate_rag_response() got an unexpected keyword argument 'query'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 47, in send_message
+    rag_response_data = await generate_rag_response(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        db=db,
+        ^^^^^^
+    ...<3 lines>...
+        is_anonymous=is_anonymous
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: generate_rag_response() got an unexpected keyword argument 'query'
+2025-04-29 03:20:27,789 - app.api.endpoints.chat - ERROR - Error processing message in conversation adf6461ddec44c7cae3d7c82262ec779: generate_rag_response() got an unexpected keyword argument 'query'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 47, in send_message
+    rag_response_data = await generate_rag_response(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        db=db,
+        ^^^^^^
+    ...<3 lines>...
+        is_anonymous=is_anonymous
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: generate_rag_response() got an unexpected keyword argument 'query'
+2025-04-29 03:20:29,451 - app.api.endpoints.chat - ERROR - Error processing message in conversation adf6461ddec44c7cae3d7c82262ec779: generate_rag_response() got an unexpected keyword argument 'query'
+Traceback (most recent call last):
+  File "/mnt/c/Users/walid/vs code testing/arabia/project_root/app/api/endpoints/chat.py", line 47, in send_message
+    rag_response_data = await generate_rag_response(
+                              ~~~~~~~~~~~~~~~~~~~~~^
+        db=db,
+        ^^^^^^
+    ...<3 lines>...
+        is_anonymous=is_anonymous
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+TypeError: generate_rag_response() got an unexpected keyword argument 'query'
+2025-04-29 03:22:09,928 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-29 03:43:16,938 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-29 03:43:17,008 - app.main - INFO - Application startup: initializing services and connections
+2025-04-29 03:43:28,932 - app.api.endpoints.auth - INFO - User registered successfully: test31473@example.com, ID: 68103cd0a56d671d7313
+2025-04-29 03:43:30,013 - app.api.endpoints.auth - INFO - Password verified for user: test31473@example.com, User ID: 68103cd0a56d671d7313
+2025-04-29 03:43:30,214 - app.api.endpoints.auth - INFO - JWT created successfully for user: test31473@example.com
+2025-04-29 03:43:31,960 - app.core.storage - INFO - Attempting to create conversation 37cacd54202047ef89ab8e823461e4ba for user 68103cd0a56d671d7313
+2025-04-29 03:43:32,193 - app.core.storage - INFO - Successfully created conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:33,699 - app.core.storage - INFO - Stored message 68103cd59df535d16c5b for user 68103cd0a56d671d7313
+2025-04-29 03:43:33,700 - app.core.chat_service - INFO - Stored user message (ID: 68103cd59df535d16c5b) for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:33,967 - app.core.storage - INFO - Timestamp updated for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:33,968 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-29 03:43:33,969 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:43:33,973 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:43:36,560 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:43:36,563 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:36,564 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:43:36,565 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:43:36,566 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:43:39,138 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:43:39,147 - app.core.chat_service - INFO - Mistral response successful for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:39,365 - app.core.storage - INFO - Stored message 68103cdb4c5b3caf01cf for user ai
+2025-04-29 03:43:40,536 - app.core.storage - INFO - Stored 5 sources for message 68103cdb4c5b3caf01cf
+2025-04-29 03:43:40,537 - app.core.chat_service - INFO - Stored AI message (ID: 68103cdb4c5b3caf01cf) for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:40,811 - app.core.storage - INFO - Timestamp updated for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:49,360 - app.core.storage - INFO - Stored message 68103ce54b05d974780f for user 68103cd0a56d671d7313
+2025-04-29 03:43:49,360 - app.core.chat_service - INFO - Stored user message (ID: 68103ce54b05d974780f) for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:49,585 - app.core.storage - INFO - Timestamp updated for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:49,586 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:43:49,590 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:43:50,625 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:43:50,627 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:50,628 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:43:50,629 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:43:50,629 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:43:52,060 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:43:52,066 - app.core.chat_service - INFO - Mistral response successful for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:52,275 - app.core.storage - INFO - Stored message 68103ce836409516ae86 for user ai
+2025-04-29 03:43:53,424 - app.core.storage - INFO - Stored 5 sources for message 68103ce836409516ae86
+2025-04-29 03:43:53,424 - app.core.chat_service - INFO - Stored AI message (ID: 68103ce836409516ae86) for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:53,627 - app.core.storage - INFO - Timestamp updated for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:55,483 - app.core.storage - INFO - Stored message 68103ceb6938bc6e901f for user 68103cd0a56d671d7313
+2025-04-29 03:43:55,484 - app.core.chat_service - INFO - Stored user message (ID: 68103ceb6938bc6e901f) for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:55,698 - app.core.storage - INFO - Timestamp updated for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:55,699 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:43:55,703 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:45:14,427 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:45:14,429 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:45:14,430 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:45:14,431 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:45:14,431 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:43:57,693 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:43:57,694 - app.core.chat_service - INFO - Mistral response successful for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:57,940 - app.core.storage - INFO - Stored message 68103ceddae4c82a7465 for user ai
+2025-04-29 03:43:59,110 - app.core.storage - INFO - Stored 5 sources for message 68103ceddae4c82a7465
+2025-04-29 03:43:59,112 - app.core.chat_service - INFO - Stored AI message (ID: 68103ceddae4c82a7465) for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:43:59,338 - app.core.storage - INFO - Timestamp updated for conversation 37cacd54202047ef89ab8e823461e4ba
+2025-04-29 03:45:46,563 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_33fe88b1f4af4390a65a71b5275b9fd5
+2025-04-29 03:45:46,564 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:45:46,567 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:45:47,901 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:45:47,903 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_33fe88b1f4af4390a65a71b5275b9fd5
+2025-04-29 03:45:47,905 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:45:47,905 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:45:47,906 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:45:48,420 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:45:48,423 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_33fe88b1f4af4390a65a71b5275b9fd5
+2025-04-29 03:46:35,240 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_b67329edb03d44f7916f1148e6989d05
+2025-04-29 03:46:35,242 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:46:35,247 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:46:36,330 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:46:36,332 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_b67329edb03d44f7916f1148e6989d05
+2025-04-29 03:46:36,333 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:46:36,334 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:46:36,335 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:46:36,599 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-29 03:46:36,601 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.56 seconds (calculated)...
+2025-04-29 03:46:38,410 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:46:38,410 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_b67329edb03d44f7916f1148e6989d05
+2025-04-29 03:46:38,743 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_62146889155e47f08fd50f11ca2c9aa3
+2025-04-29 03:46:38,743 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:46:38,747 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:46:39,835 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:46:39,837 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_62146889155e47f08fd50f11ca2c9aa3
+2025-04-29 03:46:39,838 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:46:39,839 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:46:39,840 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:46:40,472 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:46:40,483 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_62146889155e47f08fd50f11ca2c9aa3
+2025-04-29 03:46:40,898 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_fcc5a88c1e1b4b58a6380d7f4bc53315
+2025-04-29 03:46:40,899 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:46:40,919 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:46:42,197 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:46:42,201 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_fcc5a88c1e1b4b58a6380d7f4bc53315
+2025-04-29 03:46:42,220 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:46:42,226 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:46:42,231 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:46:42,800 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:46:42,826 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_fcc5a88c1e1b4b58a6380d7f4bc53315
+2025-04-29 03:47:50,121 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_60f4eecb54774e9c9f56bbf9f6e71fc6
+2025-04-29 03:47:50,121 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:47:50,125 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:47:51,186 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:47:51,188 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_60f4eecb54774e9c9f56bbf9f6e71fc6
+2025-04-29 03:47:51,189 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:47:51,190 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:47:51,191 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:47:51,693 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:47:51,694 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_60f4eecb54774e9c9f56bbf9f6e71fc6
+2025-04-29 03:47:52,013 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_9d1a32df380046cc94058470888185eb
+2025-04-29 03:47:52,015 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:47:52,026 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:47:52,137 - app.core.embeddings - ERROR - Error generating embedding: API error occurred: Status 429
+{"message":"Requests rate limit exceeded"}
+2025-04-29 03:47:52,138 - app.core.retrieval.pinecone - ERROR - Failed to generate query embedding for retrieval.
+2025-04-29 03:47:52,139 - app.core.chat_service - WARNING - No documents retrieved for query in conversation anon_conv_9d1a32df380046cc94058470888185eb
+2025-04-29 03:47:52,139 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-29 03:47:52,140 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 0
+2025-04-29 03:47:52,140 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:47:52,141 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:47:52,389 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-29 03:47:52,389 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.66 seconds (calculated)...
+2025-04-29 03:47:54,644 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:47:54,646 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_9d1a32df380046cc94058470888185eb
+2025-04-29 03:47:54,978 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_0c5f212427644cb7a64d317a4ce5986c
+2025-04-29 03:47:54,979 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:47:54,982 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:47:55,865 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:47:55,867 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_0c5f212427644cb7a64d317a4ce5986c
+2025-04-29 03:47:55,868 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:47:55,871 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:47:55,872 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:47:56,554 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:47:56,555 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_0c5f212427644cb7a64d317a4ce5986c
+2025-04-29 03:51:01,553 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-29 03:57:01,184 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-29 03:57:01,237 - app.main - INFO - Application startup: initializing services and connections
+2025-04-29 03:58:27,180 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_6de439e92eb946f9a089d36a0e4b1cfc
+2025-04-29 03:58:27,181 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-29 03:58:27,184 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:58:27,191 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:57:12,606 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:57:12,610 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_6de439e92eb946f9a089d36a0e4b1cfc
+2025-04-29 03:57:12,618 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:57:12,620 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:57:12,623 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:57:12,846 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-29 03:57:12,847 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.31 seconds (calculated)...
+2025-04-29 03:58:32,182 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:58:32,182 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_6de439e92eb946f9a089d36a0e4b1cfc
+2025-04-29 03:57:23,732 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_e7cf0d13c4414e20beffe196ec568037
+2025-04-29 03:57:23,732 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:57:23,736 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:57:25,435 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:57:25,437 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_e7cf0d13c4414e20beffe196ec568037
+2025-04-29 03:57:25,438 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:57:25,439 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:57:25,440 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:57:26,439 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:57:26,440 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_e7cf0d13c4414e20beffe196ec568037
+2025-04-29 03:57:49,322 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_cc7b99d5784247ca908d46e0c3b0389b
+2025-04-29 03:57:49,323 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:57:49,326 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:57:50,296 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:57:50,298 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_cc7b99d5784247ca908d46e0c3b0389b
+2025-04-29 03:57:50,299 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:57:50,299 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:57:50,300 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:57:50,494 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-29 03:57:50,495 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.51 seconds (calculated)...
+2025-04-29 03:57:52,529 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:57:52,529 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_cc7b99d5784247ca908d46e0c3b0389b
+2025-04-29 03:57:52,822 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_fa826cf60cb142b7801bab8b730f7898
+2025-04-29 03:57:52,822 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:57:52,825 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:57:53,737 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:57:53,739 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_fa826cf60cb142b7801bab8b730f7898
+2025-04-29 03:57:53,740 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:57:53,740 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:57:53,741 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:57:54,077 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:57:54,078 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_fa826cf60cb142b7801bab8b730f7898
+2025-04-29 03:57:54,351 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_200c1c73290b45b1a89467f8023ae72f
+2025-04-29 03:57:54,351 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:57:54,354 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:57:55,181 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:57:55,183 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_200c1c73290b45b1a89467f8023ae72f
+2025-04-29 03:57:55,184 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:57:55,185 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:57:55,186 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:57:55,542 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-29 03:57:55,542 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.25 seconds (calculated)...
+2025-04-29 03:57:57,517 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:57:57,518 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_200c1c73290b45b1a89467f8023ae72f
+2025-04-29 03:58:39,627 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_8f596e49805e46319fd92605377c6969
+2025-04-29 03:58:39,628 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:58:39,632 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:58:40,865 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 03:58:40,867 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_8f596e49805e46319fd92605377c6969
+2025-04-29 03:58:40,868 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 03:58:40,869 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:58:40,870 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:58:41,658 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:58:41,659 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_8f596e49805e46319fd92605377c6969
+2025-04-29 03:58:41,953 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_b959197cdfb84552b36ed223dbec68c5
+2025-04-29 03:58:41,954 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:58:41,956 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:58:42,054 - app.core.embeddings - ERROR - Error generating embedding: API error occurred: Status 429
+{"message":"Requests rate limit exceeded"}
+2025-04-29 03:58:42,054 - app.core.retrieval.pinecone - ERROR - Failed to generate query embedding for retrieval.
+2025-04-29 03:58:42,055 - app.core.chat_service - WARNING - No documents retrieved for query in conversation anon_conv_b959197cdfb84552b36ed223dbec68c5
+2025-04-29 03:58:42,055 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-29 03:58:42,056 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 0
+2025-04-29 03:58:42,056 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:58:42,056 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:58:42,519 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:58:42,520 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_b959197cdfb84552b36ed223dbec68c5
+2025-04-29 03:58:42,795 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_af80aa9099c34e40ad0a932b0d208e6f
+2025-04-29 03:58:42,796 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 03:58:42,801 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 03:58:42,901 - app.core.embeddings - ERROR - Error generating embedding: API error occurred: Status 429
+{"message":"Requests rate limit exceeded"}
+2025-04-29 03:58:42,902 - app.core.retrieval.pinecone - ERROR - Failed to generate query embedding for retrieval.
+2025-04-29 03:58:42,903 - app.core.chat_service - WARNING - No documents retrieved for query in conversation anon_conv_af80aa9099c34e40ad0a932b0d208e6f
+2025-04-29 03:58:42,903 - app.core.context_formatter - WARNING - No documents provided for context formatting.
+2025-04-29 03:58:42,904 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 0
+2025-04-29 03:58:42,904 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 03:58:42,904 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 03:58:43,162 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-29 03:58:43,162 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.47 seconds (calculated)...
+2025-04-29 03:58:45,352 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 03:58:45,352 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_af80aa9099c34e40ad0a932b0d208e6f
+2025-04-29 04:11:52,973 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_7d69a5a1713e42ae8b6702563562c922
+2025-04-29 04:11:52,988 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:13:10,719 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:13:22,624 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:13:22,626 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_7d69a5a1713e42ae8b6702563562c922
+2025-04-29 04:13:22,628 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:13:22,629 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:13:22,630 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:13:23,936 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:13:23,937 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_7d69a5a1713e42ae8b6702563562c922
+2025-04-29 04:13:24,240 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_16fd628ad9ea40719e2d39eb3fb7fffb
+2025-04-29 04:13:24,241 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:13:24,243 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:13:26,967 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:13:26,969 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_16fd628ad9ea40719e2d39eb3fb7fffb
+2025-04-29 04:13:26,970 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:13:26,970 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:13:26,971 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:13:27,983 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:13:27,984 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_16fd628ad9ea40719e2d39eb3fb7fffb
+2025-04-29 04:13:28,278 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_acabdd6356a1494daa4d9878ee4d48ae
+2025-04-29 04:13:28,278 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:13:28,281 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:12:15,220 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:12:15,224 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_acabdd6356a1494daa4d9878ee4d48ae
+2025-04-29 04:12:15,227 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:12:15,233 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:12:15,234 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:12:17,012 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:12:17,012 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_acabdd6356a1494daa4d9878ee4d48ae
+2025-04-29 04:12:32,409 - app.api.endpoints.auth - INFO - User registered successfully: test3774@example.com, ID: 681043a01ede0838d84d
+2025-04-29 04:12:33,692 - app.api.endpoints.auth - INFO - Password verified for user: test3774@example.com, User ID: 681043a01ede0838d84d
+2025-04-29 04:12:34,992 - app.api.endpoints.auth - INFO - JWT created successfully for user: test3774@example.com
+2025-04-29 04:12:36,715 - app.core.storage - INFO - Attempting to create conversation b400672c45ec44eebdba5e527700d1e9 for user 681043a01ede0838d84d
+2025-04-29 04:12:37,747 - app.core.storage - INFO - Successfully created conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:12:41,901 - app.core.storage - INFO - Stored message 681043a9c62213891330 for user 681043a01ede0838d84d
+2025-04-29 04:12:41,902 - app.core.chat_service - INFO - Stored user message (ID: 681043a9c62213891330) for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:12:42,425 - app.core.storage - INFO - Timestamp updated for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:12:42,429 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:12:42,434 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:12:45,104 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:12:45,106 - app.core.chat_service - INFO - Retrieved 5 documents for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:12:45,107 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:12:45,108 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:12:45,109 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:12:47,141 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:12:47,141 - app.core.chat_service - INFO - Mistral response successful for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:12:47,531 - app.core.storage - INFO - Stored message 681043af67d46a52ac54 for user ai
+2025-04-29 04:12:49,718 - app.core.storage - INFO - Stored 5 sources for message 681043af67d46a52ac54
+2025-04-29 04:12:49,718 - app.core.chat_service - INFO - Stored AI message (ID: 681043af67d46a52ac54) for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:12:50,337 - app.core.storage - INFO - Timestamp updated for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:12:53,596 - app.core.storage - INFO - Stored message 681043b585c5c39cc52c for user 681043a01ede0838d84d
+2025-04-29 04:12:53,597 - app.core.chat_service - INFO - Stored user message (ID: 681043b585c5c39cc52c) for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:12:54,023 - app.core.storage - INFO - Timestamp updated for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:12:54,023 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:12:54,026 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:12:56,412 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:12:56,419 - app.core.chat_service - INFO - Retrieved 5 documents for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:12:56,423 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:12:56,425 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:12:56,427 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:12:57,446 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:12:57,447 - app.core.chat_service - INFO - Mistral response successful for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:12:57,806 - app.core.storage - INFO - Stored message 681043b9afcd0bed6326 for user ai
+2025-04-29 04:14:24,969 - app.core.storage - INFO - Stored 5 sources for message 681043b9afcd0bed6326
+2025-04-29 04:14:24,969 - app.core.chat_service - INFO - Stored AI message (ID: 681043b9afcd0bed6326) for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:14:25,545 - app.core.storage - INFO - Timestamp updated for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:14:39,899 - app.core.storage - INFO - Stored message 681043d2433e31bcabda for user 681043a01ede0838d84d
+2025-04-29 04:14:39,900 - app.core.chat_service - INFO - Stored user message (ID: 681043d2433e31bcabda) for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:14:40,095 - app.core.storage - INFO - Timestamp updated for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:14:40,096 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:14:40,100 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:14:41,239 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:14:41,241 - app.core.chat_service - INFO - Retrieved 5 documents for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:14:41,241 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:14:41,242 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:14:41,243 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:14:42,018 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:14:42,019 - app.core.chat_service - INFO - Mistral response successful for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:14:42,242 - app.core.storage - INFO - Stored message 681043d493f9d1c68009 for user ai
+2025-04-29 04:14:43,361 - app.core.storage - INFO - Stored 5 sources for message 681043d493f9d1c68009
+2025-04-29 04:14:43,362 - app.core.chat_service - INFO - Stored AI message (ID: 681043d493f9d1c68009) for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:14:43,603 - app.core.storage - INFO - Timestamp updated for conversation b400672c45ec44eebdba5e527700d1e9
+2025-04-29 04:15:34,171 - app.api.endpoints.auth - INFO - User registered successfully: test7888@example.com, ID: 68104455e3f13b898f75
+2025-04-29 04:15:34,954 - app.api.endpoints.auth - INFO - Password verified for user: test7888@example.com, User ID: 68104455e3f13b898f75
+2025-04-29 04:15:35,176 - app.api.endpoints.auth - INFO - JWT created successfully for user: test7888@example.com
+2025-04-29 04:15:36,401 - app.core.storage - INFO - Attempting to create conversation e4213bc2fd764c0b958127eb3afb2f79 for user 68104455e3f13b898f75
+2025-04-29 04:15:36,657 - app.core.storage - INFO - Successfully created conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:38,631 - app.core.storage - INFO - Stored message 6810445a2bf2a1f68567 for user 68104455e3f13b898f75
+2025-04-29 04:15:38,633 - app.core.chat_service - INFO - Stored user message (ID: 6810445a2bf2a1f68567) for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:38,873 - app.core.storage - INFO - Timestamp updated for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:38,873 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:15:38,876 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:15:39,602 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:15:39,604 - app.core.chat_service - INFO - Retrieved 5 documents for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:39,605 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:15:39,606 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:15:39,606 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:15:41,611 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:15:41,612 - app.core.chat_service - INFO - Mistral response successful for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:41,853 - app.core.storage - INFO - Stored message 6810445d83df1c63d65c for user ai
+2025-04-29 04:15:43,415 - app.core.storage - INFO - Stored 5 sources for message 6810445d83df1c63d65c
+2025-04-29 04:15:43,417 - app.core.chat_service - INFO - Stored AI message (ID: 6810445d83df1c63d65c) for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:43,637 - app.core.storage - INFO - Timestamp updated for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:45,138 - app.core.storage - INFO - Stored message 68104460ebfe5de6a96c for user 68104455e3f13b898f75
+2025-04-29 04:15:45,139 - app.core.chat_service - INFO - Stored user message (ID: 68104460ebfe5de6a96c) for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:45,373 - app.core.storage - INFO - Timestamp updated for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:45,373 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:15:45,388 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:15:46,473 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:15:46,475 - app.core.chat_service - INFO - Retrieved 5 documents for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:46,476 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:15:46,477 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:15:46,477 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:15:47,814 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:15:47,814 - app.core.chat_service - INFO - Mistral response successful for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:48,034 - app.core.storage - INFO - Stored message 681044639b33957cc5ba for user ai
+2025-04-29 04:15:48,891 - app.core.storage - INFO - Stored 5 sources for message 681044639b33957cc5ba
+2025-04-29 04:15:48,892 - app.core.chat_service - INFO - Stored AI message (ID: 681044639b33957cc5ba) for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:49,120 - app.core.storage - INFO - Timestamp updated for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:51,072 - app.core.storage - INFO - Stored message 68104466cbc46cf25940 for user 68104455e3f13b898f75
+2025-04-29 04:15:51,072 - app.core.chat_service - INFO - Stored user message (ID: 68104466cbc46cf25940) for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:51,295 - app.core.storage - INFO - Timestamp updated for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:51,315 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:15:51,345 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:15:52,420 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:15:52,421 - app.core.chat_service - INFO - Retrieved 5 documents for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:52,422 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:15:52,424 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:15:52,425 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:15:53,234 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:15:53,234 - app.core.chat_service - INFO - Mistral response successful for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:53,459 - app.core.storage - INFO - Stored message 68104469069dbe19fbe7 for user ai
+2025-04-29 04:15:54,181 - app.core.storage - INFO - Stored 5 sources for message 68104469069dbe19fbe7
+2025-04-29 04:15:54,181 - app.core.chat_service - INFO - Stored AI message (ID: 68104469069dbe19fbe7) for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:15:54,404 - app.core.storage - INFO - Timestamp updated for conversation e4213bc2fd764c0b958127eb3afb2f79
+2025-04-29 04:16:14,349 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-29 04:16:40,504 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-29 04:16:40,592 - app.main - INFO - Application startup: initializing services and connections
+2025-04-29 04:18:09,973 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-29 04:18:26,118 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-29 04:18:26,189 - app.main - INFO - Application startup: initializing services and connections
+2025-04-29 04:18:45,641 - app.api.endpoints.auth - INFO - User registered successfully: test2974@example.com, ID: 681045154a1704c875e2
+2025-04-29 04:18:46,549 - app.api.endpoints.auth - INFO - Password verified for user: test2974@example.com, User ID: 681045154a1704c875e2
+2025-04-29 04:18:46,919 - app.api.endpoints.auth - INFO - JWT created successfully for user: test2974@example.com
+2025-04-29 04:18:48,255 - app.core.storage - INFO - Attempting to create conversation 90fa621ffcd84a29b19535b1befb5154 for user 681045154a1704c875e2
+2025-04-29 04:18:48,611 - app.core.storage - INFO - Successfully created conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:18:50,667 - app.core.storage - INFO - Stored message 6810451a83857a4a5672 for user 681045154a1704c875e2
+2025-04-29 04:18:50,668 - app.core.chat_service - INFO - Stored user message (ID: 6810451a83857a4a5672) for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:18:51,502 - app.core.storage - INFO - Timestamp updated for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:18:51,503 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-29 04:18:51,504 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:18:51,507 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:18:56,451 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:18:56,452 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:18:56,453 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:18:56,454 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:18:56,454 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:18:59,092 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:18:59,093 - app.core.chat_service - INFO - Mistral response successful for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:18:59,580 - app.core.storage - INFO - Stored message 681045236ecceaec6d6f for user ai
+2025-04-29 04:19:02,456 - app.core.storage - INFO - Stored 5 sources for message 681045236ecceaec6d6f
+2025-04-29 04:19:02,456 - app.core.chat_service - INFO - Stored AI message (ID: 681045236ecceaec6d6f) for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:19:02,941 - app.core.storage - INFO - Timestamp updated for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:19:05,419 - app.core.storage - INFO - Stored message 681045295b01316481a6 for user 681045154a1704c875e2
+2025-04-29 04:19:05,421 - app.core.chat_service - INFO - Stored user message (ID: 681045295b01316481a6) for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:19:05,669 - app.core.storage - INFO - Timestamp updated for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:19:05,670 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:19:05,673 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:19:06,792 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:19:06,794 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:19:06,795 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:19:06,796 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:19:06,796 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:19:09,285 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:19:09,286 - app.core.chat_service - INFO - Mistral response successful for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:19:09,642 - app.core.storage - INFO - Stored message 6810452d7b89848b1ced for user ai
+2025-04-29 04:19:11,520 - app.core.storage - INFO - Stored 5 sources for message 6810452d7b89848b1ced
+2025-04-29 04:19:11,520 - app.core.chat_service - INFO - Stored AI message (ID: 6810452d7b89848b1ced) for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:19:11,759 - app.core.storage - INFO - Timestamp updated for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:19:13,602 - app.core.storage - INFO - Stored message 681045317cb6a1bcebdf for user 681045154a1704c875e2
+2025-04-29 04:19:13,602 - app.core.chat_service - INFO - Stored user message (ID: 681045317cb6a1bcebdf) for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:19:13,999 - app.core.storage - INFO - Timestamp updated for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:19:13,999 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:19:14,003 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:19:15,290 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:19:15,293 - app.core.chat_service - INFO - Retrieved 5 documents for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:19:15,293 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:19:15,294 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:19:15,294 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:19:16,884 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:19:16,886 - app.core.chat_service - INFO - Mistral response successful for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:19:17,105 - app.core.storage - INFO - Stored message 681045350b07f87cf762 for user ai
+2025-04-29 04:19:18,166 - app.core.storage - INFO - Stored 5 sources for message 681045350b07f87cf762
+2025-04-29 04:19:18,167 - app.core.chat_service - INFO - Stored AI message (ID: 681045350b07f87cf762) for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:19:18,399 - app.core.storage - INFO - Timestamp updated for conversation 90fa621ffcd84a29b19535b1befb5154
+2025-04-29 04:21:49,748 - app.api.endpoints.auth - INFO - User registered successfully: test12246@example.com, ID: 681045cd86a1717bccbf
+2025-04-29 04:21:50,402 - app.api.endpoints.auth - INFO - Password verified for user: test12246@example.com, User ID: 681045cd86a1717bccbf
+2025-04-29 04:21:50,587 - app.api.endpoints.auth - INFO - JWT created successfully for user: test12246@example.com
+2025-04-29 04:21:51,714 - app.core.storage - INFO - Attempting to create conversation f82452b392464f10b1643cf44eb20d24 for user 681045cd86a1717bccbf
+2025-04-29 04:21:51,930 - app.core.storage - INFO - Successfully created conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:21:53,280 - app.core.storage - INFO - Stored message 681045d1384649641992 for user 681045cd86a1717bccbf
+2025-04-29 04:21:53,281 - app.core.chat_service - INFO - Stored user message (ID: 681045d1384649641992) for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:21:53,554 - app.core.storage - INFO - Timestamp updated for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:21:53,555 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:21:53,570 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:21:54,767 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:21:54,769 - app.core.chat_service - INFO - Retrieved 5 documents for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:21:54,770 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:21:54,770 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:21:54,771 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:21:59,028 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:21:59,028 - app.core.chat_service - INFO - Mistral response successful for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:21:59,276 - app.core.storage - INFO - Stored message 681045d735c3edc185ad for user ai
+2025-04-29 04:22:00,536 - app.core.storage - INFO - Stored 5 sources for message 681045d735c3edc185ad
+2025-04-29 04:22:00,536 - app.core.chat_service - INFO - Stored AI message (ID: 681045d735c3edc185ad) for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:00,848 - app.core.storage - INFO - Timestamp updated for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:02,739 - app.core.storage - INFO - Stored message 681045da9e262b452de0 for user 681045cd86a1717bccbf
+2025-04-29 04:22:02,739 - app.core.chat_service - INFO - Stored user message (ID: 681045da9e262b452de0) for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:02,963 - app.core.storage - INFO - Timestamp updated for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:02,963 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:22:02,966 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:22:04,131 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:22:04,136 - app.core.chat_service - INFO - Retrieved 5 documents for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:04,138 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:22:04,140 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:22:04,141 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:22:05,685 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:22:05,686 - app.core.chat_service - INFO - Mistral response successful for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:05,959 - app.core.storage - INFO - Stored message 681045ddcd56b8457c57 for user ai
+2025-04-29 04:22:07,641 - app.core.storage - INFO - Stored 5 sources for message 681045ddcd56b8457c57
+2025-04-29 04:22:07,642 - app.core.chat_service - INFO - Stored AI message (ID: 681045ddcd56b8457c57) for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:07,960 - app.core.storage - INFO - Timestamp updated for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:09,736 - app.core.storage - INFO - Stored message 681045e1a753a1515c55 for user 681045cd86a1717bccbf
+2025-04-29 04:22:09,737 - app.core.chat_service - INFO - Stored user message (ID: 681045e1a753a1515c55) for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:09,939 - app.core.storage - INFO - Timestamp updated for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:09,940 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:22:09,943 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:22:10,935 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:22:10,938 - app.core.chat_service - INFO - Retrieved 5 documents for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:10,939 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:22:10,940 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:22:10,940 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:22:12,509 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:22:12,510 - app.core.chat_service - INFO - Mistral response successful for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:12,710 - app.core.storage - INFO - Stored message 681045e4a09f2c81d84f for user ai
+2025-04-29 04:22:13,868 - app.core.storage - INFO - Stored 5 sources for message 681045e4a09f2c81d84f
+2025-04-29 04:22:13,868 - app.core.chat_service - INFO - Stored AI message (ID: 681045e4a09f2c81d84f) for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:14,098 - app.core.storage - INFO - Timestamp updated for conversation f82452b392464f10b1643cf44eb20d24
+2025-04-29 04:22:47,705 - app.main - INFO - Application shutdown: cleaning up resources
+2025-04-29 04:23:04,639 - app.main - INFO - Configuring CORS with allowed origins: ['https://maktaba-shamela-ai.vercel.app', 'http://localhost:3000']
+2025-04-29 04:23:04,681 - app.main - INFO - Application startup: initializing services and connections
+2025-04-29 04:23:04,727 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_1bab97fc01824cc0a3b15c8a36851ec0
+2025-04-29 04:23:04,728 - app.core.retrieval - INFO - Initializing retriever with provider: pinecone
+2025-04-29 04:23:04,729 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:23:04,732 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:23:07,905 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:23:07,907 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_1bab97fc01824cc0a3b15c8a36851ec0
+2025-04-29 04:23:07,907 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:23:07,908 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:23:07,908 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:23:11,300 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:23:11,300 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_1bab97fc01824cc0a3b15c8a36851ec0
+2025-04-29 04:23:11,584 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_4ad62c8a13a94f4c90800befdaee3475
+2025-04-29 04:23:11,584 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:23:11,586 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:23:12,738 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:23:12,740 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_4ad62c8a13a94f4c90800befdaee3475
+2025-04-29 04:23:12,741 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:23:12,742 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:23:12,742 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:23:13,017 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-29 04:23:13,018 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.32 seconds (calculated)...
+2025-04-29 04:23:15,108 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:23:15,109 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_4ad62c8a13a94f4c90800befdaee3475
+2025-04-29 04:23:15,408 - app.api.endpoints.chat - INFO - Using temporary anonymous conversation ID: anon_conv_f935499af01b456b9bb418523ae24ed9
+2025-04-29 04:23:15,409 - app.core.clients - INFO - Initializing Pinecone client
+2025-04-29 04:23:15,411 - app.core.clients - INFO - Getting Pinecone index: shamela
+2025-04-29 04:23:16,230 - app.core.retrieval.pinecone - INFO - Successfully processed 5 documents after validation.
+2025-04-29 04:23:16,234 - app.core.chat_service - INFO - Retrieved 5 documents for conversation anon_conv_f935499af01b456b9bb418523ae24ed9
+2025-04-29 04:23:16,236 - app.core.chat_service - INFO - Context formatted. Number of sources extracted: 5
+2025-04-29 04:23:16,236 - app.core.chat_service - INFO - Attempting LLM call...
+2025-04-29 04:23:16,238 - app.core.llm_service - INFO - Calling Mistral API (max attempts: 3)
+2025-04-29 04:23:16,548 - app.core.llm_service - WARNING - Mistral Response Body (non-200, status 429): {"message":"Requests rate limit exceeded"}
+2025-04-29 04:23:16,548 - app.core.llm_service - WARNING - Rate limit (429) hit. Retrying in 1.98 seconds (calculated)...
+2025-04-29 04:23:22,235 - app.core.llm_service - INFO - Mistral API call successful
+2025-04-29 04:23:22,235 - app.core.chat_service - INFO - Mistral response successful for conversation anon_conv_f935499af01b456b9bb418523ae24ed9

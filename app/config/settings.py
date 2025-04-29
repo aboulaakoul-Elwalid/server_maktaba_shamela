@@ -76,7 +76,7 @@ class Settings(BaseSettings):
     RETRIEVAL_TOP_K: int = 5
 
     # Prompt Configuration # Added section
-    PROMPT_TEMPLATE: str = """You are an expert assistant specializing in Arabic and Islamic texts. The conversation history is provided below. Use ONLY the conversation history and the retrieved context to answer the user's question.
+    PROMPT_TEMPLATE: str = """You are an expert assistant specializing in Arabic and Islamic texts. Below is the conversation history, followed by retrieved context passages. 
 
 [CONVERSATION HISTORY]
 {history}
@@ -86,7 +86,12 @@ class Settings(BaseSettings):
 
 QUESTION: {query}
 
-Answer concisely based *only* on the provided history and context. Cite relevant sources using their Document ID (e.g., [ID: 1234_5_6]) when using information from the context. If the answer is not found in the context or history, state that clearly. Do not make up information."""
+Instructions:
+- First, try to answer the user's question using the retrieved context and conversation history. Cite relevant sources from the context when possible.
+- If the retrieved context does not contain enough relevant information, or if it is not directly helpful, use your own knowledge to provide a helpful, accurate, and concise answer.
+- Always indicate clearly when you are using your own knowledge beyond the provided context.
+- Ensure your answer is clear, informative, and user-friendly.
+"""
 
     # Arabic-specific settings
     NORMALIZE_ARABIC: bool = True

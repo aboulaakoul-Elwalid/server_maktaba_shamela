@@ -46,7 +46,7 @@ async def send_message(
     try:
         rag_response_data = await generate_rag_response(
             db=db,
-            query=message.content,
+            message=message,  # Pass the whole message object
             user_id=user_id,
             conversation_id=conversation_id,
             is_anonymous=is_anonymous
@@ -192,7 +192,7 @@ async def stream_message(
     return StreamingResponse(
         generate_streaming_response(
             db=db,
-            query=message.content,
+            message=message,  # Pass the whole message object
             user_id=user_id,
             conversation_id=conversation_id,
             is_anonymous=is_anonymous

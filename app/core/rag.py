@@ -123,7 +123,7 @@ async def generate_llm_response(prompt: str) -> str:
                 {"role": "system", "content": "You are a knowledgeable assistant specializing in Islamic and Arabic texts."},
                 {"role": "user", "content": prompt}
             ],
-            temperature=0.3,  # Lower for more factual responses
+            temperature=0.7,  # Lower for more factual responses
             max_tokens=1000
         )
         

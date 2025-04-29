@@ -1,6 +1,6 @@
 # app/models/schemas.py
 from pydantic import BaseModel, Field, HttpUrl, model_validator  # Import model_validator
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional  # Add Dict, Any
 import datetime  # Added for timestamp
 
 class EmbedRequest(BaseModel):
@@ -77,10 +77,16 @@ class IngestionResponse(BaseModel):
 
 # --- Chat Schemas ---
 
+class HistoryMessage(BaseModel):
+    """Simple structure for history messages sent from frontend"""
+    role: str  # "user" or "assistant"
+    content: str
+
 class MessageCreate(BaseModel):
-    """Request model for sending a message."""
-    content: str = Field(..., min_length=1, description="The content of the user's message")
-    conversation_id: Optional[str] = Field(None, description="Existing conversation ID (optional)")
+    content: str = Field(..., description="The text content of the message.")
+    conversation_id: Optional[str] = Field(None, description="ID of the conversation to continue.")
+    # Add history field for frontend to pass context for anonymous users
+    history: Optional[List[HistoryMessage]] = Field(None, description="Recent message history for anonymous context.")
 
 class Message(BaseModel):
     """Represents a single message in a conversation."""

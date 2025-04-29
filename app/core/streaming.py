@@ -14,8 +14,9 @@ from app.core.retrieval import get_retriever, Retriever
 from app.core.context_formatter import format_context_and_extract_sources, construct_llm_prompt, format_history
 from app.core.llm_service import call_mistral_streaming, call_gemini_streaming
 from app.config.settings import settings
-from app.models.schemas import Message, DocumentMatch
+from app.models.schemas import Message, DocumentMatch, HistoryMessage, MessageCreate
 from app.api.auth_utils import UserResponse
+from app.core.chat_service import format_frontend_history
 
 logger = logging.getLogger(__name__)
 
@@ -24,7 +25,7 @@ HISTORY_FETCH_LIMIT = 10  # How many messages to fetch (format_history will take
 
 async def generate_streaming_response(
     db: Databases,
-    query: str,
+    message: MessageCreate,
     user_id: str,
     conversation_id: str,
     is_anonymous: bool
@@ -35,7 +36,7 @@ async def generate_streaming_response(
 
     Args:
         db: Appwrite Databases service instance.
-        query: The user's query.
+        message: The user's message object.
         user_id: The user ID.
         conversation_id: The conversation ID (can be a temporary ID for anonymous users).
         is_anonymous: Boolean indicating if the user is anonymous.
@@ -43,14 +44,15 @@ async def generate_streaming_response(
     Yields:
         Server-Sent Events formatted strings.
     """
+    query = message.content
     full_ai_response = ""
     final_sources = []
     stored_user_message_id = None
     stored_ai_message_id = None
-    history_text = "No history available."  # Default for anonymous or error
+    history_text = "No history available."
 
     try:
-        # --- Conditional: Fetch History ---
+        # --- Conditional: Fetch/Use History ---
         conversation_messages: List[Message] = []
         if not is_anonymous and conversation_id:
             try:
@@ -61,8 +63,14 @@ async def generate_streaming_response(
             except Exception as history_err:
                 logger.error(f"Error fetching history for stream {conversation_id}: {history_err}")
 
+        elif is_anonymous and message.history:
+            try:
+                history_text = format_frontend_history(message.history)
+                logger.debug(f"Stream: Using frontend-provided history for anonymous user.")
+            except Exception as format_err:
+                logger.error(f"Stream: Error formatting frontend history: {format_err}")
         elif is_anonymous:
-            logger.debug(f"Skipping history fetch for anonymous stream.")
+            logger.debug("Stream: Anonymous user with no history provided by frontend.")
 
         # --- Conditional: Store User Message ---
         if not is_anonymous:

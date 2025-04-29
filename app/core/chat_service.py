@@ -15,18 +15,31 @@ from app.core.retrieval import get_retriever, Retriever  # Use the new retrieval
 from app.core.context_formatter import format_context_and_extract_sources, construct_llm_prompt, format_history
 from app.core.llm_service import call_mistral_with_retry, call_gemini_api
 from app.config.settings import settings
-from app.models.schemas import Message, DocumentMatch
+from app.models.schemas import Message, DocumentMatch, HistoryMessage, MessageCreate  # Import MessageCreate
 
 logger = logging.getLogger(__name__)
 
 # --- Configuration ---
 HISTORY_FETCH_LIMIT = 10  # How many messages to fetch (format_history will take the last N)
 
+# --- Add a helper to format frontend history ---
+def format_frontend_history(history: List[HistoryMessage]) -> str:
+    """Formats history provided by the frontend."""
+    if not history:
+        return "No history provided."
+    # Simple formatting, adjust as needed to match format_history output
+    formatted = []
+    for msg in history:
+        role_label = "Human" if msg.role == "user" else "Assistant"
+        formatted.append(f"{role_label}: {msg.content}")
+    return "\n".join(formatted)
+# --- End helper ---
+
 async def generate_rag_response(
     db: Databases,
-    query: str,
+    message: MessageCreate,  # <-- Change input to use the schema object
     user_id: str,
-    conversation_id: str,  # Will be the temporary anon_conv_... ID for anonymous
+    conversation_id: str,  # Still needed for DB operations if authenticated
     is_anonymous: bool
 ) -> Dict[str, Any]:
     """
@@ -42,7 +55,7 @@ async def generate_rag_response(
 
     Args:
         db: Appwrite Databases service instance.
-        query: The user's query.
+        message: The user's message object.
         user_id: The user's ID (can be anonymous).
         conversation_id: The conversation ID (can be anonymous).
         is_anonymous: Flag indicating if the user is anonymous.
@@ -57,11 +70,12 @@ async def generate_rag_response(
     error_detail = None
     ai_message_id = None
     history_text = "No history available."  # Default for anonymous or error
+    query = message.content  # Get query from the message object
 
     try:
-        # 0. Fetch Conversation History (ONLY if NOT anonymous)
+        # 0. Fetch/Use Conversation History
         conversation_messages: List[Message] = []
-        if not is_anonymous and conversation_id:  # <-- Check is_anonymous
+        if not is_anonymous and conversation_id:
             try:
                 logger.debug(f"Fetching history for authenticated conversation {conversation_id}")
                 history_result = db.list_documents(
@@ -91,8 +105,15 @@ async def generate_rag_response(
             except Exception as history_err:
                 logger.error(f"Error fetching history for conversation {conversation_id}: {history_err}")
                 error_detail = "Failed to fetch conversation history."
+        elif is_anonymous and message.history:  # <-- Check for frontend history
+            try:
+                history_text = format_frontend_history(message.history)  # Use new frontend history formatter
+                logger.debug(f"Using frontend-provided history for anonymous user.")
+            except Exception as format_err:
+                logger.error(f"Error formatting frontend history: {format_err}")
+                # history_text remains "No history available."
         elif is_anonymous:
-            logger.debug(f"Skipping history fetch for anonymous user.")
+            logger.debug("Anonymous user with no history provided by frontend.")
 
         # 1. Store User Message (ONLY if NOT anonymous)
         user_message_id = f"anon_user_msg_{uuid.uuid4().hex}"  # Temp ID if anonymous
@@ -138,7 +159,7 @@ async def generate_rag_response(
         logger.debug(f"Formatted Context Text (first 300 chars):\n{context_text[:300]}")
 
         # 4. Construct Prompt and Call LLM (Do this for both)
-        prompt = construct_llm_prompt(history_text, context_text, query)
+        prompt = construct_llm_prompt(history_text, context_text, query)  # history_text now populated for anon if provided
         logger.info(f"Attempting LLM call...")
         try:
             mistral_response = call_mistral_with_retry(prompt)
